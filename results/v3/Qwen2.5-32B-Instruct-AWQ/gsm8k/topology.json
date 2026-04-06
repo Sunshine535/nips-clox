@@ -1,0 +1,1620 @@
+{
+  "summary": {
+    "benchmark": "gsm8k",
+    "n_examples": 200,
+    "r_bar_mean": 0.5207290299430397,
+    "r_bar_std": 0.07423774940083179,
+    "r_bar_median": 0.5100748855421616,
+    "epl_mean": 1.2795,
+    "epl_std": 0.27575507449748066,
+    "epl_median": 1.2,
+    "strategy_distribution": {
+      "targeted_repair": 8,
+      "hierarchical_repair": 2,
+      "standard_cot": 2,
+      "adaptive": 188
+    }
+  },
+  "per_example": [
+    {
+      "example_id": "gsm8k_0",
+      "difficulty": "easy",
+      "r_bar": 0.4183630694886483,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_1",
+      "difficulty": "easy",
+      "r_bar": 0.5421348623219503,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_2",
+      "difficulty": "medium",
+      "r_bar": 0.547607826602584,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_3",
+      "difficulty": "easy",
+      "r_bar": 0.43582745093073827,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_4",
+      "difficulty": "easy",
+      "r_bar": 0.4540726473463441,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_5",
+      "difficulty": "medium",
+      "r_bar": 0.4488446526873071,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_6",
+      "difficulty": "easy",
+      "r_bar": 0.6729160527509139,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_7",
+      "difficulty": "medium",
+      "r_bar": 0.45895637835412184,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_8",
+      "difficulty": "hard",
+      "r_bar": 0.4776718586377236,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_9",
+      "difficulty": "medium",
+      "r_bar": 0.5717202149809407,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_10",
+      "difficulty": "medium",
+      "r_bar": 0.5155537273864905,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_11",
+      "difficulty": "medium",
+      "r_bar": 0.7115892795288644,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.0,
+      "strategy": "hierarchical_repair"
+    },
+    {
+      "example_id": "gsm8k_12",
+      "difficulty": "medium",
+      "r_bar": 0.44310598576218646,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_13",
+      "difficulty": "easy",
+      "r_bar": 0.7259582792602179,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_14",
+      "difficulty": "medium",
+      "r_bar": 0.5398622681160328,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_15",
+      "difficulty": "easy",
+      "r_bar": 0.505121137704768,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_16",
+      "difficulty": "medium",
+      "r_bar": 0.4741795694508966,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_17",
+      "difficulty": "medium",
+      "r_bar": 0.5686180546840437,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_18",
+      "difficulty": "easy",
+      "r_bar": 0.4557487279252099,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_19",
+      "difficulty": "medium",
+      "r_bar": 0.49993464764333173,
+      "epl": 2.3333333333333335,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_20",
+      "difficulty": "medium",
+      "r_bar": 0.5833500747011092,
+      "epl": 1.4,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_21",
+      "difficulty": "easy",
+      "r_bar": 0.48168212717418435,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_22",
+      "difficulty": "easy",
+      "r_bar": 0.4497658651265339,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_23",
+      "difficulty": "easy",
+      "r_bar": 0.7339269415927318,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_24",
+      "difficulty": "easy",
+      "r_bar": 0.49643093421511414,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_25",
+      "difficulty": "medium",
+      "r_bar": 0.45926733975587236,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_26",
+      "difficulty": "easy",
+      "r_bar": 0.6020493992742462,
+      "epl": 1.5,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_27",
+      "difficulty": "easy",
+      "r_bar": 0.4218404967486274,
+      "epl": 1.2,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_28",
+      "difficulty": "easy",
+      "r_bar": 0.48969355796370456,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_29",
+      "difficulty": "easy",
+      "r_bar": 0.47738085531767727,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_30",
+      "difficulty": "easy",
+      "r_bar": 0.42596298946450856,
+      "epl": 1.0666666666666667,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_31",
+      "difficulty": "medium",
+      "r_bar": 0.6379403231079432,
+      "epl": 1.5,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_32",
+      "difficulty": "easy",
+      "r_bar": 0.5159880486315803,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_33",
+      "difficulty": "medium",
+      "r_bar": 0.5848953340529967,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_34",
+      "difficulty": "easy",
+      "r_bar": 0.5465503993828236,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_35",
+      "difficulty": "easy",
+      "r_bar": 0.7876917357364389,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_36",
+      "difficulty": "easy",
+      "r_bar": 0.4345816894026693,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_37",
+      "difficulty": "medium",
+      "r_bar": 0.4492861721180633,
+      "epl": 1.6,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_38",
+      "difficulty": "medium",
+      "r_bar": 0.5788982083876733,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_39",
+      "difficulty": "hard",
+      "r_bar": 0.4861174883951717,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_40",
+      "difficulty": "easy",
+      "r_bar": 0.6514105981469432,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_41",
+      "difficulty": "easy",
+      "r_bar": 0.5506576893682593,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_42",
+      "difficulty": "easy",
+      "r_bar": 0.4929748054651921,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_43",
+      "difficulty": "medium",
+      "r_bar": 0.4150603004817195,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_44",
+      "difficulty": "medium",
+      "r_bar": 0.5123496383593873,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_45",
+      "difficulty": "medium",
+      "r_bar": 0.5382327856866195,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_46",
+      "difficulty": "medium",
+      "r_bar": 0.5480546541759795,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_47",
+      "difficulty": "medium",
+      "r_bar": 0.5099970410347808,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_48",
+      "difficulty": "easy",
+      "r_bar": 0.476406038774759,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_49",
+      "difficulty": "easy",
+      "r_bar": 0.6194437401822941,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_50",
+      "difficulty": "easy",
+      "r_bar": 0.5357061825065225,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_51",
+      "difficulty": "easy",
+      "r_bar": 0.514208900940467,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_52",
+      "difficulty": "easy",
+      "r_bar": 0.45059217380448857,
+      "epl": 1.2,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_53",
+      "difficulty": "easy",
+      "r_bar": 0.44141216351074575,
+      "epl": 1.2,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_54",
+      "difficulty": "easy",
+      "r_bar": 0.5056988609943946,
+      "epl": 1.5,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_55",
+      "difficulty": "easy",
+      "r_bar": 0.5033607421870169,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_56",
+      "difficulty": "easy",
+      "r_bar": 0.5461169581639821,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_57",
+      "difficulty": "easy",
+      "r_bar": 0.6255365594437443,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_58",
+      "difficulty": "easy",
+      "r_bar": 0.5101527300495424,
+      "epl": 2.1,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_59",
+      "difficulty": "easy",
+      "r_bar": 0.4937576390344598,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_60",
+      "difficulty": "easy",
+      "r_bar": 0.49507569751555963,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_61",
+      "difficulty": "easy",
+      "r_bar": 0.46730978808717655,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_62",
+      "difficulty": "easy",
+      "r_bar": 0.42807931010922,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_63",
+      "difficulty": "medium",
+      "r_bar": 0.5105218522719651,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_64",
+      "difficulty": "easy",
+      "r_bar": 0.5652211929149398,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_65",
+      "difficulty": "medium",
+      "r_bar": 0.4505596310409497,
+      "epl": 1.8,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_66",
+      "difficulty": "medium",
+      "r_bar": 0.5850993359619834,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_67",
+      "difficulty": "easy",
+      "r_bar": 0.6224155575876296,
+      "epl": 1.5,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_68",
+      "difficulty": "easy",
+      "r_bar": 0.49749271801821504,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_69",
+      "difficulty": "easy",
+      "r_bar": 0.44855961778307374,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_70",
+      "difficulty": "medium",
+      "r_bar": 0.5151641427738775,
+      "epl": 1.5,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_71",
+      "difficulty": "easy",
+      "r_bar": 0.5481499286024275,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_72",
+      "difficulty": "easy",
+      "r_bar": 0.4707430133823023,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_73",
+      "difficulty": "medium",
+      "r_bar": 0.5150885358495698,
+      "epl": 1.4,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_74",
+      "difficulty": "hard",
+      "r_bar": 0.529519965488159,
+      "epl": 1.1666666666666667,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_75",
+      "difficulty": "medium",
+      "r_bar": 0.5062437934923637,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_76",
+      "difficulty": "medium",
+      "r_bar": 0.5391759997774241,
+      "epl": 1.4,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_77",
+      "difficulty": "easy",
+      "r_bar": 0.6731592549478181,
+      "epl": 1.8,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_78",
+      "difficulty": "medium",
+      "r_bar": 0.5063449833347126,
+      "epl": 1.2,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_79",
+      "difficulty": "easy",
+      "r_bar": 0.5238633522940915,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_80",
+      "difficulty": "medium",
+      "r_bar": 0.47320325516434786,
+      "epl": 1.3333333333333333,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_81",
+      "difficulty": "easy",
+      "r_bar": 0.4815741254325115,
+      "epl": 1.6,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_82",
+      "difficulty": "easy",
+      "r_bar": 0.43208629602720033,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_83",
+      "difficulty": "easy",
+      "r_bar": 0.5376031186132206,
+      "epl": 1.5,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_84",
+      "difficulty": "medium",
+      "r_bar": 0.6251657247820733,
+      "epl": 1.2,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_85",
+      "difficulty": "easy",
+      "r_bar": 0.636605197863147,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_86",
+      "difficulty": "easy",
+      "r_bar": 0.6322616953521598,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_87",
+      "difficulty": "medium",
+      "r_bar": 0.5043853564360932,
+      "epl": 1.5,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_88",
+      "difficulty": "medium",
+      "r_bar": 0.8346464646073803,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_89",
+      "difficulty": "easy",
+      "r_bar": 0.49022651789829325,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_90",
+      "difficulty": "medium",
+      "r_bar": 0.45893796486043825,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_91",
+      "difficulty": "easy",
+      "r_bar": 0.5333812918307537,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_92",
+      "difficulty": "easy",
+      "r_bar": 0.5966547524095137,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_93",
+      "difficulty": "easy",
+      "r_bar": 0.4308003584412357,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_94",
+      "difficulty": "medium",
+      "r_bar": 0.4546715564101762,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_95",
+      "difficulty": "medium",
+      "r_bar": 0.5615171331531773,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_96",
+      "difficulty": "easy",
+      "r_bar": 0.45497045733367864,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_97",
+      "difficulty": "easy",
+      "r_bar": 0.5070089340902957,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_98",
+      "difficulty": "easy",
+      "r_bar": 0.48776689605478996,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_99",
+      "difficulty": "medium",
+      "r_bar": 0.45384425068748174,
+      "epl": 1.6,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_100",
+      "difficulty": "medium",
+      "r_bar": 0.7702979267220209,
+      "epl": 1.6,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_101",
+      "difficulty": "easy",
+      "r_bar": 0.5451304100249743,
+      "epl": 1.2,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_102",
+      "difficulty": "easy",
+      "r_bar": 0.4092378129116949,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_103",
+      "difficulty": "easy",
+      "r_bar": 0.49793493355601587,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_104",
+      "difficulty": "medium",
+      "r_bar": 0.5205609288942569,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_105",
+      "difficulty": "easy",
+      "r_bar": 0.5535214926046416,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_106",
+      "difficulty": "medium",
+      "r_bar": 0.460998509575001,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_107",
+      "difficulty": "hard",
+      "r_bar": 0.45729295737888,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_108",
+      "difficulty": "easy",
+      "r_bar": 0.4627390762814687,
+      "epl": 1.6,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_109",
+      "difficulty": "easy",
+      "r_bar": 0.48250844189520486,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_110",
+      "difficulty": "medium",
+      "r_bar": 0.6167485222792616,
+      "epl": 1.6,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_111",
+      "difficulty": "medium",
+      "r_bar": 0.4724839525280802,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_112",
+      "difficulty": "easy",
+      "r_bar": 0.5619552734666355,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_113",
+      "difficulty": "easy",
+      "r_bar": 0.5244717841982581,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_114",
+      "difficulty": "easy",
+      "r_bar": 0.5863016189977217,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_115",
+      "difficulty": "medium",
+      "r_bar": 0.48302805792660664,
+      "epl": 1.0666666666666667,
+      "n_steps": 10.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_116",
+      "difficulty": "easy",
+      "r_bar": 0.5238744649530624,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_117",
+      "difficulty": "easy",
+      "r_bar": 0.5144254763468851,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_118",
+      "difficulty": "easy",
+      "r_bar": 0.4980050052783941,
+      "epl": 1.2,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_119",
+      "difficulty": "hard",
+      "r_bar": 0.4655199593157955,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_120",
+      "difficulty": "easy",
+      "r_bar": 0.5685586181192135,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_121",
+      "difficulty": "easy",
+      "r_bar": 0.530915874313803,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_122",
+      "difficulty": "medium",
+      "r_bar": 0.5286532679361978,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_123",
+      "difficulty": "medium",
+      "r_bar": 0.4661530975501969,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_124",
+      "difficulty": "easy",
+      "r_bar": 0.4634933295731562,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_125",
+      "difficulty": "easy",
+      "r_bar": 0.45694874241199424,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_126",
+      "difficulty": "easy",
+      "r_bar": 0.5164680320239391,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_127",
+      "difficulty": "easy",
+      "r_bar": 0.5605784054335969,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_128",
+      "difficulty": "medium",
+      "r_bar": 0.49451330267213905,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_129",
+      "difficulty": "medium",
+      "r_bar": 0.5671346232354411,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_130",
+      "difficulty": "easy",
+      "r_bar": 0.5265677320206231,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_131",
+      "difficulty": "easy",
+      "r_bar": 0.4961872837980801,
+      "epl": 1.3333333333333333,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_132",
+      "difficulty": "medium",
+      "r_bar": 0.43165793247651474,
+      "epl": 1.5,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_133",
+      "difficulty": "easy",
+      "r_bar": 0.43785361107666415,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_134",
+      "difficulty": "easy",
+      "r_bar": 0.5403523947675013,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_135",
+      "difficulty": "easy",
+      "r_bar": 0.5160223542566998,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_136",
+      "difficulty": "easy",
+      "r_bar": 0.5328412895651543,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_137",
+      "difficulty": "medium",
+      "r_bar": 0.5265395879820094,
+      "epl": 1.6666666666666667,
+      "n_steps": 10.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_138",
+      "difficulty": "medium",
+      "r_bar": 0.5865029018401708,
+      "epl": 1.3333333333333335,
+      "n_steps": 12.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_139",
+      "difficulty": "easy",
+      "r_bar": 0.5472668491145521,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_140",
+      "difficulty": "easy",
+      "r_bar": 0.42746879616364586,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_141",
+      "difficulty": "hard",
+      "r_bar": 0.5969124140255623,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_142",
+      "difficulty": "easy",
+      "r_bar": 0.5074646376384037,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_143",
+      "difficulty": "medium",
+      "r_bar": 0.5158006490285717,
+      "epl": 1.3333333333333333,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_144",
+      "difficulty": "hard",
+      "r_bar": 0.4362603872763105,
+      "epl": 1.6333333333333333,
+      "n_steps": 7.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_145",
+      "difficulty": "easy",
+      "r_bar": 0.47809376494667316,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_146",
+      "difficulty": "easy",
+      "r_bar": 0.674076153350843,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.0,
+      "strategy": "hierarchical_repair"
+    },
+    {
+      "example_id": "gsm8k_147",
+      "difficulty": "medium",
+      "r_bar": 0.503445121287648,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_148",
+      "difficulty": "easy",
+      "r_bar": 0.5028720994524593,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_149",
+      "difficulty": "easy",
+      "r_bar": 0.47293298242142306,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_150",
+      "difficulty": "medium",
+      "r_bar": 0.6685595806806169,
+      "epl": 1.2,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_151",
+      "difficulty": "medium",
+      "r_bar": 0.5904910723570607,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_152",
+      "difficulty": "easy",
+      "r_bar": 0.47921650980666386,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_153",
+      "difficulty": "medium",
+      "r_bar": 0.547951653639357,
+      "epl": 1.6333333333333333,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_154",
+      "difficulty": "hard",
+      "r_bar": 0.48155561671823616,
+      "epl": 3.0,
+      "n_steps": 9.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_155",
+      "difficulty": "medium",
+      "r_bar": 0.5380796882745277,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_156",
+      "difficulty": "easy",
+      "r_bar": 0.5314530788887414,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_157",
+      "difficulty": "hard",
+      "r_bar": 0.5263011778096248,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_158",
+      "difficulty": "easy",
+      "r_bar": 0.5482338688872161,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_159",
+      "difficulty": "easy",
+      "r_bar": 0.609207858410582,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_160",
+      "difficulty": "easy",
+      "r_bar": 0.5216424126550792,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_161",
+      "difficulty": "hard",
+      "r_bar": 0.4152173456007173,
+      "epl": 1.3333333333333335,
+      "n_steps": 10.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_162",
+      "difficulty": "medium",
+      "r_bar": 0.42337055296927456,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_163",
+      "difficulty": "easy",
+      "r_bar": 0.5292049956653417,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_164",
+      "difficulty": "easy",
+      "r_bar": 0.3822033221737719,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_165",
+      "difficulty": "easy",
+      "r_bar": 0.4319881921104684,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_166",
+      "difficulty": "easy",
+      "r_bar": 0.5302177511292657,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_167",
+      "difficulty": "medium",
+      "r_bar": 0.7477620915777998,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_168",
+      "difficulty": "easy",
+      "r_bar": 0.5240679305592361,
+      "epl": 1.2,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_169",
+      "difficulty": "easy",
+      "r_bar": 0.5467944780335173,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_170",
+      "difficulty": "medium",
+      "r_bar": 0.5533188588151363,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_171",
+      "difficulty": "medium",
+      "r_bar": 0.6031732964504904,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_172",
+      "difficulty": "medium",
+      "r_bar": 0.5819212045860465,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_173",
+      "difficulty": "medium",
+      "r_bar": 0.48398917920396384,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_174",
+      "difficulty": "easy",
+      "r_bar": 0.49675937405756715,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_175",
+      "difficulty": "medium",
+      "r_bar": 0.4490065759549163,
+      "epl": 1.2,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_176",
+      "difficulty": "easy",
+      "r_bar": 0.5089684219473047,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_177",
+      "difficulty": "hard",
+      "r_bar": 0.47287036483554135,
+      "epl": 1.8,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_178",
+      "difficulty": "medium",
+      "r_bar": 0.4924575661785641,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_179",
+      "difficulty": "easy",
+      "r_bar": 0.4585620477625856,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_180",
+      "difficulty": "easy",
+      "r_bar": 0.45504319984883973,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_181",
+      "difficulty": "easy",
+      "r_bar": 0.5341965211366005,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_182",
+      "difficulty": "medium",
+      "r_bar": 0.5150271526553389,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_183",
+      "difficulty": "medium",
+      "r_bar": 0.45174151822809877,
+      "epl": 1.5,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_184",
+      "difficulty": "easy",
+      "r_bar": 0.5409870900927543,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_185",
+      "difficulty": "easy",
+      "r_bar": 0.5062464325423907,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_186",
+      "difficulty": "medium",
+      "r_bar": 0.44136816133253776,
+      "epl": 1.6,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_187",
+      "difficulty": "easy",
+      "r_bar": 0.5043099665328213,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_188",
+      "difficulty": "easy",
+      "r_bar": 0.3919167213937523,
+      "epl": 1.3333333333333333,
+      "n_steps": 7.6,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_189",
+      "difficulty": "medium",
+      "r_bar": 0.6082290588887058,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_190",
+      "difficulty": "easy",
+      "r_bar": 0.5099354691428997,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_191",
+      "difficulty": "easy",
+      "r_bar": 0.5581154660529252,
+      "epl": 1.0,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_192",
+      "difficulty": "medium",
+      "r_bar": 0.5295592803715743,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_193",
+      "difficulty": "medium",
+      "r_bar": 0.4719996223140438,
+      "epl": 1.6,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_194",
+      "difficulty": "easy",
+      "r_bar": 0.5189647649922048,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_195",
+      "difficulty": "easy",
+      "r_bar": 0.4984725370143022,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_196",
+      "difficulty": "easy",
+      "r_bar": 0.4270300395110169,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_197",
+      "difficulty": "easy",
+      "r_bar": 0.5343205138001731,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_198",
+      "difficulty": "medium",
+      "r_bar": 0.6404731685459641,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_199",
+      "difficulty": "medium",
+      "r_bar": 0.4784345024720387,
+      "epl": 1.5,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    }
+  ]
+}

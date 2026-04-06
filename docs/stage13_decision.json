@@ -1,0 +1,19 @@
+{
+  "stage_id": "13-iterative_refine",
+  "run_id": "rc-20260325-095435-ae8d93",
+  "status": "done",
+  "decision": "proceed",
+  "output_artifacts": [
+    "refinement_log.json",
+    "experiment_final/",
+    "experiment_v1/"
+  ],
+  "evidence_refs": [
+    "stage-13/refinement_log.json",
+    "stage-13/experiment_final/",
+    "stage-13/experiment_v1/"
+  ],
+  "error": null,
+  "ts": "2026-03-25T10:58:49+00:00",
+  "next_stage": 14
+}

@@ -1,0 +1,23 @@
+{
+  "round": 3,
+  "threadId": "019d5cb1-3713-7820-9f87-e1919b4f8f00",
+  "status": "in_progress",
+  "difficulty": "medium",
+  "last_score": 6.5,
+  "last_verdict": "almost",
+  "pending_experiments": ["qwen3_8b_full_strategies"],
+  "timestamp": "2026-04-06T09:00:00",
+  "notes": {
+    "model_switch": "Qwen2.5-32B → Qwen3-8B (2025-04, user requested newer model)",
+    "qwen3_8b_pilot_done": true,
+    "qwen3_8b_topology_done": true,
+    "qwen3_8b_strategies_running": "MATH standard_cot in progress",
+    "qwen25_32b_gsm8k_complete": "20/27 combos with full statistics",
+    "key_findings": {
+      "32b_gsm8k": "Repair 96.34% >> SC 91.11% >> CoT 89.33% (p<0.001)",
+      "8b_pilot": "Different model → different winner: FullRegen dominates ARC/MATH, CoT wins StrategyQA",
+      "cross_model_insight": "Repair advantage is model-size dependent: larger models benefit from targeted repair, smaller models benefit from full rewrite"
+    },
+    "theory_revisions": ["budget_constrained_corollary", "threshold_recalibration", "short_ell_finding", "think_tag_fix"]
+  }
+}

@@ -1,0 +1,1294 @@
+{
+  "metrics_summary": {
+    "examples_total": {
+      "min": 48.0,
+      "max": 48.0,
+      "mean": 48.0,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/0/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/0/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/0/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/0/high_confidence_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/high_confidence_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought_seed_0_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/0/final_answer_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/0/local_recoverable_subset_error_rate": {
+      "min": 0.5,
+      "max": 0.5,
+      "mean": 0.5,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/local_recoverable_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/0/non_local_subset_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/non_local_subset_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/0/low_confidence_error_rate": {
+      "min": 0.4194,
+      "max": 0.4194,
+      "mean": 0.4194,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/0/high_confidence_error_rate": {
+      "min": 0.2941,
+      "max": 0.2941,
+      "mean": 0.2941,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus_seed_0_final_answer_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/0/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/0/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/0/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/0/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/low_confidence_error_rate": {
+      "min": 0.4583,
+      "max": 0.4583,
+      "mean": 0.4583,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/0/high_confidence_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction_seed_0_final_answer_error_rate": {
+      "min": 0.354167,
+      "max": 0.354167,
+      "mean": 0.354167,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/0/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/0/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/0/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/0/low_confidence_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/0/high_confidence_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair_seed_0_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/0/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/0/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/0/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/0/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/0/high_confidence_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair_seed_0_final_answer_error_rate": {
+      "min": 0.354167,
+      "max": 0.354167,
+      "mean": 0.354167,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/0/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/0/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/0/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/0/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/low_confidence_error_rate": {
+      "min": 0.4583,
+      "max": 0.4583,
+      "mean": 0.4583,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/0/high_confidence_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze_seed_0_final_answer_error_rate": {
+      "min": 0.354167,
+      "max": 0.354167,
+      "mean": 0.354167,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/0/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/0/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/0/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/0/low_confidence_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/0/high_confidence_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair_seed_0_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/1/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/1/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/1/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/1/high_confidence_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought_seed_1_final_answer_error_rate": {
+      "min": 0.354167,
+      "max": 0.354167,
+      "mean": 0.354167,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/1/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/1/local_recoverable_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/1/non_local_subset_error_rate": {
+      "min": 0.2917,
+      "max": 0.2917,
+      "mean": 0.2917,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/1/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/1/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus_seed_1_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/1/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/1/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/1/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/1/low_confidence_error_rate": {
+      "min": 0.4583,
+      "max": 0.4583,
+      "mean": 0.4583,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/1/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction_seed_1_final_answer_error_rate": {
+      "min": 0.354167,
+      "max": 0.354167,
+      "mean": 0.354167,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/1/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/1/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/1/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/1/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/1/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair_seed_1_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/1/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/1/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/1/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/1/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/1/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair_seed_1_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/1/final_answer_error_rate": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/1/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/1/non_local_subset_error_rate": {
+      "min": 0.375,
+      "max": 0.375,
+      "mean": 0.375,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/1/low_confidence_error_rate": {
+      "min": 0.4583,
+      "max": 0.4583,
+      "mean": 0.4583,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/1/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze_seed_1_final_answer_error_rate": {
+      "min": 0.354167,
+      "max": 0.354167,
+      "mean": 0.354167,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/1/final_answer_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/1/local_recoverable_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/1/non_local_subset_error_rate": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/1/low_confidence_error_rate": {
+      "min": 0.4167,
+      "max": 0.4167,
+      "mean": 0.4167,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/1/high_confidence_error_rate": {
+      "min": 0.25,
+      "max": 0.25,
+      "mean": 0.25,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair_seed_1_final_answer_error_rate": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/final_answer_error_rate_mean": {
+      "min": 0.3438,
+      "max": 0.3438,
+      "mean": 0.3438,
+      "count": 1
+    },
+    "final_answer_error_rate_mean": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/final_answer_error_rate_std": {
+      "min": 0.0104,
+      "max": 0.0104,
+      "mean": 0.0104,
+      "count": 1
+    },
+    "final_answer_error_rate_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/exact_match_accuracy_mean": {
+      "min": 0.6562,
+      "max": 0.6562,
+      "mean": 0.6562,
+      "count": 1
+    },
+    "exact_match_accuracy_mean": {
+      "min": 0.6667,
+      "max": 0.6667,
+      "mean": 0.6667,
+      "count": 1
+    },
+    "StandardLeftToRightChainOfThought/exact_match_accuracy_std": {
+      "min": 0.0104,
+      "max": 0.0104,
+      "mean": 0.0104,
+      "count": 1
+    },
+    "exact_match_accuracy_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/final_answer_error_rate_mean": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/final_answer_error_rate_std": {
+      "min": 0.0208,
+      "max": 0.0208,
+      "mean": 0.0208,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/exact_match_accuracy_mean": {
+      "min": 0.6458,
+      "max": 0.6458,
+      "mean": 0.6458,
+      "count": 1
+    },
+    "BudgetMatchedSelfConsistencyConsensus/exact_match_accuracy_std": {
+      "min": 0.0208,
+      "max": 0.0208,
+      "mean": 0.0208,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate_mean": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/exact_match_accuracy_mean": {
+      "min": 0.6458,
+      "max": 0.6458,
+      "mean": 0.6458,
+      "count": 1
+    },
+    "AnswerAnchoredBackwardClozeReconstruction/exact_match_accuracy_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate_mean": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/exact_match_accuracy_mean": {
+      "min": 0.6667,
+      "max": 0.6667,
+      "mean": 0.6667,
+      "count": 1
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair/exact_match_accuracy_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/final_answer_error_rate_mean": {
+      "min": 0.3438,
+      "max": 0.3438,
+      "mean": 0.3438,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/final_answer_error_rate_std": {
+      "min": 0.0104,
+      "max": 0.0104,
+      "mean": 0.0104,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/exact_match_accuracy_mean": {
+      "min": 0.6562,
+      "max": 0.6562,
+      "mean": 0.6562,
+      "count": 1
+    },
+    "RandomSpanMaskedRepair/exact_match_accuracy_std": {
+      "min": 0.0104,
+      "max": 0.0104,
+      "mean": 0.0104,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate_mean": {
+      "min": 0.3542,
+      "max": 0.3542,
+      "mean": 0.3542,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/exact_match_accuracy_mean": {
+      "min": 0.6458,
+      "max": 0.6458,
+      "mean": 0.6458,
+      "count": 1
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze/exact_match_accuracy_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/final_answer_error_rate_mean": {
+      "min": 0.3333,
+      "max": 0.3333,
+      "mean": 0.3333,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/final_answer_error_rate_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/exact_match_accuracy_mean": {
+      "min": 0.6667,
+      "max": 0.6667,
+      "mean": 0.6667,
+      "count": 1
+    },
+    "WholeRationaleMaskRepair/exact_match_accuracy_std": {
+      "min": 0.0,
+      "max": 0.0,
+      "mean": 0.0,
+      "count": 1
+    },
+    "primary_metric": {
+      "min": 0.333333,
+      "max": 0.333333,
+      "mean": 0.333333,
+      "count": 1
+    }
+  },
+  "total_runs": 1,
+  "best_run": {
+    "run_id": "iterative-refine-best",
+    "task_id": "sandbox-main",
+    "status": "completed",
+    "metrics": {
+      "examples_total": 48.0,
+      "StandardLeftToRightChainOfThought/0/final_answer_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/final_answer_error_rate": 0.3542,
+      "final_answer_error_rate": 0.3333333333333333,
+      "StandardLeftToRightChainOfThought/0/local_recoverable_subset_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/local_recoverable_subset_error_rate": 0.3333,
+      "local_recoverable_subset_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/0/non_local_subset_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/non_local_subset_error_rate": 0.375,
+      "non_local_subset_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/0/high_confidence_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/high_confidence_error_rate": 0.3542,
+      "high_confidence_error_rate": 0.25,
+      "StandardLeftToRightChainOfThought_seed_0_final_answer_error_rate": 0.3333333333333333,
+      "BudgetMatchedSelfConsistencyConsensus/0/final_answer_error_rate": 0.375,
+      "BudgetMatchedSelfConsistencyConsensus/final_answer_error_rate": 0.3333,
+      "BudgetMatchedSelfConsistencyConsensus/0/local_recoverable_subset_error_rate": 0.5,
+      "BudgetMatchedSelfConsistencyConsensus/local_recoverable_subset_error_rate": 0.375,
+      "BudgetMatchedSelfConsistencyConsensus/0/non_local_subset_error_rate": 0.25,
+      "BudgetMatchedSelfConsistencyConsensus/non_local_subset_error_rate": 0.2917,
+      "BudgetMatchedSelfConsistencyConsensus/0/low_confidence_error_rate": 0.4194,
+      "BudgetMatchedSelfConsistencyConsensus/low_confidence_error_rate": 0.4167,
+      "low_confidence_error_rate": 0.4167,
+      "BudgetMatchedSelfConsistencyConsensus/0/high_confidence_error_rate": 0.2941,
+      "BudgetMatchedSelfConsistencyConsensus/high_confidence_error_rate": 0.25,
+      "BudgetMatchedSelfConsistencyConsensus_seed_0_final_answer_error_rate": 0.375,
+      "AnswerAnchoredBackwardClozeReconstruction/0/final_answer_error_rate": 0.3542,
+      "AnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate": 0.3542,
+      "AnswerAnchoredBackwardClozeReconstruction/0/local_recoverable_subset_error_rate": 0.3333,
+      "AnswerAnchoredBackwardClozeReconstruction/local_recoverable_subset_error_rate": 0.3333,
+      "AnswerAnchoredBackwardClozeReconstruction/0/non_local_subset_error_rate": 0.375,
+      "AnswerAnchoredBackwardClozeReconstruction/non_local_subset_error_rate": 0.375,
+      "AnswerAnchoredBackwardClozeReconstruction/0/low_confidence_error_rate": 0.4167,
+      "AnswerAnchoredBackwardClozeReconstruction/low_confidence_error_rate": 0.4583,
+      "AnswerAnchoredBackwardClozeReconstruction/0/high_confidence_error_rate": 0.2917,
+      "AnswerAnchoredBackwardClozeReconstruction/high_confidence_error_rate": 0.25,
+      "AnswerAnchoredBackwardClozeReconstruction_seed_0_final_answer_error_rate": 0.3541666666666667,
+      "UncertaintyTargetedSelectiveMaskedRepair/0/final_answer_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/0/local_recoverable_subset_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/local_recoverable_subset_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/0/non_local_subset_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/non_local_subset_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/0/low_confidence_error_rate": 0.375,
+      "UncertaintyTargetedSelectiveMaskedRepair/low_confidence_error_rate": 0.4167,
+      "UncertaintyTargetedSelectiveMaskedRepair/0/high_confidence_error_rate": 0.2917,
+      "UncertaintyTargetedSelectiveMaskedRepair/high_confidence_error_rate": 0.25,
+      "UncertaintyTargetedSelectiveMaskedRepair_seed_0_final_answer_error_rate": 0.3333333333333333,
+      "RandomSpanMaskedRepair/0/final_answer_error_rate": 0.3542,
+      "RandomSpanMaskedRepair/final_answer_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/0/local_recoverable_subset_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/local_recoverable_subset_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/0/non_local_subset_error_rate": 0.375,
+      "RandomSpanMaskedRepair/non_local_subset_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/0/low_confidence_error_rate": 0.4167,
+      "RandomSpanMaskedRepair/low_confidence_error_rate": 0.4167,
+      "RandomSpanMaskedRepair/0/high_confidence_error_rate": 0.2917,
+      "RandomSpanMaskedRepair/high_confidence_error_rate": 0.25,
+      "RandomSpanMaskedRepair_seed_0_final_answer_error_rate": 0.3541666666666667,
+      "ForwardOrderClozeInsteadOfBackwardCloze/0/final_answer_error_rate": 0.3542,
+      "ForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate": 0.3542,
+      "ForwardOrderClozeInsteadOfBackwardCloze/0/local_recoverable_subset_error_rate": 0.3333,
+      "ForwardOrderClozeInsteadOfBackwardCloze/local_recoverable_subset_error_rate": 0.3333,
+      "ForwardOrderClozeInsteadOfBackwardCloze/0/non_local_subset_error_rate": 0.375,
+      "ForwardOrderClozeInsteadOfBackwardCloze/non_local_subset_error_rate": 0.375,
+      "ForwardOrderClozeInsteadOfBackwardCloze/0/low_confidence_error_rate": 0.4167,
+      "ForwardOrderClozeInsteadOfBackwardCloze/low_confidence_error_rate": 0.4583,
+      "ForwardOrderClozeInsteadOfBackwardCloze/0/high_confidence_error_rate": 0.2917,
+      "ForwardOrderClozeInsteadOfBackwardCloze/high_confidence_error_rate": 0.25,
+      "ForwardOrderClozeInsteadOfBackwardCloze_seed_0_final_answer_error_rate": 0.3541666666666667,
+      "WholeRationaleMaskRepair/0/final_answer_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/final_answer_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/0/local_recoverable_subset_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/local_recoverable_subset_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/0/non_local_subset_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/non_local_subset_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/0/low_confidence_error_rate": 0.375,
+      "WholeRationaleMaskRepair/low_confidence_error_rate": 0.4167,
+      "WholeRationaleMaskRepair/0/high_confidence_error_rate": 0.2917,
+      "WholeRationaleMaskRepair/high_confidence_error_rate": 0.25,
+      "WholeRationaleMaskRepair_seed_0_final_answer_error_rate": 0.3333333333333333,
+      "StandardLeftToRightChainOfThought/1/final_answer_error_rate": 0.3542,
+      "StandardLeftToRightChainOfThought/1/local_recoverable_subset_error_rate": 0.3333,
+      "StandardLeftToRightChainOfThought/1/non_local_subset_error_rate": 0.375,
+      "StandardLeftToRightChainOfThought/1/high_confidence_error_rate": 0.3542,
+      "StandardLeftToRightChainOfThought_seed_1_final_answer_error_rate": 0.3541666666666667,
+      "BudgetMatchedSelfConsistencyConsensus/1/final_answer_error_rate": 0.3333,
+      "BudgetMatchedSelfConsistencyConsensus/1/local_recoverable_subset_error_rate": 0.375,
+      "BudgetMatchedSelfConsistencyConsensus/1/non_local_subset_error_rate": 0.2917,
+      "BudgetMatchedSelfConsistencyConsensus/1/low_confidence_error_rate": 0.4167,
+      "BudgetMatchedSelfConsistencyConsensus/1/high_confidence_error_rate": 0.25,
+      "BudgetMatchedSelfConsistencyConsensus_seed_1_final_answer_error_rate": 0.3333333333333333,
+      "AnswerAnchoredBackwardClozeReconstruction/1/final_answer_error_rate": 0.3542,
+      "AnswerAnchoredBackwardClozeReconstruction/1/local_recoverable_subset_error_rate": 0.3333,
+      "AnswerAnchoredBackwardClozeReconstruction/1/non_local_subset_error_rate": 0.375,
+      "AnswerAnchoredBackwardClozeReconstruction/1/low_confidence_error_rate": 0.4583,
+      "AnswerAnchoredBackwardClozeReconstruction/1/high_confidence_error_rate": 0.25,
+      "AnswerAnchoredBackwardClozeReconstruction_seed_1_final_answer_error_rate": 0.3541666666666667,
+      "UncertaintyTargetedSelectiveMaskedRepair/1/final_answer_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/1/local_recoverable_subset_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/1/non_local_subset_error_rate": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/1/low_confidence_error_rate": 0.4167,
+      "UncertaintyTargetedSelectiveMaskedRepair/1/high_confidence_error_rate": 0.25,
+      "UncertaintyTargetedSelectiveMaskedRepair_seed_1_final_answer_error_rate": 0.3333333333333333,
+      "RandomSpanMaskedRepair/1/final_answer_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/1/local_recoverable_subset_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/1/non_local_subset_error_rate": 0.3333,
+      "RandomSpanMaskedRepair/1/low_confidence_error_rate": 0.4167,
+      "RandomSpanMaskedRepair/1/high_confidence_error_rate": 0.25,
+      "RandomSpanMaskedRepair_seed_1_final_answer_error_rate": 0.3333333333333333,
+      "ForwardOrderClozeInsteadOfBackwardCloze/1/final_answer_error_rate": 0.3542,
+      "ForwardOrderClozeInsteadOfBackwardCloze/1/local_recoverable_subset_error_rate": 0.3333,
+      "ForwardOrderClozeInsteadOfBackwardCloze/1/non_local_subset_error_rate": 0.375,
+      "ForwardOrderClozeInsteadOfBackwardCloze/1/low_confidence_error_rate": 0.4583,
+      "ForwardOrderClozeInsteadOfBackwardCloze/1/high_confidence_error_rate": 0.25,
+      "ForwardOrderClozeInsteadOfBackwardCloze_seed_1_final_answer_error_rate": 0.3541666666666667,
+      "WholeRationaleMaskRepair/1/final_answer_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/1/local_recoverable_subset_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/1/non_local_subset_error_rate": 0.3333,
+      "WholeRationaleMaskRepair/1/low_confidence_error_rate": 0.4167,
+      "WholeRationaleMaskRepair/1/high_confidence_error_rate": 0.25,
+      "WholeRationaleMaskRepair_seed_1_final_answer_error_rate": 0.3333333333333333,
+      "StandardLeftToRightChainOfThought/final_answer_error_rate_mean": 0.3438,
+      "final_answer_error_rate_mean": 0.3333,
+      "StandardLeftToRightChainOfThought/final_answer_error_rate_std": 0.0104,
+      "final_answer_error_rate_std": 0.0,
+      "StandardLeftToRightChainOfThought/exact_match_accuracy_mean": 0.6562,
+      "exact_match_accuracy_mean": 0.6667,
+      "StandardLeftToRightChainOfThought/exact_match_accuracy_std": 0.0104,
+      "exact_match_accuracy_std": 0.0,
+      "BudgetMatchedSelfConsistencyConsensus/final_answer_error_rate_mean": 0.3542,
+      "BudgetMatchedSelfConsistencyConsensus/final_answer_error_rate_std": 0.0208,
+      "BudgetMatchedSelfConsistencyConsensus/exact_match_accuracy_mean": 0.6458,
+      "BudgetMatchedSelfConsistencyConsensus/exact_match_accuracy_std": 0.0208,
+      "AnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate_mean": 0.3542,
+      "AnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate_std": 0.0,
+      "AnswerAnchoredBackwardClozeReconstruction/exact_match_accuracy_mean": 0.6458,
+      "AnswerAnchoredBackwardClozeReconstruction/exact_match_accuracy_std": 0.0,
+      "UncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate_mean": 0.3333,
+      "UncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate_std": 0.0,
+      "UncertaintyTargetedSelectiveMaskedRepair/exact_match_accuracy_mean": 0.6667,
+      "UncertaintyTargetedSelectiveMaskedRepair/exact_match_accuracy_std": 0.0,
+      "RandomSpanMaskedRepair/final_answer_error_rate_mean": 0.3438,
+      "RandomSpanMaskedRepair/final_answer_error_rate_std": 0.0104,
+      "RandomSpanMaskedRepair/exact_match_accuracy_mean": 0.6562,
+      "RandomSpanMaskedRepair/exact_match_accuracy_std": 0.0104,
+      "ForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate_mean": 0.3542,
+      "ForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate_std": 0.0,
+      "ForwardOrderClozeInsteadOfBackwardCloze/exact_match_accuracy_mean": 0.6458,
+      "ForwardOrderClozeInsteadOfBackwardCloze/exact_match_accuracy_std": 0.0,
+      "WholeRationaleMaskRepair/final_answer_error_rate_mean": 0.3333,
+      "WholeRationaleMaskRepair/final_answer_error_rate_std": 0.0,
+      "WholeRationaleMaskRepair/exact_match_accuracy_mean": 0.6667,
+      "WholeRationaleMaskRepair/exact_match_accuracy_std": 0.0,
+      "primary_metric": 0.3333333333333333
+    },
+    "elapsed_sec": 5.32409534486942,
+    "stdout": "",
+    "stderr": "",
+    "timed_out": false,
+    "condition_count": 125
+  },
+  "latex_table": "\\begin{table}[h]\n\\centering\n\\caption{Experiment Results (Best Refinement Iteration)}\n\\begin{tabular}{lrrrr}\n\\hline\nMetric & Min & Max & Mean & N \\\\\n\\hline\nAnswerAnchoredBackwardClozeReconstruction/0/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/0/high_confidence_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/0/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/0/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/0/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/1/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/1/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/1/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/1/low_confidence_error_rate & 0.4583 & 0.4583 & 0.4583 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/1/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/exact_match_accuracy_mean & 0.6458 & 0.6458 & 0.6458 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/exact_match_accuracy_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate_mean & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/final_answer_error_rate_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/low_confidence_error_rate & 0.4583 & 0.4583 & 0.4583 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction_seed_0_final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nAnswerAnchoredBackwardClozeReconstruction_seed_1_final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/0/final_answer_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/0/high_confidence_error_rate & 0.2941 & 0.2941 & 0.2941 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/0/local_recoverable_subset_error_rate & 0.5000 & 0.5000 & 0.5000 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/0/low_confidence_error_rate & 0.4194 & 0.4194 & 0.4194 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/0/non_local_subset_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/1/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/1/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/1/local_recoverable_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/1/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/1/non_local_subset_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/exact_match_accuracy_mean & 0.6458 & 0.6458 & 0.6458 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/exact_match_accuracy_std & 0.0208 & 0.0208 & 0.0208 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/final_answer_error_rate_mean & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/final_answer_error_rate_std & 0.0208 & 0.0208 & 0.0208 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/local_recoverable_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus/non_local_subset_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus_seed_0_final_answer_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nBudgetMatchedSelfConsistencyConsensus_seed_1_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/0/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/0/high_confidence_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/0/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/0/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/0/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/1/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/1/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/1/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/1/low_confidence_error_rate & 0.4583 & 0.4583 & 0.4583 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/1/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/exact_match_accuracy_mean & 0.6458 & 0.6458 & 0.6458 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/exact_match_accuracy_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate_mean & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/final_answer_error_rate_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/low_confidence_error_rate & 0.4583 & 0.4583 & 0.4583 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze_seed_0_final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nForwardOrderClozeInsteadOfBackwardCloze_seed_1_final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nRandomSpanMaskedRepair/0/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nRandomSpanMaskedRepair/0/high_confidence_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nRandomSpanMaskedRepair/0/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair/0/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nRandomSpanMaskedRepair/0/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nRandomSpanMaskedRepair/1/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair/1/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nRandomSpanMaskedRepair/1/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair/1/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nRandomSpanMaskedRepair/1/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair/exact_match_accuracy_mean & 0.6562 & 0.6562 & 0.6562 & 1 \\\\\nRandomSpanMaskedRepair/exact_match_accuracy_std & 0.0104 & 0.0104 & 0.0104 & 1 \\\\\nRandomSpanMaskedRepair/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair/final_answer_error_rate_mean & 0.3438 & 0.3438 & 0.3438 & 1 \\\\\nRandomSpanMaskedRepair/final_answer_error_rate_std & 0.0104 & 0.0104 & 0.0104 & 1 \\\\\nRandomSpanMaskedRepair/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nRandomSpanMaskedRepair/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nRandomSpanMaskedRepair/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nRandomSpanMaskedRepair_seed_0_final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nRandomSpanMaskedRepair_seed_1_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/0/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/0/high_confidence_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/0/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/0/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/1/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nStandardLeftToRightChainOfThought/1/high_confidence_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nStandardLeftToRightChainOfThought/1/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/1/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nStandardLeftToRightChainOfThought/exact_match_accuracy_mean & 0.6562 & 0.6562 & 0.6562 & 1 \\\\\nStandardLeftToRightChainOfThought/exact_match_accuracy_std & 0.0104 & 0.0104 & 0.0104 & 1 \\\\\nStandardLeftToRightChainOfThought/final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nStandardLeftToRightChainOfThought/final_answer_error_rate_mean & 0.3438 & 0.3438 & 0.3438 & 1 \\\\\nStandardLeftToRightChainOfThought/final_answer_error_rate_std & 0.0104 & 0.0104 & 0.0104 & 1 \\\\\nStandardLeftToRightChainOfThought/high_confidence_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nStandardLeftToRightChainOfThought/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought/non_local_subset_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nStandardLeftToRightChainOfThought_seed_0_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nStandardLeftToRightChainOfThought_seed_1_final_answer_error_rate & 0.3542 & 0.3542 & 0.3542 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/0/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/0/high_confidence_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/0/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/0/low_confidence_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/0/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/1/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/1/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/1/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/1/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/1/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/exact_match_accuracy_mean & 0.6667 & 0.6667 & 0.6667 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/exact_match_accuracy_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate_mean & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/final_answer_error_rate_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair_seed_0_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nUncertaintyTargetedSelectiveMaskedRepair_seed_1_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/0/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/0/high_confidence_error_rate & 0.2917 & 0.2917 & 0.2917 & 1 \\\\\nWholeRationaleMaskRepair/0/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/0/low_confidence_error_rate & 0.3750 & 0.3750 & 0.3750 & 1 \\\\\nWholeRationaleMaskRepair/0/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/1/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/1/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nWholeRationaleMaskRepair/1/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/1/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nWholeRationaleMaskRepair/1/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/exact_match_accuracy_mean & 0.6667 & 0.6667 & 0.6667 & 1 \\\\\nWholeRationaleMaskRepair/exact_match_accuracy_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nWholeRationaleMaskRepair/final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/final_answer_error_rate_mean & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/final_answer_error_rate_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nWholeRationaleMaskRepair/high_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nWholeRationaleMaskRepair/local_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair/low_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nWholeRationaleMaskRepair/non_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair_seed_0_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nWholeRationaleMaskRepair_seed_1_final_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nexact_match_accuracy_mean & 0.6667 & 0.6667 & 0.6667 & 1 \\\\\nexact_match_accuracy_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nexamples_total & 48.0000 & 48.0000 & 48.0000 & 1 \\\\\nfinal_answer_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nfinal_answer_error_rate_mean & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nfinal_answer_error_rate_std & 0.0000 & 0.0000 & 0.0000 & 1 \\\\\nhigh_confidence_error_rate & 0.2500 & 0.2500 & 0.2500 & 1 \\\\\nlocal_recoverable_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nlow_confidence_error_rate & 0.4167 & 0.4167 & 0.4167 & 1 \\\\\nnon_local_subset_error_rate & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\nprimary_metric & 0.3333 & 0.3333 & 0.3333 & 1 \\\\\n\\hline\n\\end{tabular}\n\\end{table}",
+  "generated": "2026-03-25T10:31:33+00:00",
+  "ablation_warnings": [
+    "ABLATION FAILURE: Conditions 'AnswerAnchoredBackwardClozeReconstruction' and 'ForwardOrderClozeInsteadOfBackwardCloze' produce identical outputs across all 9 metrics. The ablation is invalid \u2014 the differentiating parameter is likely not used in the code.",
+    "ABLATION FAILURE: Conditions 'UncertaintyTargetedSelectiveMaskedRepair' and 'WholeRationaleMaskRepair' produce identical outputs across all 9 metrics. The ablation is invalid \u2014 the differentiating parameter is likely not used in the code."
+  ],
+  "condition_summaries": {
+    "StandardLeftToRightChainOfThought": {
+      "metrics": {
+        "final_answer_error_rate": 0.3542,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.375,
+        "high_confidence_error_rate": 0.3542,
+        "final_answer_error_rate_mean": 0.3438,
+        "final_answer_error_rate_std": 0.0104,
+        "exact_match_accuracy_mean": 0.6562,
+        "exact_match_accuracy_std": 0.0104
+      }
+    },
+    "BudgetMatchedSelfConsistencyConsensus": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.375,
+        "non_local_subset_error_rate": 0.2917,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3542,
+        "final_answer_error_rate_std": 0.0208,
+        "exact_match_accuracy_mean": 0.6458,
+        "exact_match_accuracy_std": 0.0208
+      }
+    },
+    "AnswerAnchoredBackwardClozeReconstruction": {
+      "metrics": {
+        "final_answer_error_rate": 0.3542,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.375,
+        "low_confidence_error_rate": 0.4583,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3542,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6458,
+        "exact_match_accuracy_std": 0.0
+      }
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.3333,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3333,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6667,
+        "exact_match_accuracy_std": 0.0
+      }
+    },
+    "RandomSpanMaskedRepair": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.3333,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3438,
+        "final_answer_error_rate_std": 0.0104,
+        "exact_match_accuracy_mean": 0.6562,
+        "exact_match_accuracy_std": 0.0104
+      }
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze": {
+      "metrics": {
+        "final_answer_error_rate": 0.3542,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.375,
+        "low_confidence_error_rate": 0.4583,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3542,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6458,
+        "exact_match_accuracy_std": 0.0
+      }
+    },
+    "WholeRationaleMaskRepair": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.3333,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3333,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6667,
+        "exact_match_accuracy_std": 0.0
+      }
+    }
+  },
+  "condition_metrics": {
+    "StandardLeftToRightChainOfThought": {
+      "metrics": {
+        "final_answer_error_rate": 0.3542,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.375,
+        "high_confidence_error_rate": 0.3542,
+        "final_answer_error_rate_mean": 0.3438,
+        "final_answer_error_rate_std": 0.0104,
+        "exact_match_accuracy_mean": 0.6562,
+        "exact_match_accuracy_std": 0.0104
+      }
+    },
+    "BudgetMatchedSelfConsistencyConsensus": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.375,
+        "non_local_subset_error_rate": 0.2917,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3542,
+        "final_answer_error_rate_std": 0.0208,
+        "exact_match_accuracy_mean": 0.6458,
+        "exact_match_accuracy_std": 0.0208
+      }
+    },
+    "AnswerAnchoredBackwardClozeReconstruction": {
+      "metrics": {
+        "final_answer_error_rate": 0.3542,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.375,
+        "low_confidence_error_rate": 0.4583,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3542,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6458,
+        "exact_match_accuracy_std": 0.0
+      }
+    },
+    "UncertaintyTargetedSelectiveMaskedRepair": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.3333,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3333,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6667,
+        "exact_match_accuracy_std": 0.0
+      }
+    },
+    "RandomSpanMaskedRepair": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.3333,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3438,
+        "final_answer_error_rate_std": 0.0104,
+        "exact_match_accuracy_mean": 0.6562,
+        "exact_match_accuracy_std": 0.0104
+      }
+    },
+    "ForwardOrderClozeInsteadOfBackwardCloze": {
+      "metrics": {
+        "final_answer_error_rate": 0.3542,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.375,
+        "low_confidence_error_rate": 0.4583,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3542,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6458,
+        "exact_match_accuracy_std": 0.0
+      }
+    },
+    "WholeRationaleMaskRepair": {
+      "metrics": {
+        "final_answer_error_rate": 0.3333,
+        "local_recoverable_subset_error_rate": 0.3333,
+        "non_local_subset_error_rate": 0.3333,
+        "low_confidence_error_rate": 0.4167,
+        "high_confidence_error_rate": 0.25,
+        "final_answer_error_rate_mean": 0.3333,
+        "final_answer_error_rate_std": 0.0,
+        "exact_match_accuracy_mean": 0.6667,
+        "exact_match_accuracy_std": 0.0
+      }
+    }
+  },
+  "total_conditions": 7,
+  "total_metric_keys": 155
+}

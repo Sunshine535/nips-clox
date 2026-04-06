@@ -1,0 +1,1619 @@
+{
+  "summary": {
+    "benchmark": "arc_challenge",
+    "n_examples": 200,
+    "r_bar_mean": 0.493359491522234,
+    "r_bar_std": 0.08105470423088934,
+    "r_bar_median": 0.4766852634898391,
+    "epl_mean": 1.508030303030303,
+    "epl_std": 0.7670330750965118,
+    "epl_median": 1.3333333333333335,
+    "strategy_distribution": {
+      "targeted_repair": 8,
+      "adaptive": 179,
+      "standard_cot": 13
+    }
+  },
+  "per_example": [
+    {
+      "example_id": "arc_0",
+      "difficulty": "hard",
+      "r_bar": 0.4219801279341775,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_1",
+      "difficulty": "hard",
+      "r_bar": 0.48522769805296817,
+      "epl": 1.2,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_2",
+      "difficulty": "hard",
+      "r_bar": 0.46035511923139416,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_3",
+      "difficulty": "hard",
+      "r_bar": 0.43576262970260077,
+      "epl": 1.1666666666666667,
+      "n_steps": 14.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_4",
+      "difficulty": "hard",
+      "r_bar": 0.4145964388021382,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_5",
+      "difficulty": "hard",
+      "r_bar": 0.45593173557443706,
+      "epl": 1.2,
+      "n_steps": 13.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_6",
+      "difficulty": "hard",
+      "r_bar": 0.4765446722664312,
+      "epl": 1.2,
+      "n_steps": 23.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_7",
+      "difficulty": "hard",
+      "r_bar": 0.40256353744449186,
+      "epl": 1.8666666666666665,
+      "n_steps": 14.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_8",
+      "difficulty": "hard",
+      "r_bar": 0.38360323811248076,
+      "epl": 2.4,
+      "n_steps": 16.6,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_9",
+      "difficulty": "hard",
+      "r_bar": 0.5780631766869726,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_10",
+      "difficulty": "hard",
+      "r_bar": 0.49010940197465097,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_11",
+      "difficulty": "hard",
+      "r_bar": 0.4086013677919933,
+      "epl": 2.3333333333333335,
+      "n_steps": 14.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_12",
+      "difficulty": "hard",
+      "r_bar": 0.5837511721548226,
+      "epl": 1.5,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_13",
+      "difficulty": "hard",
+      "r_bar": 0.44561139359346036,
+      "epl": 2.1333333333333333,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_14",
+      "difficulty": "hard",
+      "r_bar": 0.5328968066326546,
+      "epl": 1.4,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_15",
+      "difficulty": "hard",
+      "r_bar": 0.704633870375289,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_16",
+      "difficulty": "hard",
+      "r_bar": 0.4002582881993506,
+      "epl": 1.2,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_17",
+      "difficulty": "hard",
+      "r_bar": 0.47197462406162294,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_18",
+      "difficulty": "hard",
+      "r_bar": 0.4097546592093509,
+      "epl": 1.2,
+      "n_steps": 9.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_19",
+      "difficulty": "hard",
+      "r_bar": 0.46274737028845747,
+      "epl": 1.6333333333333333,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_20",
+      "difficulty": "hard",
+      "r_bar": 0.6509160043296487,
+      "epl": 1.4,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_21",
+      "difficulty": "hard",
+      "r_bar": 0.4287510218950775,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_22",
+      "difficulty": "hard",
+      "r_bar": 0.4960474604625756,
+      "epl": 1.5,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_23",
+      "difficulty": "hard",
+      "r_bar": 0.39894684080170034,
+      "epl": 1.3333333333333335,
+      "n_steps": 9.4,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_24",
+      "difficulty": "hard",
+      "r_bar": 0.5097184363308317,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_25",
+      "difficulty": "hard",
+      "r_bar": 0.5555715925255775,
+      "epl": 1.4,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_26",
+      "difficulty": "hard",
+      "r_bar": 0.4033308657478335,
+      "epl": 1.3333333333333335,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_27",
+      "difficulty": "hard",
+      "r_bar": 0.4472443235738876,
+      "epl": 1.3333333333333335,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_28",
+      "difficulty": "hard",
+      "r_bar": 0.49106455298201723,
+      "epl": 1.4,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_29",
+      "difficulty": "hard",
+      "r_bar": 0.457503162802376,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_30",
+      "difficulty": "hard",
+      "r_bar": 0.506604011264174,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_31",
+      "difficulty": "hard",
+      "r_bar": 0.4799120713341092,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_32",
+      "difficulty": "hard",
+      "r_bar": 0.5417782253360314,
+      "epl": 1.6,
+      "n_steps": 19.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_33",
+      "difficulty": "hard",
+      "r_bar": 0.5566644772597025,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_34",
+      "difficulty": "hard",
+      "r_bar": 0.4086318599636287,
+      "epl": 1.3333333333333335,
+      "n_steps": 14.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_35",
+      "difficulty": "hard",
+      "r_bar": 0.40845480970384407,
+      "epl": 1.2,
+      "n_steps": 13.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_36",
+      "difficulty": "hard",
+      "r_bar": 0.48846255356941554,
+      "epl": 2.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_37",
+      "difficulty": "hard",
+      "r_bar": 0.5014430583694582,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_38",
+      "difficulty": "hard",
+      "r_bar": 0.5891840701240925,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_39",
+      "difficulty": "hard",
+      "r_bar": 0.538100586808079,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_40",
+      "difficulty": "hard",
+      "r_bar": 0.5283147240436709,
+      "epl": 1.0,
+      "n_steps": 14.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_41",
+      "difficulty": "hard",
+      "r_bar": 0.46926726575076766,
+      "epl": 3.9,
+      "n_steps": 20.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_42",
+      "difficulty": "hard",
+      "r_bar": 0.48397066054920174,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_43",
+      "difficulty": "hard",
+      "r_bar": 0.49911393552483696,
+      "epl": 1.3333333333333335,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_44",
+      "difficulty": "hard",
+      "r_bar": 0.6538449773449508,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_45",
+      "difficulty": "hard",
+      "r_bar": 0.4307551291589731,
+      "epl": 1.6,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_46",
+      "difficulty": "hard",
+      "r_bar": 0.4493386981221024,
+      "epl": 1.3333333333333335,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_47",
+      "difficulty": "hard",
+      "r_bar": 0.6372598555338895,
+      "epl": 1.4,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_48",
+      "difficulty": "hard",
+      "r_bar": 0.4094367234651147,
+      "epl": 2.4,
+      "n_steps": 17.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_49",
+      "difficulty": "hard",
+      "r_bar": 0.3930722119510307,
+      "epl": 1.6666666666666667,
+      "n_steps": 13.8,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_50",
+      "difficulty": "hard",
+      "r_bar": 0.5159149311151271,
+      "epl": 1.4,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_51",
+      "difficulty": "hard",
+      "r_bar": 0.42964526994434116,
+      "epl": 1.5,
+      "n_steps": 14.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_52",
+      "difficulty": "hard",
+      "r_bar": 0.5193231827417872,
+      "epl": 2.1333333333333333,
+      "n_steps": 11.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_53",
+      "difficulty": "hard",
+      "r_bar": 0.46794528475238123,
+      "epl": 5.6000000000000005,
+      "n_steps": 23.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_54",
+      "difficulty": "hard",
+      "r_bar": 0.3976569489511487,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_55",
+      "difficulty": "hard",
+      "r_bar": 0.4246126306344893,
+      "epl": 2.1333333333333333,
+      "n_steps": 23.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_56",
+      "difficulty": "hard",
+      "r_bar": 0.39090965417512646,
+      "epl": 1.6666666666666667,
+      "n_steps": 16.6,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_57",
+      "difficulty": "hard",
+      "r_bar": 0.5574744232283539,
+      "epl": 1.4,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_58",
+      "difficulty": "hard",
+      "r_bar": 0.47572152252125005,
+      "epl": 1.0,
+      "n_steps": 16.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_59",
+      "difficulty": "hard",
+      "r_bar": 0.49067737009285856,
+      "epl": 1.3333333333333333,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_60",
+      "difficulty": "hard",
+      "r_bar": 0.443172775680522,
+      "epl": 1.2,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_61",
+      "difficulty": "hard",
+      "r_bar": 0.5296926596575973,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_62",
+      "difficulty": "hard",
+      "r_bar": 0.8051168654744223,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_63",
+      "difficulty": "hard",
+      "r_bar": 0.5341945900129279,
+      "epl": 1.0666666666666667,
+      "n_steps": 10.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_64",
+      "difficulty": "hard",
+      "r_bar": 0.4310368717603339,
+      "epl": 2.1,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_65",
+      "difficulty": "hard",
+      "r_bar": 0.5436260296631202,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_66",
+      "difficulty": "hard",
+      "r_bar": 0.557927731523412,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_67",
+      "difficulty": "hard",
+      "r_bar": 0.4635462543799872,
+      "epl": 1.6666666666666667,
+      "n_steps": 13.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_68",
+      "difficulty": "hard",
+      "r_bar": 0.4375141675108036,
+      "epl": 1.0666666666666667,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_69",
+      "difficulty": "hard",
+      "r_bar": 0.439652647689268,
+      "epl": 1.5,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_70",
+      "difficulty": "hard",
+      "r_bar": 0.4184141089544317,
+      "epl": 1.6,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_71",
+      "difficulty": "hard",
+      "r_bar": 0.4412402878073723,
+      "epl": 3.966666666666667,
+      "n_steps": 25.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_72",
+      "difficulty": "hard",
+      "r_bar": 0.4834985181111591,
+      "epl": 1.2,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_73",
+      "difficulty": "hard",
+      "r_bar": 0.5173783345489951,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_74",
+      "difficulty": "hard",
+      "r_bar": 0.5806957189908408,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_75",
+      "difficulty": "hard",
+      "r_bar": 0.49797709977282806,
+      "epl": 2.0,
+      "n_steps": 10.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_76",
+      "difficulty": "hard",
+      "r_bar": 0.5673063508783212,
+      "epl": 1.0666666666666667,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_77",
+      "difficulty": "hard",
+      "r_bar": 0.44729949054395945,
+      "epl": 2.0,
+      "n_steps": 12.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_78",
+      "difficulty": "hard",
+      "r_bar": 0.41691528704213676,
+      "epl": 1.1666666666666667,
+      "n_steps": 9.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_79",
+      "difficulty": "hard",
+      "r_bar": 0.36746978977783357,
+      "epl": 6.6,
+      "n_steps": 28.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_80",
+      "difficulty": "hard",
+      "r_bar": 0.5415655457860855,
+      "epl": 2.0,
+      "n_steps": 22.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_81",
+      "difficulty": "hard",
+      "r_bar": 0.4928468335409229,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_82",
+      "difficulty": "hard",
+      "r_bar": 0.5047849736682961,
+      "epl": 1.2,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_83",
+      "difficulty": "hard",
+      "r_bar": 0.5554689497101482,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_84",
+      "difficulty": "hard",
+      "r_bar": 0.589295372076544,
+      "epl": 2.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_85",
+      "difficulty": "hard",
+      "r_bar": 0.5911884203882716,
+      "epl": 1.6,
+      "n_steps": 11.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_86",
+      "difficulty": "hard",
+      "r_bar": 0.46851579416315914,
+      "epl": 1.8,
+      "n_steps": 9.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_87",
+      "difficulty": "hard",
+      "r_bar": 0.48979298934824805,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_88",
+      "difficulty": "hard",
+      "r_bar": 0.8077930598951072,
+      "epl": 1.5999999999999999,
+      "n_steps": 8.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_89",
+      "difficulty": "hard",
+      "r_bar": 0.4353893007671206,
+      "epl": 1.0666666666666667,
+      "n_steps": 13.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_90",
+      "difficulty": "hard",
+      "r_bar": 0.45929597555404095,
+      "epl": 1.0666666666666667,
+      "n_steps": 11.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_91",
+      "difficulty": "hard",
+      "r_bar": 0.49408778862722136,
+      "epl": 1.5,
+      "n_steps": 20.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_92",
+      "difficulty": "hard",
+      "r_bar": 0.4662540587682423,
+      "epl": 1.2,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_93",
+      "difficulty": "hard",
+      "r_bar": 0.47565998374935736,
+      "epl": 1.2,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_94",
+      "difficulty": "hard",
+      "r_bar": 0.6279702193953075,
+      "epl": 1.3333333333333335,
+      "n_steps": 11.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_95",
+      "difficulty": "hard",
+      "r_bar": 0.5080898096662189,
+      "epl": 1.2,
+      "n_steps": 17.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_96",
+      "difficulty": "hard",
+      "r_bar": 0.4477017083269345,
+      "epl": 1.2,
+      "n_steps": 14.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_97",
+      "difficulty": "hard",
+      "r_bar": 0.5478083890794292,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_98",
+      "difficulty": "hard",
+      "r_bar": 0.5064431100571999,
+      "epl": 2.6666666666666665,
+      "n_steps": 29.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_99",
+      "difficulty": "hard",
+      "r_bar": 0.5404304474209863,
+      "epl": 1.4,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_100",
+      "difficulty": "hard",
+      "r_bar": 0.4138788793895774,
+      "epl": 1.4,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_101",
+      "difficulty": "hard",
+      "r_bar": 0.4521932071372188,
+      "epl": 1.0,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_102",
+      "difficulty": "hard",
+      "r_bar": 0.4987168780715901,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_103",
+      "difficulty": "hard",
+      "r_bar": 0.4392479238809172,
+      "epl": 1.0666666666666667,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_104",
+      "difficulty": "hard",
+      "r_bar": 0.42130234617636586,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_105",
+      "difficulty": "hard",
+      "r_bar": 0.5196917816540318,
+      "epl": 1.1666666666666667,
+      "n_steps": 11.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_106",
+      "difficulty": "hard",
+      "r_bar": 0.45186922720262546,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_107",
+      "difficulty": "hard",
+      "r_bar": 0.5979831243955521,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_108",
+      "difficulty": "hard",
+      "r_bar": 0.5552898044251674,
+      "epl": 1.0666666666666667,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_109",
+      "difficulty": "hard",
+      "r_bar": 0.5093615786053333,
+      "epl": 5.333333333333334,
+      "n_steps": 21.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_110",
+      "difficulty": "hard",
+      "r_bar": 0.39859613353056633,
+      "epl": 1.4,
+      "n_steps": 14.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_111",
+      "difficulty": "hard",
+      "r_bar": 0.5508485058313544,
+      "epl": 1.0666666666666667,
+      "n_steps": 17.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_112",
+      "difficulty": "hard",
+      "r_bar": 0.44012452857658957,
+      "epl": 1.2,
+      "n_steps": 10.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_113",
+      "difficulty": "hard",
+      "r_bar": 0.4702686536625682,
+      "epl": 1.2,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_114",
+      "difficulty": "hard",
+      "r_bar": 0.4735083350716649,
+      "epl": 1.0666666666666667,
+      "n_steps": 7.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_115",
+      "difficulty": "hard",
+      "r_bar": 0.4725037769359701,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_116",
+      "difficulty": "hard",
+      "r_bar": 0.44690480096161944,
+      "epl": 1.2,
+      "n_steps": 15.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_117",
+      "difficulty": "hard",
+      "r_bar": 0.4751563263909493,
+      "epl": 1.1666666666666667,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_118",
+      "difficulty": "hard",
+      "r_bar": 0.8637861225694446,
+      "epl": 2.266666666666667,
+      "n_steps": 11.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_119",
+      "difficulty": "hard",
+      "r_bar": 0.43538810646636344,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_120",
+      "difficulty": "hard",
+      "r_bar": 0.48268878729077763,
+      "epl": 1.2,
+      "n_steps": 9.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_121",
+      "difficulty": "hard",
+      "r_bar": 0.5985232634731104,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_122",
+      "difficulty": "hard",
+      "r_bar": 0.623187970657077,
+      "epl": 1.2,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_123",
+      "difficulty": "hard",
+      "r_bar": 0.44690411826222504,
+      "epl": 2.1,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_124",
+      "difficulty": "hard",
+      "r_bar": 0.4378758622253428,
+      "epl": 1.6,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_125",
+      "difficulty": "hard",
+      "r_bar": 0.5281502669226281,
+      "epl": 1.5,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_126",
+      "difficulty": "hard",
+      "r_bar": 0.44252342088363517,
+      "epl": 2.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_127",
+      "difficulty": "hard",
+      "r_bar": 0.5352787020649314,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_128",
+      "difficulty": "hard",
+      "r_bar": 0.4833735141986517,
+      "epl": 1.3333333333333335,
+      "n_steps": 8.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_129",
+      "difficulty": "hard",
+      "r_bar": 0.41019199493923636,
+      "epl": 1.3333333333333333,
+      "n_steps": 22.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_130",
+      "difficulty": "hard",
+      "r_bar": 0.45139625558959073,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_131",
+      "difficulty": "hard",
+      "r_bar": 0.4252714649018574,
+      "epl": 1.2,
+      "n_steps": 18.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_132",
+      "difficulty": "hard",
+      "r_bar": 0.5862792565808835,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_133",
+      "difficulty": "hard",
+      "r_bar": 0.4878292619341075,
+      "epl": 1.2,
+      "n_steps": 17.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_134",
+      "difficulty": "hard",
+      "r_bar": 0.5240518403500014,
+      "epl": 1.3333333333333335,
+      "n_steps": 22.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_135",
+      "difficulty": "hard",
+      "r_bar": 0.45542881238806715,
+      "epl": 1.8,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_136",
+      "difficulty": "hard",
+      "r_bar": 0.5726013963978174,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_137",
+      "difficulty": "hard",
+      "r_bar": 0.4385195298804274,
+      "epl": 1.2,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_138",
+      "difficulty": "hard",
+      "r_bar": 0.5469429044587273,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_139",
+      "difficulty": "hard",
+      "r_bar": 0.44264054615584797,
+      "epl": 1.3333333333333333,
+      "n_steps": 14.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_140",
+      "difficulty": "hard",
+      "r_bar": 0.6352248984286231,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_141",
+      "difficulty": "hard",
+      "r_bar": 0.6035501828964001,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_142",
+      "difficulty": "hard",
+      "r_bar": 0.5973558175952421,
+      "epl": 5.972727272727272,
+      "n_steps": 29.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_143",
+      "difficulty": "hard",
+      "r_bar": 0.4451693730654255,
+      "epl": 1.3333333333333335,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_144",
+      "difficulty": "hard",
+      "r_bar": 0.452950362753601,
+      "epl": 1.6666666666666667,
+      "n_steps": 17.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_145",
+      "difficulty": "hard",
+      "r_bar": 0.3595107283470997,
+      "epl": 1.8,
+      "n_steps": 14.6,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_146",
+      "difficulty": "hard",
+      "r_bar": 0.43769408003169474,
+      "epl": 1.5,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_147",
+      "difficulty": "hard",
+      "r_bar": 0.5451934761923412,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_148",
+      "difficulty": "hard",
+      "r_bar": 0.5312959913228553,
+      "epl": 1.2,
+      "n_steps": 7.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_149",
+      "difficulty": "hard",
+      "r_bar": 0.5472800547382407,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_150",
+      "difficulty": "hard",
+      "r_bar": 0.45040265564692017,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_151",
+      "difficulty": "hard",
+      "r_bar": 0.6364861243367902,
+      "epl": 1.6333333333333333,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_152",
+      "difficulty": "hard",
+      "r_bar": 0.4743450249889352,
+      "epl": 1.0666666666666667,
+      "n_steps": 13.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_153",
+      "difficulty": "hard",
+      "r_bar": 0.5234034230139241,
+      "epl": 2.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_154",
+      "difficulty": "hard",
+      "r_bar": 0.4421499711818605,
+      "epl": 1.6,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_155",
+      "difficulty": "hard",
+      "r_bar": 0.4361441039716094,
+      "epl": 1.3333333333333333,
+      "n_steps": 12.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_156",
+      "difficulty": "hard",
+      "r_bar": 0.5462112022779034,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_157",
+      "difficulty": "hard",
+      "r_bar": 0.47840646360452505,
+      "epl": 1.2,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_158",
+      "difficulty": "hard",
+      "r_bar": 0.6396053532682918,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_159",
+      "difficulty": "hard",
+      "r_bar": 0.4424476940971182,
+      "epl": 1.0,
+      "n_steps": 17.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_160",
+      "difficulty": "hard",
+      "r_bar": 0.4336305336622336,
+      "epl": 1.3333333333333335,
+      "n_steps": 18.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_161",
+      "difficulty": "hard",
+      "r_bar": 0.45764573250111173,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_162",
+      "difficulty": "hard",
+      "r_bar": 0.37127304347762263,
+      "epl": 1.8,
+      "n_steps": 16.8,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_163",
+      "difficulty": "hard",
+      "r_bar": 0.45110758802390727,
+      "epl": 1.8666666666666665,
+      "n_steps": 7.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_164",
+      "difficulty": "hard",
+      "r_bar": 0.606867235725591,
+      "epl": 1.3333333333333335,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_165",
+      "difficulty": "hard",
+      "r_bar": 0.6535646449133969,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_166",
+      "difficulty": "hard",
+      "r_bar": 0.4924189304238711,
+      "epl": 1.3333333333333333,
+      "n_steps": 23.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_167",
+      "difficulty": "hard",
+      "r_bar": 0.43499997554294534,
+      "epl": 1.6666666666666667,
+      "n_steps": 20.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_168",
+      "difficulty": "hard",
+      "r_bar": 0.4567078017039774,
+      "epl": 1.3333333333333335,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_169",
+      "difficulty": "hard",
+      "r_bar": 0.5739714722156741,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_170",
+      "difficulty": "hard",
+      "r_bar": 0.48373391907516955,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_171",
+      "difficulty": "hard",
+      "r_bar": 0.44277435144599736,
+      "epl": 1.6333333333333333,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_172",
+      "difficulty": "hard",
+      "r_bar": 0.4796470880057604,
+      "epl": 1.3333333333333333,
+      "n_steps": 10.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_173",
+      "difficulty": "hard",
+      "r_bar": 0.47682585471324695,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_174",
+      "difficulty": "hard",
+      "r_bar": 0.5174745679969163,
+      "epl": 1.6,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_175",
+      "difficulty": "hard",
+      "r_bar": 0.5174223783680723,
+      "epl": 1.3333333333333333,
+      "n_steps": 12.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_176",
+      "difficulty": "hard",
+      "r_bar": 0.4241323238632569,
+      "epl": 1.0,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_177",
+      "difficulty": "hard",
+      "r_bar": 0.6036380731367698,
+      "epl": 1.0,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_178",
+      "difficulty": "hard",
+      "r_bar": 0.5925387491996386,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_179",
+      "difficulty": "hard",
+      "r_bar": 0.35177997213845386,
+      "epl": 1.5,
+      "n_steps": 8.8,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_180",
+      "difficulty": "hard",
+      "r_bar": 0.48183448458500977,
+      "epl": 1.5,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_181",
+      "difficulty": "hard",
+      "r_bar": 0.4406622071331487,
+      "epl": 1.3333333333333333,
+      "n_steps": 14.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_182",
+      "difficulty": "hard",
+      "r_bar": 0.4029177148105491,
+      "epl": 1.2,
+      "n_steps": 15.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_183",
+      "difficulty": "hard",
+      "r_bar": 0.499006344815733,
+      "epl": 1.8,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_184",
+      "difficulty": "hard",
+      "r_bar": 0.4091906380961536,
+      "epl": 1.5,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_185",
+      "difficulty": "hard",
+      "r_bar": 0.47330351719549796,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_186",
+      "difficulty": "hard",
+      "r_bar": 0.4423625017733235,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_187",
+      "difficulty": "hard",
+      "r_bar": 0.397711557180579,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_188",
+      "difficulty": "hard",
+      "r_bar": 0.7743843643323504,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "arc_189",
+      "difficulty": "hard",
+      "r_bar": 0.488844225938994,
+      "epl": 1.5,
+      "n_steps": 10.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_190",
+      "difficulty": "hard",
+      "r_bar": 0.3699959974745999,
+      "epl": 1.3333333333333333,
+      "n_steps": 12.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_191",
+      "difficulty": "hard",
+      "r_bar": 0.5545863460029573,
+      "epl": 1.3333333333333335,
+      "n_steps": 13.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_192",
+      "difficulty": "hard",
+      "r_bar": 0.4414101459460098,
+      "epl": 1.0666666666666667,
+      "n_steps": 8.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_193",
+      "difficulty": "hard",
+      "r_bar": 0.4566674847252908,
+      "epl": 1.2,
+      "n_steps": 9.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_194",
+      "difficulty": "hard",
+      "r_bar": 0.4315533367870013,
+      "epl": 1.2,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_195",
+      "difficulty": "hard",
+      "r_bar": 0.5024001330264913,
+      "epl": 3.6666666666666665,
+      "n_steps": 11.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_196",
+      "difficulty": "hard",
+      "r_bar": 0.3911368656904027,
+      "epl": 2.0,
+      "n_steps": 10.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "arc_197",
+      "difficulty": "hard",
+      "r_bar": 0.4685286298814324,
+      "epl": 1.2,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_198",
+      "difficulty": "hard",
+      "r_bar": 0.4794580531569189,
+      "epl": 1.5,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "arc_199",
+      "difficulty": "hard",
+      "r_bar": 0.5310723048666095,
+      "epl": 1.1666666666666667,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "summary": {
+    "total": 11,
+    "verified": 9,
+    "suspicious": 2,
+    "hallucinated": 0,
+    "skipped": 0,
+    "integrity_score": 0.818
+  },
+  "results": [
+    {
+      "cite_key": "wei2022chain",
+      "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+      "status": "suspicious",
+      "confidence": 0.7,
+      "method": "doi",
+      "details": "DOI resolves but title differs (sim=0.70): 'Chain-Of-Thought Prompting Elicits Reasoning in Large Language Models'",
+      "relevance_score": 0.5
+    },
+    {
+      "cite_key": "kojima2022large",
+      "title": "Large Language Models are Zero-Shot Reasoners",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'Large Language Models Are Zero-Shot Reasoners'",
+      "relevance_score": 0.45
+    },
+    {
+      "cite_key": "yao2023tree",
+      "title": "Tree of Thoughts: Deliberate Problem Solving with Large Language Models",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via DataCite: 'Tree of Thoughts: Deliberate Problem Solving with Large Language Models'",
+      "relevance_score": 0.4
+    },
+    {
+      "cite_key": "zhou2022leasttomost",
+      "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via DataCite: 'Least-to-Most Prompting Enables Complex Reasoning in Large Language Models'",
+      "relevance_score": 0.45
+    },
+    {
+      "cite_key": "du2022general",
+      "title": "GLM: General Language Model Pretraining with Autoregressive Blank Infilling",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'GLM: General Language Model Pretraining with Autoregressive Blank Infilling'",
+      "relevance_score": 0.95
+    },
+    {
+      "cite_key": "liu2024lost",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'Lost in the Middle: How Language Models Use Long Contexts'",
+      "relevance_score": 0.1
+    },
+    {
+      "cite_key": "wang2022selfconsistency",
+      "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via DataCite: 'Self-Consistency Improves Chain of Thought Reasoning in Language Models'",
+      "relevance_score": 0.35
+    },
+    {
+      "cite_key": "wang2023planandsolve",
+      "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning by Large Language Models'",
+      "relevance_score": 0.35
+    },
+    {
+      "cite_key": "rogers2020primer",
+      "title": "A Primer in BERTology: What We Know About How BERT Works",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via CrossRef: 'A Primer in BERTology: What We Know About How BERT Works'",
+      "relevance_score": 0.3
+    },
+    {
+      "cite_key": "pan2023automatically",
+      "title": "Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies",
+      "status": "verified",
+      "confidence": 1.0,
+      "method": "doi",
+      "details": "Confirmed via DataCite: 'Automatically Correcting Large Language Models: Surveying the landscape of diverse self-correction strategies'",
+      "relevance_score": 0.25
+    },
+    {
+      "cite_key": "devlin2019bert",
+      "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+      "status": "suspicious",
+      "confidence": 0.643,
+      "method": "openalex",
+      "details": "Partial match via OpenAlex (sim=0.64): '5\u5206\u3067\u5206\u304b\u308b!? \u6709\u540d\u8ad6\u6587\u30ca\u30ca\u30e1\u8aad\u307f\uff1aJacob Devlin et al. : BERT : Pre-training of Deep Bidirectional Transformers for Language Understanding'",
+      "relevance_score": 0.75
+    }
+  ]
+}

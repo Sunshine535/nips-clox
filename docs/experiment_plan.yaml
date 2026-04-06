@@ -1,0 +1,519 @@
+ablations:
+- expected_effect: 'If targeted masking is the active ingredient, this should underperform
+    the uncertainty-targeted version while matching compute.
+
+    '
+  how_it_differs: 'Replace entropy-based span selector with uniform random selection
+    over rationale spans, keeping the same number of blanks, masked fraction, prompts,
+    and token budget.
+
+    '
+  name: RandomSpanMaskedRepair
+  parent_method: UncertaintyTargetedSelectiveMaskedRepair
+  what_is_removed: Uncertainty-based targeting of masked spans
+- expected_effect: 'Tests whether the claimed stabilizing effect comes from answer-anchored
+    backward reconstruction rather than merely adding blanks.
+
+    '
+  how_it_differs: 'Keep answer candidates and the same number of blanks, but fill
+    blanks from first to last in normal left-to-right order rather than backward from
+    the answer anchor.
+
+    '
+  name: ForwardOrderClozeInsteadOfBackwardCloze
+  parent_method: AnswerAnchoredBackwardClozeReconstruction
+  what_is_removed: Backward reconstruction order conditioned on the final answer
+- expected_effect: 'Should collapse toward generic revision behavior; if performance
+    matches the base method, selective masking is not necessary.
+
+    '
+  how_it_differs: 'Mask the full rationale body after the first pass and ask the model
+    to regenerate all reasoning, preserving the same outer prompt and answer extraction
+    code.
+
+    '
+  name: WholeRationaleMaskRepair
+  parent_method: UncertaintyTargetedSelectiveMaskedRepair
+  what_is_removed: Selectivity of local repair
+baselines:
+- citation:
+    fairness_note: Required canonical baseline because all claims are relative to
+      standard free-form CoT.
+    paper: Wei et al., Chain-of-Thought Prompting Elicits Reasoning in Large Language
+      Models, NeurIPS 2022
+  implementation_spec:
+    algorithm_steps:
+    - Format task-specific prompt with few-shot or zero-shot CoT instruction.
+    - Generate one left-to-right rationale and final answer.
+    - Parse numeric or categorical answer using dataset-specific extractor.
+    - Return answer, rationale, token count, and per-token logprobs.
+    class_name: StandardLeftToRightChainOfThought
+    differentiator: Single-pass unrestricted left-to-right reasoning with no masking
+      or repair.
+    key_hyperparameters:
+      entropy_coefficient: 0.0
+      gradient_clip_threshold: null
+      learning_rate: null
+      max_new_tokens: 192
+      model_name: Qwen2.5-1.5B-Instruct or Phi-3-mini-4k-instruct, 4-bit
+      stop_tokens:
+      - 'Final answer:'
+      temperature: 0.2
+      top_p: 0.95
+    key_methods:
+    - __init__
+    - build_prompt
+    - generate_rationale
+    - extract_answer
+    - predict
+    loss_function: L = -sum_t log p(y_t | y_<t, x); inference uses greedy or temperature-controlled
+      decoding only.
+  name: StandardLeftToRightChainOfThought
+- citation:
+    fairness_note: 'Strong and widely used inference-time baseline; represents near-standard
+      extra-compute reasoning and is essential to separate masking benefits from simply
+      sampling more.
+
+      '
+    paper: Wang et al., Self-Consistency Improves Chain of Thought Reasoning in Language
+      Models, ICLR 2023
+  implementation_spec:
+    algorithm_steps:
+    - Use the same CoT prompt as StandardLeftToRightChainOfThought.
+    - Sample K rationales under a token budget matched to masked methods.
+    - Extract candidate answers from each sample.
+    - Choose majority answer; tie-break by summed normalized answer logprob.
+    class_name: BudgetMatchedSelfConsistencyConsensus
+    differentiator: Uniformly spends extra compute on full independent reasoning paths
+      rather than targeted blanks.
+    key_hyperparameters:
+      entropy_coefficient: 0.0
+      gradient_clip_threshold: null
+      learning_rate: null
+      max_new_tokens_per_sample: 72
+      model_name: Qwen2.5-1.5B-Instruct or Phi-3-mini-4k-instruct, 4-bit
+      num_samples: 3
+      temperature: 0.7
+      top_p: 0.95
+    key_methods:
+    - __init__
+    - build_prompt
+    - sample_rationales
+    - aggregate_answers
+    - predict
+    loss_function: L = -sum_t log p(y_t | y_<t, x); prediction uses argmax_a count(a)
+      under matched total token budget.
+  name: BudgetMatchedSelfConsistencyConsensus
+- citation:
+    fairness_note: 'Fair compute-matched revision baseline; tests whether gains come
+      from generic second-pass revision rather than selective masking.
+
+      '
+    paper: 'Madaan et al., Self-Refine: Iterative Refinement with Self-Feedback, NeurIPS
+      2023 workshop / widely adopted 2023-2024 baseline'
+  implementation_spec:
+    algorithm_steps:
+    - Generate an initial CoT rationale and answer.
+    - Prompt the model to critique the entire rationale.
+    - Prompt the model to regenerate the full rationale from scratch using the critique.
+    - Extract revised final answer.
+    class_name: FullRationaleRegenerationRevision
+    differentiator: Second pass rewrites the whole rationale, not just uncertain spans.
+    key_hyperparameters:
+      entropy_coefficient: 0.0
+      gradient_clip_threshold: null
+      learning_rate: null
+      max_new_tokens_first_pass: 96
+      max_new_tokens_revision: 96
+      model_name: Qwen2.5-1.5B-Instruct or Phi-3-mini-4k-instruct, 4-bit
+      temperature_first_pass: 0.2
+      temperature_revision: 0.2
+    key_methods:
+    - __init__
+    - first_pass
+    - critique_pass
+    - full_revision_pass
+    - extract_answer
+    - predict
+    loss_function: L = -sum_t log p(y_t | y_<t, x); revision objective approximates
+      maximize p(answer | critique, x).
+  name: FullRationaleRegenerationRevision
+compute_budget:
+  budget_allocation:
+    estimated_seconds_per_condition_per_seed: 6
+    estimated_total_seconds: 180
+    examples_per_seed: 64
+    examples_total: 64
+    overhead_note: Reserve covers model load, dataset init, cache clearing, and failures/retries.
+    overhead_reserve_seconds: 120
+  condition_count: 6
+  conditions_run_order:
+  - StandardLeftToRightChainOfThought
+  - BudgetMatchedSelfConsistencyConsensus
+  - FullRationaleRegenerationRevision
+  - AnswerAnchoredBackwardClozeReconstruction
+  - UncertaintyTargetedSelectiveMaskedRepair
+  - RandomSpanMaskedRepair
+  decision_rule_for_followup:
+    scale_up_if: 'UncertaintyTargetedSelectiveMaskedRepair or AnswerAnchoredBackwardClozeReconstruction
+      reduces final_answer_error_rate by >= 2 points on local_recoverable items and
+      beats compute-matched baselines.
+
+      '
+    stop_if: Gains disappear against RandomSpanMaskedRepair or FullRationaleRegenerationRevision,
+      or selective_repair_ratio indicates the method is effectively full regeneration.
+  hardware:
+    cpu: shared server
+    distributed_training: false
+    gpu: 1 x NVIDIA RTX 6000 Ada, 49 GB VRAM
+  model_plan:
+    primary_executable_model: Qwen2.5-1.5B-Instruct or Phi-3-mini-4k-instruct, 4-bit
+      quantized
+    rationale: 'A 7B-8B model would exceed the 300s total budget for 5-seed multi-condition
+      evaluation. This plan is an inference-only pilot designed to produce decisive
+      falsification signals within the hard runtime cap.
+
+      '
+  reproducibility:
+    deterministic_settings:
+    - Fixed seeds for torch/python/numpy
+    - Deterministic prompt templates
+    - Fixed stratified evaluation subset
+    outputs_to_save:
+    - per-example predictions
+    - per-token logprobs where available
+    - token counts
+    - latency
+    - selected blank spans
+    - per-seed summary JSON
+  runtime_budget_seconds: 300
+  seed_plan:
+    note: Seeds affect sampling, prompt example order, and tie-breaking.
+    num_seeds: 5
+    seed_values:
+    - 11
+    - 23
+    - 37
+    - 47
+    - 59
+  token_budgets:
+    AnswerAnchoredBackwardClozeReconstruction: 2 answer candidates + 2 blanks, total
+      <= 96
+    BudgetMatchedSelfConsistencyConsensus: 3 samples x <= 32 tokens each
+    FullRationaleRegenerationRevision: first pass <= 48 + revision <= 48
+    RandomSpanMaskedRepair: matched to uncertainty-targeted repair
+    StandardLeftToRightChainOfThought: <= 96 rationale tokens + 8 answer tokens
+    UncertaintyTargetedSelectiveMaskedRepair: first pass <= 64 + repair <= 32 + verify
+      <= 8
+datasets:
+  benchmarks:
+  - name: GSM8K_main
+    official_split_only: true
+    pilot_subset_size: 24
+    source: 'HuggingFace: openai/gsm8k'
+    split: test
+    why_used: Standard arithmetic reasoning benchmark; core test bed for Hypotheses
+      1 and 2.
+  - name: SVAMP
+    official_split_only: true
+    pilot_subset_size: 16
+    source: HuggingFace mirror of SVAMP
+    split: test
+    why_used: Arithmetic benchmark emphasizing structured local reasoning; strengthens
+      Hypothesis 1.
+  - name: StrategyQA
+    official_split_only: true
+    pilot_subset_size: 12
+    source: 'HuggingFace: strategy_qa'
+    split: test
+    why_used: Non-math reasoning benchmark for testing whether selective masking generalizes
+      beyond arithmetic.
+  - name: AQUA_RAT
+    official_split_only: true
+    pilot_subset_size: 12
+    source: 'HuggingFace: aqua_rat'
+    split: test
+    why_used: Harder, more non-local multi-choice reasoning; falsification target
+      for Hypothesis 1 and stress test for Hypothesis 3.
+  evaluation_subset_policy:
+    note: 'Because the runtime budget is 300s, main executable uses a fixed stratified
+      pilot subset of 64 total examples. All methods evaluate the identical examples
+      and identical seeds for paired testing.
+
+      '
+  factorial_reporting_plan:
+    design: 2 x 2 x 2 factorial reporting where sample size permits; otherwise report
+      all observed cells and mark sparse cells.
+    mandatory_per_regime_reporting:
+    - reasoning_structure x first_pass_confidence
+    - reasoning_structure x budget_regime
+  regime_factors:
+    budget_regime:
+      definition:
+        moderate_budget: <= 1.5x CoT tokens
+        tight_budget: single extra call or <= 1.2x CoT tokens
+      levels:
+      - tight_budget
+      - moderate_budget
+    first_pass_confidence:
+      definition: Binned by first-pass answer logprob / rationale entropy from StandardLeftToRightChainOfThought
+      levels:
+      - high_confidence
+      - low_confidence
+    reasoning_structure:
+      definition:
+        local_recoverable: GSM8K + SVAMP items with short arithmetic decomposition
+        non_local: AQUA-RAT + StrategyQA items requiring broader search or commonsense
+          composition
+      levels:
+      - local_recoverable
+      - non_local
+  setup:
+    data_root: /workspace/data
+    setup_py_actions:
+    - Download GSM8K via HuggingFace datasets to /workspace/data
+    - Download StrategyQA via HuggingFace datasets to /workspace/data
+    - Download AQUA-RAT via HuggingFace datasets to /workspace/data
+    - Download SVAMP from HuggingFace mirror to /workspace/data
+    setup_py_required: true
+metrics:
+  primary_metric:
+    definition: 100 - exact_match_accuracy
+    direction: minimize
+    name: final_answer_error_rate
+    units: percent
+  secondary_metrics:
+  - definition: Task-standard exact match or multiple-choice accuracy
+    name: exact_match_accuracy
+  - definition: Total generated tokens divided by number of correct predictions
+    name: tokens_per_correct_answer
+  - definition: Wall-clock inference time per example
+    name: latency_per_example_ms
+  - definition: (error_baseline - error_method) / total_generated_tokens
+    name: budget_normalized_error_reduction
+  - definition: Fraction of rationale tokens modified during repair; should stay low
+      for true selective repair
+    name: selective_repair_ratio
+  - definition: Agreement between repaired intermediate steps and final answer
+    name: blank_fill_consistency
+  - definition: 'Change in final answer after perturbing a filled blank minus change
+      after perturbing a matched-length span in standard CoT; discovery-aligned faithfulness
+      endpoint.
+
+      '
+    name: causal_blank_sensitivity_gap
+  - definition: Error rate on GSM8K/SVAMP subset; direct discovery-aligned endpoint
+      for Hypothesis 1
+    name: local_recoverable_subset_error_rate
+  - definition: Error rate on AQUA-RAT/StrategyQA subset
+    name: non_local_subset_error_rate
+  - definition: Fraction of seeds that complete without NaN, OOM, parser crash, malformed-output
+      failure, or timeout
+    name: success_rate
+  statistical_reporting:
+    confidence_intervals: 95% bootstrap CI over paired example-level differences and
+      over seeds
+    effect_sizes:
+    - Cohen_d on per-seed accuracy
+    - Rank-biserial correlation for Wilcoxon comparisons
+    hypothesis_tests:
+    - Paired bootstrap test for accuracy/error differences
+    - Wilcoxon signed-rank test across seeds
+    per_seed_reporting: true
+    seeds: 5
+  subgroup_reports_required:
+  - reasoning_structure = local_recoverable vs non_local
+  - first_pass_confidence = high_confidence vs low_confidence
+  - budget_regime = tight_budget vs moderate_budget
+objectives:
+  hypothesis_mapping:
+    hypothesis_1:
+      expected_regime_effect:
+        local_recoverable: gain >= 2 absolute EM points
+        non_local: small or null gain
+      key_comparisons:
+      - AnswerAnchoredBackwardClozeReconstruction vs StandardLeftToRightChainOfThought
+      - AnswerAnchoredBackwardClozeReconstruction vs BudgetMatchedSelfConsistencyConsensus
+      statement: 'Answer-anchored backward cloze should outperform one-pass left-to-right
+        CoT on structured, locally recoverable arithmetic tasks, but not on non-local
+        reasoning tasks.
+
+        '
+    hypothesis_2:
+      expected_regime_effect:
+        high_first_pass_confidence: small or no gains
+        low_first_pass_confidence: largest gains
+      key_comparisons:
+      - UncertaintyTargetedSelectiveMaskedRepair vs StandardLeftToRightChainOfThought
+      - UncertaintyTargetedSelectiveMaskedRepair vs FullRationaleRegenerationRevision
+      - UncertaintyTargetedSelectiveMaskedRepair vs RandomSpanMaskedRepair
+      statement: 'Uncertainty-targeted selective masked repair should beat plain CoT,
+        random masking, and full-regeneration revision when compute is matched.
+
+        '
+    hypothesis_3:
+      expected_regime_effect:
+        easy_medium: equal accuracy with lower latency/token cost
+        hard_shifted: possible degradation or null gains
+      key_comparisons:
+      - UncertaintyTargetedSelectiveMaskedRepair vs BudgetMatchedSelfConsistencyConsensus
+      - AnswerAnchoredBackwardClozeReconstruction vs BudgetMatchedSelfConsistencyConsensus
+      statement: 'Blank-triggered compute allocation is primarily an efficiency mechanism;
+        it should match or modestly improve accuracy with lower latency/token cost
+        than uniform extra compute, but may fail on hard/ambiguous items.
+
+        '
+  primary_goal: 'Test whether inference-time partial masking of intermediate reasoning
+    in decoder-only LLMs improves final-answer performance, robustness, or efficiency
+    under strictly matched token/model-call budgets.
+
+    '
+  secondary_goal: 'Measure whether masked methods remain causally faithful by testing
+    answer sensitivity to perturbations in filled blanks versus perturbations in standard
+    CoT rationales.
+
+    '
+proposed_methods:
+- citation_positioning:
+    fair_comparison_targets:
+    - StandardLeftToRightChainOfThought
+    - BudgetMatchedSelfConsistencyConsensus
+    novelty_note: 'New inference-only method motivated by Hypothesis 1: propose answer
+      candidates first, then reconstruct a sparse rationale backward by filling blanks
+      conditioned on the answer.
+
+      '
+  implementation_spec:
+    algorithm_steps:
+    - Generate M short answer candidates without full rationale.
+    - For each candidate, create a sparse backward scaffold ending at that answer,
+      with 2-3 masked intermediate spans.
+    - Iteratively infill masked spans from last blank to first blank.
+    - Score each completed rationale-answer pair by normalized joint logprob and answer
+      consistency.
+    - Return the highest-scoring final answer under the matched token budget.
+    class_name: AnswerAnchoredBackwardClozeReconstruction
+    differentiator: Anchors reasoning on candidate answers and reconstructs rationale
+      backward through masked infilling.
+    key_hyperparameters:
+      blank_span_strategy: equation_or_operation_spans
+      entropy_coefficient: 0.0
+      gradient_clip_threshold: null
+      infill_order: backward
+      learning_rate: null
+      max_new_tokens_answer_stage: 24
+      max_new_tokens_infill_stage: 48
+      model_name: Qwen2.5-1.5B-Instruct or Phi-3-mini-4k-instruct, 4-bit
+      num_answer_candidates: 2
+      num_blanks: 2
+      score_normalization_alpha: 0.7
+      temperature_answer_stage: 0.5
+      temperature_infill_stage: 0.2
+    key_methods:
+    - __init__
+    - propose_answer_candidates
+    - build_backward_cloze_prompt
+    - infill_blank_spans
+    - score_candidate
+    - predict
+    loss_function: L = -[log p(a|x) + lambda * sum_j log p(blank_j | scaffold, a,
+      x)] with lambda=1 at scoring time.
+  name: AnswerAnchoredBackwardClozeReconstruction
+- citation_positioning:
+    fair_comparison_targets:
+    - StandardLeftToRightChainOfThought
+    - FullRationaleRegenerationRevision
+    - BudgetMatchedSelfConsistencyConsensus
+    novelty_note: 'New inference-only method motivated by Hypotheses 2 and 3: generate
+      once, identify high-entropy rationale spans, mask only those spans, and locally
+      repair them.
+
+      '
+  implementation_spec:
+    algorithm_steps:
+    - Generate an initial CoT rationale and answer with token logprobs.
+    - Compute token entropy or negative logprob and smooth over windows.
+    - Select top uncertain span(s) subject to a max masked fraction.
+    - Replace selected spans with [BLANK_i] markers and prompt the model to fill only
+      those blanks.
+    - Recompose the rationale, optionally do one final short answer verification,
+      and return the repaired answer.
+    class_name: UncertaintyTargetedSelectiveMaskedRepair
+    differentiator: Allocates second-pass compute only to uncertain rationale spans
+      instead of resampling or rewriting everything.
+    key_hyperparameters:
+      answer_verification: true
+      entropy_coefficient: 0.0
+      gradient_clip_threshold: null
+      learning_rate: null
+      max_blank_spans: 2
+      max_masked_fraction: 0.25
+      max_new_tokens_first_pass: 96
+      max_new_tokens_repair: 48
+      model_name: Qwen2.5-1.5B-Instruct or Phi-3-mini-4k-instruct, 4-bit
+      smoothing_window: 5
+      temperature_first_pass: 0.2
+      temperature_repair: 0.2
+      uncertainty_metric: token_entropy
+      verification_max_new_tokens: 12
+    key_methods:
+    - __init__
+    - first_pass_generate
+    - compute_token_uncertainty
+    - select_mask_spans
+    - repair_masked_spans
+    - extract_answer
+    - predict
+    loss_function: L = -sum_{j in selected blanks} log p(blank_j | visible rationale,
+      x) + beta * 1[answer changes inconsistently], beta=0.0 in base pilot.
+  name: UncertaintyTargetedSelectiveMaskedRepair
+risks:
+  numerical_and_system_stability:
+  - mitigation:
+    - Use regex-robust answer extraction
+    - Constrain outputs with short answer tags
+    - Retry once with deterministic decoding on parse failure
+    risk: 4-bit quantized generation can produce malformed UTF-8, invalid JSON-like
+      spans, or parser failures.
+  - mitigation:
+    - Use max_new_tokens caps
+    - Run batch size 1
+    - Clear cache between examples
+    - Prefer vLLM or HF generate with static cache limits
+    risk: OOM or KV-cache overflow during multi-pass generation.
+  - mitigation:
+    - Clamp logprobs to finite range
+    - Skip corrupted example and record failure in success_rate
+    - Early stop on first NaN from model backend
+    risk: NaN / divergence is unlikely because no training occurs, but logprob computation
+      may return inf or NaN on rare tokenizer edge cases.
+  - mitigation:
+    - Strict token-budget and model-call matching against Self-Consistency and FullRationaleRegenerationRevision
+    risk: Answer-first cloze may appear better only because it gets more samples.
+  - mitigation:
+    - Track selective_repair_ratio
+    - Reject runs where repaired fraction exceeds configured cap
+    risk: Selective repair may silently rewrite most of the rationale, invalidating
+      the claimed mechanism.
+  - mitigation:
+    - Report per-dataset and per-regime
+    - Avoid pooling claims without stratified analysis
+    risk: Task mix confounds local recoverability with domain.
+  - mitigation:
+    - Use paired tests, per-seed raw values, and explicitly label study as pilot under
+      300s constraint
+    risk: Very small pilot subset may yield noisy estimates.
+  - mitigation:
+    - Use fixed local open-weight model only; no live API dependence during main run
+    risk: Past literature-screen failures due to remote LLM instability.
+  validity_risks:
+  - mitigation:
+    - Compute-matched baselines are mandatory in every hypothesis test
+    risk: Benchmark gains may reflect compute reallocation rather than better reasoning.
+  - mitigation:
+    - Include causal_blank_sensitivity_gap and perturbation-based faithfulness check
+    risk: Masked rationale may be less faithful even when answers improve.
+topic: For large language models, is it possible to introduce partial masking at any
+  stage—such as inference, chain-of-thought reasoning, or MoE activation—to improve
+  performance? For example, can the model be encouraged to solve the problem in a
+  cloze-style or fill-in-the-blank manner?

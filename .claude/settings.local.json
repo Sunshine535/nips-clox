@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nvidia-smi --query-gpu=index,memory.used,utilization.gpu --format=csv,noheader)",
+      "Bash(/workspace/nips-clox/venv/bin/python -m pytest tests/test_clox.py -v)",
+      "Bash(rm -rf /workspace/nips-clox/results/validation2)",
+      "Bash(/workspace/nips-clox/venv/bin/python main.py --model Qwen/Qwen2.5-7B-Instruct --benchmarks gsm8k --strategies standard_cot,self_consistency,backward_cloze,uncertainty_masked_repair,random_masked_repair,full_regeneration,hierarchical_repair,clox_adaptive --seeds 11 --max_examples 20 --max_new_tokens 512 --output_dir /workspace/nips-clox/results/validation2 --n_gpus 1)",
+      "Bash(/workspace/nips-clox/venv/bin/python:*)",
+      "Bash(ls -la /workspace/nips-clox/results/validation2/*.json)",
+      "Bash(ls -la /workspace/nips-clox/results/validation2/.ckpt*)",
+      "Bash(ls -lrt /workspace/nips-clox/results/validation2/.ckpt*)",
+      "Bash(/workspace/nips-clox/venv/bin/pip install:*)",
+      "Bash(ls -la /workspace/nips-clox/results/validation3/.ckpt*)",
+      "Bash([ ! -f /workspace/nips-clox/results/validation3/gsm8k_results.json ])",
+      "Bash(chmod +x /workspace/nips-clox/scripts/run_phase1.sh)",
+      "Bash(/workspace/nips-clox/scripts/run_phase1.sh)",
+      "Bash(echo \"StrategyQA PID: $!\")",
+      "Bash(ls -la /workspace/nips-clox/results/full/qwen2.5-7b-instruct/.ckpt*)"
+    ]
+  }
+}

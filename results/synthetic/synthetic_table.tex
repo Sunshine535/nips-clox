@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Synthetic DAG: answer error rate (\%) under budget $B=3n$.}
+\label{tab:synthetic}
+\small
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Graph Type} & $(\bar{r}, \ell)$ & \textbf{CoT} & \textbf{SC-3} & \textbf{MR} & \textbf{CLOX-A} & \textbf{Theory} \\
+\midrule
+bottleneck, $\bar{r}$=0.2 & (0.2, 5) & 80.7 & 89.0 & \textbf{79.5} & 89.1 & SC \\
+bottleneck, $\bar{r}$=0.9 & (0.9, 5) & 80.7 & 89.0 & \textbf{70.5} & \textbf{70.1} & Mixed \\
+chain, $\bar{r}$=0.2 & (0.2, 9) & 80.7 & 89.0 & \textbf{79.3} & 89.3 & SC \\
+chain, $\bar{r}$=0.9 & (0.9, 9) & 80.7 & 89.0 & \textbf{70.1} & 70.6 & Mixed \\
+parallel, $\bar{r}$=0.2 & (0.2, 1) & 80.7 & 89.0 & \textbf{78.9} & 89.3 & Mixed \\
+parallel, $\bar{r}$=0.9 & (0.9, 1) & 80.7 & 89.0 & \textbf{43.5} & \textbf{44.0} & MR \\
+tree_b2, $\bar{r}$=0.2 & (0.2, 9) & 48.0 & \textbf{45.7} & \textbf{45.8} & \textbf{45.8} & SC \\
+tree_b2, $\bar{r}$=0.9 & (0.9, 9) & 48.0 & 45.7 & \textbf{33.6} & 32.7 & Mixed \\
+tree_b4, $\bar{r}$=0.2 & (0.2, 9) & 38.5 & \textbf{33.3} & 36.0 & \textbf{33.4} & SC \\
+tree_b4, $\bar{r}$=0.9 & (0.9, 9) & 38.5 & 33.3 & \textbf{21.7} & 22.3 & Mixed \\
+\bottomrule
+\end{tabular}
+\end{table}

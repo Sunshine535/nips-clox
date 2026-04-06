@@ -1,0 +1,49 @@
+{
+  "manifest": [
+    {
+      "figure_number": 1,
+      "figure_id": "fig_main_results_all_conditions",
+      "file_path": "charts/fig_main_results_all_conditions.png",
+      "absolute_path": "/home/nwh/autonips/AutoResearchClaw/artifacts/rc-20260324-172235-ae8d93/stage-14/charts/fig_main_results_all_conditions.png",
+      "title": "Final Answer Error Rate Across Reasoning and Masking Strategies",
+      "caption": "Compare the overall final answer error rate for all seven inference strategies: standard left-to-right chain-of-thought, budget-matched self-consistency, and the five masking/cloze-style variants. This is the primary results figure and establishes whether partial masking during inference or reasoning improves end-task performance over conventional decoding baselines.",
+      "paper_section": "Results",
+      "width": "double_column",
+      "label": "fig:fig_main_results_all_conditions",
+      "script_path": "/home/nwh/autonips/AutoResearchClaw/artifacts/rc-20260324-172235-ae8d93/stage-14/charts/scripts/fig_main_results_all_conditions.py"
+    },
+    {
+      "figure_number": 2,
+      "figure_id": "fig_masking_design_comparison",
+      "file_path": "charts/fig_masking_design_comparison.png",
+      "absolute_path": "/home/nwh/autonips/AutoResearchClaw/artifacts/rc-20260324-172235-ae8d93/stage-14/charts/fig_masking_design_comparison.png",
+      "title": "Effect of Masking Design Choices",
+      "caption": "Focus on the masking-based methods to isolate which design choices matter: backward cloze reconstruction, uncertainty-targeted selective repair, random span masking, forward-order cloze, and whole-rationale mask repair. This figure serves as the paper's ablation-style analysis by comparing targeted versus untargeted masking and backward versus forward reconstruction order.",
+      "paper_section": "Analysis",
+      "width": "single_column",
+      "label": "fig:fig_masking_design_comparison",
+      "script_path": "/home/nwh/autonips/AutoResearchClaw/artifacts/rc-20260324-172235-ae8d93/stage-14/charts/scripts/fig_masking_design_comparison.py"
+    },
+    {
+      "figure_number": 3,
+      "figure_id": "fig_error_breakdown_by_subset",
+      "file_path": "charts/fig_error_breakdown_by_subset.png",
+      "absolute_path": "/home/nwh/autonips/AutoResearchClaw/artifacts/rc-20260324-172235-ae8d93/stage-14/charts/fig_error_breakdown_by_subset.png",
+      "title": "Where Masking Helps: Local, Non-local, and High-Confidence Errors",
+      "caption": "Break down performance by error subtype using local recoverable subset error rate, non-local subset error rate, and high-confidence error rate across conditions. This figure tests whether partial masking mainly repairs locally recoverable reasoning failures, or whether it also reduces harder non-local and overconfident errors.",
+      "paper_section": "Analysis",
+      "width": "double_column",
+      "label": "fig:fig_error_breakdown_by_subset",
+      "script_path": "/home/nwh/autonips/AutoResearchClaw/artifacts/rc-20260324-172235-ae8d93/stage-14/charts/scripts/fig_error_breakdown_by_subset.py"
+    }
+  ],
+  "markdown_refs": "![Figure 1: Compare the overall final answer error rate for all seven inference strategies: standard left-to-right chain-of-thought, budget-matched self-consistency, and the five masking/cloze-style variants. This is the primary results figure and establishes whether partial masking during inference or reasoning improves end-task performance over conventional decoding baselines.](charts/fig_main_results_all_conditions.png)\n\n![Figure 2: Focus on the masking-based methods to isolate which design choices matter: backward cloze reconstruction, uncertainty-targeted selective repair, random span masking, forward-order cloze, and whole-rationale mask repair. This figure serves as the paper's ablation-style analysis by comparing targeted versus untargeted masking and backward versus forward reconstruction order.](charts/fig_masking_design_comparison.png)\n\n![Figure 3: Break down performance by error subtype using local recoverable subset error rate, non-local subset error rate, and high-confidence error rate across conditions. This figure tests whether partial masking mainly repairs locally recoverable reasoning failures, or whether it also reduces harder non-local and overconfident errors.](charts/fig_error_breakdown_by_subset.png)",
+  "figure_descriptions": "## AVAILABLE FIGURES (embed in the paper)\nThe following figures were generated from actual experiment data. Reference them in the appropriate paper sections using markdown image syntax: `![Caption](charts/filename.png)`\n\n**Figure 1** (`charts/fig_main_results_all_conditions.png`) — Final Answer Error Rate Across Reasoning and Masking Strategies\n  Caption: Compare the overall final answer error rate for all seven inference strategies: standard left-to-right chain-of-thought, budget-matched self-consistency, and the five masking/cloze-style variants. This is the primary results figure and establishes whether partial masking during inference or reasoning improves end-task performance over conventional decoding baselines.\n  Place in: **Results** section\n\n**Figure 2** (`charts/fig_masking_design_comparison.png`) — Effect of Masking Design Choices\n  Caption: Focus on the masking-based methods to isolate which design choices matter: backward cloze reconstruction, uncertainty-targeted selective repair, random span masking, forward-order cloze, and whole-rationale mask repair. This figure serves as the paper's ablation-style analysis by comparing targeted versus untargeted masking and backward versus forward reconstruction order.\n  Place in: **Analysis** section\n\n**Figure 3** (`charts/fig_error_breakdown_by_subset.png`) — Where Masking Helps: Local, Non-local, and High-Confidence Errors\n  Caption: Break down performance by error subtype using local recoverable subset error rate, non-local subset error rate, and high-confidence error rate across conditions. This figure tests whether partial masking mainly repairs locally recoverable reasoning failures, or whether it also reduces harder non-local and overconfident errors.\n  Place in: **Analysis** section\n\n\nFor each figure referenced, write a descriptive caption and discuss what the figure shows in 2-3 sentences.\n",
+  "output_dir": "artifacts/rc-20260324-172235-ae8d93/stage-14/charts",
+  "manifest_path": "artifacts/rc-20260324-172235-ae8d93/stage-14/charts/figure_manifest.json",
+  "figure_count": 3,
+  "passed_count": 3,
+  "total_llm_calls": 17,
+  "total_tokens": 42862,
+  "elapsed_sec": 443.6181484782137
+}

@@ -1,0 +1,25 @@
+{
+  "stage_id": "14-result_analysis",
+  "run_id": "rc-20260325-095435-ae8d93",
+  "status": "done",
+  "decision": "proceed",
+  "output_artifacts": [
+    "analysis.md",
+    "experiment_summary.json",
+    "results_table.tex",
+    "charts/fig_main_final_error_across_evals.png",
+    "charts/fig_confidence_stratified_error.png",
+    "charts/fig_local_vs_nonlocal_recovery.png"
+  ],
+  "evidence_refs": [
+    "stage-14/analysis.md",
+    "stage-14/experiment_summary.json",
+    "stage-14/results_table.tex",
+    "stage-14/charts/fig_main_final_error_across_evals.png",
+    "stage-14/charts/fig_confidence_stratified_error.png",
+    "stage-14/charts/fig_local_vs_nonlocal_recovery.png"
+  ],
+  "error": null,
+  "ts": "2026-03-25T11:14:12+00:00",
+  "next_stage": 15
+}

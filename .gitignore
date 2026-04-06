@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+.eggs/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+*.bcf
+*.run.xml
+*-blx.bib
+paper/*.pdf
+!paper/figures/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Model weights and large files
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# Data (download at runtime)
+data/
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+logs/
+
+# Secrets
+.env
+.env.*
+
+# Zone identifiers (Windows)
+*:Zone.Identifier
+
+# Checkpoint files (temporary)
+.ckpt_*
+
+# Cache
+.cache/

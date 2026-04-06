@@ -1,0 +1,1618 @@
+{
+  "summary": {
+    "benchmark": "strategyqa",
+    "n_examples": 200,
+    "r_bar_mean": 0.6953918704846636,
+    "r_bar_std": 0.10575852108975997,
+    "r_bar_median": 0.6814496844856466,
+    "epl_mean": 1.1758333333333335,
+    "epl_std": 0.2551238805844025,
+    "epl_median": 1.0,
+    "strategy_distribution": {
+      "targeted_repair": 122,
+      "adaptive": 78
+    }
+  },
+  "per_example": [
+    {
+      "example_id": "strategyqa_0",
+      "difficulty": "medium",
+      "r_bar": 0.7751053610036711,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_1",
+      "difficulty": "medium",
+      "r_bar": 0.9979329887297121,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_2",
+      "difficulty": "medium",
+      "r_bar": 0.6034886835572507,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_3",
+      "difficulty": "medium",
+      "r_bar": 0.7578777838012476,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_4",
+      "difficulty": "medium",
+      "r_bar": 0.737335817739523,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_5",
+      "difficulty": "medium",
+      "r_bar": 0.7259872744069547,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_6",
+      "difficulty": "medium",
+      "r_bar": 0.5994717776460831,
+      "epl": 1.866666666666667,
+      "n_steps": 9.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_7",
+      "difficulty": "medium",
+      "r_bar": 0.7081614864278961,
+      "epl": 1.2,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_8",
+      "difficulty": "medium",
+      "r_bar": 0.5160551725872192,
+      "epl": 1.6,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_9",
+      "difficulty": "medium",
+      "r_bar": 0.5473844614416399,
+      "epl": 1.6,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_10",
+      "difficulty": "medium",
+      "r_bar": 0.6102754347682338,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_11",
+      "difficulty": "medium",
+      "r_bar": 0.6171227691931692,
+      "epl": 1.2,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_12",
+      "difficulty": "medium",
+      "r_bar": 0.632841348244998,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_13",
+      "difficulty": "medium",
+      "r_bar": 0.5962158408980405,
+      "epl": 1.866666666666667,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_14",
+      "difficulty": "medium",
+      "r_bar": 0.5814746238463872,
+      "epl": 1.0,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_15",
+      "difficulty": "medium",
+      "r_bar": 0.6521714979092048,
+      "epl": 1.6,
+      "n_steps": 6.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_16",
+      "difficulty": "medium",
+      "r_bar": 0.6261215335740389,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_17",
+      "difficulty": "medium",
+      "r_bar": 0.6187075020598585,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_18",
+      "difficulty": "medium",
+      "r_bar": 0.6781470971853877,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_19",
+      "difficulty": "medium",
+      "r_bar": 0.8116718835032757,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_20",
+      "difficulty": "medium",
+      "r_bar": 0.5996173713256006,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_21",
+      "difficulty": "medium",
+      "r_bar": 0.7246927160503671,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_22",
+      "difficulty": "medium",
+      "r_bar": 0.8422888675740529,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_23",
+      "difficulty": "medium",
+      "r_bar": 0.7660583291362785,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_24",
+      "difficulty": "medium",
+      "r_bar": 0.5782528361091611,
+      "epl": 1.4,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_25",
+      "difficulty": "medium",
+      "r_bar": 0.6089183294075985,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_26",
+      "difficulty": "medium",
+      "r_bar": 0.7210315876349898,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_27",
+      "difficulty": "medium",
+      "r_bar": 0.695036985833956,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_28",
+      "difficulty": "medium",
+      "r_bar": 0.5908019763303597,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_29",
+      "difficulty": "medium",
+      "r_bar": 0.6095607552769895,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_30",
+      "difficulty": "medium",
+      "r_bar": 0.6901062322400179,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_31",
+      "difficulty": "medium",
+      "r_bar": 0.7447392043104065,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_32",
+      "difficulty": "medium",
+      "r_bar": 0.5672972844034043,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_33",
+      "difficulty": "medium",
+      "r_bar": 0.7146875543937209,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_34",
+      "difficulty": "medium",
+      "r_bar": 0.5776788167680673,
+      "epl": 1.0,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_35",
+      "difficulty": "medium",
+      "r_bar": 0.6137538817892698,
+      "epl": 1.0,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_36",
+      "difficulty": "medium",
+      "r_bar": 0.7018504802761653,
+      "epl": 1.4,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_37",
+      "difficulty": "medium",
+      "r_bar": 0.618520278363476,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_38",
+      "difficulty": "medium",
+      "r_bar": 0.7597312618062092,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_39",
+      "difficulty": "medium",
+      "r_bar": 0.6773614052486705,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_40",
+      "difficulty": "medium",
+      "r_bar": 0.7658396903600184,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_41",
+      "difficulty": "medium",
+      "r_bar": 0.5842881729025421,
+      "epl": 1.2,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_42",
+      "difficulty": "medium",
+      "r_bar": 0.754549610907881,
+      "epl": 1.5,
+      "n_steps": 8.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_43",
+      "difficulty": "medium",
+      "r_bar": 0.7130118776936282,
+      "epl": 1.0,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_44",
+      "difficulty": "medium",
+      "r_bar": 0.6654245362782585,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_45",
+      "difficulty": "medium",
+      "r_bar": 0.7067322208942912,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_46",
+      "difficulty": "medium",
+      "r_bar": 0.7569514630941457,
+      "epl": 1.7333333333333334,
+      "n_steps": 6.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_47",
+      "difficulty": "medium",
+      "r_bar": 0.762281215662364,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_48",
+      "difficulty": "medium",
+      "r_bar": 0.7476809614031883,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_49",
+      "difficulty": "medium",
+      "r_bar": 0.9490245010792446,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_50",
+      "difficulty": "medium",
+      "r_bar": 0.5984083071506668,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_51",
+      "difficulty": "medium",
+      "r_bar": 0.5624806641549155,
+      "epl": 1.4,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_52",
+      "difficulty": "medium",
+      "r_bar": 0.6678492867535331,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_53",
+      "difficulty": "medium",
+      "r_bar": 0.5954238024858687,
+      "epl": 1.2,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_54",
+      "difficulty": "medium",
+      "r_bar": 0.6464136150402271,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_55",
+      "difficulty": "medium",
+      "r_bar": 0.6151122338176487,
+      "epl": 1.2,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_56",
+      "difficulty": "medium",
+      "r_bar": 0.8482143294621485,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_57",
+      "difficulty": "medium",
+      "r_bar": 0.7147798747565276,
+      "epl": 1.0,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_58",
+      "difficulty": "medium",
+      "r_bar": 0.8673765230042566,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_59",
+      "difficulty": "medium",
+      "r_bar": 0.638179260930448,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_60",
+      "difficulty": "medium",
+      "r_bar": 0.9436150800493375,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_61",
+      "difficulty": "medium",
+      "r_bar": 0.6285750916198495,
+      "epl": 1.5,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_62",
+      "difficulty": "medium",
+      "r_bar": 0.7267813849431785,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_63",
+      "difficulty": "medium",
+      "r_bar": 0.7151743202035299,
+      "epl": 2.1,
+      "n_steps": 9.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_64",
+      "difficulty": "medium",
+      "r_bar": 0.9226767465228493,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_65",
+      "difficulty": "medium",
+      "r_bar": 0.8232582001137281,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_66",
+      "difficulty": "medium",
+      "r_bar": 0.5476678186052155,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_67",
+      "difficulty": "medium",
+      "r_bar": 0.5108595347125672,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_68",
+      "difficulty": "medium",
+      "r_bar": 0.6506438548379024,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_69",
+      "difficulty": "medium",
+      "r_bar": 0.7991481474338098,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_70",
+      "difficulty": "medium",
+      "r_bar": 0.6928011597774439,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_71",
+      "difficulty": "medium",
+      "r_bar": 0.5639379765619167,
+      "epl": 1.5,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_72",
+      "difficulty": "medium",
+      "r_bar": 0.6728059675814757,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_73",
+      "difficulty": "medium",
+      "r_bar": 0.6688225100577251,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_74",
+      "difficulty": "medium",
+      "r_bar": 0.7658944748222503,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_75",
+      "difficulty": "medium",
+      "r_bar": 0.7339732435340247,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_76",
+      "difficulty": "medium",
+      "r_bar": 0.6215962642716036,
+      "epl": 1.866666666666667,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_77",
+      "difficulty": "medium",
+      "r_bar": 0.6943775297890571,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_78",
+      "difficulty": "medium",
+      "r_bar": 0.7070628929172996,
+      "epl": 1.6,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_79",
+      "difficulty": "medium",
+      "r_bar": 0.6509336982894108,
+      "epl": 1.4,
+      "n_steps": 6.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_80",
+      "difficulty": "medium",
+      "r_bar": 0.8549466993006497,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_81",
+      "difficulty": "medium",
+      "r_bar": 0.7729260364592886,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_82",
+      "difficulty": "medium",
+      "r_bar": 0.7152934879307392,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_83",
+      "difficulty": "medium",
+      "r_bar": 0.6207804035636171,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_84",
+      "difficulty": "medium",
+      "r_bar": 0.6503293624689731,
+      "epl": 1.6,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_85",
+      "difficulty": "medium",
+      "r_bar": 0.6859375971545392,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_86",
+      "difficulty": "medium",
+      "r_bar": 0.777643474594481,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_87",
+      "difficulty": "medium",
+      "r_bar": 0.8686103663812466,
+      "epl": 1.2,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_88",
+      "difficulty": "medium",
+      "r_bar": 0.7578780915574435,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_89",
+      "difficulty": "medium",
+      "r_bar": 0.5818562333279637,
+      "epl": 1.4,
+      "n_steps": 7.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_90",
+      "difficulty": "medium",
+      "r_bar": 0.6430738191161784,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_91",
+      "difficulty": "medium",
+      "r_bar": 0.6884187125337906,
+      "epl": 1.4,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_92",
+      "difficulty": "medium",
+      "r_bar": 0.6212590793809237,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_93",
+      "difficulty": "medium",
+      "r_bar": 0.4869123680471379,
+      "epl": 1.6,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_94",
+      "difficulty": "medium",
+      "r_bar": 0.9145296086184291,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_95",
+      "difficulty": "medium",
+      "r_bar": 0.6787817864435877,
+      "epl": 1.5,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_96",
+      "difficulty": "medium",
+      "r_bar": 0.6494825543941991,
+      "epl": 1.5,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_97",
+      "difficulty": "medium",
+      "r_bar": 0.5714901641433446,
+      "epl": 1.4000000000000001,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_98",
+      "difficulty": "medium",
+      "r_bar": 0.819992591221899,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_99",
+      "difficulty": "medium",
+      "r_bar": 0.9360824740211863,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_100",
+      "difficulty": "medium",
+      "r_bar": 0.6171465218043073,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_101",
+      "difficulty": "medium",
+      "r_bar": 0.6962939639640658,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_102",
+      "difficulty": "medium",
+      "r_bar": 0.7014345479307222,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_103",
+      "difficulty": "medium",
+      "r_bar": 0.84369086692484,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_104",
+      "difficulty": "medium",
+      "r_bar": 0.7505465229641397,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_105",
+      "difficulty": "medium",
+      "r_bar": 0.630365371243514,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_106",
+      "difficulty": "medium",
+      "r_bar": 0.7515009720660204,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_107",
+      "difficulty": "medium",
+      "r_bar": 0.713500850124868,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_108",
+      "difficulty": "medium",
+      "r_bar": 0.571787969791272,
+      "epl": 1.8,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_109",
+      "difficulty": "medium",
+      "r_bar": 0.7047221010038286,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_110",
+      "difficulty": "medium",
+      "r_bar": 0.662015256027935,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_111",
+      "difficulty": "medium",
+      "r_bar": 0.6648551124493706,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_112",
+      "difficulty": "medium",
+      "r_bar": 0.8663560301218883,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_113",
+      "difficulty": "medium",
+      "r_bar": 0.7361503903383412,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_114",
+      "difficulty": "medium",
+      "r_bar": 0.7020942422260791,
+      "epl": 1.0,
+      "n_steps": 3.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_115",
+      "difficulty": "medium",
+      "r_bar": 0.653752648186369,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_116",
+      "difficulty": "medium",
+      "r_bar": 0.6080579187974753,
+      "epl": 1.5,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_117",
+      "difficulty": "medium",
+      "r_bar": 0.6835029875740611,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_118",
+      "difficulty": "medium",
+      "r_bar": 0.950381414939165,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_119",
+      "difficulty": "medium",
+      "r_bar": 0.9153727437239307,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_120",
+      "difficulty": "medium",
+      "r_bar": 0.6050430782784066,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_121",
+      "difficulty": "medium",
+      "r_bar": 0.7440252913953673,
+      "epl": 1.2,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_122",
+      "difficulty": "medium",
+      "r_bar": 0.6988977929922887,
+      "epl": 1.0,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_123",
+      "difficulty": "medium",
+      "r_bar": 0.7885862917169447,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_124",
+      "difficulty": "medium",
+      "r_bar": 0.9774311247393488,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_125",
+      "difficulty": "medium",
+      "r_bar": 0.5885036425549107,
+      "epl": 1.6,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_126",
+      "difficulty": "medium",
+      "r_bar": 0.7924977445375705,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_127",
+      "difficulty": "medium",
+      "r_bar": 0.6043700688943955,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_128",
+      "difficulty": "medium",
+      "r_bar": 0.6455660283911937,
+      "epl": 1.5,
+      "n_steps": 7.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_129",
+      "difficulty": "medium",
+      "r_bar": 0.5834324031399324,
+      "epl": 1.4,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_130",
+      "difficulty": "medium",
+      "r_bar": 0.675285152742228,
+      "epl": 1.3333333333333335,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_131",
+      "difficulty": "medium",
+      "r_bar": 0.5661077769311434,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_132",
+      "difficulty": "medium",
+      "r_bar": 0.8979169945274991,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_133",
+      "difficulty": "medium",
+      "r_bar": 0.5897820405299639,
+      "epl": 1.4,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_134",
+      "difficulty": "medium",
+      "r_bar": 0.6968696167975914,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_135",
+      "difficulty": "medium",
+      "r_bar": 0.8131438815003685,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_136",
+      "difficulty": "medium",
+      "r_bar": 0.9377338460978674,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_137",
+      "difficulty": "medium",
+      "r_bar": 0.6745892516679328,
+      "epl": 1.4,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_138",
+      "difficulty": "medium",
+      "r_bar": 0.8151888409798425,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_139",
+      "difficulty": "medium",
+      "r_bar": 0.5611918849879697,
+      "epl": 1.8,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_140",
+      "difficulty": "medium",
+      "r_bar": 0.7486580605435438,
+      "epl": 1.4,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_141",
+      "difficulty": "medium",
+      "r_bar": 0.9418215749130966,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_142",
+      "difficulty": "medium",
+      "r_bar": 0.5769575882792648,
+      "epl": 1.4,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_143",
+      "difficulty": "medium",
+      "r_bar": 0.5382151652969075,
+      "epl": 1.8,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_144",
+      "difficulty": "medium",
+      "r_bar": 0.721641503350089,
+      "epl": 1.5,
+      "n_steps": 6.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_145",
+      "difficulty": "medium",
+      "r_bar": 0.7620329951137671,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_146",
+      "difficulty": "medium",
+      "r_bar": 0.7427653653119979,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_147",
+      "difficulty": "medium",
+      "r_bar": 0.813389621568806,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_148",
+      "difficulty": "medium",
+      "r_bar": 0.680887384581678,
+      "epl": 1.2,
+      "n_steps": 6.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_149",
+      "difficulty": "medium",
+      "r_bar": 0.6352661676521211,
+      "epl": 1.3333333333333335,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_150",
+      "difficulty": "medium",
+      "r_bar": 0.5503172326416349,
+      "epl": 1.6,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_151",
+      "difficulty": "medium",
+      "r_bar": 0.6252471793318358,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_152",
+      "difficulty": "medium",
+      "r_bar": 0.6820119843896153,
+      "epl": 1.0,
+      "n_steps": 7.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_153",
+      "difficulty": "medium",
+      "r_bar": 0.8509136411958224,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_154",
+      "difficulty": "medium",
+      "r_bar": 0.7360853688013276,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_155",
+      "difficulty": "medium",
+      "r_bar": 0.6110263602211922,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_156",
+      "difficulty": "medium",
+      "r_bar": 0.8329387327887792,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_157",
+      "difficulty": "medium",
+      "r_bar": 0.6669316040690736,
+      "epl": 1.5,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_158",
+      "difficulty": "medium",
+      "r_bar": 0.5936414977400728,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_159",
+      "difficulty": "medium",
+      "r_bar": 0.5663838412100521,
+      "epl": 1.2,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_160",
+      "difficulty": "medium",
+      "r_bar": 0.8162710341019526,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_161",
+      "difficulty": "medium",
+      "r_bar": 0.5743626801337421,
+      "epl": 1.8,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_162",
+      "difficulty": "medium",
+      "r_bar": 0.6781261250403787,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_163",
+      "difficulty": "medium",
+      "r_bar": 0.6351002012151433,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_164",
+      "difficulty": "medium",
+      "r_bar": 0.7325562654121108,
+      "epl": 1.2,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_165",
+      "difficulty": "medium",
+      "r_bar": 0.5361943593081436,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_166",
+      "difficulty": "medium",
+      "r_bar": 0.7136173889020194,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_167",
+      "difficulty": "medium",
+      "r_bar": 0.7798120602655422,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_168",
+      "difficulty": "medium",
+      "r_bar": 0.874915126264114,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_169",
+      "difficulty": "medium",
+      "r_bar": 0.638336073363998,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_170",
+      "difficulty": "medium",
+      "r_bar": 0.6239222975489318,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_171",
+      "difficulty": "medium",
+      "r_bar": 0.6919904384019832,
+      "epl": 1.6,
+      "n_steps": 6.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_172",
+      "difficulty": "medium",
+      "r_bar": 0.6075998040510426,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_173",
+      "difficulty": "medium",
+      "r_bar": 0.641477537156393,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_174",
+      "difficulty": "medium",
+      "r_bar": 0.593610704137321,
+      "epl": 1.0,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_175",
+      "difficulty": "medium",
+      "r_bar": 0.6952980147873474,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_176",
+      "difficulty": "medium",
+      "r_bar": 0.7866150184801581,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_177",
+      "difficulty": "medium",
+      "r_bar": 0.782636819038258,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_178",
+      "difficulty": "medium",
+      "r_bar": 0.5122360344935283,
+      "epl": 1.4000000000000001,
+      "n_steps": 9.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_179",
+      "difficulty": "medium",
+      "r_bar": 0.6529563728714812,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_180",
+      "difficulty": "medium",
+      "r_bar": 0.6368471106383364,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_181",
+      "difficulty": "medium",
+      "r_bar": 0.6477825261798642,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_182",
+      "difficulty": "medium",
+      "r_bar": 0.5738007869356435,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_183",
+      "difficulty": "medium",
+      "r_bar": 0.8272997107229473,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_184",
+      "difficulty": "medium",
+      "r_bar": 0.8480969578389098,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_185",
+      "difficulty": "medium",
+      "r_bar": 0.6119744885449265,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_186",
+      "difficulty": "medium",
+      "r_bar": 0.525718428637921,
+      "epl": 1.4,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_187",
+      "difficulty": "medium",
+      "r_bar": 0.6705146968597009,
+      "epl": 1.6,
+      "n_steps": 7.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_188",
+      "difficulty": "medium",
+      "r_bar": 0.575296182015864,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_189",
+      "difficulty": "medium",
+      "r_bar": 0.6276800482696372,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_190",
+      "difficulty": "medium",
+      "r_bar": 0.7149089068320374,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_191",
+      "difficulty": "medium",
+      "r_bar": 0.6392428018996411,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_192",
+      "difficulty": "medium",
+      "r_bar": 0.5926831669697614,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_193",
+      "difficulty": "medium",
+      "r_bar": 0.6040996354385588,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_194",
+      "difficulty": "medium",
+      "r_bar": 0.6551577755351664,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_195",
+      "difficulty": "medium",
+      "r_bar": 0.7786062910016948,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_196",
+      "difficulty": "medium",
+      "r_bar": 0.8582933421014337,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_197",
+      "difficulty": "medium",
+      "r_bar": 0.694293504670781,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_198",
+      "difficulty": "medium",
+      "r_bar": 0.8692947255842967,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "strategyqa_199",
+      "difficulty": "medium",
+      "r_bar": 0.709935152738232,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.8,
+      "strategy": "targeted_repair"
+    }
+  ]
+}

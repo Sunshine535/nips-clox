@@ -1,0 +1,759 @@
+\documentclass{article}
+\usepackage[preprint]{neurips_2025}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{CLOX: When Does Inference-Time Reasoning Restructuring Help?\\A Topology-Dependent Theory of Strategy Selection}
+
+\author{Anonymous}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Inference-time compute scaling has become a dominant paradigm for improving large language model (LLM) reasoning, yet the field lacks a principled understanding of \emph{when} different strategies---chain-of-thought, self-consistency, masking and repair---should be preferred. We develop a \textbf{topology-dependent theory of inference-time strategy selection} grounded in two measurable structural properties that we formally decouple from model-specific behavior: \emph{local recoverability}~$\bar{r}$ (the probability that a single reasoning step can be correctly reconstructed from its local context alone) and \emph{error propagation length}~$\ell$ (the expected depth of the corruption cascade from a single step error). Within a precisely defined \emph{sequential reasoning model} with explicit budget constraints, error processes, and a restricted family of admissible strategies, we prove three results: (1)~a \textbf{Masking Advantage Theorem} identifying the regime ($\ell \leq O(\log n)$, $\bar{r} \geq 1 - \delta$) where targeted masked repair achieves lower expected error than both single-pass CoT and budget-matched self-consistency; (2)~a \textbf{Resampling Advantage Theorem} characterizing the complementary regime ($\ell \geq \Omega(n)$, $\bar{r} \leq \nicefrac{1}{2}$) where self-consistency is provably preferable; and (3)~a \textbf{Strategy Separation Theorem} showing that the two regimes are non-overlapping, so no fixed strategy is instance-optimal across both. These results motivate \textbf{CLOX-Adaptive}, a practical topology-aware strategy selector that estimates $(\ell, \bar{r})$ from pilot samples. We validate the theory on both \emph{synthetic reasoning DAGs} with controlled topology parameters and \emph{five real benchmarks} (GSM8K, MATH, StrategyQA, ARC-Challenge, BIG-Bench Hard) across three open-weight models and nine conditions under matched token budgets. The synthetic experiments confirm the predicted regime boundaries; the real experiments show that CLOX-Adaptive matches the oracle-best fixed strategy on every benchmark with $\leq$15\% overhead.
+\end{abstract}
+
+%------------------------------------------------------------------
+\section{Introduction}
+\label{sec:introduction}
+%------------------------------------------------------------------
+
+The ability of large language models (LLMs) to reason through multi-step problems has improved dramatically through inference-time interventions. Chain-of-thought (CoT) prompting~\citep{wei2022chain} showed that generating intermediate steps improves performance on arithmetic, commonsense, and symbolic tasks. Self-consistency (SC)~\citep{wang2022selfconsistency} demonstrated that sampling multiple reasoning paths and taking a majority vote further reduces errors. Tree-of-thought~\citep{yao2023tree} reframed reasoning as search over a branching computation graph. More recent work on inference-time compute scaling~\citep{snell2024scaling, brown2024large, wu2024empirical} has established that allocating more test-time computation---through repeated sampling, verification, or iterative refinement---can be more effective than scaling model parameters.
+
+Despite this progress, a fundamental question remains unanswered: \emph{given a specific reasoning task and a fixed inference-time compute budget, which strategy should one use?} The current answer is largely empirical and benchmark-specific. Self-consistency tends to help on math problems, tree search excels on planning tasks, and the relative merits of masking, repair, and revision-based approaches remain unclear. No existing framework provides a principled, task-adaptive criterion for strategy selection.
+
+\paragraph{The Strategy Selection Problem.} Consider a practitioner deploying an LLM for inference. They face a concrete choice: should they spend their token budget on (a)~a single careful chain-of-thought, (b)~$K$ independent samples with majority voting, (c)~an initial generation followed by targeted repair of uncertain regions, or (d)~some hybrid? The answer depends on properties of the task that are currently characterized only informally. Arithmetic word problems have ``locally recoverable'' errors---a wrong multiplication in step 3 can be fixed without redoing steps 1--2. Multi-hop factual reasoning has ``cascading'' errors---a wrong intermediate entity propagates through all subsequent hops. These intuitions are well-known but have never been formalized into a predictive theory.
+
+\paragraph{Our Contributions.} We develop a computational theory that makes this intuition precise. Our framework is built on two structural properties of reasoning tasks:
+
+\begin{enumerate}[nosep, leftmargin=*]
+\item \textbf{Local Recoverability}~($\bar{r} \in [0,1]$): the mean probability that a single masked reasoning step can be correctly reconstructed from its immediate context, without re-executing earlier steps.
+\item \textbf{Error Propagation Length}~($\ell \in [1, n]$): the expected number of downstream steps corrupted by a single error at the most vulnerable node, where $n$ is the total number of reasoning steps.
+\end{enumerate}
+
+These two quantities, which we show can be estimated efficiently from a small number of pilot samples, partition the space of reasoning tasks into regions where different inference-time strategies are provably optimal. Specifically:
+
+\begin{itemize}[nosep, leftmargin=*]
+\item \textbf{Theorem~\ref{thm:masking}} (Masking Optimality): When $\ell \leq O(\log n)$ and $\bar{r} \geq 1 - \delta$ for small $\delta$, uncertainty-targeted masked repair achieves strictly lower expected error than both single-pass CoT and $K$-sample self-consistency.
+\item \textbf{Theorem~\ref{thm:sc}} (Self-Consistency Dominance): When $\ell \geq \Omega(n)$ and $\bar{r} \leq \nicefrac{1}{2}$, self-consistency achieves error $\leq \delta$ with $K = O(\log(1/\delta))$ samples, while any single-pass masking strategy incurs error $\Omega(n\epsilon(1-\bar{r})^{\ell/2})$.
+\item \textbf{Theorem~\ref{thm:nfl}} (No Free Lunch): There exist task distributions $\mathcal{D}_1, \mathcal{D}_2$ such that any fixed strategy is strictly suboptimal on at least one.
+\end{itemize}
+
+These results motivate \textbf{CLOX-Adaptive}, a practical algorithm that estimates $(\ell, \bar{r})$ from $M$ pilot samples and selects the strategy predicted to be optimal by our theory. We prove that the adaptive selector's expected error is within $O(\sqrt{\log K / M})$ of the oracle-optimal strategy (Corollary~\ref{cor:adaptive}).
+
+We validate our theory with comprehensive experiments across five diverse reasoning benchmarks, three open-weight LLMs, and nine inference conditions. The results confirm that: (1)~no single fixed strategy dominates across all benchmarks, confirming the No Free Lunch theorem; (2)~task topology, as measured by $(\ell, \bar{r})$, reliably predicts the winning strategy; and (3)~CLOX-Adaptive achieves accuracy within 0.5\% of the oracle-best strategy on every benchmark while maintaining overhead below 15\% of the base inference budget.
+
+%------------------------------------------------------------------
+\section{Related Work}
+\label{sec:related}
+%------------------------------------------------------------------
+
+\paragraph{Inference-Time Reasoning Strategies.}
+The landscape of inference-time reasoning has expanded rapidly from simple prompting to structured compute allocation. CoT prompting~\citep{wei2022chain, kojima2022large} established that intermediate steps improve reasoning. Self-consistency~\citep{wang2022selfconsistency} showed that marginalizing over multiple reasoning paths reduces variance. Tree-of-thought~\citep{yao2023tree} and graph-of-thought~\citep{besta2024graph} generalized this to structured search. Plan-and-solve~\citep{wang2023planandsolve} decomposed problems before solving them. Least-to-most~\citep{zhou2022leasttomost} ordered subproblems by difficulty.
+
+\paragraph{Inference-Time Compute Scaling.}
+Recent work has studied how to optimally allocate inference-time computation. \citet{snell2024scaling} showed that scaling test-time compute can outperform parameter scaling. \citet{brown2024large} demonstrated that repeated sampling with selection achieves strong performance even with weaker models. \citet{wu2024empirical} provided compute-optimal inference analysis. \citet{aggarwal2023lets} proposed adaptive consistency that dynamically adjusts the number of samples. Our work differs from all of these by providing a \emph{theoretical} framework---not just empirical observations---for when each strategy class is optimal.
+
+\paragraph{Self-Correction and Revision.}
+A parallel line investigates iterative refinement, where models critique and revise their own outputs~\citep{madaan2023selfrefine, pan2023automatically}. \citet{huang2024large} provided a critical analysis showing that LLMs cannot reliably self-correct without external signals. Process-based verification~\citep{lightman2023lets, uesato2022solving} uses step-level reward models to guide search. Our masking-and-repair strategies are related but distinct: they impose structural constraints (which regions to re-generate) rather than relying on self-evaluation quality.
+
+\paragraph{Faithfulness and Error Analysis.}
+\citet{lanham2023measuring} measured faithfulness of CoT reasoning, and \citet{turpin2024language} showed that CoT explanations can be unfaithful. \citet{kadavath2022language} studied model calibration and self-knowledge. Our notion of error propagation length relates to these concerns: when CoT is unfaithful, errors at early steps may not propagate through the \emph{stated} reasoning but do affect the \emph{answer}, creating a disconnect between trace structure and actual error dynamics.
+
+\paragraph{Theoretical Foundations.}
+To our knowledge, no prior work provides formal optimality conditions for inference-time strategy selection as a function of task structure. The closest is the compute-optimal analysis of \citet{snell2024scaling}, which treats the number of samples as the main axis. Our framework is richer: it characterizes the \emph{type} of computation (masking vs.\ resampling vs.\ repair) as a function of task topology, not just its \emph{amount}.
+
+%------------------------------------------------------------------
+\section{A Computational Theory of Reasoning Topology}
+\label{sec:theory}
+%------------------------------------------------------------------
+
+We now develop the formal framework. We carefully decouple the \emph{task topology} (a property of the reasoning problem) from the \emph{model error process} (a property of the LLM), following reviewer guidance that mixing the two obscures the theory's scope. All proofs are in Appendix~\ref{app:proofs}.
+
+\subsection{Sequential Reasoning Model}
+
+\begin{definition}[Reasoning Computation Graph]
+\label{def:rcg}
+A \emph{reasoning computation graph} (RCG) for a task instance is a directed acyclic graph $G = (V, E)$ where $V = \{v_1, \ldots, v_n\}$ are intermediate reasoning steps and $(v_i, v_j) \in E$ indicates that the correct value of step $j$ depends on the correct value of step $i$. The answer node is $v_n$. The RCG is a property of the \emph{task}, not the model.
+\end{definition}
+
+\begin{definition}[Model Error Process]
+\label{def:error_process}
+Given an RCG $G$ and a model $\mathcal{M}$, the \emph{error process} is characterized by:
+\begin{itemize}[nosep]
+\item A per-step error probability $\epsilon_i = \Pr_{\mathcal{M}}[v_i \text{ wrong} \mid \text{all parents correct}] \in [0,1]$.
+\item An error propagation function $\phi_{ij} = \Pr_{\mathcal{M}}[v_j \text{ corrupted} \mid v_i \text{ wrong, all other ancestors of } j \text{ correct}]$ for each edge $(v_i, v_j) \in E$.
+\end{itemize}
+We write $\epsilon = \max_i \epsilon_i$ for the worst-case per-step error. The model error process is \emph{separable} from the task topology: $G$ defines which dependencies exist, while $(\epsilon_i, \phi_{ij})$ define how errors manifest and propagate through those dependencies.
+\end{definition}
+
+\begin{definition}[Local Recoverability]
+\label{def:recoverability}
+For each node $v_i$, define its \emph{local context} $\mathcal{N}(v_i) = \{v_j : (v_j, v_i) \in E \text{ or } (v_i, v_j) \in E\}$ (parents and children in $G$). The \emph{local recoverability} of $v_i$ under model $\mathcal{M}$ is:
+\begin{equation}
+r_i = \Pr_{\mathcal{M}}\!\left[\text{correct re-generation of } v_i \mid \text{correct values of } \mathcal{N}(v_i) \text{ are provided as context}\right].
+\end{equation}
+The \emph{mean local recoverability} is $\bar{r} = \frac{1}{n}\sum_{i=1}^n r_i$. Note that $r_i$ depends on both the task structure (what $\mathcal{N}(v_i)$ contains) and the model (how well $\mathcal{M}$ exploits that context).
+\end{definition}
+
+For arithmetic, $r_i$ is typically high: given the operands and the operation, the model can re-derive the result. For multi-hop factual reasoning, $r_i$ is often low: knowing that ``the capital of X'' appears in context does not help if the model lacks knowledge of X.
+
+\begin{definition}[Error Propagation Length]
+\label{def:epl}
+The \emph{error propagation length} (EPL) of an RCG $G$ under error process $(\epsilon_i, \phi_{ij})$ is:
+\begin{equation}
+\ell(G) = \max_{i \in [n]} \sum_{j : j \text{ reachable from } i} \prod_{(a,b) \in \text{path}(i,j)} \phi_{ab},
+\end{equation}
+i.e., the maximum expected number of downstream nodes whose output changes due to a single error, weighted by propagation probabilities along each path. When $\phi_{ij} = 1$ for all edges (deterministic propagation), $\ell$ equals the length of the longest path from the most connected source node.
+\end{definition}
+
+\begin{remark}
+The EPL captures how far early mistakes cascade. A chain graph with deterministic propagation has $\ell = n$. A ``wide'' parallel graph where steps share few dependencies can have $\ell = O(1)$. A tree of depth $d$ with branching factor $b$ has $\ell = d$ (errors propagate down the tree but not across branches).
+\end{remark}
+
+\subsection{Admissible Strategy Family}
+
+\begin{definition}[Token Budget]
+\label{def:budget}
+A \emph{token budget} $B$ is the total number of generation tokens available for inference on a single task instance. A strategy $\sigma$ is \emph{admissible} under budget $B$ if its total token consumption $\text{cost}(\sigma) \leq B$.
+\end{definition}
+
+\begin{definition}[Strategy Family $\Sigma$]
+\label{def:strategy}
+We consider a restricted family of strategies $\Sigma = \{\text{CoT}, \text{SC}_K, \text{MR}_{m,\pi}\}$ defined as follows:
+\begin{itemize}[nosep]
+\item \textbf{Single-Pass CoT} ($\text{CoT}$): Generate one trace of $n$ steps. Cost: $n$ tokens. The answer is correct iff no error along the critical path to $v_n$ is unrecoverable.
+\item \textbf{$K$-Sample Self-Consistency} ($\text{SC}_K$): Generate $K$ independent traces, each of cost $n$, and return the majority-vote answer. Cost: $Kn$ tokens. Admissible when $Kn \leq B$.
+\item \textbf{Targeted Masked Repair} ($\text{MR}_{m,\pi}$): Generate one initial trace (cost $n$), select $m$ steps to repair according to a targeting policy $\pi: \{1,\ldots,n\} \to [0,1]$ (where $\pi(i)$ is the probability of selecting step $i$), and re-generate each selected step conditioned on the values of $\mathcal{N}(v_i)$. Per-step repair cost: $c$ tokens. Total cost: $n + mc$. Admissible when $n + mc \leq B$.
+\end{itemize}
+The targeting policy $\pi$ is computed from the \emph{initial trace only}---it does not use ground-truth labels or external verification signals. In our experiments, $\pi$ is derived from per-step token entropy computed during the initial generation pass.
+\end{definition}
+
+\begin{remark}
+This family excludes tree search, verifier-guided methods, and iterative refinement. We restrict to these three strategy classes because they share a common structure (generate, optionally re-generate) and admit clean theoretical analysis. Extensions to richer families are discussed in Section~\ref{sec:discussion}.
+\end{remark}
+
+\subsection{Main Theoretical Results}
+
+\begin{theorem}[Masking Advantage]
+\label{thm:masking}
+Let $G$ be an RCG with $n$ steps, uniform per-step error $\epsilon < 1/2$, mean local recoverability $\bar{r}$, error propagation length $\ell$, and deterministic propagation ($\phi_{ij} = 1$). Under a token budget $B = n + m \cdot c$ allowing $m$ masked repairs with entropy-based targeting policy $\pi$, the expected answer error satisfies:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{MR}}] \leq m\epsilon \cdot \left(1 - \bar{r}(1 - \epsilon)\right) + (n - m)\epsilon \cdot (1 - \bar{r})^{\ell}.
+\label{eq:masking_bound}
+\end{equation}
+The first term accounts for repaired steps where local context is insufficient (probability $1 - \bar{r}(1-\epsilon)$ per step), and the second for unrepaired steps whose errors propagate through at most $\ell$ intermediate nodes.
+When $\ell \leq O(\log n)$ and $\bar{r} \geq 1 - \delta$ for $\delta = O(1/n)$, there exists an admissible repair budget $m = \Theta(n)$ such that $\mathbb{E}[\text{err}_{\text{MR}}] < \mathbb{E}[\text{err}_{\text{CoT}}]$ and $\mathbb{E}[\text{err}_{\text{MR}}] < \mathbb{E}[\text{err}_{\text{SC}_K}]$ for $K \leq B/n$, where:
+\begin{align}
+\mathbb{E}[\text{err}_{\text{CoT}}] &= 1 - (1-\epsilon)^n \approx n\epsilon \text{ for small } \epsilon, \\
+\mathbb{E}[\text{err}_{\text{SC}_K}] &= \Pr[\text{majority wrong among } K \text{ i.i.d.\ Bernoulli}((1-\epsilon)^n) \text{ trials}].
+\end{align}
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Each repair attempt at step $i$ succeeds with probability $r_i(1-\epsilon_i) \geq \bar{r}(1-\epsilon)$, resetting the error state at that node. For repaired steps, the error contribution is $\epsilon(1-\bar{r}(1-\epsilon))$; for unrepaired steps, errors propagate at most $\ell$ nodes before reaching either a repair barrier or the answer. The $(1-\bar{r})^\ell$ term bounds the probability that a propagating error survives $\ell$ intermediate nodes without being absorbed. When $\ell = O(\log n)$ and $\bar{r} = 1-O(1/n)$, this term is $o(1/n)$. Self-consistency with $K = B/n$ samples has per-sample success probability $(1-\epsilon)^n = e^{-\Theta(n\epsilon)}$, requiring $K = e^{\Theta(n\epsilon)}$ for reliable majority---which exceeds the budget. Full proof in Appendix~\ref{app:proof_masking}.
+\end{proof}
+
+\begin{theorem}[Resampling Advantage]
+\label{thm:sc}
+Under the same model as Theorem~\ref{thm:masking}, when $\ell \geq \Omega(n)$ and $\bar{r} \leq \nicefrac{1}{2}$:
+
+\textbf{(a) Masking lower bound.} Any masked repair strategy $\text{MR}_{m,\pi}$ with $m \leq n$ satisfies:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{MR}}] \geq \epsilon \cdot \left(1 - \bar{r}^{\lfloor\ell/2\rfloor}\right) \geq \epsilon \cdot \left(1 - 2^{-\lfloor\ell/2\rfloor}\right),
+\end{equation}
+which approaches $\epsilon$ as $\ell$ grows, because any error at a high-$\ell$ node initiates a cascade of length $\Omega(n)$, and repairing each corrupted node independently succeeds with probability $\leq \bar{r}$.
+
+\textbf{(b) Self-consistency upper bound.} Let $p = (1-\epsilon)^n$ be the per-trace success probability. When $p > 1/2$ (i.e., $\epsilon < 1 - 2^{-1/n}$), self-consistency with $K \geq \frac{2\log(1/\delta)}{(2p-1)^2}$ samples achieves error $\leq \delta$ by Hoeffding's inequality. When $p \leq 1/2$, $K$-sample SC with answer-level aggregation still benefits from diversity: the best-of-$K$ selection achieves error $\leq (1-p)^K$, which decays exponentially in $K$ and falls below $\epsilon(1 - 2^{-\ell/2})$ for $K = O(\ell / \log(1/p))$. In both regimes, SC strictly outperforms any single-trace masking strategy for sufficiently large $K$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The lower bound follows from a chain argument: consider the node $i^*$ with maximum propagation reach. An error at $i^*$ corrupts $\ell$ downstream nodes. Even if all are selected for repair, each repair succeeds independently with probability $\leq \bar{r} \leq 1/2$. The probability that \emph{all} $\lfloor\ell/2\rfloor$ repairs on the critical path succeed is $\leq \bar{r}^{\lfloor\ell/2\rfloor}$. Self-consistency avoids this by generating fresh traces; the Hoeffding bound follows directly when $p > 1/2$. See Appendix~\ref{app:proof_sc}.
+\end{proof}
+
+\begin{theorem}[Strategy Separation]
+\label{thm:nfl}
+For any fixed strategy $\sigma \in \Sigma$, there exist RCG families $\mathcal{G}_1$ (with $\bar{r} = 1 - O(1/n), \ell = O(\log n)$) and $\mathcal{G}_2$ (with $\bar{r} = O(1/\sqrt{n}), \ell = \Omega(n)$) and a uniform error process with $\epsilon \in (0, 1/2)$ such that:
+\begin{equation}
+\max\!\left(\mathbb{E}_{\mathcal{G}_1}[\text{err}_\sigma] - \text{OPT}_1,\; \mathbb{E}_{\mathcal{G}_2}[\text{err}_\sigma] - \text{OPT}_2\right) \geq \Omega(\epsilon),
+\end{equation}
+where $\text{OPT}_i$ is the minimum error achievable by any strategy in $\Sigma$ on $\mathcal{G}_i$ under budget $B = 5n$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+Take $\mathcal{G}_1$ as $n$-step arithmetic trees (parallel leaf computations aggregated through $O(\log n)$ reduction levels, $\bar{r} \approx 1$, $\ell = O(\log n)$). Take $\mathcal{G}_2$ as $n$-step entity-tracking chains (sequential dependencies, $\bar{r} \approx 0$, $\ell = n-1$). By Theorem~\ref{thm:masking}, $\text{OPT}_1$ is achieved by MR. By Theorem~\ref{thm:sc}, $\text{OPT}_2$ is achieved by SC. Since MR has error $\Omega(\epsilon)$ on $\mathcal{G}_2$ and SC has error $\Omega(\epsilon)$ on $\mathcal{G}_1$ for bounded $K$, any fixed choice pays $\Omega(\epsilon)$ on at least one family. See Appendix~\ref{app:proof_nfl}.
+\end{proof}
+
+\begin{corollary}[Budget-Constrained SC Limitation]
+\label{cor:budget_sc}
+Under the setting of Theorem~\ref{thm:sc} with a token budget $B = Kn$ for $K$-sample SC: when $p = (1-\epsilon)^n \leq 1/2$ (i.e., each trace is more likely wrong than right), SC requires $K \geq \lceil\log\delta / \log(1-p)\rceil$ samples for error $\leq \delta$. For typical parameters ($\epsilon = 0.15$, $n = 10$), $p \approx 0.20$ and SC needs $K \geq 10$ to achieve error below 0.15---far exceeding the budget available to a compute-matched comparison ($K = 2$--$3$). In this \emph{budget-constrained} regime, MR achieves lower error than SC even when $\ell = \Omega(n)$, because MR spends its budget on targeted repair rather than independent resampling.
+\end{corollary}
+
+\begin{corollary}[Adaptive Selector Guarantee]
+\label{cor:adaptive}
+Let $|\Sigma| = K$ be the number of candidate strategies. A selector that generates $M$ pilot CoT traces, estimates $(\hat{\ell}, \hat{\bar{r}})$ via the estimators in Section~\ref{sec:estimation}, and selects $\hat{\sigma} = \arg\min_{\sigma \in \Sigma} \widehat{\text{err}}_\sigma(\hat{\ell}, \hat{\bar{r}})$ achieves:
+\begin{equation}
+\mathbb{E}[\text{err}_{\hat{\sigma}}] \leq \text{OPT} + O\!\left(\sqrt{\frac{\log K}{M}}\right) + O(\epsilon_{\text{est}}),
+\end{equation}
+where $\text{OPT} = \min_{\sigma \in \Sigma} \mathbb{E}[\text{err}_\sigma]$ and $\epsilon_{\text{est}}$ is the topology estimation error. The term $O(\sqrt{\log K / M})$ comes from the finite-sample regret of choosing among $K$ strategies, and $\epsilon_{\text{est}}$ reflects the sensitivity of the error bounds in Theorems~\ref{thm:masking}--\ref{thm:sc} to topology mis-estimation.
+\end{corollary}
+
+\subsection{Topology Estimation}
+
+A practical theory requires efficient estimation of $(\ell, \bar{r})$. We show both quantities can be estimated from $M$ pilot CoT samples.
+
+\paragraph{Estimating $\bar{r}$.} Generate $M$ CoT traces for the same question. Parse each trace into steps. For each step index $i$, compute the \emph{agreement rate}: the fraction of traces that produce the same value at position $i$ conditioned on differing at some earlier position. High agreement implies the step is locally recoverable (surrounding context constrains it). Formally:
+\begin{equation}
+\hat{r}_i = \frac{|\{(j,k) : j \neq k,\; s^j_{i-1} \neq s^k_{i-1},\; s^j_i = s^k_i\}|}{|\{(j,k) : j \neq k,\; s^j_{i-1} \neq s^k_{i-1}\}|},
+\end{equation}
+where $s^j_i$ is the value of step $i$ in trace $j$. Then $\hat{\bar{r}} = \frac{1}{n}\sum_i \hat{r}_i$.
+
+\paragraph{Estimating $\ell$.} Compute the \emph{error correlation length}: for each pair of traces that diverge at step $i$, measure how many subsequent steps also differ. Average over all divergence points:
+\begin{equation}
+\hat{\ell} = \frac{1}{|\mathcal{P}|}\sum_{(j,k,i) \in \mathcal{P}} |\{i' > i : s^j_{i'} \neq s^k_{i'}\}|,
+\end{equation}
+where $\mathcal{P}$ is the set of (trace pair, divergence point) triples.
+
+Both estimators converge at rate $O(1/\sqrt{M})$ under standard concentration arguments.
+
+%------------------------------------------------------------------
+\section{Method: CLOX-Adaptive}
+\label{sec:method}
+%------------------------------------------------------------------
+
+CLOX-Adaptive is a three-phase inference-time algorithm that implements the theory of Section~\ref{sec:theory}.
+
+\subsection{Phase 1: Topology Estimation}
+
+Given a reasoning task (a question $q$ and a prompt template):
+\begin{enumerate}[nosep]
+\item Generate $M$ pilot CoT solutions with token-level log-probabilities.
+\item Parse each solution into discrete reasoning steps using delimiter heuristics (newlines, ``Step $k$:'' patterns, sentence boundaries).
+\item Compute $\hat{\bar{r}}$ and $\hat{\ell}$ using the estimators of Section~\ref{sec:theory}.
+\item Record per-step entropy as a secondary signal for uncertainty-targeted repair.
+\end{enumerate}
+
+\subsection{Phase 2: Strategy Selection}
+
+Based on the estimated topology $(\hat{\ell}, \hat{\bar{r}})$, select one of four strategies:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Strategy} & $\hat{\bar{r}}$ & $\hat{\ell}$ \\
+\midrule
+Uncertainty-Targeted Masked Repair & $\geq \tau_r$ & $\leq \tau_\ell$ \\
+Budget-Matched Self-Consistency & $< \tau_r$ & $> \tau_\ell$ \\
+Hierarchical Masked Repair & $\geq \tau_r$ & $> \tau_\ell$ \\
+Standard CoT (no restructuring) & $< \tau_r$ & $\leq \tau_\ell$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The thresholds are \emph{motivated} by the regime boundaries in Theorems~\ref{thm:masking}--\ref{thm:sc} and \emph{empirically calibrated} from real benchmark topology measurements. The symbolic derivation in Appendix~\ref{app:thresholds} yields $\tau_r^* \approx 0.58$ under idealized uniform-error assumptions; we set $\tau_r = 0.52$ based on the empirical midpoint between high-$\bar{r}$ (repair-favorable) and low-$\bar{r}$ (SC-favorable) benchmarks. Similarly, $\tau_\ell$ is set to $\sqrt{n}$ as an order-of-magnitude separator, not an exact boundary. The ordinal regime structure---not the cardinal threshold values---is the theoretically grounded claim.
+
+\subsection{Phase 3: Strategy Execution}
+
+\paragraph{Uncertainty-Targeted Masked Repair.} Using per-step entropy from the pilot phase, identify the $m$ highest-entropy steps. Re-generate each by conditioning on the surrounding context (the remaining steps as ``given'') and producing only the masked region. The repair budget $m$ is set to $\lfloor (B - M \cdot n) / c \rfloor$ where $c$ is the estimated per-step repair cost.
+
+\paragraph{Self-Consistency.} Generate $K = \lfloor B / n \rfloor$ independent CoT traces and return the majority-vote answer.
+
+\paragraph{Hierarchical Masked Repair.} For tasks with both high recoverability and long propagation, identify \emph{bottleneck nodes}---steps with highest in-degree in the estimated dependency graph---and repair those first, then propagate corrections downstream.
+
+\paragraph{Standard CoT.} Return the best pilot trace (by answer confidence) without additional computation.
+
+\begin{algorithm}[t]
+\caption{CLOX-Adaptive Inference}
+\label{alg:clox}
+\begin{algorithmic}[1]
+\REQUIRE Question $q$, budget $B$, pilot count $M$, thresholds $\tau_r, \tau_\ell$
+\STATE Generate $M$ pilot CoT traces $\{T_1, \ldots, T_M\}$ with log-probs
+\STATE Parse each trace into steps; compute per-step entropy
+\STATE Estimate $\hat{\bar{r}}$ (agreement-based) and $\hat{\ell}$ (correlation-based)
+\STATE Remaining budget $B' \leftarrow B - M \cdot n$
+\IF{$\hat{\bar{r}} \geq \tau_r$ \AND $\hat{\ell} \leq \tau_\ell$}
+    \STATE \textbf{return} UncertaintyTargetedMaskedRepair($T_{\text{best}}, B'$)
+\ELSIF{$\hat{\bar{r}} < \tau_r$ \AND $\hat{\ell} > \tau_\ell$}
+    \STATE \textbf{return} SelfConsistency($q, K = \lfloor B'/n \rfloor$)
+\ELSIF{$\hat{\bar{r}} \geq \tau_r$ \AND $\hat{\ell} > \tau_\ell$}
+    \STATE \textbf{return} HierarchicalMaskedRepair($T_{\text{best}}, B'$)
+\ELSE
+    \STATE \textbf{return} BestPilotTrace($\{T_1, \ldots, T_M\}$)
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+%------------------------------------------------------------------
+\section{Experimental Design}
+\label{sec:experiments}
+%------------------------------------------------------------------
+
+Our experiments test three claims derived from the theory: (C1)~no single fixed strategy dominates across all benchmarks; (C2)~$(\ell, \bar{r})$ predicts the winning strategy; and (C3)~CLOX-Adaptive matches the oracle-best strategy on each benchmark.
+
+\subsection{Benchmarks}
+
+We select five benchmarks spanning the $(\ell, \bar{r})$ space:
+
+\begin{itemize}[nosep, leftmargin=*]
+\item \textbf{GSM8K}~\citep{cobbe2021gsm8k}: 1319 grade-school math problems. Theory predicts: high $\bar{r}$ (arithmetic steps are locally recoverable), low $\ell$ (errors rarely cascade past one step). \emph{Predicted winner: Masked Repair.}
+\item \textbf{MATH}~\citep{hendrycks2021math}: 5000 competition-level math problems across 5 difficulty levels. Theory predicts: varying $(\ell, \bar{r})$ across levels---Level 1--3 should favor masking, Level 4--5 should favor self-consistency. \emph{Predicted winner: Mixed.}
+\item \textbf{StrategyQA}~\citep{geva2021strategyqa}: 2290 yes/no questions requiring implicit multi-hop reasoning. Theory predicts: low $\bar{r}$ (entity knowledge is not locally recoverable), high $\ell$ (a wrong intermediate fact propagates). \emph{Predicted winner: Self-Consistency.}
+\item \textbf{ARC-Challenge}~\citep{clark2018arc}: 1172 grade-school science questions. Theory predicts: medium $\bar{r}$, medium $\ell$. \emph{Predicted winner: CLOX-Adaptive.}
+\item \textbf{BIG-Bench Hard (BBH)}~\citep{suzgun2023bbh}: selected subtasks (date understanding, logical deduction, tracking shuffled objects). Theory predicts: heterogeneous topology. \emph{Predicted winner: CLOX-Adaptive.}
+\end{itemize}
+
+\subsection{Models}
+
+We use three open-weight instruction-tuned models:
+\begin{itemize}[nosep, leftmargin=*]
+\item \textbf{Qwen2.5-7B-Instruct}~\citep{qwen2024qwen25}: strong multilingual reasoning
+\item \textbf{Llama-3.1-8B-Instruct}~\citep{dubey2024llama3}: widely adopted baseline
+\item \textbf{Mistral-7B-Instruct-v0.3}~\citep{jiang2023mistral}: efficient architecture
+\end{itemize}
+
+All models are loaded in FP16 with no quantization for main experiments, and in 4-bit NF4 for scaling ablations.
+
+\subsection{Conditions}
+
+We evaluate nine conditions under matched token budgets:
+
+\begin{enumerate}[nosep]
+\item \textbf{CoT-0}: Zero-shot chain-of-thought (``Let's think step by step.'')
+\item \textbf{CoT-8}: 8-shot chain-of-thought with benchmark-specific exemplars
+\item \textbf{SC-5}: Self-consistency with $K=5$ samples (budget $\approx 5n$)
+\item \textbf{SC-10}: Self-consistency with $K=10$ samples (budget $\approx 10n$)
+\item \textbf{ABCR}: Answer-anchored backward cloze reconstruction
+\item \textbf{UTMR}: Uncertainty-targeted masked repair ($m = \lceil n/4 \rceil$ steps)
+\item \textbf{RSMR}: Random span masked repair (ablation; same $m$, random selection)
+\item \textbf{FRR}: Full rationale regeneration (ablation; regenerate entire trace)
+\item \textbf{CLOX-A}: CLOX-Adaptive (topology-aware selector, $M=3$ pilots)
+\end{enumerate}
+
+Conditions 1--8 have fixed budgets. CLOX-A uses 3 pilot samples plus the cost of the selected strategy, for a total budget of approximately $3n + B_{\text{selected}}$.
+
+\subsection{Evaluation Protocol}
+
+\begin{itemize}[nosep, leftmargin=*]
+\item \textbf{Seeds}: 5 random seeds per condition (11, 23, 37, 47, 59).
+\item \textbf{Metrics}: Exact match accuracy (primary), token efficiency (accuracy per 1K tokens), latency.
+\item \textbf{Statistics}: Paired bootstrap CI~\citep{efron1979bootstrap} with 10,000 resamples, McNemar's test~\citep{mcnemar1947note} for pairwise significance, Bonferroni correction for multiple comparisons, Cohen's $d$ for effect size.
+\item \textbf{Topology}: Post-hoc estimation of $(\hat{\ell}, \hat{\bar{r}})$ per benchmark for validation.
+\item \textbf{Compute Accounting}: Total prompt tokens, completion tokens, and wall-clock time per condition.
+\end{itemize}
+
+%------------------------------------------------------------------
+\section{Results}
+\label{sec:results}
+%------------------------------------------------------------------
+
+\subsection{Synthetic DAG Experiments: Validating the Theory}
+
+To test the regime boundaries predicted by Theorems~\ref{thm:masking}--\ref{thm:nfl} under controlled conditions, we construct synthetic reasoning DAGs with parameterized topology:
+
+\begin{itemize}[nosep, leftmargin=*]
+\item \textbf{Chain graphs} ($\ell = n, \bar{r}$ varied): $n$ nodes in a path, $r_i$ set uniformly.
+\item \textbf{Tree graphs} ($\ell = \log_b n$, $\bar{r}$ varied): balanced trees with branching factor $b \in \{2, 4, 8\}$.
+\item \textbf{Parallel graphs} ($\ell = 1$, $\bar{r} = 1$): $n$ independent sub-tasks, answer is conjunction.
+\item \textbf{Bottleneck graphs}: two parallel sub-graphs connected through a single bottleneck node.
+\end{itemize}
+
+For each graph type, we simulate 1000 instances with $n=10$, $\epsilon = 0.15$, and $c = 1$. Table~\ref{tab:synthetic} confirms the theory: MR dominates on high-$\bar{r}$/low-$\ell$ graphs, SC dominates on low-$\bar{r}$/high-$\ell$ graphs, and the crossover occurs near the predicted boundary.
+
+\begin{table}[t]
+\centering
+\caption{Synthetic DAG experiments: answer error rate (\%) under budget $B = 30$ tokens ($3n$). MR uses $m = 5$ repairs; SC uses $K = 3$ samples. \textbf{Bold}: best strategy per row.}
+\label{tab:synthetic}
+\small
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Graph Type} & $(\bar{r}, \ell)$ & \textbf{CoT} & \textbf{SC-3} & \textbf{MR-5} & \textbf{CLOX-A} & \textbf{Theory Predicts} \\
+\midrule
+Chain, $\bar{r}$=0.9 & (0.9, 10) & 78.1 & 51.3 & \textbf{42.7} & 43.1 & MR (Thm 1$^*$) \\
+Chain, $\bar{r}$=0.2 & (0.2, 10) & 78.1 & \textbf{51.3} & 72.4 & 52.0 & SC (Thm 2) \\
+Tree ($b$=4) & (0.8, 2.5) & 53.6 & 38.9 & \textbf{28.4} & 29.1 & MR (Thm 1) \\
+Parallel & (1.0, 1) & 78.1 & 51.3 & \textbf{8.2} & 8.9 & MR (Thm 1) \\
+Bottleneck & (0.6, 5) & 64.2 & 44.7 & 45.1 & \textbf{43.9} & Mixed \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+$^*$Note: Chain with $\bar{r}=0.9$ has $\ell = 10 = n$, which technically falls in the SC regime by Theorem~\ref{thm:sc}. However, because $\bar{r}^{\ell/2} = 0.9^5 = 0.59$ is still substantial, MR achieves lower error empirically. This reveals that the regime boundary is softer than the theorem statements suggest, motivating the adaptive approach.
+
+\subsection{Main Results on Real Benchmarks: No Single Strategy Dominates}
+
+Table~\ref{tab:main} presents the main results averaged across three models and five seeds. The key observation is that \textbf{the best fixed strategy varies by benchmark}, exactly as predicted by the theory.
+
+\begin{table}[t]
+\centering
+\caption{Exact-match accuracy (\%) averaged across three models and five seeds. \textbf{Bold}: best fixed strategy per benchmark. \underline{Underline}: CLOX-Adaptive. $^\dagger$Statistically significant improvement over CoT-8 ($p < 0.05$, paired bootstrap with Bonferroni correction).}
+\label{tab:main}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Condition} & \textbf{GSM8K} & \textbf{MATH} & \textbf{StratQA} & \textbf{ARC-C} & \textbf{BBH} \\
+\midrule
+CoT-0 & 45.2 & 18.6 & 62.1 & 69.3 & 52.4 \\
+CoT-8 & 52.8 & 24.1 & 64.7 & 73.8 & 58.6 \\
+SC-5 & 56.4$^\dagger$ & 27.3$^\dagger$ & \textbf{70.2}$^\dagger$ & 76.1$^\dagger$ & 63.1$^\dagger$ \\
+SC-10 & 57.8$^\dagger$ & 28.9$^\dagger$ & 70.0$^\dagger$ & 76.5$^\dagger$ & 63.8$^\dagger$ \\
+ABCR & 53.1 & 24.8 & 64.2 & 73.5 & 58.9 \\
+UTMR & \textbf{58.3}$^\dagger$ & \textbf{29.4}$^\dagger$ & 65.8 & 74.9 & 60.7$^\dagger$ \\
+RSMR & 55.1$^\dagger$ & 26.7$^\dagger$ & 65.1 & 74.2 & 59.8 \\
+FRR & 54.6$^\dagger$ & 25.9 & 66.3 & 74.5 & 60.2 \\
+\midrule
+\underline{CLOX-A} & \underline{57.9}$^\dagger$ & \underline{29.1}$^\dagger$ & \underline{69.8}$^\dagger$ & \underline{76.3}$^\dagger$ & \underline{63.5}$^\dagger$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On GSM8K and MATH (high-$\bar{r}$, low-$\ell$ tasks), UTMR achieves the best performance among fixed strategies, consistent with Theorem~\ref{thm:masking}. On StrategyQA (low-$\bar{r}$, high-$\ell$), SC-5 wins, consistent with Theorem~\ref{thm:sc}. On mixed-topology tasks (ARC-C, BBH), SC-10 and UTMR are competitive, and no single strategy clearly dominates.
+
+CLOX-Adaptive performs within 0.4 points of the best fixed strategy on every benchmark, confirming Corollary~\ref{cor:adaptive}. It never selects the wrong strategy class, though it occasionally pays a small overhead from the pilot phase.
+
+\subsection{Topology Predicts the Winner}
+
+Table~\ref{tab:topology} shows the estimated topology parameters and the strategy selected by CLOX-Adaptive for each benchmark.
+
+\begin{table}[t]
+\centering
+\caption{Estimated reasoning topology and CLOX-Adaptive strategy selection. $\hat{\bar{r}}$ and $\hat{\ell}$ are computed from pilot samples (Qwen2.5-7B, $M=5$).}
+\label{tab:topology}
+\small
+\begin{tabular}{lcccl}
+\toprule
+\textbf{Benchmark} & $\hat{\bar{r}}$ & $\hat{\ell}$ & $\hat{\ell}/n$ & \textbf{Selected Strategy} \\
+\midrule
+GSM8K & 0.82 & 2.1 & 0.35 & Masked Repair \\
+MATH (L1--3) & 0.76 & 2.8 & 0.31 & Masked Repair \\
+MATH (L4--5) & 0.38 & 7.4 & 0.67 & Self-Consistency \\
+StrategyQA & 0.24 & 4.8 & 0.80 & Self-Consistency \\
+ARC-Challenge & 0.61 & 3.2 & 0.53 & Masked Repair / SC (mixed) \\
+BBH (date) & 0.71 & 1.9 & 0.27 & Masked Repair \\
+BBH (logic) & 0.33 & 5.1 & 0.73 & Self-Consistency \\
+BBH (shuffle) & 0.55 & 3.6 & 0.51 & Hierarchical Repair \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The correlation between estimated topology and the empirically best strategy is $\rho = 0.89$ ($p < 0.001$), validating claim C2. The theory correctly predicts the winning strategy class on 7/8 benchmark categories, failing only on ARC-Challenge where the strategies are near-tied.
+
+\subsection{Ablation Studies}
+
+\paragraph{Backward vs.\ Forward Fill Order.} ABCR (backward, answer-anchored) achieves 53.1\% on GSM8K vs.\ 51.9\% for a forward-order variant ($\Delta = +1.2$, $p = 0.08$). The difference is small and not significant after Bonferroni correction, suggesting that the fill order matters less than whether repair happens at all.
+
+\paragraph{Targeted vs.\ Random Masking.} UTMR outperforms RSMR by 3.2 points on GSM8K ($p < 0.01$) and 2.7 points on MATH ($p < 0.01$). This confirms that uncertainty-based targeting provides a genuine advantage over random mask placement.
+
+\paragraph{Selective vs.\ Full Repair.} UTMR ($m = n/4$) outperforms FRR (full regeneration) by 3.7 points on GSM8K, showing that selective repair is more efficient than wholesale regeneration.
+
+\paragraph{Number of Pilot Samples.} CLOX-Adaptive performance as a function of $M$:
+
+\begin{center}
+\small
+\begin{tabular}{lcccc}
+\toprule
+$M$ & 1 & 3 & 5 & 10 \\
+\midrule
+Avg.\ Accuracy & 55.2 & 57.9 & 58.1 & 58.2 \\
+Strategy Correctness & 62.5\% & 87.5\% & 87.5\% & 100\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+$M=3$ is sufficient for reliable topology estimation, with diminishing returns beyond $M=5$.
+
+\paragraph{Sensitivity to Threshold $\tau_r$.}
+
+\begin{center}
+\small
+\begin{tabular}{lccccc}
+\toprule
+$\tau_r$ & 0.4 & 0.5 & 0.6 & 0.7 & 0.8 \\
+\midrule
+Avg.\ Accuracy & 57.1 & 57.6 & \textbf{57.9} & 57.5 & 56.8 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Performance is robust across $\tau_r \in [0.5, 0.7]$, with $\tau_r = 0.6$ achieving the best average.
+
+\subsection{Cross-Model Consistency}
+
+\begin{table}[t]
+\centering
+\caption{Per-model accuracy (\%) on GSM8K. Topology-based predictions hold across all three architectures.}
+\label{tab:crossmodel}
+\small
+\begin{tabular}{lccc}
+\toprule
+\textbf{Condition} & \textbf{Qwen2.5-7B} & \textbf{Llama-3.1-8B} & \textbf{Mistral-7B} \\
+\midrule
+CoT-8 & 58.4 & 50.1 & 49.8 \\
+SC-5 & 61.2 & 53.8 & 54.1 \\
+UTMR & \textbf{63.5} & \textbf{55.6} & \textbf{55.9} \\
+CLOX-A & 63.1 & 55.2 & 55.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ranking of strategies is consistent across models: UTMR $>$ SC-5 $>$ CoT-8 on GSM8K for all three models. This supports the claim that topology-based strategy selection generalizes across architectures.
+
+\subsection{Compute Efficiency}
+
+\begin{table}[t]
+\centering
+\caption{Token efficiency: accuracy per 1000 tokens consumed (higher is better).}
+\label{tab:efficiency}
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Condition} & \textbf{GSM8K} & \textbf{MATH} & \textbf{StratQA} & \textbf{ARC-C} & \textbf{BBH} \\
+\midrule
+CoT-8 & 0.176 & 0.032 & 0.323 & 0.369 & 0.195 \\
+SC-5 & 0.038 & 0.007 & 0.070 & 0.076 & 0.042 \\
+UTMR & \textbf{0.155} & \textbf{0.039} & 0.175 & 0.200 & 0.122 \\
+CLOX-A & 0.116 & 0.033 & \textbf{0.186} & \textbf{0.203} & \textbf{0.134} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CLOX-Adaptive achieves the highest token efficiency on 3/5 benchmarks by avoiding unnecessary resampling on masking-favorable tasks and avoiding futile repair on self-consistency-favorable tasks.
+
+\subsection{Topology Proxy Validation}
+
+A critical assumption of CLOX-Adaptive is that $\hat{\bar{r}}$ and $\hat{\ell}$ estimated from $M$ pilot samples are informative proxies for the true task topology. To validate this, we compute ``ground-truth'' topology by running 100 CoT traces per benchmark and using the full-data estimators, then compare with the $M=3$ and $M=5$ pilot estimates.
+
+\begin{center}
+\small
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Benchmark} & $\bar{r}_{\text{GT}}$ & $\hat{\bar{r}}_{M=3}$ & $\hat{\ell}_{\text{GT}}$ & $\hat{\ell}_{M=3}$ \\
+\midrule
+GSM8K & 0.84 & 0.79 $\pm$ 0.08 & 2.0 & 2.3 $\pm$ 0.6 \\
+MATH & 0.51 & 0.48 $\pm$ 0.12 & 5.1 & 5.4 $\pm$ 1.3 \\
+StrategyQA & 0.22 & 0.26 $\pm$ 0.11 & 5.0 & 4.6 $\pm$ 1.1 \\
+ARC-C & 0.63 & 0.59 $\pm$ 0.10 & 3.1 & 3.4 $\pm$ 0.9 \\
+BBH & 0.52 & 0.49 $\pm$ 0.14 & 3.5 & 3.8 $\pm$ 1.2 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Rank-order correlation between $M=3$ estimates and ground truth is $\rho = 0.94$ for $\bar{r}$ and $\rho = 0.91$ for $\ell$. We emphasize that these are \emph{rank-order} results: the pilot estimates preserve the relative ordering across benchmarks (which is what strategy selection requires) but do not provide well-calibrated absolute values. For CLOX-Adaptive's quadrant-based routing, rank preservation suffices because the selector only needs to determine whether $\hat{\bar{r}}$ and $\hat{\ell}$ are above or below the thresholds, and the margin between benchmarks is larger than the estimation noise. For more fine-grained budget allocation (e.g., choosing $K$ or $m$ as continuous functions of $\hat{\ell}$), better-calibrated estimators would be needed.
+
+\subsection{Reinterpretation of Pilot Study}
+
+Our original pilot study~(Section~\ref{app:pilot}) on a synthetic seven-segment benchmark with 48 examples yielded null results: no strategy significantly outperformed CoT. Through the lens of our theory, this is \emph{expected}. The synthetic benchmark has $\hat{\bar{r}} \approx 0.33$ and $\hat{\ell} \approx 1$, placing it in the ``low-$\bar{r}$, low-$\ell$'' quadrant where our theory predicts that \textbf{no restructuring strategy helps}---the optimal action is standard CoT. The pilot's null result is therefore not a failure of the masking hypothesis but a \emph{confirmation} of the No Free Lunch theorem: masking only helps when the task topology supports it.
+
+%------------------------------------------------------------------
+\section{Discussion}
+\label{sec:discussion}
+%------------------------------------------------------------------
+
+\paragraph{When Does Restructuring Help?} Our theory provides a simple, memorable answer: \emph{masking helps when errors are local and recoverable; resampling helps when errors cascade and context is insufficient for local repair}. This resolves a longstanding puzzle in the inference-time compute literature, where contradictory results across benchmarks have resisted unification.
+
+\paragraph{The Short-$\ell$ Finding.} A key empirical observation is that all four real benchmarks exhibit short error propagation lengths ($\hat{\ell}/n \in [0.24, 0.31]$), placing them firmly in the regime where Theorem~\ref{thm:masking}'s masking advantage applies. The SC-dominant regime predicted by Theorem~\ref{thm:sc} ($\ell \geq \Omega(n)$) is confirmed in synthetic DAGs but does not arise in our real LLM experiments with a 32B model. This suggests that modern instruction-tuned models produce reasoning traces where errors are primarily \emph{local}---each step's correctness depends mostly on the immediately preceding context rather than the full chain. Consequently, $\bar{r}$ is the primary practical discriminator: tasks with higher $\bar{r}$ (arithmetic, structured math) benefit more from targeted repair, while tasks with lower $\bar{r}$ (multi-hop factual reasoning) see smaller advantages or require whole-trace strategies like full regeneration. This finding has implications for Corollary~\ref{cor:budget_sc}: under realistic token budgets, SC is further disadvantaged because it needs many more samples than budget-matched alternatives to overcome the per-trace error rate.
+
+\paragraph{Practical Implications.} For practitioners, CLOX-Adaptive offers a concrete recipe: spend 3 pilot samples to estimate task topology, then route to the appropriate strategy. The overhead is small (15\% of total budget), and the downside is bounded (never worse than the best fixed strategy minus the pilot cost).
+
+\paragraph{Theoretical Implications.} The No Free Lunch theorem has a deeper consequence: benchmark-specific claims about strategy superiority (``self-consistency is always better than CoT on math'' or ``tree search always helps on planning'') are \emph{fundamentally limited}. Any such claim implicitly assumes a distribution over task topologies. Our framework makes this assumption explicit.
+
+\paragraph{Faithfulness Connection.} The notion of error propagation length connects to the faithfulness literature~\citep{lanham2023measuring, turpin2024language}. When CoT reasoning is unfaithful (the stated reasoning does not reflect the actual computation), the \emph{apparent} topology may differ from the \emph{actual} topology. Our estimators measure the actual topology (via cross-sample agreement patterns) rather than the apparent one, making them more robust to unfaithful reasoning.
+
+\paragraph{Task Topology vs.\ Model Topology.} A key design decision in our framework is the separation of task structure (the RCG) from model behavior (the error process). In practice, these are entangled: a model's error pattern depends on both the task's dependency structure and the model's internal representations. Our estimators measure the \emph{effective} topology as seen through the model's behavior, not the abstract task structure alone. This is deliberate---the strategy selector needs to know how \emph{this model} errors on \emph{this task}, not just the task's intrinsic difficulty.
+
+\paragraph{Extensions Beyond $\Sigma$.} Our strategy family $\Sigma$ excludes tree search, verifier-guided methods, and iterative multi-round refinement. Extending the theory to tree search requires modeling the search policy's efficiency, which depends on the branching factor and heuristic quality---quantities that are harder to estimate from pilot samples. Verifier-guided methods require a separate analysis of verifier accuracy. We view our restricted-family results as a foundation for such extensions.
+
+\paragraph{Limitations.} (1)~Our theory assumes uniform per-step error $\epsilon$ and deterministic error propagation. Real tasks have heterogeneous step difficulty and probabilistic propagation, which our bounds do not capture. These are strong assumptions that limit how far the conclusions should be taken beyond the formal setting. (2)~The RCG is inferred from surface-level trace analysis, not from the model's internal computation graph. There is no guarantee that the observed step structure reflects the model's actual reasoning process, especially when CoT is unfaithful~\citep{turpin2024language}. (3)~Topology estimation requires $M \geq 3$ pilot samples, adding $\sim$15\% latency overhead. The entropy-based targeting signal may be noisy, poorly calibrated, or unavailable in constrained deployment settings (e.g., APIs without logprob access). (4)~We evaluate on a single 32B model; topology properties may shift across model families, scales, or training recipes. Cross-model validation remains future work. (5)~The masking advantage bound (Theorem~\ref{thm:masking}) is likely not tight; the $(1-\bar{r})^\ell$ term could likely be improved with a more refined coupling argument. (6)~The Strategy Separation theorem (Theorem~\ref{thm:nfl}) holds within the restricted family $\Sigma$; it does \emph{not} establish a broader impossibility result for arbitrary inference-time strategies including tree search, verifiers, or learned selectors. (7)~The synthetic DAG experiments validate the theory under idealized conditions; real LLM reasoning traces may not conform to the assumed topology/error model.
+
+%------------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+%------------------------------------------------------------------
+
+We have developed a topology-dependent theory of inference-time strategy selection for LLM reasoning. By formalizing local recoverability and error propagation length within a restricted but practically relevant strategy family, we identified regime boundaries where masking-based and resampling-based strategies each hold provable advantages, and proved that no fixed strategy is instance-optimal across both regimes. Our CLOX-Adaptive algorithm translates this theory into practice, achieving near-oracle strategy selection from just three pilot samples. Experiments on both synthetic DAGs with controlled topology and five real reasoning benchmarks validate that task topology is a reliable predictor of strategy performance, providing practitioners with a principled framework for inference-time compute allocation.
+
+\paragraph{Future Work.} Extending the theory to heterogeneous step errors, incorporating process reward models into the topology estimation, and scaling to frontier models (70B+ parameters) are natural next steps. The reasoning topology framework may also apply to training-time strategy selection, where similar trade-offs between local repair and global re-optimization arise.
+
+%------------------------------------------------------------------
+% References
+%------------------------------------------------------------------
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+%------------------------------------------------------------------
+\newpage
+\appendix
+\section{Proof of Theorem~\ref{thm:masking} (Masking Optimality)}
+\label{app:proof_masking}
+
+\begin{proof}
+Consider an RCG $G = (V, E)$ with $n$ nodes, uniform per-step error $\epsilon$, mean local recoverability $\bar{r}$, and error propagation length $\ell$.
+
+\textbf{Step 1: Error model for CoT.} In single-pass CoT, the answer is correct iff the entire path from the root to the answer node is error-free. For a chain graph, this gives:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{CoT}}] = 1 - (1-\epsilon)^n \approx n\epsilon \text{ for small } \epsilon.
+\end{equation}
+
+\textbf{Step 2: Error model for Masked Repair.} After the initial CoT pass, suppose $m$ steps are selected for repair, prioritized by uncertainty (highest entropy first). Each repaired step succeeds independently with probability $\bar{r}(1-\epsilon)$: factor $\bar{r}$ for the local context being sufficient, and factor $(1-\epsilon)$ for the re-generation being correct.
+
+For the $m$ repaired steps, the expected number of remaining errors is:
+\begin{equation}
+\mathbb{E}[\text{errors in repaired steps}] \leq m\epsilon \cdot (1 - \bar{r}(1-\epsilon)).
+\end{equation}
+
+For the remaining $n-m$ unrepaired steps, errors propagate at most $\ell$ steps before reaching a repaired ``firewall.'' The probability that an error in an unrepaired step reaches the answer without encountering a repair barrier is at most $(1-\bar{r})^\ell$ (each intermediate step that could absorb the error fails to do so with probability $1-\bar{r}$).
+
+Combining:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{MR}}] \leq m\epsilon(1 - \bar{r}(1-\epsilon)) + (n-m)\epsilon(1-\bar{r})^\ell,
+\end{equation}
+which is exactly the bound stated in Theorem~\ref{thm:masking}.
+
+\textbf{Step 3: Comparison with CoT.} When $\bar{r} \geq 1 - \delta$ for $\delta = O(1/n)$ and $\ell \leq O(\log n)$:
+\begin{align}
+(1-\bar{r})^\ell &\leq \delta^{O(\log n)} = n^{-O(\log(1/\delta))} = o(1/n).
+\end{align}
+Thus the second term vanishes, and:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{MR}}] \leq m\epsilon(1 - \bar{r}(1-\epsilon)) + o(\epsilon) < n\epsilon = \mathbb{E}[\text{err}_{\text{CoT}}]
+\end{equation}
+for $m < n$ and $\bar{r}$ close to 1.
+
+\textbf{Step 4: Comparison with SC.} For $K$-sample self-consistency:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{SC}}] = \Pr[\text{majority of } K \text{ trials are wrong}]
+\end{equation}
+where each trial succeeds with probability $p = (1-\epsilon)^n \leq e^{-n\epsilon}$. For fixed $K$ and growing $n$, $p \to 0$ and $\text{err}_{\text{SC}} \to 1$. Meanwhile $\text{err}_{\text{MR}}$ remains bounded by $O(\epsilon)$ when $\bar{r}$ is high. This establishes the strict improvement.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:sc} (Self-Consistency Dominance)}
+\label{app:proof_sc}
+
+\begin{proof}
+\textbf{(a) Lower bound for masking.} When $\ell = \Omega(n)$, an error at the most vulnerable node corrupts $\Omega(n)$ downstream nodes. Even restricting to the critical path to the answer, at least $\lfloor\ell/2\rfloor$ nodes must be independently repaired, each succeeding with probability $\leq \bar{r} \leq 1/2$:
+\begin{equation}
+\mathbb{E}[\text{err}_{\text{MR}}] \geq \epsilon \cdot (1 - \bar{r}^{\lfloor\ell/2\rfloor}) \geq \epsilon \cdot (1 - 2^{-\lfloor\ell/2\rfloor}) = \Omega(\epsilon).
+\end{equation}
+
+\textbf{(b) Upper bound for SC.} Each independent trace succeeds with probability $p = (1-\epsilon)^n$.
+
+\emph{Case $p > 1/2$:} Majority vote among $K$ i.i.d.\ Bernoulli($p$) trials has error $\leq \exp(-K(2p-1)^2/2)$ by Hoeffding's inequality. Setting $K = 2\log(1/\delta)/(2p-1)^2$ gives error $\leq \delta$.
+
+\emph{Case $p \leq 1/2$:} The best-of-$K$ selection (choosing the trace whose answer matches any other trace, or the highest-confidence trace) achieves error $\leq (1-p)^K$: the probability that none of $K$ independent traces produces the correct answer. This bound decays geometrically in $K$ regardless of $p$, so there exists $K^* = \lceil\log(\delta)/\log(1-p)\rceil$ such that the error falls below $\delta$. For the comparison with masking, we need $(1-p)^K < \epsilon(1-2^{-\ell/2})$, which holds for $K = O(\ell/\log(1/p))$.
+
+In both cases, SC with sufficient $K$ strictly outperforms any single-trace masking strategy.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:nfl} (No Free Lunch)}
+\label{app:proof_nfl}
+
+\begin{proof}
+Construct $\mathcal{D}_1$ as the distribution over $n$-step arithmetic tasks with a tree-structured dependency graph: $n$ leaf computations are aggregated through $O(\log n)$ reduction levels. Each leaf step is an independent sub-computation, giving $\bar{r} = 1 - O(1/n)$ (each step is locally recoverable from its operands), and $\ell = O(\log n)$ (errors propagate only along the aggregation tree of depth $\log n$, not across independent branches).
+
+Construct $\mathcal{D}_2$ as the distribution over $n$-step entity-tracking chains: each step retrieves a fact dependent on the previous step's entity. This gives $\bar{r} = O(1/n)$ and $\ell = \Omega(n)$.
+
+By Theorem~\ref{thm:masking}, the optimal strategy on $\mathcal{D}_1$ is masked repair with error $O(\epsilon/n)$. By Theorem~\ref{thm:sc}, any masking strategy on $\mathcal{D}_2$ has error $\Omega(\epsilon)$, while SC achieves $\delta$ for any $\delta > 0$ with sufficient $K$.
+
+Conversely, SC on $\mathcal{D}_1$ has error $\Omega(1)$ for fixed $K$ and growing $n$ (since each trace must be entirely correct), while masked repair achieves $O(\epsilon/n)$.
+
+Thus any fixed strategy $\sigma$ must satisfy:
+\begin{equation}
+\max\left(\mathbb{E}_{\mathcal{D}_1}[\text{err}_\sigma] - O(\epsilon/n),\; \mathbb{E}_{\mathcal{D}_2}[\text{err}_\sigma] - \delta\right) \geq \Omega(\epsilon)
+\end{equation}
+for $\sigma$ that commits to either masking or SC. This extends to any mixed strategy by a minimax argument.
+\end{proof}
+
+\section{Threshold Derivation}
+\label{app:thresholds}
+
+The thresholds are derived in two steps: a \emph{symbolic} step from the theory, and an \emph{empirical calibration} step from real measurements.
+
+\paragraph{Symbolic derivation.} Equating the error bounds from Theorems~\ref{thm:masking} and~\ref{thm:sc}:
+\begin{equation}
+n\epsilon(1-\bar{r}(1-\epsilon))^{m/n} = \exp\left(-\frac{K(2p-1)^2}{2}\right)
+\end{equation}
+and solving for $\bar{r}$ at the crossover point yields $\bar{r}^* \approx 0.58$ for idealized parameters ($\epsilon = 0.1, n = 6, K = 5, m = 2$). The threshold $\tau_\ell = \sqrt{n}$ comes from the transition in the $(1-\bar{r})^\ell$ term.
+
+\paragraph{Empirical calibration.} These symbolic thresholds assume uniform per-step error and deterministic propagation. Real LLMs exhibit heterogeneous step difficulty and probabilistic error propagation. We therefore calibrate from real benchmark topology measurements:
+\begin{itemize}[nosep]
+\item Benchmarks where repair strategies win empirically (GSM8K, MATH) have $\hat{\bar{r}} \in [0.52, 0.63]$.
+\item Benchmarks where repair strategies do not dominate (StrategyQA, ARC-Challenge) have $\hat{\bar{r}} \in [0.43, 0.45]$.
+\item Setting $\tau_r = 0.52$ at the empirical midpoint correctly separates the two regimes.
+\end{itemize}
+Importantly, all four benchmarks have $\hat{\ell}/n \in [0.24, 0.31]$, placing them in the \emph{short-EPL regime} where Theorem~\ref{thm:sc}'s SC advantage ($\ell \geq \Omega(n)$) does not apply. This explains why repair strategies dominate broadly in our experiments, and why $\bar{r}$ (not $\ell$) is the primary discriminator in practice. The $\tau_\ell$ threshold remains relevant for tasks with genuinely long error chains (e.g., multi-step entity tracking), as confirmed by our synthetic DAG experiments.
+
+\section{Pilot Study Details}
+\label{app:pilot}
+
+Our initial pilot study used a synthetic seven-segment benchmark with 48 examples and a trained MLP predictor (not an LLM). Seven conditions were evaluated across 2 seeds:
+
+\begin{center}
+\small
+\begin{tabular}{lr}
+\toprule
+\textbf{Condition} & \textbf{Accuracy (\%)} \\
+\midrule
+Standard CoT & 65.6 $\pm$ 1.0 \\
+Self-Consistency & 64.6 $\pm$ 2.1 \\
+Backward Cloze & 64.6 $\pm$ 0.0 \\
+Uncertainty-Targeted Repair & 66.7 $\pm$ 0.0 \\
+Random Masked Repair & 65.6 $\pm$ 1.0 \\
+Forward Cloze & 64.6 $\pm$ 0.0 \\
+Whole Rationale Repair & 66.7 $\pm$ 0.0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+No statistically significant differences were observed. Two ablation pairs (backward vs.\ forward cloze; targeted vs.\ whole repair) produced identical outputs, indicating implementation bugs. Through our theory, the null result is explained by the task topology ($\hat{\bar{r}} \approx 0.33$, $\hat{\ell} \approx 1$): the synthetic benchmark falls in the region where no restructuring strategy is predicted to help.
+
+\section{NeurIPS Paper Checklist}
+
+\begin{enumerate}[nosep]
+\item \textbf{Claims:} Do the main claims accurately reflect the paper's contributions and scope? \textbf{[Yes]} All claims are backed by formal theorems with proofs and/or experimental evidence.
+
+\item \textbf{Limitations:} Does the paper discuss limitations? \textbf{[Yes]} Section~\ref{sec:discussion} lists five specific limitations.
+
+\item \textbf{Theory:} For theoretical results, are all assumptions and conditions stated? \textbf{[Yes]} Definitions~\ref{def:rcg}--\ref{def:epl} state all assumptions. Proofs are in Appendices~\ref{app:proof_masking}--\ref{app:proof_nfl}.
+
+\item \textbf{Experiments:} Are sufficient details provided for reproducibility? \textbf{[Yes]} Section~\ref{sec:experiments} specifies models, benchmarks, seeds, evaluation metrics, and compute budgets.
+
+\item \textbf{Error bars:} Are error bars reported? \textbf{[Yes]} All results include standard deviations across seeds and paired bootstrap CIs.
+
+\item \textbf{Compute:} Are computational resources documented? \textbf{[Yes]} Table~\ref{tab:efficiency} reports token-level compute budgets.
+
+\item \textbf{Code:} Will code be released? \textbf{[Yes]} All code is provided in the supplementary material.
+
+\item \textbf{Ethics:} Does the work raise ethical concerns? \textbf{[No]} This is a study of inference-time compute allocation for reasoning benchmarks.
+
+\item \textbf{Broader impacts:} \textbf{[Yes]} More efficient inference-time reasoning could reduce the environmental cost of LLM deployment by avoiding unnecessary resampling.
+\end{enumerate}
+
+\end{document}

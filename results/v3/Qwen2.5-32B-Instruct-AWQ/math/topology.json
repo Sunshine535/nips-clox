@@ -1,0 +1,1618 @@
+{
+  "summary": {
+    "benchmark": "math",
+    "n_examples": 200,
+    "r_bar_mean": 0.6335798869019791,
+    "r_bar_std": 0.08584400675080756,
+    "r_bar_median": 0.6239060007058055,
+    "epl_mean": 1.1765,
+    "epl_std": 0.28387785910297564,
+    "epl_median": 1.0,
+    "strategy_distribution": {
+      "targeted_repair": 69,
+      "adaptive": 131
+    }
+  },
+  "per_example": [
+    {
+      "example_id": "math_0",
+      "difficulty": "medium",
+      "r_bar": 0.5436531455831479,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_1",
+      "difficulty": "easy",
+      "r_bar": 0.6056718120174482,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_2",
+      "difficulty": "hard",
+      "r_bar": 0.5626685669758223,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_3",
+      "difficulty": "hard",
+      "r_bar": 0.5116348286073052,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_4",
+      "difficulty": "easy",
+      "r_bar": 0.8265982918914284,
+      "epl": 1.0,
+      "n_steps": 3.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_5",
+      "difficulty": "easy",
+      "r_bar": 0.5420046228444851,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_6",
+      "difficulty": "hard",
+      "r_bar": 0.6755472919586756,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_7",
+      "difficulty": "hard",
+      "r_bar": 0.711809740884815,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_8",
+      "difficulty": "hard",
+      "r_bar": 0.5089913900795574,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_9",
+      "difficulty": "hard",
+      "r_bar": 0.5689187153993471,
+      "epl": 1.4,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_10",
+      "difficulty": "hard",
+      "r_bar": 0.5963413750226065,
+      "epl": 1.0,
+      "n_steps": 9.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_11",
+      "difficulty": "hard",
+      "r_bar": 0.5273233566020774,
+      "epl": 1.0,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_12",
+      "difficulty": "easy",
+      "r_bar": 0.6651268019178761,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_13",
+      "difficulty": "easy",
+      "r_bar": 0.7029082193310779,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_14",
+      "difficulty": "medium",
+      "r_bar": 0.5583144438636638,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_15",
+      "difficulty": "hard",
+      "r_bar": 0.595266547401389,
+      "epl": 1.1666666666666667,
+      "n_steps": 12.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_16",
+      "difficulty": "easy",
+      "r_bar": 0.7201916223049377,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_17",
+      "difficulty": "medium",
+      "r_bar": 0.5541079790054974,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_18",
+      "difficulty": "medium",
+      "r_bar": 0.7236332291847694,
+      "epl": 1.0,
+      "n_steps": 3.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_19",
+      "difficulty": "easy",
+      "r_bar": 0.8430009958055964,
+      "epl": 1.2,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_20",
+      "difficulty": "hard",
+      "r_bar": 0.5362911139179946,
+      "epl": 1.2,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_21",
+      "difficulty": "hard",
+      "r_bar": 0.5199335110080693,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_22",
+      "difficulty": "easy",
+      "r_bar": 0.5863759705843467,
+      "epl": 2.1999999999999997,
+      "n_steps": 13.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_23",
+      "difficulty": "medium",
+      "r_bar": 0.5282775299141775,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_24",
+      "difficulty": "easy",
+      "r_bar": 0.7234132769562962,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_25",
+      "difficulty": "hard",
+      "r_bar": 0.6205014021228481,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_26",
+      "difficulty": "hard",
+      "r_bar": 0.5648147716498613,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_27",
+      "difficulty": "hard",
+      "r_bar": 0.6232769179618867,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_28",
+      "difficulty": "hard",
+      "r_bar": 0.7137464101745704,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_29",
+      "difficulty": "hard",
+      "r_bar": 0.562401217413405,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_30",
+      "difficulty": "medium",
+      "r_bar": 0.6327121026952529,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_31",
+      "difficulty": "medium",
+      "r_bar": 0.5511501507162792,
+      "epl": 1.6333333333333333,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_32",
+      "difficulty": "hard",
+      "r_bar": 0.5029473830871803,
+      "epl": 1.1666666666666667,
+      "n_steps": 10.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_33",
+      "difficulty": "hard",
+      "r_bar": 0.5941842106751218,
+      "epl": 1.5,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_34",
+      "difficulty": "hard",
+      "r_bar": 0.6166895376288505,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_35",
+      "difficulty": "medium",
+      "r_bar": 0.6098240629367417,
+      "epl": 1.0,
+      "n_steps": 9.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_36",
+      "difficulty": "hard",
+      "r_bar": 0.550090056915545,
+      "epl": 1.3333333333333333,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_37",
+      "difficulty": "hard",
+      "r_bar": 0.6824245383468889,
+      "epl": 1.2,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_38",
+      "difficulty": "hard",
+      "r_bar": 0.6228984072871326,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_39",
+      "difficulty": "hard",
+      "r_bar": 0.5961917199863457,
+      "epl": 1.3333333333333333,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_40",
+      "difficulty": "hard",
+      "r_bar": 0.5926400294223242,
+      "epl": 1.2,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_41",
+      "difficulty": "easy",
+      "r_bar": 0.6329341682310845,
+      "epl": 1.2,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_42",
+      "difficulty": "easy",
+      "r_bar": 0.6934737332309471,
+      "epl": 1.0,
+      "n_steps": 3.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_43",
+      "difficulty": "hard",
+      "r_bar": 0.6589142846321318,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_44",
+      "difficulty": "easy",
+      "r_bar": 0.6641931232769148,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_45",
+      "difficulty": "medium",
+      "r_bar": 0.7528417053840727,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_46",
+      "difficulty": "hard",
+      "r_bar": 0.612267473188998,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_47",
+      "difficulty": "medium",
+      "r_bar": 0.5498359362168498,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_48",
+      "difficulty": "hard",
+      "r_bar": 0.7321917381998194,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_49",
+      "difficulty": "medium",
+      "r_bar": 0.5259788730712301,
+      "epl": 1.0,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_50",
+      "difficulty": "hard",
+      "r_bar": 0.6091858538084907,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_51",
+      "difficulty": "hard",
+      "r_bar": 0.5228980486327217,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_52",
+      "difficulty": "medium",
+      "r_bar": 0.6191270947222461,
+      "epl": 1.866666666666667,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_53",
+      "difficulty": "medium",
+      "r_bar": 0.48737601256011037,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_54",
+      "difficulty": "hard",
+      "r_bar": 0.5737140703799627,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_55",
+      "difficulty": "medium",
+      "r_bar": 0.5021873189593387,
+      "epl": 1.0,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_56",
+      "difficulty": "hard",
+      "r_bar": 0.6519159831837089,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_57",
+      "difficulty": "hard",
+      "r_bar": 0.561495825676871,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_58",
+      "difficulty": "medium",
+      "r_bar": 0.5862301354962008,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_59",
+      "difficulty": "medium",
+      "r_bar": 0.5773224375557947,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_60",
+      "difficulty": "medium",
+      "r_bar": 0.6484054916469475,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_61",
+      "difficulty": "hard",
+      "r_bar": 0.5006679843503727,
+      "epl": 1.3333333333333335,
+      "n_steps": 10.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_62",
+      "difficulty": "hard",
+      "r_bar": 0.5910824290884882,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_63",
+      "difficulty": "hard",
+      "r_bar": 0.6092039380836081,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_64",
+      "difficulty": "easy",
+      "r_bar": 0.8346815047743372,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_65",
+      "difficulty": "easy",
+      "r_bar": 0.7162645587576375,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_66",
+      "difficulty": "hard",
+      "r_bar": 0.6389879376248621,
+      "epl": 1.2,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_67",
+      "difficulty": "easy",
+      "r_bar": 0.7658422742739978,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_68",
+      "difficulty": "hard",
+      "r_bar": 0.6225842037120481,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_69",
+      "difficulty": "hard",
+      "r_bar": 0.6771332438723776,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_70",
+      "difficulty": "easy",
+      "r_bar": 0.6388103014312699,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_71",
+      "difficulty": "medium",
+      "r_bar": 0.7347180576416916,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_72",
+      "difficulty": "easy",
+      "r_bar": 0.5195115505826047,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_73",
+      "difficulty": "medium",
+      "r_bar": 0.6053387813137431,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_74",
+      "difficulty": "medium",
+      "r_bar": 0.521410491805765,
+      "epl": 1.2,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_75",
+      "difficulty": "hard",
+      "r_bar": 0.6378487897427353,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_76",
+      "difficulty": "easy",
+      "r_bar": 0.7083262390940618,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_77",
+      "difficulty": "hard",
+      "r_bar": 0.5257161952917975,
+      "epl": 1.1666666666666667,
+      "n_steps": 10.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_78",
+      "difficulty": "hard",
+      "r_bar": 0.6774744775645664,
+      "epl": 1.2,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_79",
+      "difficulty": "easy",
+      "r_bar": 0.6043356730344391,
+      "epl": 1.2,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_80",
+      "difficulty": "hard",
+      "r_bar": 0.6733502657095665,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_81",
+      "difficulty": "hard",
+      "r_bar": 0.5808910904398354,
+      "epl": 1.2,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_82",
+      "difficulty": "easy",
+      "r_bar": 0.5386192324090624,
+      "epl": 1.2,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_83",
+      "difficulty": "easy",
+      "r_bar": 0.6246701585898375,
+      "epl": 1.2,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_84",
+      "difficulty": "easy",
+      "r_bar": 0.7093175289879686,
+      "epl": 2.0,
+      "n_steps": 12.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_85",
+      "difficulty": "hard",
+      "r_bar": 0.7768101951319456,
+      "epl": 2.4,
+      "n_steps": 11.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_86",
+      "difficulty": "easy",
+      "r_bar": 0.5955388368607156,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_87",
+      "difficulty": "medium",
+      "r_bar": 0.7359660081595873,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_88",
+      "difficulty": "medium",
+      "r_bar": 0.66312283621818,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_89",
+      "difficulty": "hard",
+      "r_bar": 0.5400326547573251,
+      "epl": 1.0,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_90",
+      "difficulty": "medium",
+      "r_bar": 0.7016802096279995,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_91",
+      "difficulty": "hard",
+      "r_bar": 0.5123551788226018,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_92",
+      "difficulty": "hard",
+      "r_bar": 0.6024417395309994,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_93",
+      "difficulty": "hard",
+      "r_bar": 0.694805247098694,
+      "epl": 1.2,
+      "n_steps": 3.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_94",
+      "difficulty": "easy",
+      "r_bar": 0.6275365697199448,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_95",
+      "difficulty": "hard",
+      "r_bar": 0.6368043451751245,
+      "epl": 1.2,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_96",
+      "difficulty": "easy",
+      "r_bar": 0.6444494576350288,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_97",
+      "difficulty": "medium",
+      "r_bar": 0.6504116981300027,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_98",
+      "difficulty": "medium",
+      "r_bar": 0.649657330591218,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_99",
+      "difficulty": "hard",
+      "r_bar": 0.8372441954196104,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_100",
+      "difficulty": "easy",
+      "r_bar": 0.6476831985698736,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_101",
+      "difficulty": "easy",
+      "r_bar": 0.5535180527468456,
+      "epl": 1.1666666666666667,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_102",
+      "difficulty": "easy",
+      "r_bar": 0.6436670235963906,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_103",
+      "difficulty": "easy",
+      "r_bar": 0.6602698163242764,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_104",
+      "difficulty": "hard",
+      "r_bar": 0.6521053942169972,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_105",
+      "difficulty": "easy",
+      "r_bar": 0.6068117119460921,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_106",
+      "difficulty": "hard",
+      "r_bar": 0.6244522401456167,
+      "epl": 2.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_107",
+      "difficulty": "hard",
+      "r_bar": 0.6749141816401403,
+      "epl": 2.1,
+      "n_steps": 7.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_108",
+      "difficulty": "medium",
+      "r_bar": 0.6012797233025253,
+      "epl": 1.0,
+      "n_steps": 11.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_109",
+      "difficulty": "hard",
+      "r_bar": 0.47822605748899677,
+      "epl": 1.3333333333333333,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_110",
+      "difficulty": "easy",
+      "r_bar": 0.8787910161300493,
+      "epl": 1.0,
+      "n_steps": 3.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_111",
+      "difficulty": "medium",
+      "r_bar": 0.7302822514084042,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_112",
+      "difficulty": "easy",
+      "r_bar": 0.6608866211907509,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_113",
+      "difficulty": "medium",
+      "r_bar": 0.5046243071914098,
+      "epl": 1.8,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_114",
+      "difficulty": "hard",
+      "r_bar": 0.645463013763316,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_115",
+      "difficulty": "easy",
+      "r_bar": 0.6290634302838097,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_116",
+      "difficulty": "hard",
+      "r_bar": 0.5608053102740521,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_117",
+      "difficulty": "hard",
+      "r_bar": 0.6015114306285295,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_118",
+      "difficulty": "easy",
+      "r_bar": 0.7347235394866815,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_119",
+      "difficulty": "hard",
+      "r_bar": 0.7069992935223558,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_120",
+      "difficulty": "easy",
+      "r_bar": 0.7022990316928226,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_121",
+      "difficulty": "hard",
+      "r_bar": 0.5134473348917071,
+      "epl": 2.1,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_122",
+      "difficulty": "medium",
+      "r_bar": 0.6013704930499458,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_123",
+      "difficulty": "medium",
+      "r_bar": 0.6233597612659942,
+      "epl": 1.0,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_124",
+      "difficulty": "hard",
+      "r_bar": 0.7939238511957881,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_125",
+      "difficulty": "hard",
+      "r_bar": 0.6478079356218751,
+      "epl": 1.6,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_126",
+      "difficulty": "easy",
+      "r_bar": 0.9366588270378791,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_127",
+      "difficulty": "easy",
+      "r_bar": 0.5371648855787179,
+      "epl": 2.5999999999999996,
+      "n_steps": 12.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_128",
+      "difficulty": "medium",
+      "r_bar": 0.7194215219940615,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_129",
+      "difficulty": "hard",
+      "r_bar": 0.5742911180471392,
+      "epl": 1.2,
+      "n_steps": 14.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_130",
+      "difficulty": "hard",
+      "r_bar": 0.632379527186009,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_131",
+      "difficulty": "easy",
+      "r_bar": 0.5507377414256153,
+      "epl": 1.0,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_132",
+      "difficulty": "easy",
+      "r_bar": 0.7303476976591042,
+      "epl": 1.0,
+      "n_steps": 3.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_133",
+      "difficulty": "medium",
+      "r_bar": 0.7008276923111533,
+      "epl": 1.0,
+      "n_steps": 6.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_134",
+      "difficulty": "hard",
+      "r_bar": 0.6489662086173513,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_135",
+      "difficulty": "hard",
+      "r_bar": 0.6065766065310598,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_136",
+      "difficulty": "hard",
+      "r_bar": 0.5528996248076129,
+      "epl": 1.0666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_137",
+      "difficulty": "hard",
+      "r_bar": 0.6129209159613426,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_138",
+      "difficulty": "hard",
+      "r_bar": 0.6089593234677922,
+      "epl": 1.3333333333333333,
+      "n_steps": 13.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_139",
+      "difficulty": "hard",
+      "r_bar": 0.6918177624486838,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_140",
+      "difficulty": "easy",
+      "r_bar": 0.6590456389595116,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_141",
+      "difficulty": "medium",
+      "r_bar": 0.672580512121272,
+      "epl": 1.0,
+      "n_steps": 3.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_142",
+      "difficulty": "easy",
+      "r_bar": 0.7387354132584503,
+      "epl": 1.0,
+      "n_steps": 4.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_143",
+      "difficulty": "hard",
+      "r_bar": 0.4958784599985228,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_144",
+      "difficulty": "hard",
+      "r_bar": 0.6496224224548437,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_145",
+      "difficulty": "medium",
+      "r_bar": 0.5844115766332486,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_146",
+      "difficulty": "easy",
+      "r_bar": 0.6550939985840473,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_147",
+      "difficulty": "hard",
+      "r_bar": 0.592691679359069,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_148",
+      "difficulty": "easy",
+      "r_bar": 0.6381969225496882,
+      "epl": 1.0,
+      "n_steps": 3.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_149",
+      "difficulty": "easy",
+      "r_bar": 0.6405671571369755,
+      "epl": 1.0,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_150",
+      "difficulty": "hard",
+      "r_bar": 0.5300317107613381,
+      "epl": 1.0,
+      "n_steps": 15.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_151",
+      "difficulty": "hard",
+      "r_bar": 0.6571562111542647,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_152",
+      "difficulty": "medium",
+      "r_bar": 0.5772820891096305,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_153",
+      "difficulty": "medium",
+      "r_bar": 0.7761361712136452,
+      "epl": 1.2,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_154",
+      "difficulty": "easy",
+      "r_bar": 0.5464553085658902,
+      "epl": 1.0,
+      "n_steps": 7.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_155",
+      "difficulty": "hard",
+      "r_bar": 0.5386192776419003,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_156",
+      "difficulty": "hard",
+      "r_bar": 0.706287248173298,
+      "epl": 1.0,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_157",
+      "difficulty": "hard",
+      "r_bar": 0.5445650408933947,
+      "epl": 1.8666666666666665,
+      "n_steps": 25.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_158",
+      "difficulty": "medium",
+      "r_bar": 0.6064194036237959,
+      "epl": 1.866666666666667,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_159",
+      "difficulty": "easy",
+      "r_bar": 0.777956642604104,
+      "epl": 1.0,
+      "n_steps": 7.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_160",
+      "difficulty": "medium",
+      "r_bar": 0.6434193928134664,
+      "epl": 1.2,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_161",
+      "difficulty": "hard",
+      "r_bar": 0.5965936889259793,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_162",
+      "difficulty": "hard",
+      "r_bar": 0.7187436902099236,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_163",
+      "difficulty": "hard",
+      "r_bar": 0.5465679962351238,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_164",
+      "difficulty": "medium",
+      "r_bar": 0.6490250505207742,
+      "epl": 1.2,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_165",
+      "difficulty": "hard",
+      "r_bar": 0.5187279341930736,
+      "epl": 1.3333333333333333,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_166",
+      "difficulty": "hard",
+      "r_bar": 0.5910590804105659,
+      "epl": 1.4000000000000001,
+      "n_steps": 11.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_167",
+      "difficulty": "medium",
+      "r_bar": 0.7236626430981988,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_168",
+      "difficulty": "easy",
+      "r_bar": 0.6169699822196759,
+      "epl": 1.6333333333333333,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_169",
+      "difficulty": "hard",
+      "r_bar": 0.8306358958655287,
+      "epl": 1.2,
+      "n_steps": 4.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_170",
+      "difficulty": "hard",
+      "r_bar": 0.6043608417577714,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_171",
+      "difficulty": "hard",
+      "r_bar": 0.6195504827412945,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_172",
+      "difficulty": "medium",
+      "r_bar": 0.5548008079516049,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_173",
+      "difficulty": "easy",
+      "r_bar": 0.8971764937167432,
+      "epl": 1.0,
+      "n_steps": 7.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_174",
+      "difficulty": "hard",
+      "r_bar": 0.5887126386988916,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_175",
+      "difficulty": "easy",
+      "r_bar": 0.5402601388081101,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_176",
+      "difficulty": "hard",
+      "r_bar": 0.7031440278670819,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_177",
+      "difficulty": "hard",
+      "r_bar": 0.6868585236408,
+      "epl": 1.5,
+      "n_steps": 5.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_178",
+      "difficulty": "hard",
+      "r_bar": 0.6931008993251833,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_179",
+      "difficulty": "easy",
+      "r_bar": 0.8184738636484559,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_180",
+      "difficulty": "medium",
+      "r_bar": 0.5678441800758364,
+      "epl": 1.8666666666666665,
+      "n_steps": 7.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_181",
+      "difficulty": "easy",
+      "r_bar": 0.6227834623323787,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_182",
+      "difficulty": "hard",
+      "r_bar": 0.7633877217804758,
+      "epl": 1.0,
+      "n_steps": 3.2,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_183",
+      "difficulty": "hard",
+      "r_bar": 0.640844613755821,
+      "epl": 1.4,
+      "n_steps": 9.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_184",
+      "difficulty": "hard",
+      "r_bar": 0.7182484393909115,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_185",
+      "difficulty": "medium",
+      "r_bar": 0.7681521960120086,
+      "epl": 1.0,
+      "n_steps": 3.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_186",
+      "difficulty": "hard",
+      "r_bar": 0.6007017320191427,
+      "epl": 1.4,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_187",
+      "difficulty": "easy",
+      "r_bar": 0.529678590036251,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_188",
+      "difficulty": "hard",
+      "r_bar": 0.6488011049399985,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_189",
+      "difficulty": "hard",
+      "r_bar": 0.6340509416320025,
+      "epl": 1.2,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_190",
+      "difficulty": "medium",
+      "r_bar": 0.5139940497997695,
+      "epl": 1.2,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_191",
+      "difficulty": "hard",
+      "r_bar": 0.6354569124634827,
+      "epl": 1.0,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_192",
+      "difficulty": "easy",
+      "r_bar": 0.6321603578086751,
+      "epl": 1.0,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_193",
+      "difficulty": "hard",
+      "r_bar": 0.7386141563220017,
+      "epl": 1.2,
+      "n_steps": 5.4,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_194",
+      "difficulty": "easy",
+      "r_bar": 0.5671240740175818,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_195",
+      "difficulty": "hard",
+      "r_bar": 0.5595848501276484,
+      "epl": 1.3333333333333333,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_196",
+      "difficulty": "hard",
+      "r_bar": 0.6921687299356957,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_197",
+      "difficulty": "hard",
+      "r_bar": 0.6548665499386134,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "math_198",
+      "difficulty": "medium",
+      "r_bar": 0.5669030564041438,
+      "epl": 1.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "math_199",
+      "difficulty": "easy",
+      "r_bar": 0.7861492123167348,
+      "epl": 1.0,
+      "n_steps": 4.2,
+      "strategy": "targeted_repair"
+    }
+  ]
+}

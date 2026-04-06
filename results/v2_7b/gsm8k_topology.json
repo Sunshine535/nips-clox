@@ -1,0 +1,715 @@
+{
+  "per_example": [
+    {
+      "example_id": "gsm8k_0",
+      "r_bar": 0.5337843873468935,
+      "epl": 1.4,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_1",
+      "r_bar": 0.4331483602944734,
+      "epl": 1.0,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_2",
+      "r_bar": 0.4453559463118687,
+      "epl": 1.6666666666666667,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_3",
+      "r_bar": 0.39880054260139003,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.4,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_4",
+      "r_bar": 0.45314196556369707,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_5",
+      "r_bar": 0.41069968352203945,
+      "epl": 2.0,
+      "n_steps": 12.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_6",
+      "r_bar": 0.5522359270471572,
+      "epl": 1.5,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_7",
+      "r_bar": 0.4233392946565483,
+      "epl": 1.6,
+      "n_steps": 7.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_8",
+      "r_bar": 0.4379306443820261,
+      "epl": 1.5,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_9",
+      "r_bar": 0.42653598369339285,
+      "epl": 1.8,
+      "n_steps": 9.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_10",
+      "r_bar": 0.43537726197695115,
+      "epl": 1.3333333333333333,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_11",
+      "r_bar": 0.6814919053587289,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_12",
+      "r_bar": 0.4072662695961917,
+      "epl": 1.3333333333333335,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_13",
+      "r_bar": 0.6916032599745282,
+      "epl": 1.4000000000000001,
+      "n_steps": 7.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_14",
+      "r_bar": 0.42660324267764926,
+      "epl": 1.6,
+      "n_steps": 9.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_15",
+      "r_bar": 0.45130361121494245,
+      "epl": 1.2,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_16",
+      "r_bar": 0.506397050988306,
+      "epl": 1.2,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_17",
+      "r_bar": 0.5550896526607936,
+      "epl": 1.8,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_18",
+      "r_bar": 0.40421685358078946,
+      "epl": 1.3333333333333333,
+      "n_steps": 10.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_19",
+      "r_bar": 0.4669104449781741,
+      "epl": 1.3333333333333335,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_20",
+      "r_bar": 0.5364092284695661,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_21",
+      "r_bar": 0.473897192279125,
+      "epl": 1.5,
+      "n_steps": 9.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_22",
+      "r_bar": 0.45071683890696596,
+      "epl": 1.0666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_23",
+      "r_bar": 0.45896844640946394,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_24",
+      "r_bar": 0.4630454652646662,
+      "epl": 1.0,
+      "n_steps": 11.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_25",
+      "r_bar": 0.4812870735264616,
+      "epl": 1.3333333333333335,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_26",
+      "r_bar": 0.5824005127347778,
+      "epl": 1.2,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_27",
+      "r_bar": 0.5643536484837012,
+      "epl": 1.3333333333333335,
+      "n_steps": 11.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_28",
+      "r_bar": 0.6024115540326339,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_29",
+      "r_bar": 0.5279003521741099,
+      "epl": 1.6,
+      "n_steps": 12.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_30",
+      "r_bar": 0.4592721644237252,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_31",
+      "r_bar": 0.5299458704512269,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_32",
+      "r_bar": 0.6227299360842016,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_33",
+      "r_bar": 0.6552345206823383,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "targeted_repair"
+    },
+    {
+      "example_id": "gsm8k_34",
+      "r_bar": 0.5065171229268193,
+      "epl": 1.1666666666666667,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_35",
+      "r_bar": 0.45627831793482654,
+      "epl": 3.0,
+      "n_steps": 17.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_36",
+      "r_bar": 0.3911533885296762,
+      "epl": 1.6666666666666667,
+      "n_steps": 14.8,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_37",
+      "r_bar": 0.43817997351247506,
+      "epl": 1.6,
+      "n_steps": 11.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_38",
+      "r_bar": 0.4393644584583317,
+      "epl": 2.0,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_39",
+      "r_bar": 0.5529682151268018,
+      "epl": 1.5,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_40",
+      "r_bar": 0.5025164322969813,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_41",
+      "r_bar": 0.45253096179895647,
+      "epl": 1.0,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_42",
+      "r_bar": 0.4618048392149219,
+      "epl": 1.2,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_43",
+      "r_bar": 0.4001423330744699,
+      "epl": 1.6,
+      "n_steps": 9.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_44",
+      "r_bar": 0.45439636768063735,
+      "epl": 1.6,
+      "n_steps": 9.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_45",
+      "r_bar": 0.5158068612090139,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_46",
+      "r_bar": 0.4713945902653771,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_47",
+      "r_bar": 0.6020806992523521,
+      "epl": 1.8,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_48",
+      "r_bar": 0.5811970523692906,
+      "epl": 1.0,
+      "n_steps": 9.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_49",
+      "r_bar": 0.6488912652489877,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_50",
+      "r_bar": 0.4586149757562054,
+      "epl": 1.6666666666666667,
+      "n_steps": 12.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_51",
+      "r_bar": 0.4486356452490341,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_52",
+      "r_bar": 0.45063429044756576,
+      "epl": 1.0,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_53",
+      "r_bar": 0.4168953567933907,
+      "epl": 1.0666666666666667,
+      "n_steps": 12.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_54",
+      "r_bar": 0.44376255778736634,
+      "epl": 1.5,
+      "n_steps": 12.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_55",
+      "r_bar": 0.49176175015227436,
+      "epl": 1.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_56",
+      "r_bar": 0.37563131964732405,
+      "epl": 1.5,
+      "n_steps": 10.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_57",
+      "r_bar": 0.3920631784409171,
+      "epl": 1.4,
+      "n_steps": 10.8,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_58",
+      "r_bar": 0.5047943573166963,
+      "epl": 1.4,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_59",
+      "r_bar": 0.4895594805815306,
+      "epl": 1.0,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_60",
+      "r_bar": 0.4792180669215271,
+      "epl": 1.3333333333333335,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_61",
+      "r_bar": 0.47123092911552317,
+      "epl": 1.1666666666666667,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_62",
+      "r_bar": 0.5752586738728813,
+      "epl": 1.2,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_63",
+      "r_bar": 0.5625585018468646,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_64",
+      "r_bar": 0.5032290438825747,
+      "epl": 1.0666666666666667,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_65",
+      "r_bar": 0.5245853582138381,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_66",
+      "r_bar": 0.4599289320072555,
+      "epl": 1.0,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_67",
+      "r_bar": 0.5187960164298362,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_68",
+      "r_bar": 0.4639498441160527,
+      "epl": 1.0,
+      "n_steps": 10.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_69",
+      "r_bar": 0.5141447364819672,
+      "epl": 1.1666666666666667,
+      "n_steps": 11.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_70",
+      "r_bar": 0.4230865348694355,
+      "epl": 1.2,
+      "n_steps": 8.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_71",
+      "r_bar": 0.5641353040560044,
+      "epl": 1.0,
+      "n_steps": 8.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_72",
+      "r_bar": 0.46414658280427123,
+      "epl": 1.2,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_73",
+      "r_bar": 0.43874827073549216,
+      "epl": 1.3333333333333333,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_74",
+      "r_bar": 0.4119832999722237,
+      "epl": 1.5,
+      "n_steps": 12.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_75",
+      "r_bar": 0.535237941625912,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_76",
+      "r_bar": 0.3863807605521959,
+      "epl": 2.1,
+      "n_steps": 8.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "gsm8k_77",
+      "r_bar": 0.5287082647146709,
+      "epl": 1.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_78",
+      "r_bar": 0.4342900220286826,
+      "epl": 1.3333333333333335,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_79",
+      "r_bar": 0.48891232189788486,
+      "epl": 1.0,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_80",
+      "r_bar": 0.4198004680335304,
+      "epl": 1.0,
+      "n_steps": 6.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_81",
+      "r_bar": 0.42644599405879285,
+      "epl": 2.1,
+      "n_steps": 7.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_82",
+      "r_bar": 0.4362902294728645,
+      "epl": 1.0,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_83",
+      "r_bar": 0.5585199591751617,
+      "epl": 1.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_84",
+      "r_bar": 0.4482735827892741,
+      "epl": 1.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_85",
+      "r_bar": 0.4852093686131398,
+      "epl": 1.0666666666666667,
+      "n_steps": 8.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_86",
+      "r_bar": 0.6189386557297794,
+      "epl": 1.6666666666666667,
+      "n_steps": 10.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_87",
+      "r_bar": 0.4304631504472815,
+      "epl": 2.6666666666666665,
+      "n_steps": 8.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_88",
+      "r_bar": 0.627034913803483,
+      "epl": 1.9428571428571428,
+      "n_steps": 10.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_89",
+      "r_bar": 0.5887043813244958,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_90",
+      "r_bar": 0.49788137241182095,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_91",
+      "r_bar": 0.4365488641347573,
+      "epl": 1.1666666666666667,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_92",
+      "r_bar": 0.462966384766253,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_93",
+      "r_bar": 0.41234751746494835,
+      "epl": 1.8,
+      "n_steps": 11.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_94",
+      "r_bar": 0.549692921905418,
+      "epl": 2.0,
+      "n_steps": 8.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_95",
+      "r_bar": 0.4787092859313845,
+      "epl": 1.2,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_96",
+      "r_bar": 0.5977214505614806,
+      "epl": 1.0,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_97",
+      "r_bar": 0.4368219555206653,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_98",
+      "r_bar": 0.43610564803438834,
+      "epl": 1.6,
+      "n_steps": 6.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "gsm8k_99",
+      "r_bar": 0.5155421530997036,
+      "epl": 1.0666666666666667,
+      "n_steps": 8.8,
+      "strategy": "adaptive"
+    }
+  ],
+  "summary": {
+    "r_bar_mean": 0.4890992854684544,
+    "r_bar_std": 0.07005573677360404,
+    "epl_mean": 1.3517619047619047,
+    "epl_std": 0.36152151073081173,
+    "strategy_distribution": {
+      "adaptive": 92,
+      "standard_cot": 5,
+      "targeted_repair": 3
+    }
+  }
+}

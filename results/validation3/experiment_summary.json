@@ -1,0 +1,31 @@
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "benchmarks": [
+    "gsm8k"
+  ],
+  "strategies": [
+    "standard_cot",
+    "self_consistency",
+    "backward_cloze",
+    "uncertainty_masked_repair",
+    "random_masked_repair",
+    "full_regeneration",
+    "hierarchical_repair",
+    "clox_adaptive"
+  ],
+  "seeds": [
+    11
+  ],
+  "results": {
+    "gsm8k": {
+      "standard_cot": 0.8,
+      "self_consistency": 0.7,
+      "backward_cloze": 0.8,
+      "uncertainty_masked_repair": 0.7,
+      "random_masked_repair": 0.7,
+      "full_regeneration": 0.5,
+      "hierarchical_repair": 0.7,
+      "clox_adaptive": 0.15
+    }
+  }
+}

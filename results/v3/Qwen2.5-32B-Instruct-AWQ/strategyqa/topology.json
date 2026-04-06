@@ -1,0 +1,1618 @@
+{
+  "summary": {
+    "benchmark": "strategyqa",
+    "n_examples": 200,
+    "r_bar_mean": 0.45089716575879835,
+    "r_bar_std": 0.0572245741219091,
+    "r_bar_median": 0.44165531181229756,
+    "epl_mean": 1.5541666666666665,
+    "epl_std": 0.2822614528726475,
+    "epl_median": 1.5,
+    "strategy_distribution": {
+      "standard_cot": 9,
+      "adaptive": 191
+    }
+  },
+  "per_example": [
+    {
+      "example_id": "strategyqa_0",
+      "difficulty": "medium",
+      "r_bar": 0.520737575630062,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_1",
+      "difficulty": "medium",
+      "r_bar": 0.4359039591814831,
+      "epl": 2.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_2",
+      "difficulty": "medium",
+      "r_bar": 0.39691401768617585,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_3",
+      "difficulty": "medium",
+      "r_bar": 0.3705567882711555,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_4",
+      "difficulty": "medium",
+      "r_bar": 0.3314537919305598,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_5",
+      "difficulty": "medium",
+      "r_bar": 0.4185183320759804,
+      "epl": 1.2,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_6",
+      "difficulty": "medium",
+      "r_bar": 0.44059027026734265,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_7",
+      "difficulty": "medium",
+      "r_bar": 0.46740348097776463,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_8",
+      "difficulty": "medium",
+      "r_bar": 0.5142728084587297,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_9",
+      "difficulty": "medium",
+      "r_bar": 0.41106524487586693,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_10",
+      "difficulty": "medium",
+      "r_bar": 0.4984415368101775,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_11",
+      "difficulty": "medium",
+      "r_bar": 0.39962948173758556,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_12",
+      "difficulty": "medium",
+      "r_bar": 0.4627148114604222,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_13",
+      "difficulty": "medium",
+      "r_bar": 0.578056948450511,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_14",
+      "difficulty": "medium",
+      "r_bar": 0.4860511914612198,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_15",
+      "difficulty": "medium",
+      "r_bar": 0.5687259366002345,
+      "epl": 1.3333333333333333,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_16",
+      "difficulty": "medium",
+      "r_bar": 0.41340459660564105,
+      "epl": 1.3333333333333333,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_17",
+      "difficulty": "medium",
+      "r_bar": 0.4243105580558111,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_18",
+      "difficulty": "medium",
+      "r_bar": 0.44012925841815154,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_19",
+      "difficulty": "medium",
+      "r_bar": 0.4428913226581559,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_20",
+      "difficulty": "medium",
+      "r_bar": 0.4748473478440691,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_21",
+      "difficulty": "medium",
+      "r_bar": 0.3905814803045831,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_22",
+      "difficulty": "medium",
+      "r_bar": 0.4106523613800026,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_23",
+      "difficulty": "medium",
+      "r_bar": 0.45137763595336955,
+      "epl": 1.6,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_24",
+      "difficulty": "medium",
+      "r_bar": 0.41160190039070754,
+      "epl": 1.6,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_25",
+      "difficulty": "medium",
+      "r_bar": 0.49328908082959877,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_26",
+      "difficulty": "medium",
+      "r_bar": 0.4192221727631161,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_27",
+      "difficulty": "medium",
+      "r_bar": 0.40517444552010556,
+      "epl": 1.2,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_28",
+      "difficulty": "medium",
+      "r_bar": 0.4395725004191859,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_29",
+      "difficulty": "medium",
+      "r_bar": 0.4460179531961781,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_30",
+      "difficulty": "medium",
+      "r_bar": 0.4610500214193538,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_31",
+      "difficulty": "medium",
+      "r_bar": 0.43092477535183277,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_32",
+      "difficulty": "medium",
+      "r_bar": 0.4072981112674293,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_33",
+      "difficulty": "medium",
+      "r_bar": 0.4001574358937242,
+      "epl": 1.6,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_34",
+      "difficulty": "medium",
+      "r_bar": 0.4268499769237853,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_35",
+      "difficulty": "medium",
+      "r_bar": 0.44674630892105904,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_36",
+      "difficulty": "medium",
+      "r_bar": 0.5147879504466881,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_37",
+      "difficulty": "medium",
+      "r_bar": 0.5277641262992533,
+      "epl": 1.2,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_38",
+      "difficulty": "medium",
+      "r_bar": 0.4086637676918918,
+      "epl": 2.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_39",
+      "difficulty": "medium",
+      "r_bar": 0.3822363916968887,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_40",
+      "difficulty": "medium",
+      "r_bar": 0.4060216149571219,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_41",
+      "difficulty": "medium",
+      "r_bar": 0.4421080006435579,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_42",
+      "difficulty": "medium",
+      "r_bar": 0.35190948616074996,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_43",
+      "difficulty": "medium",
+      "r_bar": 0.44268947041473455,
+      "epl": 2.3333333333333335,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_44",
+      "difficulty": "medium",
+      "r_bar": 0.39144809614653714,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_45",
+      "difficulty": "medium",
+      "r_bar": 0.5125350575541484,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_46",
+      "difficulty": "medium",
+      "r_bar": 0.4255512554142451,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_47",
+      "difficulty": "medium",
+      "r_bar": 0.45955420718225237,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_48",
+      "difficulty": "medium",
+      "r_bar": 0.4300716336613752,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_49",
+      "difficulty": "medium",
+      "r_bar": 0.531611674756441,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_50",
+      "difficulty": "medium",
+      "r_bar": 0.4407546010582045,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_51",
+      "difficulty": "medium",
+      "r_bar": 0.5404431476787267,
+      "epl": 1.3333333333333333,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_52",
+      "difficulty": "medium",
+      "r_bar": 0.43823291661388586,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_53",
+      "difficulty": "medium",
+      "r_bar": 0.6060459348083708,
+      "epl": 1.0,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_54",
+      "difficulty": "medium",
+      "r_bar": 0.39134377933062925,
+      "epl": 2.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_55",
+      "difficulty": "medium",
+      "r_bar": 0.4501950836694254,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_56",
+      "difficulty": "medium",
+      "r_bar": 0.45358296280566535,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_57",
+      "difficulty": "medium",
+      "r_bar": 0.4817846358951603,
+      "epl": 1.5,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_58",
+      "difficulty": "medium",
+      "r_bar": 0.49708115729213753,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_59",
+      "difficulty": "medium",
+      "r_bar": 0.41677837649121957,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_60",
+      "difficulty": "medium",
+      "r_bar": 0.4404144471437454,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_61",
+      "difficulty": "medium",
+      "r_bar": 0.4208340671365251,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_62",
+      "difficulty": "medium",
+      "r_bar": 0.44612054779355004,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_63",
+      "difficulty": "medium",
+      "r_bar": 0.49013714796727825,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_64",
+      "difficulty": "medium",
+      "r_bar": 0.5345754786478588,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_65",
+      "difficulty": "medium",
+      "r_bar": 0.4742786398620619,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_66",
+      "difficulty": "medium",
+      "r_bar": 0.38885292135324684,
+      "epl": 1.6666666666666667,
+      "n_steps": 6.0,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_67",
+      "difficulty": "medium",
+      "r_bar": 0.4886764304596836,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_68",
+      "difficulty": "medium",
+      "r_bar": 0.41566130186307615,
+      "epl": 1.2,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_69",
+      "difficulty": "medium",
+      "r_bar": 0.4685456091137095,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_70",
+      "difficulty": "medium",
+      "r_bar": 0.5986001372874276,
+      "epl": 1.2,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_71",
+      "difficulty": "medium",
+      "r_bar": 0.37691771005987845,
+      "epl": 2.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_72",
+      "difficulty": "medium",
+      "r_bar": 0.47231430006448294,
+      "epl": 1.0,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_73",
+      "difficulty": "medium",
+      "r_bar": 0.41233020952791355,
+      "epl": 1.2,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_74",
+      "difficulty": "medium",
+      "r_bar": 0.4601812090163005,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_75",
+      "difficulty": "medium",
+      "r_bar": 0.391843673238101,
+      "epl": 1.5,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_76",
+      "difficulty": "medium",
+      "r_bar": 0.5468111147960049,
+      "epl": 2.0,
+      "n_steps": 7.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_77",
+      "difficulty": "medium",
+      "r_bar": 0.5282158265403194,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_78",
+      "difficulty": "medium",
+      "r_bar": 0.4977497824705784,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_79",
+      "difficulty": "medium",
+      "r_bar": 0.543195564816354,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_80",
+      "difficulty": "medium",
+      "r_bar": 0.5665207997034175,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_81",
+      "difficulty": "medium",
+      "r_bar": 0.47225548293109965,
+      "epl": 2.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_82",
+      "difficulty": "medium",
+      "r_bar": 0.47400127117839086,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_83",
+      "difficulty": "medium",
+      "r_bar": 0.38813871596518534,
+      "epl": 2.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_84",
+      "difficulty": "medium",
+      "r_bar": 0.43583709107919716,
+      "epl": 2.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_85",
+      "difficulty": "medium",
+      "r_bar": 0.40580454855560905,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_86",
+      "difficulty": "medium",
+      "r_bar": 0.45863966739124545,
+      "epl": 2.3333333333333335,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_87",
+      "difficulty": "medium",
+      "r_bar": 0.41884614370154455,
+      "epl": 1.6,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_88",
+      "difficulty": "medium",
+      "r_bar": 0.5794060321012446,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_89",
+      "difficulty": "medium",
+      "r_bar": 0.5882505679230374,
+      "epl": 1.2,
+      "n_steps": 3.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_90",
+      "difficulty": "medium",
+      "r_bar": 0.43454916315290965,
+      "epl": 1.3333333333333333,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_91",
+      "difficulty": "medium",
+      "r_bar": 0.38414896842903523,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_92",
+      "difficulty": "medium",
+      "r_bar": 0.4031137205868605,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_93",
+      "difficulty": "medium",
+      "r_bar": 0.4082012935607857,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_94",
+      "difficulty": "medium",
+      "r_bar": 0.39015271550946207,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_95",
+      "difficulty": "medium",
+      "r_bar": 0.4374922469693538,
+      "epl": 1.8,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_96",
+      "difficulty": "medium",
+      "r_bar": 0.3882575835653002,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_97",
+      "difficulty": "medium",
+      "r_bar": 0.4475165049655734,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_98",
+      "difficulty": "medium",
+      "r_bar": 0.4062209551401261,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_99",
+      "difficulty": "medium",
+      "r_bar": 0.47046358895354046,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_100",
+      "difficulty": "medium",
+      "r_bar": 0.4108676225768857,
+      "epl": 2.0,
+      "n_steps": 6.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_101",
+      "difficulty": "medium",
+      "r_bar": 0.41447619118236945,
+      "epl": 2.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_102",
+      "difficulty": "medium",
+      "r_bar": 0.46041251957529794,
+      "epl": 1.5,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_103",
+      "difficulty": "medium",
+      "r_bar": 0.4915931236723512,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_104",
+      "difficulty": "medium",
+      "r_bar": 0.3573633989271845,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_105",
+      "difficulty": "medium",
+      "r_bar": 0.4325524921646524,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_106",
+      "difficulty": "medium",
+      "r_bar": 0.39385334491214785,
+      "epl": 1.1666666666666667,
+      "n_steps": 5.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_107",
+      "difficulty": "medium",
+      "r_bar": 0.41390821400807437,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_108",
+      "difficulty": "medium",
+      "r_bar": 0.3524433546211442,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_109",
+      "difficulty": "medium",
+      "r_bar": 0.3968395986561559,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_110",
+      "difficulty": "medium",
+      "r_bar": 0.44239950696232366,
+      "epl": 1.1666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_111",
+      "difficulty": "medium",
+      "r_bar": 0.4449836664319642,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_112",
+      "difficulty": "medium",
+      "r_bar": 0.41825990743465746,
+      "epl": 1.8,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_113",
+      "difficulty": "medium",
+      "r_bar": 0.4266771283261079,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_114",
+      "difficulty": "medium",
+      "r_bar": 0.36474318757363794,
+      "epl": 1.8,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_115",
+      "difficulty": "medium",
+      "r_bar": 0.6277347065848071,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_116",
+      "difficulty": "medium",
+      "r_bar": 0.39494987577622526,
+      "epl": 1.8,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_117",
+      "difficulty": "medium",
+      "r_bar": 0.4984712585909633,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_118",
+      "difficulty": "medium",
+      "r_bar": 0.5906381054831814,
+      "epl": 1.5,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_119",
+      "difficulty": "medium",
+      "r_bar": 0.4297808137976877,
+      "epl": 1.5,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_120",
+      "difficulty": "medium",
+      "r_bar": 0.41877000581599627,
+      "epl": 1.8,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_121",
+      "difficulty": "medium",
+      "r_bar": 0.4125188568429829,
+      "epl": 2.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_122",
+      "difficulty": "medium",
+      "r_bar": 0.3967296752107507,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_123",
+      "difficulty": "medium",
+      "r_bar": 0.5326263803217901,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_124",
+      "difficulty": "medium",
+      "r_bar": 0.5630997484840875,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_125",
+      "difficulty": "medium",
+      "r_bar": 0.40253967818024855,
+      "epl": 2.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_126",
+      "difficulty": "medium",
+      "r_bar": 0.39832616582001473,
+      "epl": 2.0,
+      "n_steps": 6.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_127",
+      "difficulty": "medium",
+      "r_bar": 0.4130148660600718,
+      "epl": 2.0,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_128",
+      "difficulty": "medium",
+      "r_bar": 0.39278326145195674,
+      "epl": 2.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_129",
+      "difficulty": "medium",
+      "r_bar": 0.5108977082141871,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_130",
+      "difficulty": "medium",
+      "r_bar": 0.45114108250436263,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_131",
+      "difficulty": "medium",
+      "r_bar": 0.3660870736111949,
+      "epl": 1.2,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_132",
+      "difficulty": "medium",
+      "r_bar": 0.4352021241340779,
+      "epl": 2.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_133",
+      "difficulty": "medium",
+      "r_bar": 0.5046510508267716,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_134",
+      "difficulty": "medium",
+      "r_bar": 0.48134400703723446,
+      "epl": 1.8,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_135",
+      "difficulty": "medium",
+      "r_bar": 0.4042872559307414,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_136",
+      "difficulty": "medium",
+      "r_bar": 0.4329091641542536,
+      "epl": 1.8,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_137",
+      "difficulty": "medium",
+      "r_bar": 0.4421221649046629,
+      "epl": 2.3333333333333335,
+      "n_steps": 6.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_138",
+      "difficulty": "medium",
+      "r_bar": 0.5336650112839254,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_139",
+      "difficulty": "medium",
+      "r_bar": 0.3859306117897791,
+      "epl": 1.3333333333333333,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_140",
+      "difficulty": "medium",
+      "r_bar": 0.48147588836562627,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_141",
+      "difficulty": "medium",
+      "r_bar": 0.4129546687933665,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_142",
+      "difficulty": "medium",
+      "r_bar": 0.4500626259316741,
+      "epl": 1.5,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_143",
+      "difficulty": "medium",
+      "r_bar": 0.3951582407722905,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_144",
+      "difficulty": "medium",
+      "r_bar": 0.4263282846395997,
+      "epl": 2.0,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_145",
+      "difficulty": "medium",
+      "r_bar": 0.47224774507992323,
+      "epl": 1.2,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_146",
+      "difficulty": "medium",
+      "r_bar": 0.44931717140303445,
+      "epl": 1.4,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_147",
+      "difficulty": "medium",
+      "r_bar": 0.4842312196807994,
+      "epl": 1.2,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_148",
+      "difficulty": "medium",
+      "r_bar": 0.41939097792726326,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_149",
+      "difficulty": "medium",
+      "r_bar": 0.475180578328654,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_150",
+      "difficulty": "medium",
+      "r_bar": 0.44535230748115073,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_151",
+      "difficulty": "medium",
+      "r_bar": 0.452663849693796,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_152",
+      "difficulty": "medium",
+      "r_bar": 0.5078573608571358,
+      "epl": 1.5,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_153",
+      "difficulty": "medium",
+      "r_bar": 0.5291661648083601,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_154",
+      "difficulty": "medium",
+      "r_bar": 0.40568042709346763,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_155",
+      "difficulty": "medium",
+      "r_bar": 0.3913628860534633,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_156",
+      "difficulty": "medium",
+      "r_bar": 0.45266803300417374,
+      "epl": 1.5,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_157",
+      "difficulty": "medium",
+      "r_bar": 0.4703390683697273,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_158",
+      "difficulty": "medium",
+      "r_bar": 0.4243189050036838,
+      "epl": 1.3333333333333333,
+      "n_steps": 3.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_159",
+      "difficulty": "medium",
+      "r_bar": 0.4412026229810373,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_160",
+      "difficulty": "medium",
+      "r_bar": 0.4875045204001481,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_161",
+      "difficulty": "medium",
+      "r_bar": 0.47239027440106723,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_162",
+      "difficulty": "medium",
+      "r_bar": 0.38776327368588753,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_163",
+      "difficulty": "medium",
+      "r_bar": 0.3937042530094823,
+      "epl": 2.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_164",
+      "difficulty": "medium",
+      "r_bar": 0.440177035369224,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_165",
+      "difficulty": "medium",
+      "r_bar": 0.49406211181430015,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_166",
+      "difficulty": "medium",
+      "r_bar": 0.40252237246970013,
+      "epl": 2.0,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_167",
+      "difficulty": "medium",
+      "r_bar": 0.39895649720600457,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_168",
+      "difficulty": "medium",
+      "r_bar": 0.552559469673227,
+      "epl": 1.0666666666666667,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_169",
+      "difficulty": "medium",
+      "r_bar": 0.48991024069587263,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_170",
+      "difficulty": "medium",
+      "r_bar": 0.4275248121989247,
+      "epl": 1.6,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_171",
+      "difficulty": "medium",
+      "r_bar": 0.45930272824717827,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_172",
+      "difficulty": "medium",
+      "r_bar": 0.4951984150924411,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_173",
+      "difficulty": "medium",
+      "r_bar": 0.5740593663784587,
+      "epl": 1.2,
+      "n_steps": 3.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_174",
+      "difficulty": "medium",
+      "r_bar": 0.3764942042736703,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_175",
+      "difficulty": "medium",
+      "r_bar": 0.4457489237944458,
+      "epl": 1.5,
+      "n_steps": 5.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_176",
+      "difficulty": "medium",
+      "r_bar": 0.4455131445697375,
+      "epl": 1.3333333333333335,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_177",
+      "difficulty": "medium",
+      "r_bar": 0.5886008721306409,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_178",
+      "difficulty": "medium",
+      "r_bar": 0.41947863764936555,
+      "epl": 1.0666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_179",
+      "difficulty": "medium",
+      "r_bar": 0.4686755112037755,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_180",
+      "difficulty": "medium",
+      "r_bar": 0.4691208003978308,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_181",
+      "difficulty": "medium",
+      "r_bar": 0.46339265676446284,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_182",
+      "difficulty": "medium",
+      "r_bar": 0.37741349578375627,
+      "epl": 1.5,
+      "n_steps": 5.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_183",
+      "difficulty": "medium",
+      "r_bar": 0.38877617064158926,
+      "epl": 2.0,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_184",
+      "difficulty": "medium",
+      "r_bar": 0.5024724773527227,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_185",
+      "difficulty": "medium",
+      "r_bar": 0.429036525051524,
+      "epl": 2.0,
+      "n_steps": 5.4,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_186",
+      "difficulty": "medium",
+      "r_bar": 0.48079902742718217,
+      "epl": 1.5,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_187",
+      "difficulty": "medium",
+      "r_bar": 0.3741481513264621,
+      "epl": 1.2,
+      "n_steps": 4.2,
+      "strategy": "standard_cot"
+    },
+    {
+      "example_id": "strategyqa_188",
+      "difficulty": "medium",
+      "r_bar": 0.5852229847676282,
+      "epl": 2.1,
+      "n_steps": 7.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_189",
+      "difficulty": "medium",
+      "r_bar": 0.4455644541397433,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_190",
+      "difficulty": "medium",
+      "r_bar": 0.47396659172984923,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_191",
+      "difficulty": "medium",
+      "r_bar": 0.4268067854770279,
+      "epl": 1.6666666666666667,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_192",
+      "difficulty": "medium",
+      "r_bar": 0.36528493921332006,
+      "epl": 1.6666666666666667,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_193",
+      "difficulty": "medium",
+      "r_bar": 0.4463762350781504,
+      "epl": 1.2,
+      "n_steps": 3.2,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_194",
+      "difficulty": "medium",
+      "r_bar": 0.4395408635435232,
+      "epl": 1.5,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_195",
+      "difficulty": "medium",
+      "r_bar": 0.4781767737929757,
+      "epl": 1.8,
+      "n_steps": 5.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_196",
+      "difficulty": "medium",
+      "r_bar": 0.40275442630002434,
+      "epl": 1.5,
+      "n_steps": 4.6,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_197",
+      "difficulty": "medium",
+      "r_bar": 0.4911482867173414,
+      "epl": 1.3333333333333333,
+      "n_steps": 4.8,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_198",
+      "difficulty": "medium",
+      "r_bar": 0.5890689170928174,
+      "epl": 1.3333333333333335,
+      "n_steps": 4.0,
+      "strategy": "adaptive"
+    },
+    {
+      "example_id": "strategyqa_199",
+      "difficulty": "medium",
+      "r_bar": 0.4672590596115813,
+      "epl": 1.6,
+      "n_steps": 5.0,
+      "strategy": "adaptive"
+    }
+  ]
+}

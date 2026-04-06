@@ -1,0 +1,110 @@
+{
+  "gsm8k": {
+    "standard_cot": {
+      "accuracy": 0.9,
+      "mean_tokens": 467.76,
+      "n": 50
+    },
+    "self_consistency": {
+      "accuracy": 0.94,
+      "mean_tokens": 2347.28,
+      "n": 50
+    },
+    "targeted_repair": {
+      "accuracy": 0.98,
+      "mean_tokens": 1094.94,
+      "n": 50
+    },
+    "backward_cloze": {
+      "accuracy": 0.92,
+      "mean_tokens": 1953.92,
+      "n": 50
+    },
+    "full_regeneration": {
+      "accuracy": 0.96,
+      "mean_tokens": 1059.6,
+      "n": 50
+    }
+  },
+  "math": {
+    "standard_cot": {
+      "accuracy": 0.66,
+      "mean_tokens": 515.94,
+      "n": 50
+    },
+    "self_consistency": {
+      "accuracy": 0.64,
+      "mean_tokens": 2603.0,
+      "n": 50
+    },
+    "targeted_repair": {
+      "accuracy": 0.72,
+      "mean_tokens": 1362.48,
+      "n": 50
+    },
+    "backward_cloze": {
+      "accuracy": 0.66,
+      "mean_tokens": 2133.36,
+      "n": 50
+    },
+    "full_regeneration": {
+      "accuracy": 0.66,
+      "mean_tokens": 1376.26,
+      "n": 50
+    }
+  },
+  "strategyqa": {
+    "standard_cot": {
+      "accuracy": 0.64,
+      "mean_tokens": 346.58,
+      "n": 50
+    },
+    "self_consistency": {
+      "accuracy": 0.66,
+      "mean_tokens": 1829.98,
+      "n": 50
+    },
+    "targeted_repair": {
+      "accuracy": 0.64,
+      "mean_tokens": 923.14,
+      "n": 50
+    },
+    "backward_cloze": {
+      "accuracy": 0.62,
+      "mean_tokens": 1476.0,
+      "n": 50
+    },
+    "full_regeneration": {
+      "accuracy": 0.74,
+      "mean_tokens": 960.98,
+      "n": 50
+    }
+  },
+  "arc_challenge": {
+    "standard_cot": {
+      "accuracy": 0.74,
+      "mean_tokens": 360.98,
+      "n": 50
+    },
+    "self_consistency": {
+      "accuracy": 0.8,
+      "mean_tokens": 1870.94,
+      "n": 50
+    },
+    "targeted_repair": {
+      "accuracy": 0.9,
+      "mean_tokens": 1024.82,
+      "n": 50
+    },
+    "backward_cloze": {
+      "accuracy": 0.8,
+      "mean_tokens": 1565.06,
+      "n": 50
+    },
+    "full_regeneration": {
+      "accuracy": 0.88,
+      "mean_tokens": 1025.94,
+      "n": 50
+    }
+  }
+}
