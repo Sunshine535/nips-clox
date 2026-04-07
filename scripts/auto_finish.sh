@@ -2,9 +2,11 @@
 # Auto-finish: monitor experiment, push to github, create zip when done
 # Usage: nohup bash scripts/auto_finish.sh &
 
-LOG="/home/claude/nips-clox/results/v4/experiment.log"
-REPO="/home/claude/nips-clox"
-GH="/home/claude/.local/bin/gh"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+LOG="$PROJECT_DIR/results/v4/experiment.log"
+REPO="$PROJECT_DIR"
+GH="$(command -v gh || echo gh)"
 
 echo "[$(date)] Monitoring experiment..."
 
@@ -56,7 +58,7 @@ git remote set-url origin https://github.com/Sunshine535/nips-clox.git
 
 # Create zip with everything including results
 echo "[$(date)] Creating zip..."
-cd /home/claude
+cd "$PROJECT_DIR/.."
 zip -r /workspace/nips-clox-results.zip nips-clox/ \
     -x "nips-clox/venv/*" \
     -x "nips-clox/.git/*" \

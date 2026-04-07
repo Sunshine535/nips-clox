@@ -3,9 +3,11 @@
 # Run on 2×H100 80GB with Qwen3-32B
 set -e
 
-VENV="/home/claude/clox-venv"
-CODE="/home/claude/nips-clox/code"
-RESULTS="/home/claude/nips-clox/results/v2"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+VENV="$PROJECT_DIR/venv"
+CODE="$PROJECT_DIR/code"
+RESULTS="$PROJECT_DIR/results/v2"
 
 source "$VENV/bin/activate"
 cd "$CODE"
