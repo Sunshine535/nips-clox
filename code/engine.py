@@ -35,9 +35,16 @@ def auto_tp(model_name: str, available_gpus: int | None = None) -> int:
     if available_gpus is None:
         available_gpus = detect_gpu_count()
     name_lower = model_name.lower()
-    # Small models: don't waste GPUs on TP overhead
-    if any(s in name_lower for s in ["1.5b", "3b", "7b", "8b", "14b"]):
+    # MoE models (e.g. Qwen3.5-35B-A3B): activated params are small
+    if re.search(r'-a\d+b', name_lower):
         max_tp = min(2, available_gpus)
+    # Extract largest "XB" number to determine model size
+    elif (m := re.findall(r'(\d+(?:\.\d+)?)b', name_lower)):
+        largest_b = max(float(x) for x in m)
+        if largest_b <= 14:
+            max_tp = min(2, available_gpus)
+        else:
+            max_tp = available_gpus
     else:
         max_tp = available_gpus
     # Round down to power of 2

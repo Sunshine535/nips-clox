@@ -494,7 +494,7 @@ def run_proxy_validation(engine: VLLMEngine, benchmarks: list[str],
 
 def main():
     parser = argparse.ArgumentParser(description="CLOX v2: Full NeurIPS Experiment")
-    parser.add_argument("--model", type=str, default="Qwen/Qwen2.5-32B-Instruct-AWQ")
+    parser.add_argument("--model", type=str, default="Qwen/Qwen3.5-27B-GPTQ-Int4")
     parser.add_argument("--tp", type=int, default=0,
                         help="Tensor parallel size (0 = auto-detect from GPU count)")
     parser.add_argument("--phase", type=str, default="all",

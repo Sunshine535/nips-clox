@@ -38,7 +38,7 @@ cd code
 python3 synthetic_dag.py
 
 # 带模型的 smoke test（需要 GPU）
-python3 run_clox.py --model Qwen/Qwen2.5-7B-Instruct --tp 1 \
+python3 run_clox.py --model Qwen/Qwen3.5-9B --tp 1 \
     --benchmarks gsm8k --phase topology --max_examples 10
 ```
 
@@ -46,7 +46,7 @@ python3 run_clox.py --model Qwen/Qwen2.5-7B-Instruct --tp 1 \
 
 ### Step 1: 策略对比（核心缺失部分）
 
-9 策略 × 3 seeds × 4 benchmarks，使用 Qwen2.5-32B-Instruct-AWQ。
+9 策略 × 3 seeds × 4 benchmarks，使用 Qwen3.5-27B-GPTQ-Int4（最新 Qwen3.5 系列）。
 
 GPU 自动检测已内置——`--tp 0`（默认）根据模型大小和可用 GPU 自动选择 TP。
 
@@ -94,16 +94,16 @@ python3 code/run_full_experiment.py --phase proxy --output results/v5
 ### Step 3: 分析与出图
 
 ```bash
-python3 code/analyze_v2.py results/v5/Qwen2.5-32B-Instruct-AWQ/
+python3 code/analyze_v2.py results/v5/Qwen3.5-27B-GPTQ-Int4/
 ```
 
 ### Step 4: 跨模型验证（可选）
 
-用 Qwen3-8B 做跨模型分析：
+用 Qwen3.5-9B 做跨模型分析：
 
 ```bash
 python3 code/run_full_experiment.py \
-    --model Qwen/Qwen3-8B \
+    --model Qwen/Qwen3.5-9B \
     --phase strategies \
     --seeds 11,23,37 \
     --output results/v5
@@ -125,8 +125,9 @@ python3 code/run_full_experiment.py \
 | 模型大小 | 4 GPU | 2 GPU | 1 GPU |
 |---------|-------|-------|-------|
 | 70B/72B | TP=4 | TP=2 | TP=1 |
-| 32B/34B | TP=2 | TP=2 | TP=1 |
-| ≤14B | TP=1 | TP=1 | TP=1 |
+| 27B/32B | TP=4 | TP=2 | TP=1 |
+| MoE (35B-A3B 等) | TP=2 | TP=2 | TP=1 |
+| ≤14B | TP=2 | TP=2 | TP=1 |
 
 手动指定：`--tp N`。支持 `CUDA_VISIBLE_DEVICES` 限制可见 GPU。
 
@@ -135,10 +136,10 @@ python3 code/run_full_experiment.py \
 | 数据 | 位置 | 说明 |
 |------|------|------|
 | 合成 DAG | `results/synthetic/` | 5 图类型 × 6 r̄ × 3 seeds × 2000 trials |
-| 32B 拓扑 | `results/v3/Qwen2.5-32B-Instruct-AWQ/` | 4 benchmarks × 200 examples |
-| 8B 拓扑 | `results/v4/Qwen3-8B/` | 3 benchmarks × 200 examples |
-| 32B Pilot | `results/v3/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks |
-| 8B Pilot | `results/v4/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks |
+| 32B 拓扑 | `results/v3/Qwen3.5-27B-GPTQ-Int4/` | 4 benchmarks × 200 examples |
+| 8B 拓扑 | `results/v4/Qwen3-8B/` | 3 benchmarks × 200 examples (旧模型) |
+| 32B Pilot | `results/v3/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks (旧模型) |
+| 8B Pilot | `results/v4/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks (旧模型) |
 
 ### 关键拓扑数据 (32B)
 
