@@ -1,43 +1,60 @@
-# CLOX v2 — Topology-Aware Compute-Optimal Inference
+# CLOX v2 — 拓扑感知的计算最优推理策略选择
 
-Reasoning traces have measurable structural properties — **local recoverability (r̄)** and **error propagation length (ℓ)** — that predict which inference-time strategy is optimal. CLOX estimates these from cheap pilot traces and routes to the best strategy, matching Self-Consistency accuracy at 40-60% compute cost.
+推理 trace 具有可测量的结构属性——**局部可恢复性 (r̄)** 和**误差传播长度 (ℓ)**——这两个指标决定了最优推理策略。CLOX 从少量 pilot traces 估算拓扑，自动路由到最优策略，在匹配 Self-Consistency 准确率的同时节省 40-60% 计算开销。
 
-## Current State
+**Review 状态**: Round 3, Score 6.5/10
 
-| Component | Status |
-|-----------|--------|
-| Synthetic DAG validation | ✅ 83% theory prediction accuracy |
-| Topology characterization (32B, 4 benchmarks × 200) | ✅ Complete |
-| Topology characterization (8B, 3 benchmarks × 200) | ✅ Complete |
-| Pilot results (32B + 8B) | ✅ Complete |
-| **Strategy comparison (9 strategies × 3 seeds × 4 benchmarks)** | ❌ **Not started** |
-| CLOX-Adaptive evaluation | ❌ Not started |
-| Proxy validation | ❌ Not started |
-| Paper draft | 🔄 Needs results update |
-| Review score | 6.5/10 (Round 3) |
-
-## Resume: Run Remaining Experiments
-
-### Prerequisites
+## 环境安装
 
 ```bash
-cd /workspace/nips-clox
+git clone https://github.com/Sunshine535/nips-clox.git
+cd nips-clox
+python3 -m venv venv
 source venv/bin/activate
-
-# Verify GPU setup (auto-detects GPU count and sets TP)
-python3 code/verify_gpu.py
+pip install torch --index-url https://download.pytorch.org/whl/cu128
+pip install vllm transformers datasets numpy scipy matplotlib sentencepiece
 ```
 
-### Step 1: Strategy Comparison (32B)
+## 当前进度
 
-The main missing piece. 9 strategies × 3 seeds × 4 benchmarks on Qwen2.5-32B-Instruct-AWQ.
+| 组件 | 状态 |
+|------|------|
+| 合成 DAG 验证 | ✅ 83% 理论预测准确率 |
+| 拓扑特征化 (32B, 4 benchmarks × 200) | ✅ 完成 |
+| 拓扑特征化 (8B, 3 benchmarks × 200) | ✅ 完成 |
+| Pilot 结果 (32B + 8B) | ✅ 完成 |
+| **策略对比 (9 strategies × 3 seeds × 4 benchmarks)** | ❌ 待运行 |
+| CLOX-Adaptive 评估 | ❌ 待运行 |
+| Proxy validation | ❌ 待运行 |
+| 论文草稿 | 🔄 需更新结果 |
 
-GPU auto-detection is built in — `--tp 0` (default) picks TP from model size and available GPUs.
+## 快速验证（Smoke Test）
 
 ```bash
-# Full run: all 4 benchmarks, all 9 strategies, 3 seeds
-# TP auto-detected (32B → TP=2 if ≥2 GPUs)
-# Checkpoint: saves every 50 examples, safe to kill and re-run
+source venv/bin/activate
+cd code
+
+# 合成 DAG 验证（无需 GPU，~1 分钟）
+python3 synthetic_dag.py
+
+# 带模型的 smoke test（需要 GPU）
+python3 run_clox.py --model Qwen/Qwen2.5-7B-Instruct --tp 1 \
+    --benchmarks gsm8k --phase topology --max_examples 10
+```
+
+## 继续实验
+
+### Step 1: 策略对比（核心缺失部分）
+
+9 策略 × 3 seeds × 4 benchmarks，使用 Qwen2.5-32B-Instruct-AWQ。
+
+GPU 自动检测已内置——`--tp 0`（默认）根据模型大小和可用 GPU 自动选择 TP。
+
+```bash
+source venv/bin/activate
+
+# 全量运行：4 benchmarks, 9 strategies, 3 seeds
+# 每 50 例自动 checkpoint，可随时中断重跑
 python3 code/run_full_experiment.py \
     --phase strategies \
     --seeds 11,23,37 \
@@ -45,46 +62,44 @@ python3 code/run_full_experiment.py \
     --log_file results/v5/strategies.log
 ```
 
-Or run benchmarks incrementally:
+也可按 benchmark 分步运行：
 
 ```bash
-# GSM8K first (most informative, ~2h)
+# GSM8K（最关键，~2h）
 python3 code/run_full_experiment.py \
     --phase strategies --benchmarks gsm8k \
     --seeds 11,23,37 --output results/v5
 
-# Then MATH (~3h)
+# MATH (~3h)
 python3 code/run_full_experiment.py \
     --phase strategies --benchmarks math \
     --seeds 11,23,37 --output results/v5
 
-# Then StrategyQA + ARC
+# StrategyQA + ARC
 python3 code/run_full_experiment.py \
     --phase strategies --benchmarks strategyqa,arc_challenge \
     --seeds 11,23,37 --output results/v5
 ```
 
-Strategies run: `standard_cot`, `self_consistency` (k=5), `compute_matched_sc` (k=2), `targeted_repair`, `random_repair`, `backward_cloze`, `full_regeneration`, `hierarchical_repair`, `clox_adaptive`.
+9 个策略：`standard_cot`, `self_consistency` (k=5), `compute_matched_sc` (k=2), `targeted_repair`, `random_repair`, `backward_cloze`, `full_regeneration`, `hierarchical_repair`, `clox_adaptive`
 
 ### Step 2: Proxy Validation
 
-Tests how many pilot traces are needed for reliable topology estimation.
+测试多少 pilot traces 足够可靠估算拓扑。
 
 ```bash
-python3 code/run_full_experiment.py \
-    --phase proxy \
-    --output results/v5
+python3 code/run_full_experiment.py --phase proxy --output results/v5
 ```
 
-### Step 3: Analysis & Figures
+### Step 3: 分析与出图
 
 ```bash
 python3 code/analyze_v2.py results/v5/Qwen2.5-32B-Instruct-AWQ/
 ```
 
-### Step 4: Cross-Model (Optional)
+### Step 4: 跨模型验证（可选）
 
-Run the same on Qwen3-8B for cross-model analysis:
+用 Qwen3-8B 做跨模型分析：
 
 ```bash
 python3 code/run_full_experiment.py \
@@ -94,65 +109,72 @@ python3 code/run_full_experiment.py \
     --output results/v5
 ```
 
-## Checkpoint & Resume
+## 断点续训
 
-`run_full_experiment.py` checkpoints every 50 examples per (strategy, seed) combo:
+`run_full_experiment.py` 每 50 例自动保存 checkpoint：
 
-- `.ckpt_{strategy}_s{seed}.json` files in each benchmark directory
-- Re-running the same command skips completed combos automatically
-- To force re-run a specific combo: delete its `.ckpt_*.json` file
-- Final results are saved to `{benchmark}/strategies.json` with aggregate statistics
+- 每个 benchmark 目录下的 `.ckpt_{strategy}_s{seed}.json`
+- 重跑同一命令会自动跳过已完成的 (strategy, seed) 组合
+- 强制重跑某个组合：删除对应的 `.ckpt_*.json` 文件
+- 最终结果保存到 `{benchmark}/strategies.json`（含聚合统计）
 
-## GPU Auto-Detection
+## 多卡配置
 
-The engine auto-detects available GPUs and picks tensor parallelism:
+引擎自动检测 GPU 并选择 tensor parallelism：
 
-| Model size | TP (4 GPUs) | TP (2 GPUs) | TP (1 GPU) |
-|-----------|-------------|-------------|------------|
-| 70B/72B | 4 | 2 | 1 |
-| 32B/34B | 2 | 2 | 1 |
-| ≤14B | 1 | 1 | 1 |
+| 模型大小 | 4 GPU | 2 GPU | 1 GPU |
+|---------|-------|-------|-------|
+| 70B/72B | TP=4 | TP=2 | TP=1 |
+| 32B/34B | TP=2 | TP=2 | TP=1 |
+| ≤14B | TP=1 | TP=1 | TP=1 |
 
-Override with `--tp N`. Respects `CUDA_VISIBLE_DEVICES`.
+手动指定：`--tp N`。支持 `CUDA_VISIBLE_DEVICES` 限制可见 GPU。
 
-## Existing Results
+## 已有结果
 
-| Data | Location | Notes |
-|------|----------|-------|
-| Synthetic DAG | `results/synthetic/` | 5 graph types × 6 r̄ × 3 seeds × 2000 trials |
-| 32B Topology | `results/v3/Qwen2.5-32B-Instruct-AWQ/` | r̄, ℓ for GSM8K/MATH/StrategyQA/ARC |
-| 8B Topology | `results/v4/Qwen3-8B/` | r̄, ℓ for MATH/StrategyQA/ARC |
+| 数据 | 位置 | 说明 |
+|------|------|------|
+| 合成 DAG | `results/synthetic/` | 5 图类型 × 6 r̄ × 3 seeds × 2000 trials |
+| 32B 拓扑 | `results/v3/Qwen2.5-32B-Instruct-AWQ/` | 4 benchmarks × 200 examples |
+| 8B 拓扑 | `results/v4/Qwen3-8B/` | 3 benchmarks × 200 examples |
 | 32B Pilot | `results/v3/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks |
 | 8B Pilot | `results/v4/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks |
 
-### Key Topology Numbers (32B)
+### 关键拓扑数据 (32B)
 
-| Benchmark | r̄ | ℓ | Predicted Strategy |
-|-----------|-----|------|-------------------|
+| Benchmark | r̄ | ℓ | 预测策略 |
+|-----------|-----|------|---------|
 | GSM8K | 0.521 ± 0.074 | 1.28 ± 0.28 | Targeted repair |
 | MATH | 0.634 ± 0.086 | 1.18 ± 0.28 | Targeted repair |
 | StrategyQA | 0.451 ± 0.057 | 1.55 ± 0.28 | Standard CoT / Adaptive |
 | ARC-Challenge | 0.427 ± 0.055 | 1.57 ± 0.38 | Standard CoT / Adaptive |
 
-## Project Structure
+## 项目结构
 
 ```
 code/
-  engine.py              # vLLM engine (auto GPU detection + TP)
-  strategies_v2.py       # 9 inference strategies
-  topology_v2.py         # Topology estimation (r̄, ℓ)
-  run_full_experiment.py # Main runner (checkpoint + auto-TP)
-  run_clox.py            # Phase-based runner
-  synthetic_dag.py       # Synthetic DAG validation
-  benchmarks.py          # Benchmark loaders
-  evaluation.py          # Statistical tests
-  analyze_v2.py          # Analysis + figures
-  verify_gpu.py          # GPU verification script
+  engine.py              # vLLM 引擎 (自动 GPU 检测 + TP)
+  strategies_v2.py       # 9 个推理策略 + STRATEGY_REGISTRY
+  topology_v2.py         # 拓扑估算 (r̄, ℓ)
+  run_full_experiment.py # 主 runner (checkpoint + auto-TP)
+  run_clox.py            # 分 phase runner
+  synthetic_dag.py       # 合成 DAG 理论验证
+  benchmarks.py          # 4 benchmark 加载器
+  evaluation.py          # Bootstrap CI, McNemar, Cohen's d
+  analyze_v2.py          # 结果分析 + 绘图
 results/
-  synthetic/             # DAG validation
-  v3/                    # 32B results (topology + pilot)
-  v4/                    # 8B results (topology + pilot)
-  v5/                    # [target] Full strategy comparison
+  synthetic/             # DAG 验证结果
+  v3/                    # 32B 结果 (拓扑 + pilot)
+  v4/                    # 8B 结果 (拓扑 + pilot)
+  v5/                    # [目标] 完整策略对比
 paper/
-  main.tex               # NeurIPS draft
+  main.tex               # NeurIPS 论文草稿
 ```
+
+## 下一步（Reviewer 要求）
+
+1. 完成 32B 全部 9 策略 × 3 seeds × 4 benchmarks
+2. 评估 CLOX-Adaptive 在 held-out split 上的表现
+3. Proxy validation（3/5/8 pilot traces vs 30 ground truth）
+4. 完整统计检验（paired bootstrap CI, McNemar, Bonferroni）
+5. 论文重写，纳入 short-ℓ regime 发现
