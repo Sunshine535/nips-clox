@@ -31,7 +31,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(__file__))
 
 from benchmarks import BenchmarkExample, FEW_SHOT_PROMPTS, load_benchmark
-from engine import VLLMEngine, extract_answer, split_into_steps
+from engine import VLLMEngine, extract_answer, split_into_steps, auto_tp, detect_gpu_count
 from evaluation import (
     check_answer,
     paired_bootstrap_ci,
@@ -495,7 +495,8 @@ def run_proxy_validation(engine: VLLMEngine, benchmarks: list[str],
 def main():
     parser = argparse.ArgumentParser(description="CLOX v2: Full NeurIPS Experiment")
     parser.add_argument("--model", type=str, default="Qwen/Qwen2.5-32B-Instruct-AWQ")
-    parser.add_argument("--tp", type=int, default=2, help="Tensor parallel (MUST be 2)")
+    parser.add_argument("--tp", type=int, default=0,
+                        help="Tensor parallel size (0 = auto-detect from GPU count)")
     parser.add_argument("--phase", type=str, default="all",
                         choices=["pilot", "topology", "strategies", "proxy", "all"])
     parser.add_argument("--benchmarks", type=str, default=None,
@@ -521,9 +522,16 @@ def main():
         else CORE_STRATEGIES
     )
 
+    # Auto-detect TP if not specified
+    tp = args.tp
+    if tp <= 0:
+        tp = auto_tp(args.model)
+    n_gpus = detect_gpu_count()
+
     log.info("CLOX v2 Full Experiment")
     log.info(f"  Model: {args.model}")
-    log.info(f"  TP: {args.tp}")
+    log.info(f"  GPUs detected: {n_gpus}")
+    log.info(f"  TP: {tp} (auto)" if args.tp <= 0 else f"  TP: {tp} (manual)")
     log.info(f"  Phase: {args.phase}")
     log.info(f"  Seeds: {seeds}")
     log.info(f"  Output: {args.output}")
@@ -532,7 +540,7 @@ def main():
     model_dir = os.path.join(args.output, model_tag)
     os.makedirs(model_dir, exist_ok=True)
 
-    engine = init_engine(args.model, tp=args.tp, quant=args.quant)
+    engine = init_engine(args.model, tp=tp, quant=args.quant)
 
     # Determine benchmarks
     if args.benchmarks:

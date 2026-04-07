@@ -6,9 +6,45 @@ for topology estimation. Designed for multi-GPU tensor parallelism.
 from __future__ import annotations
 
 import math
+import os
 import re
 from dataclasses import dataclass, field
 from typing import Any
+
+
+def detect_gpu_count() -> int:
+    """Auto-detect available GPU count from CUDA_VISIBLE_DEVICES or torch."""
+    cvd = os.environ.get("CUDA_VISIBLE_DEVICES")
+    if cvd is not None:
+        ids = [x.strip() for x in cvd.split(",") if x.strip()]
+        if ids:
+            return len(ids)
+    try:
+        import torch
+        return torch.cuda.device_count()
+    except Exception:
+        return 1
+
+
+def auto_tp(model_name: str, available_gpus: int | None = None) -> int:
+    """Pick tensor_parallel_size to use all available GPUs.
+
+    Uses the largest power-of-2 <= available GPUs, ensuring models fit.
+    For small models (≤14B), caps at 2 to avoid communication overhead.
+    """
+    if available_gpus is None:
+        available_gpus = detect_gpu_count()
+    name_lower = model_name.lower()
+    # Small models: don't waste GPUs on TP overhead
+    if any(s in name_lower for s in ["1.5b", "3b", "7b", "8b", "14b"]):
+        max_tp = min(2, available_gpus)
+    else:
+        max_tp = available_gpus
+    # Round down to power of 2
+    p = 1
+    while p * 2 <= max_tp:
+        p *= 2
+    return p
 
 
 @dataclass
