@@ -46,7 +46,7 @@ python3 run_clox.py --model Qwen/Qwen3.5-9B --tp 1 \
 
 ### Step 1: 策略对比（核心缺失部分）
 
-9 策略 × 3 seeds × 4 benchmarks，使用 Qwen3.5-27B-GPTQ-Int4（最新 Qwen3.5 系列）。
+9 策略 × 3 seeds × 4 benchmarks，使用 Qwen3.5-27B（最新 Qwen3.5 系列）。
 
 GPU 自动检测已内置——`--tp 0`（默认）根据模型大小和可用 GPU 自动选择 TP。
 
@@ -94,7 +94,7 @@ python3 code/run_full_experiment.py --phase proxy --output results/v5
 ### Step 3: 分析与出图
 
 ```bash
-python3 code/analyze_v2.py results/v5/Qwen3.5-27B-GPTQ-Int4/
+python3 code/analyze_v2.py results/v5/Qwen3.5-27B/
 ```
 
 ### Step 4: 跨模型验证（可选）
@@ -136,7 +136,7 @@ python3 code/run_full_experiment.py \
 | 数据 | 位置 | 说明 |
 |------|------|------|
 | 合成 DAG | `results/synthetic/` | 5 图类型 × 6 r̄ × 3 seeds × 2000 trials |
-| 32B 拓扑 | `results/v3/Qwen3.5-27B-GPTQ-Int4/` | 4 benchmarks × 200 examples |
+| 32B 拓扑 | `results/v3/Qwen3.5-27B/` | 4 benchmarks × 200 examples |
 | 8B 拓扑 | `results/v4/Qwen3-8B/` | 3 benchmarks × 200 examples (旧模型) |
 | 32B Pilot | `results/v3/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks (旧模型) |
 | 8B Pilot | `results/v4/.../pilot/pilot_results.json` | 50 examples × 5 strategies × 4 benchmarks (旧模型) |

@@ -7,7 +7,7 @@ from engine import detect_gpu_count, auto_tp, VLLMEngine
 
 def main():
     n_gpus = detect_gpu_count()
-    model = os.environ.get("MODEL", "Qwen/Qwen3.5-27B-GPTQ-Int4")
+    model = os.environ.get("MODEL", "Qwen/Qwen3.5-27B")
     tp = auto_tp(model, n_gpus)
     print(f"[verify] GPUs: {n_gpus}, model: {model}, TP: {tp}")
 
