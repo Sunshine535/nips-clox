@@ -12,7 +12,7 @@ from strategies_v2 import build_strategy
 from topology_v2 import batch_estimate_topology
 
 def main():
-    OUTPUT = "/home/claude/nips-clox/results/v2_7b"
+    OUTPUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "v2_7b")
     os.makedirs(OUTPUT, exist_ok=True)
 
     print("Loading Qwen2.5-7B-Instruct...")

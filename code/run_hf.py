@@ -17,7 +17,7 @@ from evaluation import check_answer, paired_bootstrap_ci, compute_token_efficien
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("clox_hf")
 
-OUTPUT = "/home/claude/nips-clox/results/v2_32b"
+OUTPUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "v2_32b")
 
 
 def load_model(model_name):

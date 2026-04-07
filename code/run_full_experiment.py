@@ -54,7 +54,7 @@ logging.basicConfig(
 log = logging.getLogger("clox_full")
 
 PYTHON = sys.executable
-OUTPUT_BASE = "/home/claude/nips-clox/results/v3"
+OUTPUT_BASE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "v3")
 
 # Core strategies for main comparison
 CORE_STRATEGIES = [

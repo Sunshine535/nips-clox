@@ -17,7 +17,7 @@ from evaluation import check_answer
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("clox_focused")
 
-OUTPUT = "/home/claude/nips-clox/results/v2_focused"
+OUTPUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "v2_focused")
 
 
 def load_model(name):

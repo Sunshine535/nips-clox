@@ -15,7 +15,7 @@ from topology_v2 import batch_estimate_topology
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("clox32b")
 
-OUTPUT = "/home/claude/nips-clox/results/v2_32b"
+OUTPUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "v2_32b")
 
 def run_topology(engine, benchmark_name, examples, few_shot, n_pilot=5):
     """Phase 1: Topology characterization."""

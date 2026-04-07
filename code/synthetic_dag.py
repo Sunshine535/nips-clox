@@ -457,5 +457,6 @@ def run_full_synthetic_study(output_dir: str, n: int = 10, n_trials: int = 2000)
 
 
 if __name__ == "__main__":
-    output_dir = sys.argv[1] if len(sys.argv) > 1 else "/home/claude/nips-clox/results/synthetic"
+    _default = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "synthetic")
+    output_dir = sys.argv[1] if len(sys.argv) > 1 else _default
     run_full_synthetic_study(output_dir, n=10, n_trials=2000)

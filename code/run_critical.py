@@ -27,7 +27,7 @@ from topology_v2 import batch_estimate_topology
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 log = logging.getLogger("clox_critical")
 
-OUTPUT = "/home/claude/nips-clox/results/v3/Qwen2.5-32B-Instruct-AWQ"
+OUTPUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "results", "v3", "Qwen2.5-32B-Instruct-AWQ")
 SEEDS = [11, 23, 37]
 
 
