@@ -9,8 +9,8 @@
 ```bash
 git clone https://github.com/Sunshine535/nips-clox.git
 cd nips-clox
-bash setup.sh          # conda env 'clox' + Python 3.11 + PyTorch (CUDA 12.8)
-conda activate clox
+bash setup.sh          # venv + PyTorch (CUDA 12.8) + all deps
+source .venv/bin/activate
 ```
 
 ## 当前进度
