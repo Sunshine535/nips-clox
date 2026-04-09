@@ -1,0 +1,19 @@
+{"from": "idea:001", "to": "paper:snell2024_ttc", "type": "inspired_by", "created": "2026-04-09"}
+{"from": "idea:001", "to": "paper:huang2024_selfcorrect", "type": "inspired_by", "created": "2026-04-09"}
+{"from": "idea:001", "to": "gap:G1", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "exp:001", "to": "claim:C2", "type": "supports", "created": "2026-04-09"}
+{"from": "exp:002", "to": "claim:C1", "type": "invalidates", "created": "2026-04-09"}
+{"from": "exp:002", "to": "claim:C3", "type": "supports", "created": "2026-04-09"}
+{"from": "exp:003", "to": "claim:C1", "type": "supports", "created": "2026-04-09", "note": "synthetic only, 83%"}
+{"from": "idea:002", "to": "paper:zhao2026_entropy_trajectory", "type": "inspired_by", "created": "2026-04-09"}
+{"from": "idea:002", "to": "gap:G2", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "idea:003", "to": "paper:huang2024_selfcorrect", "type": "inspired_by", "created": "2026-04-09"}
+{"from": "idea:003", "to": "gap:G3", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "idea:003", "to": "gap:G4", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "idea:005", "to": "paper:di2026_bom", "type": "inspired_by", "created": "2026-04-09"}
+{"from": "idea:005", "to": "gap:G5", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "idea:006", "to": "paper:jiang2024_fobar", "type": "inspired_by", "created": "2026-04-09"}
+{"from": "idea:006", "to": "gap:G6", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "paper:di2026_bom", "to": "paper:snell2024_ttc", "type": "extends", "created": "2026-04-09"}
+{"from": "paper:zhao2026_entropy_trajectory", "to": "gap:G2", "type": "addresses_gap", "created": "2026-04-09"}
+{"from": "paper:ascot2025", "to": "gap:G8", "type": "addresses_gap", "created": "2026-04-09"}
