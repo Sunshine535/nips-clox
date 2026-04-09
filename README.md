@@ -9,10 +9,8 @@
 ```bash
 git clone https://github.com/Sunshine535/nips-clox.git
 cd nips-clox
-python3 -m venv venv
-source venv/bin/activate
-pip install torch --index-url https://download.pytorch.org/whl/cu128
-pip install vllm transformers datasets numpy scipy matplotlib sentencepiece
+bash setup.sh          # conda env 'clox' + Python 3.11 + PyTorch (CUDA 12.8)
+conda activate clox
 ```
 
 ## 当前进度
