@@ -201,11 +201,13 @@ def main():
     parser.add_argument("--n_problems", type=int, default=50)
     parser.add_argument("--output", type=str, default=None,
                         help="Output dir (default: results/pilot)")
-    parser.add_argument("--model", type=str, default="Qwen/Qwen3-32B-AWQ")
+    parser.add_argument("--model", type=str, default="Qwen/Qwen3.5-27B")
     parser.add_argument("--tp", type=int, default=0,
                         help="Tensor parallel size (0 = auto-detect via auto_tp)")
-    parser.add_argument("--gpu_mem", type=float, default=0.75)
+    parser.add_argument("--gpu_mem", type=float, default=0.90)
     parser.add_argument("--max_model_len", type=int, default=4096)
+    parser.add_argument("--quant", type=str, default=None,
+                        help="Quantization method: awq, gptq, or None")
     parser.add_argument("--skip_topology", action="store_true",
                         help="Skip topology estimation (faster)")
     parser.add_argument("--seed", type=int, default=42)
@@ -252,7 +254,7 @@ def main():
         tensor_parallel_size=tp,
         gpu_memory_utilization=args.gpu_mem,
         max_model_len=args.max_model_len,
-        quantization="awq",
+        quantization=args.quant,
         seed=args.seed,
     )
     log.info("Model loaded")
