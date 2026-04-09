@@ -40,6 +40,14 @@ logging.basicConfig(
 )
 log = logging.getLogger("pilot")
 
+# Pre-create output dir so shell redirection (nohup ... > results/pilot/x.log)
+# works before main() runs
+_default_output = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "results", "pilot",
+)
+os.makedirs(_default_output, exist_ok=True)
+
 # 8 base strategies (exclude clox_adaptive meta-strategy)
 PILOT_STRATEGIES = [
     "standard_cot",
