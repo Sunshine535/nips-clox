@@ -8,6 +8,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "${SCRIPT_DIR}")"
 cd "${PROJECT_DIR}"
 
+# --- HF cache: shared across projects in parent dir ---
+export HF_HOME="${HF_HOME:-$(dirname "${PROJECT_DIR}")/.cache/hf}"
+export TOKENIZERS_PARALLELISM=false
+mkdir -p "$HF_HOME"
+
 # ── Configuration (override via env) ──────────────────────────────
 BENCHMARKS="${CLOX_BENCHMARKS:-gsm8k,math,strategyqa,arc_challenge,bbh}"
 STRATEGIES="${CLOX_STRATEGIES:-all}"
