@@ -109,7 +109,8 @@ def _save_ckpt(path: str, data: dict) -> None:
     os.replace(tmp, path)
 
 
-def run_strategies(engine: VLLMEngine, examples: list, output_dir: str, few_shot: str) -> dict:
+def run_strategies(engine: VLLMEngine, examples: list, output_dir: str, few_shot: str,
+                   max_tokens: int = 2048) -> dict:
     """Run all 8 strategies on all examples with checkpoint/resume."""
     ckpt_path = os.path.join(output_dir, ".pilot_ckpt.json")
     results = _load_ckpt(ckpt_path)
@@ -135,7 +136,7 @@ def run_strategies(engine: VLLMEngine, examples: list, output_dir: str, few_shot
         for i, ex in enumerate(remaining):
             t0 = time.perf_counter()
             try:
-                result = strategy.run(engine, ex.question, max_tokens=512, few_shot=few_shot)
+                result = strategy.run(engine, ex.question, max_tokens=max_tokens, few_shot=few_shot)
                 elapsed = time.perf_counter() - t0
                 correct = check_answer(result.prediction, ex.answer, ex.answer_type)
 
@@ -188,7 +189,7 @@ def run_topology_estimation(engine: VLLMEngine, examples: list, few_shot: str) -
         batch = questions[start:start + batch_size]
         log.info("  Topology batch %d-%d / %d", start, start + len(batch), len(questions))
         profiles = batch_estimate_topology(
-            engine, batch, few_shot=few_shot, n_pilot=8, max_tokens=512,
+            engine, batch, few_shot=few_shot, n_pilot=8, max_tokens=2048,
         )
         all_profiles.extend(profiles)
 
@@ -216,9 +217,13 @@ def main():
     parser.add_argument("--max_model_len", type=int, default=4096)
     parser.add_argument("--quant", type=str, default=None,
                         help="Quantization method: awq, gptq, or None")
+    parser.add_argument("--max_tokens", type=int, default=2048,
+                        help="Max generation tokens per call (512 too short for Qwen3.5)")
     parser.add_argument("--skip_topology", action="store_true",
                         help="Skip topology estimation (faster)")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--clean", action="store_true",
+                        help="Delete existing checkpoint and start fresh")
     args = parser.parse_args()
 
     if args.output is None:
@@ -227,6 +232,13 @@ def main():
             "results", "pilot",
         )
     os.makedirs(args.output, exist_ok=True)
+
+    # Clean old checkpoint if requested
+    if args.clean:
+        ckpt = os.path.join(args.output, ".pilot_ckpt.json")
+        if os.path.isfile(ckpt):
+            os.unlink(ckpt)
+            print(f"Deleted old checkpoint: {ckpt}")
 
     # File logger
     fh = logging.FileHandler(os.path.join(args.output, "pilot.log"))
@@ -272,7 +284,8 @@ def main():
     # Phase 1: Run all strategies
     log.info("--- Phase 1: Running %d strategies ---", len(PILOT_STRATEGIES))
     t_start = time.perf_counter()
-    strategy_results = run_strategies(engine, examples, args.output, few_shot)
+    strategy_results = run_strategies(engine, examples, args.output, few_shot,
+                                      max_tokens=args.max_tokens)
     t_strat = time.perf_counter() - t_start
     log.info("Strategies complete in %.1f min", t_strat / 60)
 

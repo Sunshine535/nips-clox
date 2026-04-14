@@ -213,10 +213,25 @@ class VLLMEngine:
 def extract_answer(text: str) -> str:
     # Strip <think>...</think> tags from Qwen3-style thinking models
     text = re.sub(r'<think>.*?</think>', '', text, flags=re.DOTALL).strip()
+    # Strip Qwen3.5-style "Thinking Process:" meta-commentary blocks
+    # These appear when /no_think fails — model generates untagged thinking
+    text = re.sub(
+        r'^Thinking Process:.*?(?=\n(?:Q:|A:|Question:|Answer:|Let\'s|Step 1|\d+\.))',
+        '', text, flags=re.DOTALL,
+    ).strip()
+    # Fallback: if entire output is a thinking block, try to extract from it
+    if text.startswith('Thinking Process:') or text.startswith('1.  **Analyze'):
+        # Look for final answer/result within the thinking block (take LAST match)
+        calc_matches = re.findall(
+            r'(?:final answer|answer|result|Wilfred|=)\s*(?:is\s*)?[=:\s]*\$?(-?\d+(?:\.\d+)?)',
+            text, re.IGNORECASE,
+        )
+        if calc_matches:
+            return calc_matches[-1]
     patterns = [
         r"\\boxed\{([^}]+)\}",
         r"####\s*(.+)",
-        r"(?:final answer|the answer is|answer:)\s*[:\s]*([^\n.;]+)",
+        r"(?:final answer|the answer is|answer:)\s*[=:\s]*([^\n.;]+)",
         r"(?:Therefore|So|Thus|Hence),?\s*(?:the (?:final )?answer is)?\s*([^\n.;]+)",
     ]
     for pattern in patterns:
