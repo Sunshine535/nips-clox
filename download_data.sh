@@ -4,9 +4,9 @@
 # Purpose: Pre-download all datasets + model on an internet-enabled container,
 #          then scp the cache directory to the air-gapped GPU server.
 #
-# Usage (on download container with internet):
+# Usage (on download container with internet, China-mainland proxies):
 #   cd /openbayes/input/input0
-#   git clone https://github.com/Sunshine535/nips-clox.git
+#   git clone https://ghfast.top/https://github.com/Sunshine535/nips-clox.git
 #   cd nips-clox
 #   bash download_data.sh                    # downloads to /openbayes/input/input0/hf_cache
 #   bash download_data.sh /custom/path       # or to custom directory
@@ -40,9 +40,11 @@ echo ""
 
 mkdir -p "$HF_CACHE"
 
-# ── Install dependencies ────────────────────────────────────────────
-echo "[1/3] Installing huggingface_hub, datasets, hf_transfer..."
-pip install -q huggingface_hub datasets hf_transfer 2>&1 | tail -5
+# ── Install dependencies (tsinghua mirror) ──────────────────────────
+PIP_MIRROR="https://pypi.tuna.tsinghua.edu.cn/simple"
+echo "[1/3] Installing huggingface_hub, datasets, hf_transfer (via tsinghua)..."
+pip install -q -i "$PIP_MIRROR" --trusted-host pypi.tuna.tsinghua.edu.cn \
+    huggingface_hub datasets hf_transfer 2>&1 | tail -5
 
 # ── Download datasets ───────────────────────────────────────────────
 echo ""
@@ -114,9 +116,10 @@ echo "Next steps:"
 echo "  1. scp to tju-hpc:"
 echo "     scp -r $TARGET_DIR tju-hpc:~/input0"
 echo ""
-echo "  2. On tju-hpc, set env vars in your shell or .bashrc:"
+echo "  2. On tju-hpc, set env vars (offline mode, uses local cache):"
 echo "     export HF_HOME=\$HOME/input0/hf_cache"
 echo "     export HF_HUB_OFFLINE=1"
+echo "     export TRANSFORMERS_OFFLINE=1"
 echo ""
 echo "  3. Run pilot:"
 echo "     cd ~/input0/nips-clox"
