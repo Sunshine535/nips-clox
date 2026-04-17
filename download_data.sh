@@ -5,10 +5,9 @@
 #          then scp the cache directory to the air-gapped GPU server.
 #
 # Usage (on download container with internet, China-mainland proxies):
-#   cd /openbayes/input/input0
 #   git clone https://ghfast.top/https://github.com/Sunshine535/nips-clox.git
 #   cd nips-clox
-#   bash download_data.sh                    # downloads to /openbayes/input/input0/hf_cache
+#   bash download_data.sh                    # downloads to ./hf_cache
 #   bash download_data.sh /custom/path       # or to custom directory
 #
 # Usage (on tju-hpc after scp):
@@ -19,7 +18,7 @@
 set -e
 
 # ── Configuration ───────────────────────────────────────────────────
-TARGET_DIR="${1:-/openbayes/input/input0}"
+TARGET_DIR="${1:-$(pwd)}"
 HF_CACHE="$TARGET_DIR/hf_cache"
 
 # Use HF mirror (faster in China; remove if outside China)
@@ -114,13 +113,12 @@ du -sh "$HF_CACHE"
 echo ""
 echo "Next steps:"
 echo "  1. scp to tju-hpc:"
-echo "     scp -r $TARGET_DIR tju-hpc:~/input0"
+echo "     scp -r $HF_CACHE tju-hpc:~/"
 echo ""
 echo "  2. On tju-hpc, set env vars (offline mode, uses local cache):"
-echo "     export HF_HOME=\$HOME/input0/hf_cache"
+echo "     export HF_HOME=\$HOME/hf_cache"
 echo "     export HF_HUB_OFFLINE=1"
 echo "     export TRANSFORMERS_OFFLINE=1"
 echo ""
 echo "  3. Run pilot:"
-echo "     cd ~/input0/nips-clox"
 echo "     bash run_pilot.sh --clean --tp 2"
