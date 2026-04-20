@@ -24,8 +24,24 @@ def _normalize_answer(text: str) -> str:
 
 
 def load_gsm8k(max_examples: int | None = None) -> list[BenchmarkExample]:
-    from datasets import load_dataset
-    ds = load_dataset("gsm8k", "main", split="test")
+    import glob, os as _os
+    from datasets import load_dataset, Dataset
+    # Try direct arrow file load first (fastest, works offline)
+    ds = None
+    cache_root = _os.environ.get("HF_DATASETS_CACHE", "") or _os.environ.get("HF_HOME", "")
+    if cache_root:
+        search_roots = [cache_root, _os.path.join(cache_root, "datasets")]
+        for root in search_roots:
+            pattern = _os.path.join(root, "openai___gsm8k", "main", "*", "*", "gsm8k-test.arrow")
+            matches = glob.glob(pattern)
+            if matches:
+                ds = Dataset.from_file(matches[0])
+                break
+    if ds is None:
+        try:
+            ds = load_dataset("openai/gsm8k", "main", split="test")
+        except Exception:
+            ds = load_dataset("gsm8k", "main", split="test")
     examples = []
     for i, item in enumerate(ds):
         if max_examples and i >= max_examples:

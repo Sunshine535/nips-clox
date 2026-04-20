@@ -28,6 +28,10 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(__file__))
 
+# Apply offline HF patch BEFORE any vllm/transformers imports
+if os.environ.get("HF_HUB_OFFLINE", "") in ("1", "true", "True"):
+    import hf_offline_patch  # noqa: F401
+
 from benchmarks import FEW_SHOT_PROMPTS, load_benchmark
 from engine import VLLMEngine, auto_tp
 from evaluation import check_answer
@@ -224,6 +228,10 @@ def main():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--clean", action="store_true",
                         help="Delete existing checkpoint and start fresh")
+    parser.add_argument("--shard_id", type=int, default=0,
+                        help="Shard index (0-based) for data parallelism")
+    parser.add_argument("--n_shards", type=int, default=1,
+                        help="Total number of shards (splits problems evenly)")
     args = parser.parse_args()
 
     if args.output is None:
@@ -248,8 +256,14 @@ def main():
     log.info("=== Cross-Strategy Pilot Experiment ===")
     log.info("Model: %s  N=%d  seed=%d", args.model, args.n_problems, args.seed)
 
-    # Select problems
-    examples = select_problems(args.n_problems, seed=args.seed)
+    # Select problems (full 50, then take shard)
+    all_examples = select_problems(args.n_problems, seed=args.seed)
+    if args.n_shards > 1:
+        examples = all_examples[args.shard_id::args.n_shards]
+        log.info("Shard %d/%d: %d/%d problems",
+                 args.shard_id, args.n_shards, len(examples), len(all_examples))
+    else:
+        examples = all_examples
     diff_counts: dict[str, int] = {}
     for ex in examples:
         diff_counts[ex.difficulty] = diff_counts.get(ex.difficulty, 0) + 1
