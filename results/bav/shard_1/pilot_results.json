@@ -1,0 +1,1187 @@
+{
+  "config": {
+    "model": "/openbayes/input/input0/hub/models--Qwen--Qwen3.5-27B/snapshots/b7ca741b86de18df552fd2cc952861e04621a4bd",
+    "n_problems": 13,
+    "strategies": [
+      "standard_cot",
+      "self_consistency",
+      "compute_matched_sc",
+      "targeted_repair",
+      "random_repair",
+      "backward_cloze",
+      "full_regeneration",
+      "hierarchical_repair"
+    ],
+    "seed": 42,
+    "timestamp": "2026-04-20 16:55:58",
+    "strategy_time_min": 132.3
+  },
+  "problems": [
+    {
+      "id": "gsm8k_109",
+      "difficulty": "easy",
+      "question": "A local gas station is selling gas for $3.00 a gallon.  An app company is offering $.20 cashback per gallon if you fill up at this station.  If someone buys 10 gallons of gas, how much with their gas ",
+      "answer": "28"
+    },
+    {
+      "id": "gsm8k_539",
+      "difficulty": "easy",
+      "question": "My wife wants to evenly split the check but wants me to pay an additional 20% tip on our $50 dinner bill. How much did I end up paying?",
+      "answer": "35"
+    },
+    {
+      "id": "gsm8k_1086",
+      "difficulty": "hard",
+      "question": "Marcel runs a bicycle store. His main products are three types of bikes: MTB, BMX, and Trekking. The price of one MTB is $500, BMX is half the price of an MTB, and a Trekking bike is $450. In one mont",
+      "answer": "131250"
+    },
+    {
+      "id": "gsm8k_456",
+      "difficulty": "medium",
+      "question": "In a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?",
+      "answer": "78"
+    },
+    {
+      "id": "gsm8k_471",
+      "difficulty": "medium",
+      "question": "There are 30 students in Marissa\u2019s class. Each student started the year with 10 pencils. After two months, 1/5 of the total pencils in class were used. At the end of the year, only 1/3 of the remainin",
+      "answer": "80"
+    },
+    {
+      "id": "gsm8k_882",
+      "difficulty": "hard",
+      "question": "Kelly is grocery shopping at a supermarket and is making sure she has enough in her budget for the items in her cart. Her 5 packs of bacon cost $10 in total and she has 6 packets of chicken which each",
+      "answer": "5"
+    },
+    {
+      "id": "gsm8k_1156",
+      "difficulty": "hard",
+      "question": "Linus works for a trading company. He buys a mobile device for $20 and sells it for twice the amount of the original price. If he bought 2 devices last Monday and 4 devices last Tuesday, how much prof",
+      "answer": "120"
+    },
+    {
+      "id": "gsm8k_666",
+      "difficulty": "medium",
+      "question": "Rayna has 60 more dollars than Kassidy, and Kassidy has 3/4 times as much money as Aurelia. If Arelia has $120, how much would each have if they decided to add together their money and share equally a",
+      "answer": "120"
+    },
+    {
+      "id": "gsm8k_649",
+      "difficulty": "easy",
+      "question": "Fishio posted her selfie on Instagram. She received 2000 likes on the photo after 1 week. Three weeks later, the number of likes was 70 times as many as the initial number of likes. If she received 20",
+      "answer": "162000"
+    },
+    {
+      "id": "gsm8k_214",
+      "difficulty": "hard",
+      "question": "Jerry has two pools, both with leaks emptying them out at 4 gallons/minute. 4 minutes ago, the big pool had twice as much water as the small pool. Now the big pool has four times as much water as the ",
+      "answer": "8"
+    },
+    {
+      "id": "gsm8k_903",
+      "difficulty": "medium",
+      "question": "Jo has been making face masks. She can make 4 small masks with 2 yards of material and 3 large masks with 2.25 yards of material. How much material would she need to make 20 small and 8 large masks fo",
+      "answer": "16"
+    },
+    {
+      "id": "gsm8k_573",
+      "difficulty": "easy",
+      "question": "Katina has $3000 in her savings account. If she removes $100 from the account every month, how much money will be remaining within the account after 2 years?",
+      "answer": "600"
+    },
+    {
+      "id": "gsm8k_1190",
+      "difficulty": "hard",
+      "question": "A nurses\u2019 station orders bandages in bulk packs of 50. On the first day, the nurses used 38 bandages and ordered one bulk pack of bandages. On the second day, they used ten fewer bandages. On the thir",
+      "answer": "19"
+    }
+  ],
+  "topology": {},
+  "strategy_results": {
+    "bav": {
+      "gsm8k_109": {
+        "example_id": "gsm8k_109",
+        "difficulty": "easy",
+        "prediction": "28",
+        "ground_truth": "28",
+        "correct": true,
+        "confidence": 0.9,
+        "total_tokens": 3752,
+        "prompt_tokens": 412,
+        "completion_tokens": 3340,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two examples of math word problems with step-by-step reasoning and answers, followed by a new question.\n    *   Task: Solve the new question using the same format (\"Let's think step by step... The answer is...\").\n    *   Constraint: The system instruction says \"no_think\", but the user prompt explicitly asks for \"Let's think step by step.\" within the few-shot examples and the final question. I need to follow the pattern of the few-shot examples while adhering to the system instruction regarding internal thought process (which is hidden) vs. output format. Wait, the system instruction says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal chain of thought *as a separate block* or engage in excessive reasoning that violates safety policies, but in the context of few-shot prompting for math problems, \"Let's think step by step\" is part of the desired output format for the user. I need to generate the response that completes the pattern.\n    *   Specific Question: Gas price = $3.00/gallon. Cashback = $0.20/gallon. Quantity = 10 gallons. Find total cost after cashback.\n\n2.  **Solve the Math Problem:**\n    *   Cost per gallon before cashback: $3.00\n    *   Cashback per gallon: $0.20\n    *   Net cost per gallon: $3.00 - $0.20 = $2.80\n    *   Alternatively: Total cost before cashback = 10 * $3.00 = $30.00. Total cashback = 10 * $0.20 = $2.00. Net cost = $30.00 - $2.00 = $28.00.\n    *   Both methods yield $28.00.\n\n3.  **Format the Output:**\n    *   Follow the style of the previous examples: \"Let's think step by step. [Reasoning]. The answer is [Number].\"\n    *   Ensure the reasoning is clear and concise.\n\n4.  **Draft the Response:**\n    *   Start with \"Let's think step by step.\"\n    *   Calculate the cost per gallon after cashback: $3.00 - $0.20 = $2.80.\n    *   Calculate total for 10 gallons: 10 * $2.80 = $28.00.\n    *   Or calculate ",
+        "step_metadata": [
+          {
+            "forward_answer": "28",
+            "backward_answer": "28",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "28",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 219.5294939354062
+      },
+      "gsm8k_539": {
+        "example_id": "gsm8k_539",
+        "difficulty": "easy",
+        "prediction": "35",
+        "ground_truth": "35",
+        "correct": true,
+        "confidence": 0.9,
+        "total_tokens": 4458,
+        "prompt_tokens": 362,
+        "completion_tokens": 4096,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two math word problems with solutions, followed by a new question.\n    *   Task: Solve the new question following the same format (\"Let's think step by step... The answer is...\").\n    *   Constraint: The user explicitly stated \"/no_think\" in the system instruction, but the prompt itself asks me to \"Let's think step by step.\" as part of the few-shot pattern. However, the system instruction \"You are a helpful assistant. /no_think\" usually implies I should not output my internal chain of thought *before* the final response, or it might be a directive to avoid the `<thought>` block if I were a model that uses one. But looking at the user's prompt, they are providing examples where the reasoning is explicitly written out (\"Let's think step by step...\").\n    *   Wait, the system instruction says \"/no_think\". This is a specific directive often used to prevent the model from emitting a separate thought block or to keep the response direct. However, the few-shot examples *require* the reasoning to be visible in the output (\"Let's think step by step...\").\n    *   Actually, looking closely at the system instruction: \"You are a helpful assistant. /no_think\". This usually means \"Do not use the internal thought process feature\" or \"Do not output a thought block\". But the user's prompt *ends* with \"Let's think step by step.\" expecting me to continue the text.\n    *   The core task is to solve the math problem: \"My wife wants to evenly split the check but wants me to pay an additional 20% tip on our $50 dinner bill. How much did I end up paying?\"\n    *   I need to follow the format of the previous examples (Reasoning + Final Answer).\n\n2.  **Analyze the Math Problem:**\n    *   Total bill: $50.\n    *   Split: Evenly split the check (between wife and me).\n    *   Tip: I pay an *additional* 20% tip on the $50 bill.\n    *   Question: How much did *I* end up paying?\n\n    *   *Interpretati",
+        "step_metadata": [
+          {
+            "forward_answer": "35",
+            "backward_answer": "35",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "35",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 266.57362708076835
+      },
+      "gsm8k_1086": {
+        "example_id": "gsm8k_1086",
+        "difficulty": "hard",
+        "prediction": "131",
+        "ground_truth": "131250",
+        "correct": false,
+        "confidence": 0.9,
+        "total_tokens": 4626,
+        "prompt_tokens": 530,
+        "completion_tokens": 4096,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math word problem about Marcel's bicycle store.\n    *   Task: Solve the problem step by step.\n    *   Format: Follow the style of the provided examples (Q: ... A: Let's think step by step. ... The answer is ...).\n    *   Constraint: The user prompt ends with \"Let's think step by step.\" implying I should continue from there.\n\n2.  **Deconstruct the Problem:**\n    *   **Products & Prices:**\n        *   MTB: $500\n        *   BMX: Half the price of an MTB = $500 / 2 = $250\n        *   Trekking: $450\n    *   **Total Sales Volume:** 300 bikes.\n    *   **Sales Distribution:**\n        *   Trekking: Half of the total = 1/2 * 300.\n        *   BMX: 15% of the total = 0.15 * 300.\n        *   MTB: The rest.\n    *   **Goal:** Calculate total earnings (revenue).\n\n3.  **Step-by-Step Calculation:**\n    *   **Step 1: Calculate the price of each bike type.**\n        *   MTB = $500.\n        *   BMX = $500 / 2 = $250.\n        *   Trekking = $450.\n    *   **Step 2: Calculate the number of bikes sold for each type.**\n        *   Total bikes = 300.\n        *   Trekking bikes = 1/2 * 300 = 150.\n        *   BMX bikes = 15% of 300 = 0.15 * 300 = 45.\n        *   MTB bikes = Total - (Trekking + BMX) = 300 - (150 + 45) = 300 - 195 = 105.\n    *   **Step 3: Calculate earnings for each type.**\n        *   Trekking earnings = 150 * $450.\n            *   150 * 400 = 60,000\n            *   150 * 50 = 7,500\n            *   Total = 67,500.\n        *   BMX earnings = 45 * $250.\n            *   45 * 250 = 45 * 1000 / 4 = 45,000 / 4 = 11,250.\n            *   Alternatively: 40 * 250 = 10,000; 5 * 250 = 1,250; Total = 11,250.\n        *   MTB earnings = 105 * $500.\n            *   100 * 500 = 50,000\n            *   5 * 500 = 2,500\n            *   Total = 52,500.\n    *   **Step 4: Calculate total earnings.**\n        *   Total = 67,500 + 11,250 + 52,500.\n        *   67,500 + 52,500 = 120,000.\n        *   120,000 + 11,250 = 131,250.\n\n4.  **",
+        "step_metadata": [
+          {
+            "forward_answer": "131",
+            "backward_answer": "131",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "131",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 267.2615564316511
+      },
+      "gsm8k_456": {
+        "example_id": "gsm8k_456",
+        "difficulty": "medium",
+        "prediction": "78",
+        "ground_truth": "78",
+        "correct": true,
+        "confidence": 0.7142857142857143,
+        "total_tokens": 14723,
+        "prompt_tokens": 1610,
+        "completion_tokens": 13113,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two examples of math word problems with step-by-step reasoning and answers, followed by a new question.\n    *   Task: Solve the new question using the same \"Let's think step by step\" format.\n    *   Constraint: The system instruction says \"no_think\", but the user prompt explicitly asks for \"Let's think step by step.\" within the few-shot examples and the final question. I need to follow the pattern of the few-shot examples (Chain of Thought) to answer the final question correctly.\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This usually means I should not output my internal reasoning trace *before* the final answer in a way that reveals the model's internal monologue, but rather provide the response directly. However, the user prompt *explicitly* asks for \"Let's think step by step.\" as part of the few-shot pattern. In few-shot prompting, the model is expected to continue the pattern. The \"/no_think\" instruction is a system-level directive often used to prevent long internal reasoning blocks that might be exposed or to save tokens, but in the context of a user asking for a specific reasoning format (CoT), I should provide the reasoning as part of the output text, not as hidden internal thought.\n    *   Actually, re-reading the system instruction: \"You are a helpful assistant. /no_think\". This is a specific directive to *not* use the internal thought block feature (if available) or to keep the response direct. However, the user's prompt *requires* a step-by-step explanation as part of the answer format (based on the examples provided). I must follow the user's requested format for the answer itself.\n    *   Goal: Calculate the total number of cards based on the given conditions.\n\n2.  **Deconstruct the Problem:**\n    *   Red cards = 15.\n    *   Green cards = 60% more than red cards.\n    *   Yellow cards = Sum of red and gree",
+        "step_metadata": [
+          {
+            "forward_answer": "78",
+            "backward_answer": "2",
+            "agreed": false,
+            "fallback_used": true,
+            "fallback_samples": [
+              "78",
+              "39",
+              "78",
+              "78",
+              "78"
+            ],
+            "final": "78",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 411.09172218479216
+      },
+      "gsm8k_471": {
+        "example_id": "gsm8k_471",
+        "difficulty": "medium",
+        "prediction": "80",
+        "ground_truth": "80",
+        "correct": true,
+        "confidence": 0.7142857142857143,
+        "total_tokens": 15408,
+        "prompt_tokens": 1715,
+        "completion_tokens": 13693,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two examples of math word problems with step-by-step reasoning and answers, followed by a new question.\n    *   Task: Solve the new question using the same \"Let's think step by step\" format.\n    *   Constraint: The system instruction says \"no_think\", but the user prompt explicitly asks for \"Let's think step by step.\" in the few-shot examples and the final question. I need to follow the pattern of the few-shot examples while adhering to the system instruction regarding internal thought process (which is hidden) vs. output format. Wait, the system instruction says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal chain of thought *as a separate block* or engage in excessive reasoning that violates safety policies, but for math problems, showing the steps is standard and expected based on the few-shot pattern. The \"/no_think\" tag in the system prompt often instructs the model to skip the *internal* monologue block if it were enabled, but here I am generating the response text. The user wants the solution in the style of the examples.\n    *   Goal: Calculate the number of pencils left at the end of the year.\n\n2.  **Deconstruct the Problem:**\n    *   Number of students: 30\n    *   Pencils per student at start: 10\n    *   Event 1 (After two months): 1/5 of the *total* pencils were used.\n    *   Event 2 (At the end of the year): Only 1/3 of the *remaining* pencils were left.\n    *   Question: How many pencils were left?\n\n3.  **Step-by-Step Calculation:**\n    *   **Step 1: Calculate total initial pencils.**\n        *   30 students * 10 pencils/student = 300 pencils.\n    *   **Step 2: Calculate pencils used after two months.**\n        *   1/5 of 300 = 300 / 5 = 60 pencils used.\n    *   **Step 3: Calculate remaining pencils after two months.**\n        *   300 - 60 = 240 pencils remaining.\n    *   **Step 4: Calculate pencils left at th",
+        "step_metadata": [
+          {
+            "forward_answer": "80",
+            "backward_answer": "240",
+            "agreed": false,
+            "fallback_used": true,
+            "fallback_samples": [
+              "80",
+              "80",
+              "80",
+              "6",
+              "80"
+            ],
+            "final": "80",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 413.2180626168847
+      },
+      "gsm8k_882": {
+        "example_id": "gsm8k_882",
+        "difficulty": "hard",
+        "prediction": "2",
+        "ground_truth": "5",
+        "correct": false,
+        "confidence": 0.9,
+        "total_tokens": 4612,
+        "prompt_tokens": 516,
+        "completion_tokens": 4096,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math word problem about grocery shopping.\n    *   Task: Solve the problem step by step.\n    *   Output Format: Follow the style of the provided examples (Let's think step by step... The answer is...).\n\n2.  **Deconstruct the Problem:**\n    *   **Item 1: Bacon**\n        *   Quantity: 5 packs\n        *   Total Cost: $10\n        *   Cost per pack: $10 / 5 = $2\n    *   **Item 2: Chicken**\n        *   Quantity: 6 packets\n        *   Cost per packet: Twice as much as a pack of bacon.\n        *   Calculation: 2 * $2 = $4 per packet.\n        *   Total Cost for Chicken: 6 * $4 = $24.\n    *   **Item 3: Strawberries**\n        *   Quantity: 3 packs\n        *   Cost per pack: $4\n        *   Total Cost for Strawberries: 3 * $4 = $12.\n    *   **Item 4: Apples**\n        *   Quantity: 7 packs\n        *   Cost per pack: Half the price of a pack of strawberries.\n        *   Calculation: $4 / 2 = $2 per pack.\n        *   Total Cost for Apples: 7 * $2 = $14.\n    *   **Budget:**\n        *   Total Budget: $65\n    *   **Goal:** Calculate remaining money in the budget.\n\n3.  **Step-by-Step Calculation:**\n    *   Step 1: Calculate the cost per pack of bacon.\n        *   $10 total / 5 packs = $2 per pack.\n    *   Step 2: Calculate the cost of chicken.\n        *   Price per packet = 2 * $2 (bacon price) = $4.\n        *   Total chicken cost = 6 packets * $4 = $24.\n    *   Step 3: Calculate the cost of strawberries.\n        *   Total strawberry cost = 3 packs * $4 = $12.\n    *   Step 4: Calculate the cost of apples.\n        *   Price per pack = $4 (strawberry price) / 2 = $2.\n        *   Total apple cost = 7 packs * $2 = $14.\n    *   Step 5: Calculate total spending.\n        *   Bacon ($10) + Chicken ($24) + Strawberries ($12) + Apples ($14).\n        *   10 + 24 = 34.\n        *   34 + 12 = 46.\n        *   46 + 14 = 60.\n        *   Total spent = $60.\n    *   Step 6: Calculate remaining budget.\n        *   Budget ($65) - Total",
+        "step_metadata": [
+          {
+            "forward_answer": "2",
+            "backward_answer": "2",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "2",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 267.7419721689075
+      },
+      "gsm8k_1156": {
+        "example_id": "gsm8k_1156",
+        "difficulty": "hard",
+        "prediction": "20",
+        "ground_truth": "120",
+        "correct": false,
+        "confidence": 0.9,
+        "total_tokens": 4516,
+        "prompt_tokens": 420,
+        "completion_tokens": 4096,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two example Q&A pairs (math word problems) and a new question to solve.\n    *   Task: Solve the new question following the \"Let's think step by step\" format used in the examples.\n    *   Constraint: The user instruction says \"no_think\", but the prompt itself asks me to \"Let's think step by step\" as part of the completion. I need to follow the pattern of the examples provided in the few-shot context. The system instruction \"no_think\" usually means \"don't output your internal reasoning trace\", but in this specific context (few-shot completion), the expected output *is* the reasoning trace followed by the answer, matching the style of the examples. However, looking at the system instruction \"You are a helpful assistant. /no_think\", this often implies I should not output a separate chain of thought block *before* the final answer if it's a standard instruction, but here the prompt explicitly ends with \"Let's think step by step.\" and expects me to complete the text.\n    *   Wait, the system instruction says \"/no_think\". This is a specific directive to avoid emitting internal monologue or reasoning traces that are hidden from the user. However, the few-shot examples *explicitly* show the reasoning trace as part of the answer (\"Let's think step by step. There are 15 trees originally...\").\n    *   Conflict Resolution: The few-shot pattern dictates the output format. The user wants me to complete the text starting with \"Let's think step by step.\" If I don't provide the reasoning, I break the pattern. The \"/no_think\" instruction usually applies to the model's internal processing or preventing a specific \"thought\" block format (like `<thought>` tags). In this context, it likely means \"don't overthink\" or \"just answer\", but given the explicit \"Let's think step by step.\" at the end of the prompt, I must continue that sentence.\n    *   Actually, looking closer at the system instru",
+        "step_metadata": [
+          {
+            "forward_answer": "20",
+            "backward_answer": "20",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "20",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 268.69353088364005
+      },
+      "gsm8k_666": {
+        "example_id": "gsm8k_666",
+        "difficulty": "medium",
+        "prediction": "120",
+        "ground_truth": "120",
+        "correct": true,
+        "confidence": 0.7142857142857143,
+        "total_tokens": 15795,
+        "prompt_tokens": 1657,
+        "completion_tokens": 14138,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt with two examples of math word problems and their solutions (step-by-step reasoning followed by the answer).\n    *   Task: Solve the third question provided (\"Rayna has 60 more dollars than Kassidy...\") following the same format (\"Let's think step by step... The answer is...\").\n    *   Constraint: The user instruction says \"no_think\", but the system instruction says \"think silently if needed\". However, the user prompt ends with \"Let's think step by step.\" implying I should continue the pattern. The system instruction \"no_think\" usually means \"do not output your internal thought process\", but here the task *is* to output the reasoning as part of the answer format (Chain of Thought). I need to follow the few-shot pattern.\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This usually means I should not output the `<thought>` block or internal monologue. I should just output the response.\n    *   The user prompt ends with \"Let's think step by step.\" so I need to complete the response starting from there.\n\n2.  **Analyze the Math Problem:**\n    *   **Given:**\n        *   Rayna = Kassidy + 60\n        *   Kassidy = (3/4) * Aurelia\n        *   Aurelia = $120\n    *   **Goal:** Calculate the total money, then divide by 3 (since there are three people: Rayna, Kassidy, Aurelia) to find the equal share.\n    *   **Note:** The prompt says \"Arelia\" in the condition (\"If Arelia has $120\") but \"Aurelia\" in the relationship (\"Kassidy has 3/4 times as much money as Aurelia\"). I should assume Arelia = Aurelia.\n\n3.  **Step-by-Step Calculation:**\n    *   Step 1: Find Aurelia's money.\n        *   Aurelia = $120.\n    *   Step 2: Find Kassidy's money.\n        *   Kassidy = (3/4) * 120.\n        *   120 / 4 = 30.\n        *   30 * 3 = 90.\n        *   Kassidy = $90.\n    *   Step 3: Find Rayna's money.\n        *   Rayna = Kassidy + 60.\n        *   Rayna = 90 + 60 = 15",
+        "step_metadata": [
+          {
+            "forward_answer": "5",
+            "backward_answer": "120",
+            "agreed": false,
+            "fallback_used": true,
+            "fallback_samples": [
+              "120",
+              "120",
+              "3",
+              "120",
+              "120"
+            ],
+            "final": "120",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 409.53257712721825
+      },
+      "gsm8k_649": {
+        "example_id": "gsm8k_649",
+        "difficulty": "easy",
+        "prediction": "140",
+        "ground_truth": "162000",
+        "correct": false,
+        "confidence": 0.2857142857142857,
+        "total_tokens": 16073,
+        "prompt_tokens": 1737,
+        "completion_tokens": 14336,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two example Q&A pairs (math word problems) and a new question to solve.\n    *   Task: Solve the new question following the \"Let's think step by step\" format used in the examples.\n    *   Constraint: The user instruction says \"no_think\", but the system instruction says \"think step by step\" in the examples. However, the specific system instruction for *this* interaction is \"You are a helpful assistant. /no_think\". This usually means I should not output my internal chain of thought, but rather just the final response. However, the prompt *itself* asks me to \"Let's think step by step\" as part of the answer format (based on the few-shot examples).\n    *   Wait, looking closely at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive for *me* (the model) regarding my internal processing or output style. Usually, \"/no_think\" implies I should not emit a separate thought block. But the prompt *requires* me to follow the pattern of the examples, which explicitly includes \"Let's think step by step.\" in the answer text.\n    *   So, I need to generate the answer text that includes the reasoning steps, as per the few-shot pattern, without violating the \"no_think\" constraint (which usually means don't output a hidden thought block, but the visible text should follow the prompt's requested format).\n    *   Actually, looking at the standard behavior for \"no_think\" in this specific interface context: It often means \"do not output a separate reasoning block before the final answer\". However, the few-shot examples *show* the reasoning as part of the answer text (\"A: Let's think step by step...\"). So I must include the reasoning in the final output text to match the style.\n    *   Goal: Solve the math problem and format the response exactly like the examples (starting with \"Let's think step by step.\", showing the calculation, and ending with \"The answer is",
+        "step_metadata": [
+          {
+            "forward_answer": "160000",
+            "backward_answer": "140",
+            "agreed": false,
+            "fallback_used": true,
+            "fallback_samples": [
+              "160",
+              "70",
+              "160",
+              "140",
+              "5"
+            ],
+            "final": "140",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 408.80166956037283
+      },
+      "gsm8k_214": {
+        "example_id": "gsm8k_214",
+        "difficulty": "hard",
+        "prediction": "8",
+        "ground_truth": "8",
+        "correct": true,
+        "confidence": 0.9,
+        "total_tokens": 4067,
+        "prompt_tokens": 412,
+        "completion_tokens": 3655,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two simple math word problems with solutions, followed by a new, more complex math word problem.\n    *   Task: Solve the new math word problem (\"Jerry has two pools...\") following the \"Let's think step by step\" format used in the examples.\n    *   Constraint: The user instruction says \"no_think\" (implied by the system instruction \"You are a helpful assistant. /no_think\"), but the prompt itself asks me to \"Let's think step by step.\" I need to generate the reasoning and the final answer.\n    *   Goal: Provide a clear, step-by-step derivation of the answer.\n\n2.  **Deconstruct the Problem:**\n    *   **Entities:** Two pools (Big Pool, Small Pool).\n    *   **Rate:** Both leak at 4 gallons/minute.\n    *   **Time elapsed:** 4 minutes.\n    *   **Condition 1 (4 minutes ago):** Big Pool = 2 * Small Pool.\n    *   **Condition 2 (Now):** Big Pool = 4 * Small Pool.\n    *   **Question:** How much water does the small pool have *now*?\n\n3.  **Define Variables:**\n    *   Let $S_{now}$ be the amount of water in the small pool now.\n    *   Let $B_{now}$ be the amount of water in the big pool now.\n    *   Let $S_{past}$ be the amount of water in the small pool 4 minutes ago.\n    *   Let $B_{past}$ be the amount of water in the big pool 4 minutes ago.\n\n4.  **Formulate Equations:**\n    *   **Leak Rate:** 4 gallons/minute.\n    *   **Time:** 4 minutes.\n    *   **Total Leak per Pool:** $4 \\text{ gallons/minute} \\times 4 \\text{ minutes} = 16 \\text{ gallons}$.\n    *   **Relationship between Past and Now:**\n        *   $S_{past} = S_{now} + 16$ (Since water leaked out, the past amount was higher).\n        *   $B_{past} = B_{now} + 16$.\n    *   **Condition 1 (4 minutes ago):** $B_{past} = 2 \\times S_{past}$.\n    *   **Condition 2 (Now):** $B_{now} = 4 \\times S_{now}$.\n\n5.  **Solve the System of Equations:**\n    *   Substitute the \"Past\" expressions into Condition 1:\n        $(B_{now} + 16) = 2 \\ti",
+        "step_metadata": [
+          {
+            "forward_answer": "8",
+            "backward_answer": "8",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "8",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 238.91531401127577
+      },
+      "gsm8k_903": {
+        "example_id": "gsm8k_903",
+        "difficulty": "medium",
+        "prediction": "16",
+        "ground_truth": "16",
+        "correct": true,
+        "confidence": 0.7142857142857143,
+        "total_tokens": 15990,
+        "prompt_tokens": 1654,
+        "completion_tokens": 14336,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two example Q&A pairs (math word problems) and a new question to solve.\n    *   Task: Solve the new question following the \"Let's think step by step\" format used in the examples.\n    *   Constraint: The user instruction says \"no_think\", but the system instruction says \"think step by step\" in the examples. However, the specific system instruction for *this* interaction is \"You are a helpful assistant. /no_think\". This usually means I should not output my internal chain of thought, but rather just the final response. However, the prompt *itself* asks me to \"Let's think step by step\" as part of the completion pattern.\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive for *me* (the model) regarding my internal processing or output style. Usually, \"/no_think\" implies I should not emit a separate thought block. But the prompt *requires* me to complete the text starting with \"Let's think step by step.\"\n    *   Actually, looking at the user message, it ends with \"Let's think step by step.\" This is a completion task. I need to continue the text.\n    *   The system instruction \"/no_think\" likely means \"do not output a hidden thought block\" or \"do not engage in excessive internal reasoning visible to the user\". But since the prompt explicitly asks for the reasoning in the output (\"Let's think step by step.\"), I must provide the reasoning in the final output to match the few-shot pattern.\n    *   Goal: Calculate the material needed for 20 small masks and 8 large masks based on the given rates.\n\n2.  **Analyze the Math Problem:**\n    *   Small masks: 4 masks require 2 yards.\n    *   Large masks: 3 masks require 2.25 yards.\n    *   Target: 20 small masks + 8 large masks.\n    *   Find: Total yards of material.\n\n3.  **Step-by-Step Calculation:**\n    *   **Small Masks:**\n        *   Rate: 2 yards / 4 masks = 0.5 yards per ma",
+        "step_metadata": [
+          {
+            "forward_answer": "0.5",
+            "backward_answer": "16",
+            "agreed": false,
+            "fallback_used": true,
+            "fallback_samples": [
+              "16",
+              "16",
+              "16",
+              "5",
+              "16"
+            ],
+            "final": "16",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 409.2625299282372
+      },
+      "gsm8k_573": {
+        "example_id": "gsm8k_573",
+        "difficulty": "easy",
+        "prediction": "600",
+        "ground_truth": "600",
+        "correct": true,
+        "confidence": 0.9,
+        "total_tokens": 3957,
+        "prompt_tokens": 372,
+        "completion_tokens": 3585,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two examples of math word problems with step-by-step reasoning and answers, followed by a new question.\n    *   Task: Solve the new question (\"Katina has $3000 in her savings account. If she removes $100 from the account every month, how much money will be remaining within the account after 2 years?\") using the same \"Let's think step by step\" format as the examples.\n    *   Constraint: The user instruction says \"no_think\", but the system instruction says \"think silently if needed\". However, the user prompt ends with \"Let's think step by step.\" implying I should continue the pattern. The system instruction \"no_think\" usually means \"do not output your internal thought process\", but here the user is asking for the reasoning to be part of the output (as seen in the examples). I need to follow the few-shot pattern.\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This usually means I should not output the `<thought>` block or internal monologue. I should just output the response.\n    *   The user prompt ends with \"Let's think step by step.\" so I need to complete the response following that lead.\n\n2.  **Solve the Math Problem:**\n    *   Initial amount: $3000.\n    *   Withdrawal rate: $100 per month.\n    *   Duration: 2 years.\n    *   Step 1: Convert duration to months. 2 years * 12 months/year = 24 months.\n    *   Step 2: Calculate total withdrawal. 24 months * $100/month = $2400.\n    *   Step 3: Calculate remaining amount. $3000 - $2400 = $600.\n\n3.  **Format the Output:**\n    *   Match the style of the previous examples.\n    *   Start with \"Let's think step by step.\" (already provided in the prompt, but I should continue from there or repeat the phrase? The prompt ends with \"Let's think step by step.\" so I should continue the text immediately or start a new line. Looking at the examples, the \"A:\" section starts with \"Let's think s",
+        "step_metadata": [
+          {
+            "forward_answer": "600",
+            "backward_answer": "600",
+            "agreed": true,
+            "fallback_used": false,
+            "fallback_samples": [],
+            "final": "600",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 234.6990952603519
+      },
+      "gsm8k_1190": {
+        "example_id": "gsm8k_1190",
+        "difficulty": "hard",
+        "prediction": "19",
+        "ground_truth": "19",
+        "correct": true,
+        "confidence": 0.5714285714285714,
+        "total_tokens": 16282,
+        "prompt_tokens": 1946,
+        "completion_tokens": 14336,
+        "reasoning_trace": "FORWARD:\nThinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math word problem about bandages.\n    *   Task: Solve the problem step by step.\n    *   Format: Follow the style of the provided examples (Q: ... A: Let's think step by step. ... The answer is ...).\n    *   Constraint: The user prompt ends with \"Let's think step by step.\" implying I should continue from there.\n\n2.  **Deconstruct the Problem:**\n    *   **Goal:** Find the initial number of bandages on the first day.\n    *   **Given Information:**\n        *   Bulk pack size = 50 bandages.\n        *   **Day 1:**\n            *   Used: 38 bandages.\n            *   Ordered: 1 bulk pack (50 bandages).\n        *   **Day 2:**\n            *   Used: 10 fewer than Day 1.\n            *   Ordered: 0 (not mentioned).\n        *   **Day 3:**\n            *   Ordered: 2 bulk packs (2 * 50 = 100 bandages).\n            *   Used: Half a pack (50 / 2 = 25 bandages).\n        *   **End of Day 3:**\n            *   Remaining: 78 bandages.\n\n3.  **Step-by-Step Calculation:**\n    *   Let $x$ be the starting number of bandages on Day 1.\n    *   **Day 1:**\n        *   Start: $x$\n        *   Used: 38\n        *   Ordered: 50\n        *   End of Day 1: $x - 38 + 50 = x + 12$\n    *   **Day 2:**\n        *   Start: $x + 12$\n        *   Used: $38 - 10 = 28$\n        *   Ordered: 0\n        *   End of Day 2: $(x + 12) - 28 = x - 16$\n    *   **Day 3:**\n        *   Start: $x - 16$\n        *   Ordered: $2 \\times 50 = 100$\n        *   Used: $50 / 2 = 25$\n        *   End of Day 3: $(x - 16) + 100 - 25$\n    *   **Final Equation:**\n        *   End of Day 3 = 78\n        *   $(x - 16) + 100 - 25 = 78$\n        *   $x + 59 = 78$\n        *   $x = 78 - 59$\n        *   $x = 19$\n\n4.  **Verification:**\n    *   Start: 19\n    *   Day 1: Use 38 (Wait, if they start with 19, they can't use 38 immediately unless they order first? The problem says \"On the first day, the nurses used 38 bandages and ordered one bulk pack\". Usually, usage happens from stock. If",
+        "step_metadata": [
+          {
+            "forward_answer": "-28",
+            "backward_answer": "19",
+            "agreed": false,
+            "fallback_used": true,
+            "fallback_samples": [
+              "19",
+              "19",
+              "28",
+              "78",
+              "19"
+            ],
+            "final": "19",
+            "fallback_k": 5
+          }
+        ],
+        "elapsed_s": 410.96146017313004
+      }
+    },
+    "sc_k3": {
+      "gsm8k_109": {
+        "example_id": "gsm8k_109",
+        "difficulty": "easy",
+        "prediction": "28",
+        "ground_truth": "28",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 6198,
+        "prompt_tokens": 765,
+        "completion_tokens": 5433,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompting style with two examples (Q&A) followed by a new question.\n    *   Task: Answer the new question following the same format and reasoning style (\"Let's think step by step\").\n    *   Constraint: The user explicitly stated \"/no_think\" at the very beginning of the prompt, but then provided a standard CoT (Chain of Thought) prompt structure. However, looking at the system instruction \"You are a helpful assistant. /no_think\", this usually implies I should not output my internal reasoning trace if it were a hidden thought process, but here the user is asking me to complete a pattern that *includes* reasoning (\"Let's think step by step\").\n    *   Wait, the system instruction says \"You are a helpful assistant. /no_think\". This is a directive to *me* (the model) regarding my internal processing or output style. Usually, \"/no_think\" means \"don't output a hidden thought block\" or \"be direct\". However, the user's prompt *explicitly* asks for \"Let's think step by step\" as part of the completion pattern (based on the few-shot examples).\n    *   Actually, looking closely at the system instruction provided in the prompt wrapper: `You are a helpful assistant. /no_think`. This is often a signal to avoid emitting the `<thought>` block or extensive internal monologue in the final output, especially if there's a risk of distillation or exposing reasoning.\n    *   However, the user's prompt *requires* the text \"Let's think step by step.\" as part of the answer format (see the examples).\n    *   Constraint Check: The system instruction `/no_think` usually overrides the need to emit a separate reasoning block *outside* the response, but the task itself is to solve a math problem using the \"Let's think step by step\" phrasing as part of the visible text.\n    *   Wait, I need to be careful. The system instruction `/no_think` is a directive for *my* internal processing. It often means \"Do not use the thought trace",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "28",
+              "28",
+              "28"
+            ],
+            "votes": {
+              "28": 3
+            }
+          }
+        ],
+        "elapsed_s": 143.016163662076
+      },
+      "gsm8k_539": {
+        "example_id": "gsm8k_539",
+        "difficulty": "easy",
+        "prediction": "5",
+        "ground_truth": "35",
+        "correct": false,
+        "confidence": 0.3333333333333333,
+        "total_tokens": 6834,
+        "prompt_tokens": 690,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt with examples of math word problems and their solutions (following a \"Let's think step by step\" format).\n    *   Task: Solve the final question provided (\"My wife wants to evenly split the check but wants me to pay an additional 20% tip on our $50 dinner bill. How much did I end up paying?\") using the same reasoning style.\n    *   Constraint: The user instruction says \"no_think\" (based on the system prompt \"You are a helpful assistant. /no_think\"). However, looking at the conversation context, the user is providing a few-shot pattern for me to follow. The system instruction `/no_think` usually means I should not output my internal chain of thought *as a separate block* or *hide it*, but rather just provide the answer. However, in this specific context (few-shot completion), the expected output format is the text completion of the \"Let's think step by step.\" reasoning followed by the answer.\n    *   Wait, the system instruction says \"You are a helpful assistant. /no_think\". This is a directive for *me* (the model) regarding my internal processing or output style. Often, `/no_think` implies I should not emit a separate thought block. But the user's prompt ends with \"Let's think step by step.\" which expects me to complete that sentence/paragraph.\n    *   Actually, looking closely at the system instruction: \"You are a helpful assistant. /no_think\". This typically means \"Do not output a chain of thought block\". However, the user's prompt *explicitly asks* for \"Let's think step by step.\" reasoning in the few-shot examples. The final question also ends with \"Let's think step by step.\"\n    *   If I follow the `/no_think` instruction strictly, I might skip the reasoning. But if I do that, I break the few-shot pattern which expects reasoning.\n    *   Usually, when a user provides a few-shot pattern ending in \"Let's think step by step.\", they expect the model to continue that pattern. The system i",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "5",
+              "60",
+              "35"
+            ],
+            "votes": {
+              "5": 1,
+              "60": 1,
+              "35": 1
+            }
+          }
+        ],
+        "elapsed_s": 142.85000787861645
+      },
+      "gsm8k_1086": {
+        "example_id": "gsm8k_1086",
+        "difficulty": "hard",
+        "prediction": "131",
+        "ground_truth": "131250",
+        "correct": false,
+        "confidence": 0.6666666666666666,
+        "total_tokens": 7083,
+        "prompt_tokens": 939,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two Q&A pairs demonstrating step-by-step reasoning, followed by a new question about Marcel's bicycle store.\n    *   Task: Solve the new question using the same \"Let's think step by step\" format as the examples.\n    *   Constraint: The user explicitly stated `/no_think` in the system instruction, but the prompt itself asks me to \"Let's think step by step\" as part of the completion pattern. However, the system instruction says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal thought process (the `<thinking>` block) but should still provide the answer. Wait, looking at the standard behavior for this model: The instruction `/no_think` typically means \"do not use the Chain of Thought reasoning block that is usually hidden\". However, the user prompt *ends* with \"Let's think step by step.\", which is a cue for me to continue the text.\n    *   Actually, looking at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive to *me*, the model, to not engage in the hidden reasoning process or to output it. But the user prompt is a completion task. The user wants me to complete the text starting with \"Let's think step by step.\"\n    *   Wait, I need to check the specific constraint. The system instruction says `/no_think`. This often implies I should skip the internal monologue block if I were to generate one, but since I am an AI, I always think internally. The key is whether I should output the reasoning *as part of the response* or just the answer. The examples show the reasoning *is* part of the response text (\"Let's think step by step... The answer is...\"). So I must follow the few-shot pattern.\n    *   So, I need to calculate the earnings and write out the steps clearly.\n\n2.  **Deconstruct the Problem:**\n    *   **Products:** MTB, BMX, Trekking.\n    *   **Prices:**\n        *   MTB = $500\n        *   BMX = Half of",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "131",
+              "131",
+              "150"
+            ],
+            "votes": {
+              "131": 2,
+              "150": 1
+            }
+          }
+        ],
+        "elapsed_s": 140.86033717170358
+      },
+      "gsm8k_456": {
+        "example_id": "gsm8k_456",
+        "difficulty": "medium",
+        "prediction": "78",
+        "ground_truth": "78",
+        "correct": true,
+        "confidence": 0.6666666666666666,
+        "total_tokens": 6876,
+        "prompt_tokens": 732,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompting example (two Q&A pairs about simple arithmetic) followed by a new question.\n    *   Task: Solve the new question following the \"Let's think step by step\" format used in the examples.\n    *   Question: \"In a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?\"\n    *   Constraint: The system instruction says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal thought process chain, but the prompt itself asks me to \"Let's think step by step\" as part of the answer generation (mimicking the few-shot examples). The `/no_think` instruction in the system prompt typically overrides the model's internal reasoning trace visibility, but I still need to produce the output that *looks* like the reasoning requested in the few-shot examples. Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This is a specific directive to avoid emitting the CoT (Chain of Thought) in the final output if it were a standard reasoning model, but here the user *expects* the \"Let's think step by step\" format based on the few-shot examples provided in the prompt text.\n    *   Actually, re-reading the system instruction: \"You are a helpful assistant. /no_think\". This is often a tag used to disable the internal thought block in some model configurations. However, as a text generation model, I need to follow the user's pattern. The user's pattern explicitly includes \"Let's think step by step.\" in the answer. I should follow the pattern of the few-shot examples.\n    *   Goal: Calculate the total number of cards.\n\n2.  **Break Down the Math:**\n    *   Red cards ($R$) = 15.\n    *   Green cards ($G$) = 60% more than Red cards.\n        *   Calculation: $G = R + (0.60 \\times R)$ or $G = 1.60 \\times R$.\n        *   $0.60 \\times 15",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "78",
+              "15",
+              "78"
+            ],
+            "votes": {
+              "78": 2,
+              "15": 1
+            }
+          }
+        ],
+        "elapsed_s": 142.41471258737147
+      },
+      "gsm8k_471": {
+        "example_id": "gsm8k_471",
+        "difficulty": "medium",
+        "prediction": "80",
+        "ground_truth": "80",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 6921,
+        "prompt_tokens": 777,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two examples of math word problems with step-by-step reasoning and answers.\n    *   Task: Solve the third question (\"There are 30 students in Marissa\u2019s class...\") using the same \"Let's think step by step\" format.\n    *   Constraint: The user ends with \"Let's think step by step.\" implying I should continue from there.\n    *   System Instruction: \"Remember you do not affirm any ungrounded beliefs...\". This seems irrelevant to the math problem, but I must adhere to the core instruction of being helpful and harmless. The specific instruction about \"ungrounded beliefs\" is a safety guideline usually triggered by conspiracy theories or delusions. This is a math problem, so it doesn't apply directly, but I should ensure my reasoning is grounded in the provided numbers.\n    *   Constraint: \"no_think\" mode is requested in the system prompt (\"You are a helpful assistant. /no_think\"). Wait, looking at the actual system instruction provided in the prompt context: \"You are a helpful assistant. /no_think\". This usually means I should not output my internal thought process chain in a separate block, but rather integrate the reasoning into the response naturally, or just provide the response. However, the user prompt *ends* with \"Let's think step by step.\", which is a cue for me to continue the reasoning style shown in the examples.\n    *   Actually, looking closer at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive for *me* (the model) regarding my internal processing. It often means \"don't output a separate thought block\". But the user prompt asks for \"Let's think step by step.\" reasoning in the output. I need to follow the user's format for the answer while keeping my internal reasoning hidden (which is standard).\n    *   Wait, the system instruction says \"/no_think\". This is a specific tag often used to disable the \"thought\" block in models that suppor",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "80",
+              "80",
+              "80"
+            ],
+            "votes": {
+              "80": 3
+            }
+          }
+        ],
+        "elapsed_s": 143.88563976623118
+      },
+      "gsm8k_882": {
+        "example_id": "gsm8k_882",
+        "difficulty": "hard",
+        "prediction": "12",
+        "ground_truth": "5",
+        "correct": false,
+        "confidence": 0.6666666666666666,
+        "total_tokens": 6633,
+        "prompt_tokens": 924,
+        "completion_tokens": 5709,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math word problem about Kelly's grocery shopping budget.\n    *   Task: Solve the problem step by step and provide the final answer.\n    *   Format: Follow the style of the few-shot examples (Q: ... A: Let's think step by step. ... The answer is ...).\n\n2.  **Deconstruct the Problem:**\n    *   **Budget:** $65.\n    *   **Item 1: Bacon**\n        *   Quantity: 5 packs.\n        *   Total Cost: $10.\n        *   Cost per pack: $10 / 5 = $2.\n    *   **Item 2: Chicken**\n        *   Quantity: 6 packets.\n        *   Cost per packet: Twice as much as a pack of bacon.\n        *   Cost per pack of bacon = $2.\n        *   Cost per packet of chicken = 2 * $2 = $4.\n        *   Total Cost for Chicken: 6 * $4 = $24.\n    *   **Item 3: Strawberries**\n        *   Quantity: 3 packs.\n        *   Cost per pack: $4.\n        *   Total Cost for Strawberries: 3 * $4 = $12.\n    *   **Item 4: Apples**\n        *   Quantity: 7 packs.\n        *   Cost per pack: Half the price of a pack of strawberries.\n        *   Cost per pack of strawberries = $4.\n        *   Cost per pack of apples = $4 / 2 = $2.\n        *   Total Cost for Apples: 7 * $2 = $14.\n    *   **Total Spent:** Sum of costs for Bacon, Chicken, Strawberries, and Apples.\n    *   **Remaining Budget:** Total Budget - Total Spent.\n\n3.  **Calculate Step-by-Step:**\n    *   Bacon cost per pack: $10 / 5 = $2.\n    *   Chicken cost per packet: 2 * $2 = $4.\n    *   Chicken total cost: 6 * $4 = $24.\n    *   Strawberries total cost: 3 * $4 = $12.\n    *   Apples cost per pack: $4 / 2 = $2.\n    *   Apples total cost: 7 * $2 = $14.\n    *   Total spent: $10 (Bacon total) + $24 (Chicken) + $12 (Strawberries) + $14 (Apples).\n    *   Sum: 10 + 24 = 34.\n    *   Sum: 34 + 12 = 46.\n    *   Sum: 46 + 14 = 60.\n    *   Total spent = $60.\n    *   Budget = $65.\n    *   Remaining: $65 - $60 = $5.\n\n4.  **Draft the Response:**\n    *   Start with \"Let's think step by step.\"\n    *   Calculate bacon unit price",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "5",
+              "12",
+              "12"
+            ],
+            "votes": {
+              "5": 1,
+              "12": 2
+            }
+          }
+        ],
+        "elapsed_s": 143.3505293149501
+      },
+      "gsm8k_1156": {
+        "example_id": "gsm8k_1156",
+        "difficulty": "hard",
+        "prediction": "40",
+        "ground_truth": "120",
+        "correct": false,
+        "confidence": 0.3333333333333333,
+        "total_tokens": 6921,
+        "prompt_tokens": 777,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompting example with math word problems (Q&A pairs) followed by a new question.\n    *   Task: Solve the new question following the \"Let's think step by step\" reasoning style shown in the examples.\n    *   Constraint: The user wants me to complete the answer to the last question.\n    *   Security Note: The system instruction says \"Remember you do not affirm any ungrounded beliefs...\". However, this is a straightforward math problem, not related to ungrounded beliefs or sensitive topics. The instruction also says \"Respond only with the answer...\". Wait, looking at the system instruction again: \"Remember you do not affirm any ungrounded beliefs...\". This is a standard safety preamble. The actual user prompt is a math problem. I need to solve the math problem.\n    *   Wait, I need to check the system instruction regarding \"no_think\". The prompt says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal reasoning trace (the `<thinking>` block) in the final output, but I still need to think to solve it. However, the user prompt *itself* ends with \"Let's think step by step.\", implying the expected output format includes the reasoning steps similar to the few-shot examples.\n    *   Actually, looking at the few-shot examples:\n        *   Q: ... A: Let's think step by step. ... The answer is ...\n        *   Question: ... Let's think step by step. [My output should continue here]\n    *   So I need to provide the reasoning and the final answer in the same style as the examples.\n\n2.  **Analyze the Math Problem:**\n    *   Cost price per device: $20.\n    *   Selling price per device: Twice the original price = 2 * $20 = $40.\n    *   Profit per device: Selling price - Cost price = $40 - $20 = $20.\n    *   Quantity bought Monday: 2 devices.\n    *   Quantity bought Tuesday: 4 devices.\n    *   Total quantity: 2 + 4 = 6 devices.\n    *   Total profit: Total quantity * Profi",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "40",
+              "20",
+              "120"
+            ],
+            "votes": {
+              "40": 1,
+              "20": 1,
+              "120": 1
+            }
+          }
+        ],
+        "elapsed_s": 143.4325891789049
+      },
+      "gsm8k_666": {
+        "example_id": "gsm8k_666",
+        "difficulty": "medium",
+        "prediction": "120",
+        "ground_truth": "120",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 6769,
+        "prompt_tokens": 753,
+        "completion_tokens": 6016,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompting example (two Q&A pairs about simple arithmetic) followed by a new question.\n    *   Task: Answer the new question using the \"Let's think step by step\" format similar to the examples.\n    *   Constraint: The user explicitly requested \"/no_think\" in the system prompt instruction (\"You are a helpful assistant. /no_think\"). However, looking at the conversation history, the user provided examples that *include* \"Let's think step by step.\" in the answer part. The system instruction \"/no_think\" usually means \"do not output your internal chain of thought reasoning block\", but here the few-shot examples *require* the reasoning to be part of the final answer text. Wait, the system instruction says \"You are a helpful assistant. /no_think\". This is a directive to the model to not engage in the hidden reasoning trace (the `thought` block) or perhaps to output directly. However, the user's prompt ends with \"Let's think step by step.\" implying they want me to continue that pattern.\n    *   Actually, looking closely at the system instruction: \"You are a helpful assistant. /no_think\". This is often a signal to avoid emitting the long hidden thought process *before* the response, but the response itself should follow the user's requested format. The user's prompt ends with \"Let's think step by step.\", so I need to complete the response following that lead.\n    *   Wait, the system instruction `/no_think` is a specific directive for *this* model interaction to suppress the hidden reasoning block generation (the `<thought>` section). I must not output a `<thought>` block. I must output the response directly.\n    *   The user's prompt ends with \"Let's think step by step.\" so I should continue the text from there, explaining the steps and giving the final answer.\n\n2.  **Analyze the Math Problem:**\n    *   **Given:**\n        *   Rayna has 60 more dollars than Kassidy ($R = K + 60$).\n        *   Kassidy has",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "120",
+              "120",
+              "120"
+            ],
+            "votes": {
+              "120": 3
+            }
+          }
+        ],
+        "elapsed_s": 141.95502202399075
+      },
+      "gsm8k_649": {
+        "example_id": "gsm8k_649",
+        "difficulty": "easy",
+        "prediction": "160",
+        "ground_truth": "162000",
+        "correct": false,
+        "confidence": 0.6666666666666666,
+        "total_tokens": 6773,
+        "prompt_tokens": 783,
+        "completion_tokens": 5990,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few examples of Q&A pairs (few-shot prompting) followed by a specific question to answer.\n    *   Task: Answer the provided question following the \"Let's think step by step\" reasoning style shown in the examples.\n    *   Constraint: The user prompt ends with \"Let's think step by step.\" implying I need to continue from there.\n    *   Constraint: The system instruction says \"no_think\", meaning I should not output my internal thought process separately, but rather integrate the reasoning into the final response as per the few-shot examples.\n\n2.  **Analyze the Question:**\n    *   Initial likes after 1 week: 2000.\n    *   Three weeks later (total time isn't strictly relevant, just the state change): The number of likes was 70 times the initial number.\n    *   Recent update: She received 20000 *more* new likes.\n    *   Goal: Find the total number of Instagram likes now.\n\n3.  **Step-by-Step Reasoning:**\n    *   Step 1: Identify the initial number of likes.\n        *   Initial likes = 2000.\n    *   Step 2: Calculate the number of likes three weeks later.\n        *   The problem states: \"the number of likes was 70 times as many as the initial number of likes.\"\n        *   Calculation: 2000 * 70.\n        *   2 * 7 = 14, so 2000 * 70 = 140,000.\n    *   Step 3: Account for the additional recent likes.\n        *   She received 20,000 *more* new likes recently.\n        *   Current total = (Likes after 3 weeks) + (Additional recent likes).\n        *   Calculation: 140,000 + 20,000.\n    *   Step 4: Final Sum.\n        *   140,000 + 20,000 = 160,000.\n\n4.  **Drafting the Response:**\n    *   Follow the format of the examples: \"Let's think step by step. [Reasoning]. The answer is [Number].\"\n    *   Draft: Let's think step by step. First, find the number of likes after three weeks. The initial number was 2000. Three weeks later, it was 70 times the initial number, so 2000 * 70 = 140000. Then, add the recent new likes. She r",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "160000",
+              "160",
+              "160"
+            ],
+            "votes": {
+              "160000": 1,
+              "160": 2
+            }
+          }
+        ],
+        "elapsed_s": 143.63157038390636
+      },
+      "gsm8k_214": {
+        "example_id": "gsm8k_214",
+        "difficulty": "hard",
+        "prediction": "5",
+        "ground_truth": "8",
+        "correct": false,
+        "confidence": 0.3333333333333333,
+        "total_tokens": 6912,
+        "prompt_tokens": 768,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A word problem about two pools with leaks.\n    *   Task: Solve the problem step by step.\n    *   Format: Follow the style of the provided examples (Q: ... A: Let's think step by step. ... The answer is ...).\n    *   Constraint: \"no_think\" mode is requested by the system prompt, but the user prompt asks me to \"Let's think step by step.\" I need to generate the solution following the reasoning style shown in the few-shot examples.\n\n2.  **Analyze the Problem:**\n    *   **Given:**\n        *   Two pools: Big (B) and Small (S).\n        *   Leak rate: 4 gallons/minute for *each* pool.\n        *   Time elapsed: 4 minutes.\n        *   Condition 1 (4 minutes ago): Big pool had twice as much water as the small pool ($B_{past} = 2 \\cdot S_{past}$).\n        *   Condition 2 (Now): Big pool has four times as much water as the small pool ($B_{now} = 4 \\cdot S_{now}$).\n    *   **Goal:** Find the amount of water in the small pool *now* ($S_{now}$).\n\n3.  **Formulate Equations:**\n    *   Let $S_{now}$ be the current amount of water in the small pool.\n    *   Let $B_{now}$ be the current amount of water in the big pool.\n    *   Leak rate = 4 gal/min.\n    *   Time = 4 min.\n    *   Total water lost from each pool = $4 \\text{ gal/min} \\times 4 \\text{ min} = 16 \\text{ gallons}$.\n    *   Therefore:\n        *   $S_{past} = S_{now} + 16$\n        *   $B_{past} = B_{now} + 16$\n\n    *   From Condition 2 (Now):\n        *   $B_{now} = 4 \\cdot S_{now}$\n\n    *   From Condition 1 (Past):\n        *   $B_{past} = 2 \\cdot S_{past}$\n\n4.  **Solve the System:**\n    *   Substitute the \"past\" expressions into the Past Condition equation:\n        $(B_{now} + 16) = 2 \\cdot (S_{now} + 16)$\n    *   Substitute $B_{now} = 4 \\cdot S_{now}$ into the equation:\n        $(4 \\cdot S_{now} + 16) = 2 \\cdot (S_{now} + 16)$\n    *   Expand the right side:\n        $4 \\cdot S_{now} + 16 = 2 \\cdot S_{now} + 32$\n    *   Isolate $S_{now}$:\n        $4 \\cdot S_{now} - 2 \\",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "5",
+              "2",
+              "8"
+            ],
+            "votes": {
+              "5": 1,
+              "2": 1,
+              "8": 1
+            }
+          }
+        ],
+        "elapsed_s": 143.8849026095122
+      },
+      "gsm8k_903": {
+        "example_id": "gsm8k_903",
+        "difficulty": "medium",
+        "prediction": "16",
+        "ground_truth": "16",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 6826,
+        "prompt_tokens": 750,
+        "completion_tokens": 6076,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two Q&A examples (math word problems) followed by a new question.\n    *   Task: Answer the new question following the style of the previous examples (\"Let's think step by step...\").\n    *   Constraint: The user instruction says \"/no_think\", which typically means I should not output my internal thought process in a separate block, but just provide the final response directly. However, the prompt itself asks me to \"Let's think step by step\" as part of the answer generation format seen in the examples. I need to follow the pattern of the examples (Chain of Thought within the answer).\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This usually means I should not emit a separate `<thought>` block or internal monologue before the response. I should just generate the response directly.\n    *   The prompt ends with \"Let's think step by step.\" which is a cue for me to continue the text in that style.\n\n2.  **Analyze the Math Problem:**\n    *   Given:\n        *   4 small masks = 2 yards of material.\n        *   3 large masks = 2.25 yards of material.\n    *   Goal: Calculate material needed for 20 small masks and 8 large masks.\n    *   Step 1: Calculate material per small mask.\n        *   2 yards / 4 masks = 0.5 yards per small mask.\n    *   Step 2: Calculate material for 20 small masks.\n        *   20 masks * 0.5 yards/mask = 10 yards.\n        *   Alternatively: 20 is 5 times 4. So 5 * 2 yards = 10 yards.\n    *   Step 3: Calculate material per large mask.\n        *   2.25 yards / 3 masks = 0.75 yards per large mask.\n    *   Step 4: Calculate material for 8 large masks.\n        *   8 masks * 0.75 yards/mask = 6 yards.\n        *   Alternatively: 8 is not a direct multiple of 3. Let's stick to unit rate or batch.\n        *   Batch method: 3 large masks = 2.25 yards. 6 large masks = 4.5 yards. 2 more large masks = 2 * 0.75 = 1.5 yards. Total = 6 ",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "16",
+              "16",
+              "16"
+            ],
+            "votes": {
+              "16": 3
+            }
+          }
+        ],
+        "elapsed_s": 143.15534102357924
+      },
+      "gsm8k_573": {
+        "example_id": "gsm8k_573",
+        "difficulty": "easy",
+        "prediction": "600",
+        "ground_truth": "600",
+        "correct": true,
+        "confidence": 0.6666666666666666,
+        "total_tokens": 6700,
+        "prompt_tokens": 702,
+        "completion_tokens": 5998,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompting example showing math word problems with step-by-step reasoning and answers, followed by a new question.\n    *   Task: Solve the new question (\"Katina has $3000 in her savings account. If she removes $100 from the account every month, how much money will be remaining within the account after 2 years?\") using the same \"Let's think step by step\" format.\n    *   Constraint: The user explicitly stated \"no_think\" in the system instruction (actually, the system instruction says \"You are a helpful assistant. /no_think\", which usually implies I should not output my internal reasoning trace, but the few-shot examples *do* show reasoning (\"Let's think step by step...\"). The prompt asks me to complete the pattern. The instruction \"/no_think\" likely means \"do not output a separate thought block before the response\", but the response itself should follow the format of the examples which includes reasoning steps).\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive to the model about its internal processing. It often means \"don't output a <thought> block\". However, the few-shot examples explicitly include the reasoning text (\"Let's think step by step...\"). I need to follow the pattern of the few-shot examples for the output content.\n    *   Goal: Provide the solution following the style of the previous examples (Step-by-step reasoning + Final Answer).\n\n2.  **Solve the Math Problem:**\n    *   Initial amount: $3000.\n    *   Withdrawal rate: $100 per month.\n    *   Time period: 2 years.\n    *   Step 1: Convert time period to months. 1 year = 12 months. So, 2 years = 2 * 12 = 24 months.\n    *   Step 2: Calculate total withdrawal. $100/month * 24 months = $2400.\n    *   Step 3: Calculate remaining balance. $3000 - $2400 = $600.\n    *   Final Answer: $600.\n\n3.  **Format the Output:**\n    *   Start with \"Let's think step by step.\"\n    *   Explain ",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "600",
+              "6",
+              "600"
+            ],
+            "votes": {
+              "600": 2,
+              "6": 1
+            }
+          }
+        ],
+        "elapsed_s": 142.5713584702462
+      },
+      "gsm8k_1190": {
+        "example_id": "gsm8k_1190",
+        "difficulty": "hard",
+        "prediction": "19",
+        "ground_truth": "19",
+        "correct": true,
+        "confidence": 0.3333333333333333,
+        "total_tokens": 7020,
+        "prompt_tokens": 876,
+        "completion_tokens": 6144,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A word problem about nurses' bandages.\n    *   Task: Solve the problem step by step.\n    *   Format: Follow the style of the provided examples (Q/A pairs with \"Let's think step by step.\" reasoning).\n    *   Goal: Determine the starting number of bandages on the first day.\n\n2.  **Deconstruct the Problem:**\n    *   **Unit:** Bulk pack = 50 bandages.\n    *   **Day 1:**\n        *   Used: 38 bandages.\n        *   Ordered: 1 bulk pack (50 bandages).\n        *   Let $S$ be the starting amount.\n        *   End of Day 1 = $S - 38 + 50$.\n    *   **Day 2:**\n        *   Used: 10 fewer than Day 1. Day 1 used 38, so Day 2 used $38 - 10 = 28$.\n        *   Ordered: None mentioned.\n        *   End of Day 2 = (End of Day 1) - 28.\n    *   **Day 3:**\n        *   Ordered: 2 bulk packs ($2 \\times 50 = 100$).\n        *   Used: Half a pack ($50 / 2 = 25$).\n        *   End of Day 3 = (End of Day 2) + 100 - 25.\n    *   **Final State:**\n        *   Left at end of Day 3 = 78 bandages.\n\n3.  **Formulate the Equation:**\n    *   Start: $S$\n    *   Day 1 changes: $-38 + 50 = +12$\n    *   Day 2 changes: $-(38 - 10) = -28$\n    *   Day 3 changes: $+100 - 25 = +75$\n    *   Total Change: $12 - 28 + 75$\n    *   Equation: $S + 12 - 28 + 75 = 78$\n\n    *Alternative Approach (Working Backwards):*\n    *   End of Day 3: 78\n    *   Before Day 3 usage/ordering:\n        *   Ended with 78.\n        *   Day 3 usage: 25.\n        *   Day 3 order: 100.\n        *   Start of Day 3 = End of Day 3 + Used - Ordered = $78 + 25 - 100$.\n        *   $78 + 25 = 103$.\n        *   $103 - 100 = 3$.\n        *   So, Start of Day 3 (which is End of Day 2) = 3.\n    *   Before Day 2 usage:\n        *   End of Day 2: 3.\n        *   Day 2 usage: 28.\n        *   Start of Day 2 (which is End of Day 1) = $3 + 28 = 31$.\n    *   Before Day 1 usage/ordering:\n        *   End of Day 1: 31.\n        *   Day 1 usage: 38.\n        *   Day 1 order: 50.\n        *   Start of Day 1 = End of Day",
+        "step_metadata": [
+          {
+            "samples": 3,
+            "answers": [
+              "19",
+              "69",
+              "1"
+            ],
+            "votes": {
+              "19": 1,
+              "69": 1,
+              "1": 1
+            }
+          }
+        ],
+        "elapsed_s": 141.60186171345413
+      }
+    },
+    "sc_k5": {
+      "gsm8k_109": {
+        "example_id": "gsm8k_109",
+        "difficulty": "easy",
+        "prediction": "28",
+        "ground_truth": "28",
+        "correct": true,
+        "confidence": 0.8,
+        "total_tokens": 11515,
+        "prompt_tokens": 1275,
+        "completion_tokens": 10240,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:** The user is providing a few-shot prompt format with math word problems. The last item is a new question that needs to be answered in the same style (\"Let's think step by step... The answer is...\"). The question involves calculating the cost of gas after a cashback reward.\n\n2.  **Analyze the Question:**\n    *   Gas price: $3.00 per gallon.\n    *   Cashback: $0.20 per gallon.\n    *   Quantity bought: 10 gallons.\n    *   Goal: Calculate the final cost after cashback.\n\n3.  **Step-by-Step Calculation:**\n    *   Step 1: Calculate the total cost before cashback.\n        *   Price per gallon = $3.00\n        *   Gallons = 10\n        *   Total cost = $3.00 * 10 = $30.00\n    *   Step 2: Calculate the total cashback amount.\n        *   Cashback per gallon = $0.20\n        *   Gallons = 10\n        *   Total cashback = $0.20 * 10 = $2.00\n    *   Step 3: Calculate the final cost after cashback.\n        *   Final cost = Total cost - Total cashback\n        *   Final cost = $30.00 - $2.00 = $28.00\n    *   Alternative Step 3 (Net price per gallon):\n        *   Net price per gallon = $3.00 - $0.20 = $2.80\n        *   Final cost = $2.80 * 10 = $28.00\n\n4.  **Format the Output:** Match the style of the previous examples.\n    *   Start with \"Let's think step by step.\"\n    *   Explain the reasoning clearly.\n    *   End with \"The answer is [number].\"\n\n5.  **Drafting the Response:**\n    *   Let's think step by step.\n    *   The cost of gas is $3.00 per gallon.\n    *   The cashback is $0.20 per gallon.\n    *   The net cost per gallon is $3.00 - $0.20 = $2.80.\n    *   They buy 10 gallons.\n    *   So, 10 * $2.80 = $28.00.\n    *   The answer is 28.\n\n    *Refining for clarity based on previous examples:*\n    The previous examples are concise.\n    Example 1: \"There are 15 trees originally. Then there were 21 trees after planting. So 21 - 15 = 6 trees were planted. The answer is 6.\"\n    Example 2: \"There are originally 3 cars. 2 more cars arrive. 3 + 2 ",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "5",
+              "28",
+              "28",
+              "28",
+              "28"
+            ],
+            "votes": {
+              "5": 1,
+              "28": 4
+            }
+          }
+        ],
+        "elapsed_s": 142.97734216228127
+      },
+      "gsm8k_539": {
+        "example_id": "gsm8k_539",
+        "difficulty": "easy",
+        "prediction": "35",
+        "ground_truth": "35",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 10846,
+        "prompt_tokens": 1150,
+        "completion_tokens": 9696,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompting style with math word problems.\n    *   Task: Answer the final question (\"My wife wants to evenly split the check but wants me to pay an additional 20% tip on our $50 dinner bill. How much did I end up paying?\") following the \"Let's think step by step\" format used in the examples.\n    *   Constraint: The user explicitly stated `/no_think` in the system instruction, but the prompt itself asks me to \"Let's think step by step.\" as part of the few-shot pattern. However, the system instruction at the very top says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal chain of thought if it's a sensitive request, but here it's a math problem where showing steps is expected based on the few-shot examples. The `/no_think` instruction typically overrides the model's tendency to emit internal reasoning traces *before* the final answer, but in this context, the \"Let's think step by step\" is part of the desired output format (few-shot completion). I need to balance being helpful with the system instruction.\n    *   Wait, looking closely at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive to *not* output the internal thinking process (the \"thought block\") that typically appears before the response in some model architectures. However, the user prompt *itself* ends with \"Let's think step by step.\" and expects me to continue that pattern.\n    *   Standard procedure for `/no_think`: Do not output a separate reasoning block. Just output the final response. However, the few-shot examples *include* the reasoning in the visible text (\"Let's think step by step. There are 15 trees originally...\").\n    *   Actually, looking at the system instruction again: \"You are a helpful assistant. /no_think\". This is often used to prevent the model from emitting its internal monologue (the `<thought>` block). But the user is asking me to comple",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "35",
+              "35",
+              "35",
+              "35",
+              "35"
+            ],
+            "votes": {
+              "35": 5
+            }
+          }
+        ],
+        "elapsed_s": 143.65790877863765
+      },
+      "gsm8k_1086": {
+        "example_id": "gsm8k_1086",
+        "difficulty": "hard",
+        "prediction": "131",
+        "ground_truth": "131250",
+        "correct": false,
+        "confidence": 1.0,
+        "total_tokens": 11387,
+        "prompt_tokens": 1565,
+        "completion_tokens": 9822,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt with two simple math word problems and their solutions (formatted as \"Q: ... A: Let's think step by step. ...\"), followed by a more complex math word problem (\"Question: Marcel runs a bicycle store...\").\n    *   Task: Provide the answer to the final question following the same \"Let's think step by step\" reasoning format as the examples.\n    *   Constraint: The system instruction says \"You are a helpful assistant. /no_think\". This usually means I should not output my internal chain of thought explicitly in a separate block, but rather integrate the reasoning into the final response naturally, similar to the examples provided. However, the user prompt explicitly asks \"Let's think step by step.\" at the end of the question, implying I should continue that pattern. The \"/no_think\" instruction in the system prompt generally means \"do not output a hidden thinking block\", but I still need to solve the problem. I will follow the format of the examples provided in the few-shot section.\n\n2.  **Deconstruct the Problem:**\n    *   **Products:** MTB, BMX, Trekking.\n    *   **Prices:**\n        *   MTB = $500\n        *   BMX = Half of MTB = $500 / 2 = $250\n        *   Trekking = $450\n    *   **Total Sales:** 300 bikes.\n    *   **Distribution:**\n        *   Trekking = Half of total = 300 / 2 = 150 bikes.\n        *   BMX = 15% of total = 0.15 * 300 = 45 bikes.\n        *   MTB = The rest.\n    *   **Goal:** Calculate total earnings.\n\n3.  **Step-by-Step Calculation:**\n    *   **Step 1: Calculate the price of a BMX bike.**\n        *   MTB price = $500.\n        *   BMX price = $500 / 2 = $250.\n    *   **Step 2: Calculate the number of Trekking bikes sold.**\n        *   Total bikes = 300.\n        *   Trekking count = 1/2 * 300 = 150.\n    *   **Step 3: Calculate the number of BMX bikes sold.**\n        *   BMX count = 15% of 300 = 0.15 * 300 = 45.\n    *   **Step 4: Calculate the number of MTB bikes sold.**\n      ",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "131",
+              "131",
+              "131",
+              "131",
+              "131"
+            ],
+            "votes": {
+              "131": 5
+            }
+          }
+        ],
+        "elapsed_s": 144.6282121874392
+      },
+      "gsm8k_456": {
+        "example_id": "gsm8k_456",
+        "difficulty": "medium",
+        "prediction": "78",
+        "ground_truth": "78",
+        "correct": true,
+        "confidence": 0.6,
+        "total_tokens": 9808,
+        "prompt_tokens": 1220,
+        "completion_tokens": 8588,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math word problem about magician's cards.\n    *   Task: Solve the problem step by step, following the format of the few-shot examples provided (Q/A pairs with \"Let's think step by step\" reasoning).\n    *   Constraint: The user explicitly stated \"/no_think\" in the system prompt, but the user's message ends with \"Let's think step by step.\" indicating they want the reasoning shown. I need to follow the style of the provided examples.\n    *   Problem Details:\n        *   Red cards = 15\n        *   Green cards = 60% more than red cards.\n        *   Yellow cards = Sum of red and green cards.\n        *   Goal: Total number of cards (Red + Green + Yellow).\n\n2.  **Step-by-Step Calculation:**\n    *   **Step 1: Calculate the number of green cards.**\n        *   Red cards = 15.\n        *   Green cards are 60% more than red cards.\n        *   60% of 15 = 0.60 * 15.\n        *   Calculation: 6 * 1.5 = 9. Or 10% is 1.5, so 60% is 1.5 * 6 = 9.\n        *   Green cards = Red cards + 60% of Red cards = 15 + 9 = 24.\n    *   **Step 2: Calculate the number of yellow cards.**\n        *   Yellow cards = Red cards + Green cards.\n        *   Yellow cards = 15 + 24 = 39.\n    *   **Step 3: Calculate the total number of cards.**\n        *   Total = Red + Green + Yellow.\n        *   Total = 15 + 24 + 39.\n        *   15 + 24 = 39.\n        *   39 + 39 = 78.\n\n3.  **Drafting the Response:**\n    *   Follow the format: \"Let's think step by step. [Reasoning]. The answer is [Number].\"\n    *   Ensure the reasoning is clear and matches the style of the examples (concise, logical steps).\n\n4.  **Review and Refine:**\n    *   Red = 15.\n    *   Green = 15 + (0.6 * 15) = 15 + 9 = 24.\n    *   Yellow = 15 + 24 = 39.\n    *   Total = 15 + 24 + 39 = 78.\n    *   Does the reasoning flow well? Yes.\n    *   Check constraints: The system instruction says \"/no_think\", which usually means I shouldn't output my internal monologue. However, the user prompt *asks",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "5",
+              "15",
+              "78",
+              "78",
+              "78"
+            ],
+            "votes": {
+              "5": 1,
+              "15": 1,
+              "78": 3
+            }
+          }
+        ],
+        "elapsed_s": 144.48691601492465
+      },
+      "gsm8k_471": {
+        "example_id": "gsm8k_471",
+        "difficulty": "medium",
+        "prediction": "80",
+        "ground_truth": "80",
+        "correct": true,
+        "confidence": 0.6,
+        "total_tokens": 10891,
+        "prompt_tokens": 1295,
+        "completion_tokens": 9596,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt containing two example Q&A pairs (math word problems) and a third question to answer.\n    *   Task: Answer the third question following the \"Let's think step by step.\" format used in the examples.\n    *   Constraint: `/no_think` is specified in the system instruction, meaning I should not output my internal chain of thought reasoning block, but rather just the final response following the pattern. However, the user prompt explicitly asks me to \"Let's think step by step.\" within the completion. I need to generate the reasoning as part of the answer text, similar to the examples provided.\n    *   Wait, the system instruction says `/no_think`. This usually means \"do not output the internal reasoning trace that the model might generate before answering\". It doesn't mean I shouldn't solve the problem step-by-step in the output text if the prompt asks for it (like \"Let's think step by step.\"). The examples show the reasoning being part of the \"A:\" section. So I need to produce the reasoning in the final output.\n    *   Goal: Solve the math problem and present the solution in the same style as the examples.\n\n2.  **Analyze the Math Problem:**\n    *   Initial state: 30 students.\n    *   Pencils per student: 10.\n    *   Total pencils start: $30 \\times 10 = 300$.\n    *   Event 1 (After two months): 1/5 of the total pencils were used.\n        *   Used: $\\frac{1}{5} \\times 300 = 60$.\n        *   Remaining after Event 1: $300 - 60 = 240$.\n    *   Event 2 (At the end of the year): Only 1/3 of the *remaining* pencils were left.\n        *   Note: The phrasing \"only 1/3 of the remaining pencils were left\" means the final amount is 1/3 of the amount after Event 1.\n        *   Remaining after Event 2: $\\frac{1}{3} \\times 240$.\n        *   Calculation: $240 / 3 = 80$.\n    *   Question: How many pencils were left?\n    *   Answer: 80.\n\n3.  **Draft the Response:**\n    *   Follow the format: \"Let's think step b",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "1",
+              "80",
+              "80",
+              "8",
+              "80"
+            ],
+            "votes": {
+              "1": 1,
+              "80": 3,
+              "8": 1
+            }
+          }
+        ],
+        "elapsed_s": 142.67031289823353
+      },
+      "gsm8k_882": {
+        "example_id": "gsm8k_882",
+        "difficulty": "hard",
+        "prediction": "5",
+        "ground_truth": "5",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 10851,
+        "prompt_tokens": 1540,
+        "completion_tokens": 9311,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few examples of Q&A pairs (few-shot prompting) followed by a specific question about Kelly's grocery shopping budget.\n    *   Task: Solve the math problem step-by-step and provide the final answer.\n    *   Constraint: The prompt ends with \"Let's think step by step.\", implying I should continue from there in the same style as the examples (Chain of Thought).\n    *   Constraint from System Instruction: \"You are a helpful assistant. /no_think\". This usually means I should not output my internal reasoning block if I were using a specific thinking mode, but here the user is asking me to \"think step by step\" as part of the output format (like the few-shot examples). I need to follow the pattern of the examples provided in the prompt. The examples show the reasoning *in* the answer text, not hidden.\n    *   Wait, looking at the system instruction: `/no_think`. This often indicates I should not use a separate thinking block (like `<thinking>...</thinking>`) but just output the response directly. However, the user prompt explicitly asks \"Let's think step by step.\" at the end. I need to follow the user's requested format for the solution while adhering to safety and policy. The `/no_think` instruction usually overrides the internal monologue visibility, but since the user *wants* the step-by-step reasoning in the output (as per the few-shot examples), I will provide the reasoning in the final response text.\n\n2.  **Deconstruct the Problem:**\n    *   **Items:**\n        1.  5 packs of bacon.\n        2.  6 packets of chicken.\n        3.  3 packs of strawberries.\n        4.  7 packs of apples.\n    *   **Costs:**\n        1.  Bacon: 5 packs cost $10 in total.\n        2.  Chicken: Each costs twice as much as a pack of bacon.\n        3.  Strawberries: 3 packs, priced at $4 each.\n        4.  Apples: 7 packs, each priced at half the price of a pack of strawberries.\n    *   **Budget:** $65.\n    *   **Goal:** Calculate remai",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "5",
+              "5",
+              "5",
+              "5",
+              "5"
+            ],
+            "votes": {
+              "5": 5
+            }
+          }
+        ],
+        "elapsed_s": 141.78529663011432
+      },
+      "gsm8k_1156": {
+        "example_id": "gsm8k_1156",
+        "difficulty": "hard",
+        "prediction": "120",
+        "ground_truth": "120",
+        "correct": true,
+        "confidence": 0.4,
+        "total_tokens": 11460,
+        "prompt_tokens": 1295,
+        "completion_tokens": 10165,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt with two examples of math word problems and their step-by-step solutions, followed by a new question to solve.\n    *   Task: Solve the new question following the same \"Let's think step by step\" format and style as the examples.\n    *   Constraint: The user explicitly added \"/no_think\" at the beginning of the prompt, but the system instruction says \"You are a helpful assistant. /no_think\". This usually means I should not output a separate thinking block (like `<thought>...</thought>`), but just provide the final response directly. However, the prompt itself asks me to \"Let's think step by step\" as part of the answer generation style (based on the few-shot examples). I need to follow the few-shot pattern.\n    *   Wait, looking at the system instruction: \"You are a helpful assistant. /no_think\". This is a directive for *me* (the model) regarding my internal processing or output format regarding chain-of-thought. Usually, \"/no_think\" in a system prompt or user prompt context means \"do not emit a separate thinking trace before the answer\". But the task itself requires me to simulate the \"Let's think step by step\" reasoning *in the output* because that's the few-shot pattern provided in the user message.\n    *   Actually, re-reading the system instruction: \"You are a helpful assistant. /no_think\". This is likely a directive to *not* use the internal thought block feature if available, or to keep the response direct. However, the user's prompt *ends* with \"Let's think step by step.\", expecting me to continue that text.\n    *   The few-shot examples show the answer starting with \"Let's think step by step.\" followed by the reasoning and then \"The answer is X.\"\n    *   So I need to generate the reasoning text and the final answer, matching the style.\n\n2.  **Analyze the Math Problem:**\n    *   Cost price per device: $20.\n    *   Selling price per device: Twice the original price = $20 * 2 = $40.\n ",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "120",
+              "40",
+              "6",
+              "20",
+              "120"
+            ],
+            "votes": {
+              "120": 2,
+              "40": 1,
+              "6": 1,
+              "20": 1
+            }
+          }
+        ],
+        "elapsed_s": 140.34757621400058
+      },
+      "gsm8k_666": {
+        "example_id": "gsm8k_666",
+        "difficulty": "medium",
+        "prediction": "120",
+        "ground_truth": "120",
+        "correct": true,
+        "confidence": 0.6,
+        "total_tokens": 11110,
+        "prompt_tokens": 1255,
+        "completion_tokens": 9855,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A math word problem involving three people (Rayna, Kassidy, Aurelia) and their money.\n    *   Task: Solve the problem step by step.\n    *   Output Format: Follow the style of the provided examples (Let's think step by step... The answer is...).\n    *   Constraint: The user prompt ends with \"Let's think step by step.\" implying I should continue from there.\n\n2.  **Deconstruct the Problem:**\n    *   **Given:**\n        *   Aurelia (Arelia) has $120. (Note: The prompt spells it \"Aurelia\" first, then \"Arelia\". I should treat them as the same person).\n        *   Kassidy has 3/4 times as much money as Aurelia.\n        *   Rayna has 60 more dollars than Kassidy.\n    *   **Goal:** Calculate the total money, then divide equally among the three, and state how much each would have.\n\n3.  **Step-by-Step Calculation:**\n    *   **Step 1: Find Aurelia's money.**\n        *   Aurelia = $120.\n    *   **Step 2: Find Kassidy's money.**\n        *   Kassidy = (3/4) * Aurelia\n        *   Kassidy = (3/4) * 120\n        *   Calculation: 120 / 4 = 30. 30 * 3 = 90.\n        *   Kassidy = $90.\n    *   **Step 3: Find Rayna's money.**\n        *   Rayna = Kassidy + 60\n        *   Rayna = 90 + 60\n        *   Rayna = $150.\n    *   **Step 4: Find the total money.**\n        *   Total = Aurelia + Kassidy + Rayna\n        *   Total = 120 + 90 + 150\n        *   Calculation: 120 + 90 = 210. 210 + 150 = 360.\n        *   Total = $360.\n    *   **Step 5: Share equally among them.**\n        *   There are 3 people (Rayna, Kassidy, Aurelia).\n        *   Share = Total / 3\n        *   Share = 360 / 3\n        *   Share = $120.\n\n4.  **Draft the Response:**\n    *   Start with \"Let's think step by step.\" (as prompted).\n    *   State Aurelia's amount.\n    *   Calculate Kassidy's amount.\n    *   Calculate Rayna's amount.\n    *   Calculate the total sum.\n    *   Divide by 3.\n    *   State the final answer.\n\n5.  **Review and Refine:**\n    *   Check spelling: The p",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "120",
+              "120",
+              "360",
+              "360",
+              "120"
+            ],
+            "votes": {
+              "120": 3,
+              "360": 2
+            }
+          }
+        ],
+        "elapsed_s": 142.97619792446494
+      },
+      "gsm8k_649": {
+        "example_id": "gsm8k_649",
+        "difficulty": "easy",
+        "prediction": "160000",
+        "ground_truth": "162000",
+        "correct": false,
+        "confidence": 0.4,
+        "total_tokens": 11545,
+        "prompt_tokens": 1305,
+        "completion_tokens": 10240,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt with two examples of math word problems and their step-by-step solutions, followed by a new question about Instagram likes.\n    *   Task: Solve the new question using the same \"Let's think step by step\" format as the examples.\n    *   Constraint: The system instruction says \"no_think\", meaning I should not output my internal thought process, just the final response. However, the user prompt explicitly asks for \"Let's think step by step.\" in the solution. I need to follow the format of the provided examples (Q/A pairs with reasoning).\n    *   Safety/Policy: The request is a simple math word problem. No sensitive or harmful content.\n\n2.  **Analyze the Math Problem:**\n    *   Initial likes (after 1 week): 2000.\n    *   Three weeks later (timeframe detail, but the multiplier is key): The number of likes was 70 times as many as the *initial* number of likes.\n    *   \"Initial number of likes\" refers to the 2000 mentioned at the start.\n    *   Calculation 1: Likes after 3 weeks = 70 * 2000.\n    *   Recent likes: 20000 more new likes.\n    *   Calculation 2: Total likes = (Likes after 3 weeks) + 20000.\n\n3.  **Draft the Solution:**\n    *   Step 1: Identify the initial number of likes. It is 2000.\n    *   Step 2: Calculate the number of likes three weeks later. This is 70 times the initial number. $70 \\times 2000 = 140,000$.\n    *   Step 3: Add the recent new likes. $140,000 + 20,000 = 160,000$.\n    *   Final Answer: 160,000.\n\n4.  **Format the Output:**\n    *   Match the style of the examples: \"Let's think step by step. [Reasoning]. The answer is [Result].\"\n\n5.  **Review against Constraints:**\n    *   The system instruction says \"no_think\". This usually means I shouldn't emit a chain of thought *in the model's internal processing block* if it were a complex reasoning task requiring privacy, but here the user is asking for the *output* to contain the reasoning (\"Let's think step by step.\").\n    *  ",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "140",
+              "160000",
+              "160000",
+              "70",
+              "6"
+            ],
+            "votes": {
+              "140": 1,
+              "160000": 2,
+              "70": 1,
+              "6": 1
+            }
+          }
+        ],
+        "elapsed_s": 143.28980034403503
+      },
+      "gsm8k_214": {
+        "example_id": "gsm8k_214",
+        "difficulty": "hard",
+        "prediction": "8",
+        "ground_truth": "8",
+        "correct": true,
+        "confidence": 0.6,
+        "total_tokens": 11277,
+        "prompt_tokens": 1280,
+        "completion_tokens": 9997,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few-shot prompt with two examples of math word problems and their solutions (step-by-step reasoning followed by the answer).\n    *   Task: Solve the third question provided (\"Jerry has two pools...\") following the same format (\"Let's think step by step...\").\n    *   Constraint: The system instruction says \"no_think\", but the user prompt explicitly asks for \"Let's think step by step\" reasoning within the answer. The system instruction \"no_think\" usually means \"do not output hidden thinking traces\", but here the user wants the reasoning visible as part of the response format (like the examples). I need to follow the user's requested format for the answer while adhering to the safety guideline of not revealing *my internal* chain of thought if it conflicts. However, in this context, the user is asking for the solution to a math problem with visible reasoning steps, which is standard for math tutoring/solving. The \"no_think\" system instruction typically prevents me from outputting a separate `<thought>` block or internal monologue. I should provide the reasoning directly in the response text as requested by the few-shot pattern.\n\n2.  **Analyze the Math Problem:**\n    *   **Given:**\n        *   Two pools: Big (B) and Small (S).\n        *   Leak rate: 4 gallons/minute for *both* pools.\n        *   Time elapsed: 4 minutes.\n        *   Condition 1 (4 minutes ago): Big pool had twice as much water as the small pool ($B_{past} = 2 \\times S_{past}$).\n        *   Condition 2 (Now): Big pool has four times as much water as the small pool ($B_{now} = 4 \\times S_{now}$).\n    *   **Goal:** Find the amount of water in the small pool *now* ($S_{now}$).\n\n3.  **Formulate Equations:**\n    *   Let $S_{now}$ be the current amount of water in the small pool.\n    *   Let $B_{now}$ be the current amount of water in the big pool.\n    *   Leak rate = 4 gal/min.\n    *   Time = 4 min.\n    *   Water lost per pool = $4 \\text{ gal/min",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "16",
+              "8",
+              "5",
+              "8",
+              "8"
+            ],
+            "votes": {
+              "16": 1,
+              "8": 3,
+              "5": 1
+            }
+          }
+        ],
+        "elapsed_s": 144.64055869542062
+      },
+      "gsm8k_903": {
+        "example_id": "gsm8k_903",
+        "difficulty": "medium",
+        "prediction": "16",
+        "ground_truth": "16",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 11188,
+        "prompt_tokens": 1250,
+        "completion_tokens": 9938,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few examples of math word problems with step-by-step reasoning and answers, followed by a new question.\n    *   Task: Solve the new question using the same \"Let's think step by step\" format.\n    *   Question: Jo makes face masks.\n        *   Rate 1: 4 small masks = 2 yards of material.\n        *   Rate 2: 3 large masks = 2.25 yards of material.\n        *   Goal: Calculate material needed for 20 small masks and 8 large masks.\n\n2.  **Break Down the Problem:**\n    *   **Small Masks:**\n        *   Given: 4 masks require 2 yards.\n        *   Find: Material per small mask OR material for 20 masks directly.\n        *   Calculation:\n            *   Material per small mask = 2 yards / 4 masks = 0.5 yards/mask.\n            *   Material for 20 small masks = 20 masks * 0.5 yards/mask = 10 yards.\n            *   Alternatively: 20 masks is 5 times 4 masks. So, 5 * 2 yards = 10 yards.\n    *   **Large Masks:**\n        *   Given: 3 masks require 2.25 yards.\n        *   Find: Material per large mask OR material for 8 masks directly.\n        *   Calculation:\n            *   Material per large mask = 2.25 yards / 3 masks = 0.75 yards/mask.\n            *   Material for 8 large masks = 8 masks * 0.75 yards/mask.\n            *   8 * 0.75 = 8 * (3/4) = 24/4 = 6 yards.\n    *   **Total Material:**\n        *   Total = Material for small masks + Material for large masks.\n        *   Total = 10 yards + 6 yards = 16 yards.\n\n3.  **Draft the Response (incorporating \"Let's think step by step\"):**\n    *   Start with the small masks calculation.\n    *   Move to the large masks calculation.\n    *   Sum the totals.\n    *   State the final answer clearly.\n\n4.  **Refine the Steps:**\n    *   Step 1: Calculate material for small masks. 20 small masks is 5 groups of 4 small masks (20 / 4 = 5). Each group takes 2 yards. So 5 * 2 = 10 yards.\n    *   Step 2: Calculate material for large masks. 2.25 yards for 3 masks. We need 8 masks. First, find ",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "16",
+              "16",
+              "16",
+              "16",
+              "16"
+            ],
+            "votes": {
+              "16": 5
+            }
+          }
+        ],
+        "elapsed_s": 139.91030884347856
+      },
+      "gsm8k_573": {
+        "example_id": "gsm8k_573",
+        "difficulty": "easy",
+        "prediction": "600",
+        "ground_truth": "600",
+        "correct": true,
+        "confidence": 1.0,
+        "total_tokens": 10253,
+        "prompt_tokens": 1170,
+        "completion_tokens": 9083,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:**\n    *   Input: A few examples of Q&A pairs involving simple arithmetic word problems, followed by a specific question to answer.\n    *   Task: Answer the specific question (\"Katina has $3000 in her savings account. If she removes $100 from the account every month, how much money will be remaining within the account after 2 years?\") using the \"Let's think step by step.\" format shown in the examples.\n    *   Constraint: The system instruction says \"no_think\", meaning I should not output my internal reasoning process in a separate block, but rather follow the format of the provided examples directly in the response. However, the prompt itself ends with \"Let's think step by step.\", implying I should continue from there.\n    *   Goal: Provide the solution following the pattern of the few-shot examples.\n\n2.  **Analyze the Question:**\n    *   Initial amount: $3000\n    *   Monthly withdrawal: $100\n    *   Time period: 2 years\n    *   Goal: Calculate remaining balance.\n\n3.  **Step-by-Step Calculation:**\n    *   Convert years to months: 2 years * 12 months/year = 24 months.\n    *   Calculate total withdrawal: 24 months * $100/month = $2400.\n    *   Calculate remaining balance: $3000 - $2400 = $600.\n\n4.  **Format the Output:**\n    *   The examples start with \"Let's think step by step.\" followed by the reasoning and then \"The answer is [number].\"\n    *   The prompt actually ends with \"Let's think step by step.\", so I need to continue the text from there.\n    *   Wait, looking at the prompt structure:\n        *   Example 1: Q... A: Let's think step by step...\n        *   Example 2: Q... A: Let's think step by step...\n        *   Target: Question... Let's think step by step.\n    *   So I need to complete the text starting after \"Let's think step by step.\"\n\n5.  **Drafting the Response:**\n    *   Katina starts with $3000.\n    *   She removes $100 every month.\n    *   There are 12 months in a year, so 2 years is 12 * 2 = 24 months.\n   ",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "600",
+              "600",
+              "600",
+              "600",
+              "600"
+            ],
+            "votes": {
+              "600": 5
+            }
+          }
+        ],
+        "elapsed_s": 140.25150571204722
+      },
+      "gsm8k_1190": {
+        "example_id": "gsm8k_1190",
+        "difficulty": "hard",
+        "prediction": "19",
+        "ground_truth": "19",
+        "correct": true,
+        "confidence": 0.6,
+        "total_tokens": 11700,
+        "prompt_tokens": 1460,
+        "completion_tokens": 10240,
+        "reasoning_trace": "Thinking Process:\n\n1.  **Analyze the Request:** The user wants me to solve a word problem about bandages, following the format of the provided examples (Q: ... A: Let's think step by step. ... The answer is ...). I need to output the reasoning and the final answer.\n\n2.  **Analyze the Problem:**\n    *   **Goal:** Find the number of bandages they started with on the first day.\n    *   **Given Information:**\n        *   Bulk pack size = 50 bandages.\n        *   **Day 1:**\n            *   Used: 38 bandages.\n            *   Ordered: 1 bulk pack (50 bandages).\n            *   Let $S$ be the starting amount on Day 1.\n        *   **Day 2:**\n            *   Used: 10 fewer than Day 1 = $38 - 10 = 28$ bandages.\n            *   Ordered: Not mentioned (assume 0).\n        *   **Day 3:**\n            *   Ordered: 2 bulk packs = $2 \\times 50 = 100$ bandages.\n            *   Used: Half a pack = $50 / 2 = 25$ bandages.\n        *   **End of Day 3:**\n            *   Remaining: 78 bandages.\n\n3.  **Formulate the Equation:**\n    *   Start with $S$.\n    *   Day 1 End: $S - 38 + 50$.\n    *   Day 2 End: $(S - 38 + 50) - 28$.\n    *   Day 3 End: $((S - 38 + 50) - 28) + 100 - 25$.\n    *   Final Amount = 78.\n\n    So, $S - 38 + 50 - 28 + 100 - 25 = 78$.\n\n4.  **Solve the Equation:**\n    *   Combine the constants:\n        *   $-38 + 50 = 12$\n        *   $12 - 28 = -16$\n        *   $-16 + 100 = 84$\n        *   $84 - 25 = 59$\n    *   So, $S + 59 = 78$.\n    *   $S = 78 - 59$.\n    *   $S = 19$.\n\n5.  **Alternative Method (Working Backwards):**\n    *   End of Day 3: 78 bandages.\n    *   Day 3 Usage: They used 25 (half pack). Before usage, they had $78 + 25 = 103$.\n    *   Day 3 Order: They ordered 100 (2 packs). Before order, they had $103 - 100 = 3$. (This is the amount carried over from Day 2).\n    *   Day 2 Usage: They used 28 (38 - 10). Before usage, they had $3 + 28 = 31$. (This is the amount carried over from Day 1).\n    *   Day 1 Order: They ordered 50 (1 pack). Before order, they had $31 - 50 = -1",
+        "step_metadata": [
+          {
+            "samples": 5,
+            "answers": [
+              "2",
+              "19",
+              "19",
+              "19",
+              "78"
+            ],
+            "votes": {
+              "2": 1,
+              "19": 3,
+              "78": 1
+            }
+          }
+        ],
+        "elapsed_s": 141.07177971117198
+      }
+    }
+  }
+}

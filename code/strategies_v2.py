@@ -536,16 +536,128 @@ class ComputeMatchedSC(InferenceStrategy):
         )
 
 
+class BackwardAnchoredVerification(InferenceStrategy):
+    """BAV: use backward cloze as a verifier for forward CoT.
+
+    Pipeline:
+      1. Greedy forward CoT → answer A (≈ 1 pass).
+      2. Answer-anchored backward reconstruction on A → backward answer B.
+      3. If A == B: commit to A.
+      4. Else: SC fallback with k=fallback_k samples (majority vote over all).
+
+    Key differences vs BackwardCloze:
+      - Only 1 forward pass (not 3), so baseline cost is CoT + backward ≈ CMS budget.
+      - Fallback is triggered ONLY on disagreement, yielding adaptive compute.
+      - Agreement rate determines average token cost; if most problems agree,
+        BAV stays cheap.
+    """
+    name = "bav"
+
+    def __init__(self, fallback_k: int = 5, temperature: float = 0.7):
+        self.fallback_k = fallback_k
+        self.temperature = temperature
+
+    def run(self, engine, question, max_tokens=512, few_shot=""):
+        prompt = f"{few_shot}\nQuestion: {question}\nLet's think step by step."
+
+        # Phase 1: greedy forward CoT
+        forward = engine.generate_single(prompt, max_tokens=max_tokens)
+        forward_answer = extract_answer(forward.text)
+
+        # Phase 2: answer-anchored backward verification
+        backward_prompt = (
+            f"Question: {question}\n\n"
+            f"A candidate answer is: {forward_answer}\n\n"
+            f"Verify by reasoning backward from this answer to the given information.\n"
+            f"Starting from the conclusion ({forward_answer}), reconstruct each step "
+            f"back to the original premises.\n\n"
+            f"After backward verification, either confirm the answer or provide "
+            f"the correct answer if the verification fails.\n"
+            f"End with: The answer is <answer>."
+        )
+        backward = engine.generate_single(backward_prompt, max_tokens=max_tokens)
+        backward_answer = extract_answer(backward.text)
+
+        total_p = forward.prompt_tokens + backward.prompt_tokens
+        total_c = forward.completion_tokens + backward.completion_tokens
+        agreed = (forward_answer == backward_answer) and forward_answer != ""
+
+        if agreed:
+            # High confidence: commit to forward answer
+            final_answer = forward_answer
+            confidence = 0.9
+            fallback_used = False
+            fallback_samples = []
+        else:
+            # Disagreement: trigger SC fallback
+            fallback = engine.generate_multi(
+                prompt, n=self.fallback_k, max_tokens=max_tokens,
+                temperature=self.temperature,
+            )
+            fallback_samples = [extract_answer(o.text) for o in fallback]
+            # Include forward and backward in the vote
+            all_answers = [forward_answer, backward_answer] + fallback_samples
+            vote_counts = Counter([a for a in all_answers if a])
+            if vote_counts:
+                final_answer, count = vote_counts.most_common(1)[0]
+                confidence = count / max(len(all_answers), 1)
+            else:
+                final_answer = forward_answer
+                confidence = 0.3
+            total_p += sum(o.prompt_tokens for o in fallback)
+            total_c += sum(o.completion_tokens for o in fallback)
+            fallback_used = True
+
+        return StrategyResult(
+            prediction=final_answer,
+            confidence=float(np.clip(confidence, 0, 1)),
+            total_tokens=total_p + total_c,
+            prompt_tokens=total_p,
+            completion_tokens=total_c,
+            strategy_name=self.name,
+            reasoning_trace=(
+                f"FORWARD:\n{forward.text}\n\nBACKWARD:\n{backward.text}"
+                + (f"\n\nFALLBACK ({self.fallback_k} samples)" if fallback_used else "")
+            ),
+            step_metadata=[{
+                "forward_answer": forward_answer,
+                "backward_answer": backward_answer,
+                "agreed": agreed,
+                "fallback_used": fallback_used,
+                "fallback_samples": fallback_samples,
+                "final": final_answer,
+                "fallback_k": self.fallback_k,
+            }],
+        )
+
+
+class SCK3(SelfConsistency):
+    """SC with k=3 — matches BAV+fallback budget roughly."""
+    name = "sc_k3"
+    def __init__(self, temperature: float = 0.7):
+        super().__init__(k=3, temperature=temperature)
+
+
+class SCK5(SelfConsistency):
+    """SC with k=5 — matches BAV+fallback budget at high disagreement rate."""
+    name = "sc_k5"
+    def __init__(self, temperature: float = 0.7):
+        super().__init__(k=5, temperature=temperature)
+
+
 STRATEGY_REGISTRY: dict[str, type[InferenceStrategy]] = {
     "standard_cot": StandardCoT,
     "self_consistency": SelfConsistency,
     "compute_matched_sc": ComputeMatchedSC,
+    "sc_k3": SCK3,
+    "sc_k5": SCK5,
     "targeted_repair": UncertaintyTargetedRepair,
     "random_repair": RandomRepair,
     "backward_cloze": BackwardCloze,
     "full_regeneration": FullRegeneration,
     "hierarchical_repair": HierarchicalRepair,
     "clox_adaptive": CLOXAdaptive,
+    "bav": BackwardAnchoredVerification,
 }
 
 

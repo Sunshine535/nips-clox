@@ -52,7 +52,8 @@ _default_output = os.path.join(
 )
 os.makedirs(_default_output, exist_ok=True)
 
-# 8 base strategies (exclude clox_adaptive meta-strategy)
+# Default strategies (exclude clox_adaptive meta-strategy).
+# Can override with --strategies flag.
 PILOT_STRATEGIES = [
     "standard_cot",
     "self_consistency",
@@ -67,6 +68,7 @@ PILOT_STRATEGIES = [
 # Strategy-specific kwargs
 STRATEGY_KWARGS: dict[str, dict] = {
     "self_consistency": {"k": 8},
+    "bav": {"fallback_k": 5},
 }
 
 
@@ -114,15 +116,16 @@ def _save_ckpt(path: str, data: dict) -> None:
 
 
 def run_strategies(engine: VLLMEngine, examples: list, output_dir: str, few_shot: str,
-                   max_tokens: int = 2048) -> dict:
-    """Run all 8 strategies on all examples with checkpoint/resume."""
+                   max_tokens: int = 2048, strategies: list = None) -> dict:
+    """Run all N strategies on all examples with checkpoint/resume."""
+    strategies = strategies or PILOT_STRATEGIES
     ckpt_path = os.path.join(output_dir, ".pilot_ckpt.json")
     results = _load_ckpt(ckpt_path)
     if results:
         total_done = sum(len(v) for v in results.values())
         log.info("Resumed from checkpoint: %d entries", total_done)
 
-    for sname in PILOT_STRATEGIES:
+    for sname in strategies:
         if sname not in results:
             results[sname] = {}
 
@@ -223,6 +226,8 @@ def main():
                         help="Quantization method: awq, gptq, or None")
     parser.add_argument("--max_tokens", type=int, default=2048,
                         help="Max generation tokens per call (512 too short for Qwen3.5)")
+    parser.add_argument("--strategies", type=str, default=None,
+                        help="Comma-separated strategy names (overrides default PILOT_STRATEGIES)")
     parser.add_argument("--skip_topology", action="store_true",
                         help="Skip topology estimation (faster)")
     parser.add_argument("--seed", type=int, default=42)
@@ -295,11 +300,15 @@ def main():
 
     few_shot = FEW_SHOT_PROMPTS.get("gsm8k", "")
 
+    strategies = args.strategies.split(",") if args.strategies else PILOT_STRATEGIES
+    strategies = [s.strip() for s in strategies if s.strip()]
+
     # Phase 1: Run all strategies
-    log.info("--- Phase 1: Running %d strategies ---", len(PILOT_STRATEGIES))
+    log.info("--- Phase 1: Running %d strategies: %s ---", len(strategies), strategies)
     t_start = time.perf_counter()
     strategy_results = run_strategies(engine, examples, args.output, few_shot,
-                                      max_tokens=args.max_tokens)
+                                      max_tokens=args.max_tokens,
+                                      strategies=strategies)
     t_strat = time.perf_counter() - t_start
     log.info("Strategies complete in %.1f min", t_strat / 60)
 

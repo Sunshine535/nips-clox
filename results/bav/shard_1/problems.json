@@ -1,0 +1,80 @@
+[
+  {
+    "id": "gsm8k_109",
+    "difficulty": "easy",
+    "question": "A local gas station is selling gas for $3.00 a gallon.  An app company is offering $.20 cashback per gallon if you fill up at this station.  If someone buys 10 gallons of gas, how much with their gas ",
+    "answer": "28"
+  },
+  {
+    "id": "gsm8k_539",
+    "difficulty": "easy",
+    "question": "My wife wants to evenly split the check but wants me to pay an additional 20% tip on our $50 dinner bill. How much did I end up paying?",
+    "answer": "35"
+  },
+  {
+    "id": "gsm8k_1086",
+    "difficulty": "hard",
+    "question": "Marcel runs a bicycle store. His main products are three types of bikes: MTB, BMX, and Trekking. The price of one MTB is $500, BMX is half the price of an MTB, and a Trekking bike is $450. In one mont",
+    "answer": "131250"
+  },
+  {
+    "id": "gsm8k_456",
+    "difficulty": "medium",
+    "question": "In a set of magicians cards, there are 15 red cards, and 60% more green cards. Yellow cards are as many, as the sum of red and green cards. How many cards of all mentioned colors are there?",
+    "answer": "78"
+  },
+  {
+    "id": "gsm8k_471",
+    "difficulty": "medium",
+    "question": "There are 30 students in Marissa\u2019s class. Each student started the year with 10 pencils. After two months, 1/5 of the total pencils in class were used. At the end of the year, only 1/3 of the remainin",
+    "answer": "80"
+  },
+  {
+    "id": "gsm8k_882",
+    "difficulty": "hard",
+    "question": "Kelly is grocery shopping at a supermarket and is making sure she has enough in her budget for the items in her cart. Her 5 packs of bacon cost $10 in total and she has 6 packets of chicken which each",
+    "answer": "5"
+  },
+  {
+    "id": "gsm8k_1156",
+    "difficulty": "hard",
+    "question": "Linus works for a trading company. He buys a mobile device for $20 and sells it for twice the amount of the original price. If he bought 2 devices last Monday and 4 devices last Tuesday, how much prof",
+    "answer": "120"
+  },
+  {
+    "id": "gsm8k_666",
+    "difficulty": "medium",
+    "question": "Rayna has 60 more dollars than Kassidy, and Kassidy has 3/4 times as much money as Aurelia. If Arelia has $120, how much would each have if they decided to add together their money and share equally a",
+    "answer": "120"
+  },
+  {
+    "id": "gsm8k_649",
+    "difficulty": "easy",
+    "question": "Fishio posted her selfie on Instagram. She received 2000 likes on the photo after 1 week. Three weeks later, the number of likes was 70 times as many as the initial number of likes. If she received 20",
+    "answer": "162000"
+  },
+  {
+    "id": "gsm8k_214",
+    "difficulty": "hard",
+    "question": "Jerry has two pools, both with leaks emptying them out at 4 gallons/minute. 4 minutes ago, the big pool had twice as much water as the small pool. Now the big pool has four times as much water as the ",
+    "answer": "8"
+  },
+  {
+    "id": "gsm8k_903",
+    "difficulty": "medium",
+    "question": "Jo has been making face masks. She can make 4 small masks with 2 yards of material and 3 large masks with 2.25 yards of material. How much material would she need to make 20 small and 8 large masks fo",
+    "answer": "16"
+  },
+  {
+    "id": "gsm8k_573",
+    "difficulty": "easy",
+    "question": "Katina has $3000 in her savings account. If she removes $100 from the account every month, how much money will be remaining within the account after 2 years?",
+    "answer": "600"
+  },
+  {
+    "id": "gsm8k_1190",
+    "difficulty": "hard",
+    "question": "A nurses\u2019 station orders bandages in bulk packs of 50. On the first day, the nurses used 38 bandages and ordered one bulk pack of bandages. On the second day, they used ten fewer bandages. On the thir",
+    "answer": "19"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "round": 1,
+  "threadId": null,
+  "status": "completed",
+  "completion_reason": "terminated_honestly_by_author",
+  "difficulty": "nightmare",
+  "reviewer_backend": "codex_exec_cli",
+  "reviewer_note": "oracle-pro unavailable (no Oracle MCP); fell back to codex exec (nightmare mode) per shared-references/reviewer-routing.md. Codex CLI 0.118.0 logged in with ChatGPT.",
+  "last_score": 3.0,
+  "last_verdict": "not ready",
+  "pending_experiments": [],
+  "timestamp": "2026-04-21T13:50:00",
+  "summary": "Pilot BAV experiment did not produce publishable positive result. BAV (40/50) vs backward_cloze (39/50) paired-bootstrap p=0.66, so BAV's adaptive-escalation logic contributes no measurable gain over backward_cloze alone. MoT citation was wrong; FOBAR is closer prior art. Scale-up from N=50 is unlikely to close the gap. Author chose to terminate loop rather than continue through max 4 rounds."
+}
