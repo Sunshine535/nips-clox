@@ -1,0 +1,2622 @@
+{
+  "model": "/openbayes/input/input0/hub/Qwen2.5-1.5B",
+  "cells": {
+    "gsm8k": {
+      "benchmark": "gsm8k",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.06666666666666667,
+        "self_consistency": 0.06666666666666667,
+        "backward_cloze": 0.1
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1622.1666666666667,
+        "self_consistency": 12055.3,
+        "backward_cloze": 6454.2
+      },
+      "oracle_accuracy": 0.2,
+      "sc_accuracy": 0.06666666666666667,
+      "oracle_sc_gap": 0.13333333333333336,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 2312
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "5",
+            "total_tokens": 2349
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "260",
+            "total_tokens": 2328
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "30",
+            "total_tokens": 2308
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": false,
+            "prediction": "acey",
+            "ground_truth": "6",
+            "total_tokens": 2278
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "520",
+            "ground_truth": "1128",
+            "total_tokens": 762
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "144",
+            "total_tokens": 811
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "22",
+            "ground_truth": "50",
+            "total_tokens": 1468
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": false,
+            "prediction": "20",
+            "ground_truth": "1490",
+            "total_tokens": 2295
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "74",
+            "total_tokens": 2292
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": false,
+            "prediction": "119",
+            "ground_truth": "18",
+            "total_tokens": 917
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": false,
+            "prediction": "38",
+            "ground_truth": "18",
+            "total_tokens": 933
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 831
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "21",
+            "total_tokens": 2287
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "15",
+            "total_tokens": 2267
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": false,
+            "prediction": "27777",
+            "ground_truth": "2",
+            "total_tokens": 761
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": false,
+            "prediction": "To arrive at the answer, we can set up an equation based on the information given in the question",
+            "ground_truth": "350",
+            "total_tokens": 1880
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": false,
+            "prediction": "495",
+            "ground_truth": "420",
+            "total_tokens": 609
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "100",
+            "total_tokens": 535
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "140",
+            "total_tokens": 769
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": false,
+            "prediction": "180",
+            "ground_truth": "67",
+            "total_tokens": 2272
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": false,
+            "prediction": "495",
+            "ground_truth": "60",
+            "total_tokens": 708
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "12",
+            "total_tokens": 2299
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": false,
+            "prediction": "90",
+            "ground_truth": "18",
+            "total_tokens": 2273
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": false,
+            "prediction": "10",
+            "ground_truth": "9",
+            "total_tokens": 2327
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "144",
+            "ground_truth": "11",
+            "total_tokens": 899
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": false,
+            "prediction": "3",
+            "ground_truth": "58",
+            "total_tokens": 906
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "56",
+            "total_tokens": 2346
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": false,
+            "prediction": "934",
+            "ground_truth": "16",
+            "total_tokens": 2273
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "24",
+            "total_tokens": 1370
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": false,
+            "prediction": "\u4f58\u8f66",
+            "ground_truth": "6",
+            "total_tokens": 11619
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": false,
+            "prediction": "14",
+            "ground_truth": "5",
+            "total_tokens": 14361
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": false,
+            "prediction": "126",
+            "ground_truth": "260",
+            "total_tokens": 14909
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "30",
+            "total_tokens": 12829
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": false,
+            "prediction": "16",
+            "ground_truth": "6",
+            "total_tokens": 13593
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "58",
+            "ground_truth": "1128",
+            "total_tokens": 8287
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "144",
+            "total_tokens": 12373
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "50",
+            "total_tokens": 13112
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": false,
+            "prediction": "\u731e\u7301",
+            "ground_truth": "1490",
+            "total_tokens": 14807
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": false,
+            "prediction": "155",
+            "ground_truth": "74",
+            "total_tokens": 13138
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": false,
+            "prediction": "36",
+            "ground_truth": "18",
+            "total_tokens": 15741
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": false,
+            "prediction": "\u8d71",
+            "ground_truth": "18",
+            "total_tokens": 12616
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "15",
+            "total_tokens": 11521
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "'numberOfTom",
+            "ground_truth": "21",
+            "total_tokens": 11360
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": false,
+            "prediction": "inquiring",
+            "ground_truth": "15",
+            "total_tokens": 13175
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": false,
+            "prediction": "aload",
+            "ground_truth": "2",
+            "total_tokens": 10838
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 11789
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": false,
+            "prediction": "195",
+            "ground_truth": "420",
+            "total_tokens": 10743
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": false,
+            "prediction": "30",
+            "ground_truth": "100",
+            "total_tokens": 8433
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 12545
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": false,
+            "prediction": "-53",
+            "ground_truth": "67",
+            "total_tokens": 5059
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": false,
+            "prediction": "300",
+            "ground_truth": "60",
+            "total_tokens": 12143
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": false,
+            "prediction": "45",
+            "ground_truth": "12",
+            "total_tokens": 15768
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": false,
+            "prediction": "that no boy and no girl stand side-by-side",
+            "ground_truth": "18",
+            "total_tokens": 12282
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": false,
+            "prediction": "10",
+            "ground_truth": "9",
+            "total_tokens": 10913
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "80",
+            "ground_truth": "11",
+            "total_tokens": 10580
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": false,
+            "prediction": "astreetassistant",
+            "ground_truth": "58",
+            "total_tokens": 15350
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": false,
+            "prediction": "80",
+            "ground_truth": "56",
+            "total_tokens": 10191
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "16",
+            "total_tokens": 11065
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": false,
+            "prediction": "sharedApplication",
+            "ground_truth": "24",
+            "total_tokens": 10519
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": false,
+            "prediction": "30",
+            "ground_truth": "6",
+            "total_tokens": 8478
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": false,
+            "prediction": "17274",
+            "ground_truth": "5",
+            "total_tokens": 8972
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 6679
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": false,
+            "prediction": "38",
+            "ground_truth": "30",
+            "total_tokens": 6242
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": false,
+            "prediction": "acey",
+            "ground_truth": "6",
+            "total_tokens": 7165
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": true,
+            "prediction": "1128",
+            "ground_truth": "1128",
+            "total_tokens": 7805
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": false,
+            "prediction": "528",
+            "ground_truth": "144",
+            "total_tokens": 5750
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "\u8d71assistant",
+            "ground_truth": "50",
+            "total_tokens": 7925
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": false,
+            "prediction": "18",
+            "ground_truth": "1490",
+            "total_tokens": 5849
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": false,
+            "prediction": "17",
+            "ground_truth": "74",
+            "total_tokens": 4235
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": false,
+            "prediction": "315",
+            "ground_truth": "18",
+            "total_tokens": 7639
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": false,
+            "prediction": "approximately 0",
+            "ground_truth": "18",
+            "total_tokens": 6487
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": false,
+            "prediction": "312",
+            "ground_truth": "15",
+            "total_tokens": 5645
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "63",
+            "ground_truth": "21",
+            "total_tokens": 5014
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": false,
+            "prediction": "(B)",
+            "ground_truth": "15",
+            "total_tokens": 7799
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": false,
+            "prediction": "12",
+            "ground_truth": "2",
+            "total_tokens": 7481
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 6531
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": false,
+            "prediction": "44",
+            "ground_truth": "420",
+            "total_tokens": 6273
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": false,
+            "prediction": "96",
+            "ground_truth": "100",
+            "total_tokens": 4430
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": false,
+            "prediction": "nal assistants are generally supportive and caring, and can provide emotional support and guidance in addition to performing tasks",
+            "ground_truth": "140",
+            "total_tokens": 4641
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": false,
+            "prediction": "/downloads",
+            "ground_truth": "67",
+            "total_tokens": 6067
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": false,
+            "prediction": "684",
+            "ground_truth": "60",
+            "total_tokens": 7576
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "12",
+            "total_tokens": 7331
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": false,
+            "prediction": "what's the best answer to the question?",
+            "ground_truth": "18",
+            "total_tokens": 5396
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": false,
+            "prediction": "11",
+            "ground_truth": "9",
+            "total_tokens": 6154
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "30",
+            "ground_truth": "11",
+            "total_tokens": 6574
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": false,
+            "prediction": "62",
+            "ground_truth": "58",
+            "total_tokens": 5050
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": false,
+            "prediction": "had to decide whether or not to run for a second term, and he decided to run for a second term after the second term had already begun",
+            "ground_truth": "56",
+            "total_tokens": 5342
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": false,
+            "prediction": "49",
+            "ground_truth": "16",
+            "total_tokens": 6414
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "24",
+            "total_tokens": 6682
+          }
+        ]
+      }
+    },
+    "math_hard": {
+      "benchmark": "math_hard",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.1,
+        "self_consistency": 0.06666666666666667,
+        "backward_cloze": 0.03333333333333333
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 2088.7,
+        "self_consistency": 14343.4,
+        "backward_cloze": 7629.310344827586
+      },
+      "oracle_accuracy": 0.13333333333333333,
+      "sc_accuracy": 0.06666666666666667,
+      "oracle_sc_gap": 0.06666666666666667,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "math_4135",
+            "correct": false,
+            "prediction": "acey",
+            "ground_truth": "20",
+            "total_tokens": 2230
+          },
+          {
+            "example_id": "math_3974",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "448",
+            "total_tokens": 2180
+          },
+          {
+            "example_id": "math_449",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "3.2",
+            "total_tokens": 2210
+          },
+          {
+            "example_id": "math_3670",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "8",
+            "total_tokens": 2157
+          },
+          {
+            "example_id": "math_3095",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "7",
+            "total_tokens": 2235
+          },
+          {
+            "example_id": "math_1878",
+            "correct": false,
+            "prediction": "szed",
+            "ground_truth": "74",
+            "total_tokens": 2205
+          },
+          {
+            "example_id": "math_2621",
+            "correct": false,
+            "prediction": "\\sqrt{101",
+            "ground_truth": "5",
+            "total_tokens": 2229
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "1820",
+            "ground_truth": "729",
+            "total_tokens": 2231
+          },
+          {
+            "example_id": "math_919",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 2177
+          },
+          {
+            "example_id": "math_4844",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "-13",
+            "total_tokens": 2252
+          },
+          {
+            "example_id": "math_4047",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "200",
+            "total_tokens": 2158
+          },
+          {
+            "example_id": "math_3286",
+            "correct": false,
+            "prediction": "7",
+            "ground_truth": "13",
+            "total_tokens": 169
+          },
+          {
+            "example_id": "math_3612",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "7",
+            "total_tokens": 2188
+          },
+          {
+            "example_id": "math_2038",
+            "correct": true,
+            "prediction": "-\\frac{\\sqrt{3",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "szed",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 2220
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 2225
+          },
+          {
+            "example_id": "math_2155",
+            "correct": false,
+            "prediction": "/slick",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 2190
+          },
+          {
+            "example_id": "math_2224",
+            "correct": false,
+            "prediction": "48",
+            "ground_truth": "25",
+            "total_tokens": 1027
+          },
+          {
+            "example_id": "math_3078",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "-221_3",
+            "total_tokens": 2175
+          },
+          {
+            "example_id": "math_1033",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "3.21",
+            "total_tokens": 2189
+          },
+          {
+            "example_id": "math_458",
+            "correct": true,
+            "prediction": "\\frac{1",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 2184
+          },
+          {
+            "example_id": "math_3750",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "264",
+            "total_tokens": 2160
+          },
+          {
+            "example_id": "math_2189",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "(23)",
+            "total_tokens": 2186
+          },
+          {
+            "example_id": "math_492",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "2",
+            "total_tokens": 2187
+          },
+          {
+            "example_id": "math_658",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "5",
+            "total_tokens": 2188
+          },
+          {
+            "example_id": "math_2243",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "1",
+            "total_tokens": 2221
+          },
+          {
+            "example_id": "math_2537",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "3",
+            "total_tokens": 2202
+          },
+          {
+            "example_id": "math_3484",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "43",
+            "total_tokens": 2182
+          },
+          {
+            "example_id": "math_3389",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "8",
+            "total_tokens": 2205
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "math_4135",
+            "correct": false,
+            "prediction": "\u73a9\u5bb6\u670b\u53cb",
+            "ground_truth": "20",
+            "total_tokens": 14741
+          },
+          {
+            "example_id": "math_3974",
+            "correct": false,
+            "prediction": "\u59af\u5a0c\u4fe9",
+            "ground_truth": "448",
+            "total_tokens": 13647
+          },
+          {
+            "example_id": "math_449",
+            "correct": false,
+            "prediction": "sch\u00fctz",
+            "ground_truth": "3.2",
+            "total_tokens": 16024
+          },
+          {
+            "example_id": "math_3670",
+            "correct": false,
+            "prediction": "creampieassistant",
+            "ground_truth": "8",
+            "total_tokens": 16860
+          },
+          {
+            "example_id": "math_3095",
+            "correct": false,
+            "prediction": ", we can ignore the 1 in front of the units digit and focus on the 83",
+            "ground_truth": "7",
+            "total_tokens": 15489
+          },
+          {
+            "example_id": "math_1878",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "74",
+            "total_tokens": 16000
+          },
+          {
+            "example_id": "math_2621",
+            "correct": false,
+            "prediction": "101^2",
+            "ground_truth": "5",
+            "total_tokens": 13492
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "1810",
+            "ground_truth": "729",
+            "total_tokens": 9925
+          },
+          {
+            "example_id": "math_919",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 13920
+          },
+          {
+            "example_id": "math_4844",
+            "correct": false,
+            "prediction": "\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053",
+            "ground_truth": "-13",
+            "total_tokens": 16073
+          },
+          {
+            "example_id": "math_4047",
+            "correct": false,
+            "prediction": "\\frac{13",
+            "ground_truth": "200",
+            "total_tokens": 8857
+          },
+          {
+            "example_id": "math_3286",
+            "correct": false,
+            "prediction": "555",
+            "ground_truth": "13",
+            "total_tokens": 13535
+          },
+          {
+            "example_id": "math_3612",
+            "correct": false,
+            "prediction": "Geile.",
+            "ground_truth": "7",
+            "total_tokens": 15031
+          },
+          {
+            "example_id": "math_2038",
+            "correct": false,
+            "prediction": "urceBundle",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 17192
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 11645
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "textContent=\"textContent\";&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&nbsp;}&",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 11976
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "10",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 17800
+          },
+          {
+            "example_id": "math_2155",
+            "correct": false,
+            "prediction": "308",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 17520
+          },
+          {
+            "example_id": "math_2224",
+            "correct": false,
+            "prediction": "\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053",
+            "ground_truth": "25",
+            "total_tokens": 17688
+          },
+          {
+            "example_id": "math_3078",
+            "correct": false,
+            "prediction": "actionPerformed",
+            "ground_truth": "-221_3",
+            "total_tokens": 10478
+          },
+          {
+            "example_id": "math_1033",
+            "correct": false,
+            "prediction": "-0.7",
+            "ground_truth": "3.21",
+            "total_tokens": 17208
+          },
+          {
+            "example_id": "math_458",
+            "correct": true,
+            "prediction": "\\frac{1",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 12930
+          },
+          {
+            "example_id": "math_3750",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "264",
+            "total_tokens": 15352
+          },
+          {
+            "example_id": "math_2189",
+            "correct": false,
+            "prediction": "cko",
+            "ground_truth": "(23)",
+            "total_tokens": 13560
+          },
+          {
+            "example_id": "math_492",
+            "correct": false,
+            "prediction": "acey",
+            "ground_truth": "2",
+            "total_tokens": 11301
+          },
+          {
+            "example_id": "math_658",
+            "correct": false,
+            "prediction": "afonef-base",
+            "ground_truth": "5",
+            "total_tokens": 12041
+          },
+          {
+            "example_id": "math_2243",
+            "correct": false,
+            "prediction": "ActivityCreated()",
+            "ground_truth": "1",
+            "total_tokens": 16197
+          },
+          {
+            "example_id": "math_2537",
+            "correct": false,
+            "prediction": "ostringstream::flusher of",
+            "ground_truth": "3",
+            "total_tokens": 13663
+          },
+          {
+            "example_id": "math_3484",
+            "correct": false,
+            "prediction": "\" << x << \"\\n\"",
+            "ground_truth": "43",
+            "total_tokens": 14303
+          },
+          {
+            "example_id": "math_3389",
+            "correct": false,
+            "prediction": "afone\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449\u0449",
+            "ground_truth": "8",
+            "total_tokens": 15854
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "math_4135",
+            "correct": false,
+            "prediction": "\u73a9\u5bb6\u670b\u53cb",
+            "ground_truth": "20",
+            "total_tokens": 8966
+          },
+          {
+            "example_id": "math_3974",
+            "correct": false,
+            "prediction": "rze",
+            "ground_truth": "448",
+            "total_tokens": 6836
+          },
+          {
+            "example_id": "math_449",
+            "correct": false,
+            "prediction": "we have $f(10) = 0",
+            "ground_truth": "3.2",
+            "total_tokens": 7203
+          },
+          {
+            "example_id": "math_3670",
+            "correct": false,
+            "prediction": "afone afone afone afone afone afone afone",
+            "ground_truth": "8",
+            "total_tokens": 8701
+          },
+          {
+            "example_id": "math_3095",
+            "correct": false,
+            "prediction": "/chatbot",
+            "ground_truth": "7",
+            "total_tokens": 5608
+          },
+          {
+            "example_id": "math_1878",
+            "correct": false,
+            "prediction": "19",
+            "ground_truth": "74",
+            "total_tokens": 7021
+          },
+          {
+            "example_id": "math_2621",
+            "correct": false,
+            "prediction": "/slick",
+            "ground_truth": "5",
+            "total_tokens": 5333
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "\u018detime",
+            "ground_truth": "729",
+            "total_tokens": 6982
+          },
+          {
+            "example_id": "math_919",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 6758
+          },
+          {
+            "example_id": "math_4844",
+            "correct": false,
+            "prediction": "oczni",
+            "ground_truth": "-13",
+            "total_tokens": 7491
+          },
+          {
+            "example_id": "math_4047",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "math_3286",
+            "correct": false,
+            "prediction": "ervletresult",
+            "ground_truth": "13",
+            "total_tokens": 8680
+          },
+          {
+            "example_id": "math_3612",
+            "correct": false,
+            "prediction": "getfield",
+            "ground_truth": "7",
+            "total_tokens": 8789
+          },
+          {
+            "example_id": "math_2038",
+            "correct": false,
+            "prediction": "urce changes: '01e21660-9185-41e1-981e-a74a989241d0'",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 8748
+          },
+          {
+            "example_id": "math_3742",
+            "correct": false,
+            "prediction": "\u731e\u7301print(count_odd_digit_numbers())",
+            "ground_truth": "625",
+            "total_tokens": 8659
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": ".externall",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 6948
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 7550
+          },
+          {
+            "example_id": "math_2155",
+            "correct": false,
+            "prediction": "afone\u0131n \u0131n \u0131 \u0131",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 6788
+          },
+          {
+            "example_id": "math_2224",
+            "correct": false,
+            "prediction": "15",
+            "ground_truth": "25",
+            "total_tokens": 8476
+          },
+          {
+            "example_id": "math_3078",
+            "correct": false,
+            "prediction": "20222_3",
+            "ground_truth": "-221_3",
+            "total_tokens": 7169
+          },
+          {
+            "example_id": "math_1033",
+            "correct": false,
+            "prediction": "ogui",
+            "ground_truth": "3.21",
+            "total_tokens": 6749
+          },
+          {
+            "example_id": "math_458",
+            "correct": false,
+            "prediction": "as a common fraction:",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 8780
+          },
+          {
+            "example_id": "math_3750",
+            "correct": false,
+            "prediction": "10",
+            "ground_truth": "264",
+            "total_tokens": 5972
+          },
+          {
+            "example_id": "math_2189",
+            "correct": false,
+            "prediction": "(0,0)",
+            "ground_truth": "(23)",
+            "total_tokens": 7300
+          },
+          {
+            "example_id": "math_492",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "2",
+            "total_tokens": 7104
+          },
+          {
+            "example_id": "math_658",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "5",
+            "total_tokens": 8789
+          },
+          {
+            "example_id": "math_2243",
+            "correct": false,
+            "prediction": "ousse",
+            "ground_truth": "1",
+            "total_tokens": 8921
+          },
+          {
+            "example_id": "math_2537",
+            "correct": true,
+            "prediction": "3",
+            "ground_truth": "3",
+            "total_tokens": 7310
+          },
+          {
+            "example_id": "math_3484",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "43",
+            "total_tokens": 8762
+          },
+          {
+            "example_id": "math_3389",
+            "correct": false,
+            "prediction": "RTHOOK",
+            "ground_truth": "8",
+            "total_tokens": 8857
+          }
+        ]
+      }
+    },
+    "strategyqa": {
+      "benchmark": "strategyqa",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.5666666666666667,
+        "self_consistency": 0.5,
+        "backward_cloze": 0.5333333333333333
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1714.1,
+        "self_consistency": 9819.733333333334,
+        "backward_cloze": 5847.733333333334
+      },
+      "oracle_accuracy": 0.8333333333333334,
+      "sc_accuracy": 0.5,
+      "oracle_sc_gap": 0.33333333333333337,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 322
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 242
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": false,
+            "prediction": "ystate",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "it is not guaranteed",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 349
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 280
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "it is not possible to tell",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 306
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "ertools",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 302
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "\u731e\u7301",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": true,
+            "prediction": "\u6864",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "it is not guaranteed",
+            "ground_truth": "no",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 306
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": false,
+            "prediction": "Sarkozy",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": false,
+            "prediction": "ycopg",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8021
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5632
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5559
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 12666
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4841
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 15185
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 15395
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5606
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 12456
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7793
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "mgruff",
+            "ground_truth": "no",
+            "total_tokens": 13518
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7248
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 13262
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 12136
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9278
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 12532
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10340
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9529
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8611
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 11830
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 12953
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 12323
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4434
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10236
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6907
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9986
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8920
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8403
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8732
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10260
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4939
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3881
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7265
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7406
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3909
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3167
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": false,
+            "prediction": "ystate",
+            "ground_truth": "yes",
+            "total_tokens": 8615
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5329
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6985
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6824
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "it is not possible to tell",
+            "ground_truth": "no",
+            "total_tokens": 4445
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": false,
+            "prediction": "A: Let's think through this step-by-step. Mayonnaise is a thick, creamy sauce made from egg yolks, oil, and vinegar. Mustard is a pungent condiment made from ground seeds of a flowering plant called the horseradish root. Mustard has a tangy, peppery flavor and often pairs well with the crunch of a sandwich. Mayonnaise, while versatile and flavorful on its own, tends to be thinner and more neutral in flavor compared to mustard. Considering both taste and texture, I would choose mustard over mayonnaise for a sandwich.",
+            "ground_truth": "yes",
+            "total_tokens": 5157
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6844
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "aceyouhave",
+            "ground_truth": "no",
+            "total_tokens": 6814
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5864
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "acey",
+            "ground_truth": "yes",
+            "total_tokens": 8635
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6807
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8615
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "acey",
+            "ground_truth": "no",
+            "total_tokens": 7665
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "uthern United States",
+            "ground_truth": "no",
+            "total_tokens": 6765
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3431
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3393
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "rz\u0105duser",
+            "ground_truth": "no",
+            "total_tokens": 7505
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4975
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3806
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": false,
+            "prediction": "\u9c86",
+            "ground_truth": "yes",
+            "total_tokens": 6997
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "that a woodpecker would not be used as a prop in the movie Doctor Strange, as it is not a traditional prop or object used in the Marvel Cinematic Universe",
+            "ground_truth": "no",
+            "total_tokens": 2297
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6694
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": false,
+            "prediction": ".rmiassistant",
+            "ground_truth": "yes",
+            "total_tokens": 6769
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3634
+          }
+        ]
+      }
+    },
+    "bbh_logic": {
+      "benchmark": "bbh_logic",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.3,
+        "self_consistency": 0.4,
+        "backward_cloze": 0.36666666666666664
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1884.1,
+        "self_consistency": 12360.733333333334,
+        "backward_cloze": 6823.357142857143
+      },
+      "oracle_accuracy": 0.7,
+      "sc_accuracy": 0.4,
+      "oracle_sc_gap": 0.29999999999999993,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": true,
+            "prediction": "the brown book must be the leftmost book on the shelf",
+            "ground_truth": "(b)",
+            "total_tokens": 289
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "(a)",
+            "total_tokens": 2220
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": false,
+            "prediction": "\u6864\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783",
+            "ground_truth": "(c)",
+            "total_tokens": 2178
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": false,
+            "prediction": "(C)",
+            "ground_truth": "(a)",
+            "total_tokens": 174
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": false,
+            "prediction": "\u6864\u0e4c",
+            "ground_truth": "(b)",
+            "total_tokens": 2184
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "Question: The following paragraphs",
+            "ground_truth": "(a)",
+            "total_tokens": 2221
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": false,
+            "prediction": "(D)",
+            "ground_truth": "(b)",
+            "total_tokens": 2225
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "(A) The black book is the",
+            "ground_truth": "(b)",
+            "total_tokens": 2241
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "(B) The cardinal is",
+            "ground_truth": "(e)",
+            "total_tokens": 2240
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": false,
+            "prediction": "\u6864\u0e4c",
+            "ground_truth": "(c)",
+            "total_tokens": 2184
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "(b)",
+            "total_tokens": 2177
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "(e)",
+            "total_tokens": 2227
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "(a)",
+            "total_tokens": 2219
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "(d)",
+            "total_tokens": 2217
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": true,
+            "prediction": "(B)",
+            "ground_truth": "(b)",
+            "total_tokens": 172
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": false,
+            "prediction": "afone",
+            "ground_truth": "(b)",
+            "total_tokens": 2178
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": false,
+            "prediction": "(B)",
+            "ground_truth": "(c)",
+            "total_tokens": 174
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "(a)",
+            "total_tokens": 2220
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": true,
+            "prediction": "(A) The green book is the",
+            "ground_truth": "(b)",
+            "total_tokens": 2241
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "(c)",
+            "total_tokens": 2229
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": false,
+            "prediction": "(C) The brown book is the",
+            "ground_truth": "(d)",
+            "total_tokens": 2239
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "(c)",
+            "total_tokens": 2218
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "the orange book must be the leftmost book on the shelf",
+            "ground_truth": "(e)",
+            "total_tokens": 277
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": false,
+            "prediction": "\u6864\u6783",
+            "ground_truth": "(e)",
+            "total_tokens": 2231
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": false,
+            "prediction": "(E",
+            "ground_truth": "(b)",
+            "total_tokens": 2224
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "(a)",
+            "total_tokens": 2227
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "(C) The gray book is the",
+            "ground_truth": "(e)",
+            "total_tokens": 2239
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": false,
+            "prediction": "\u6864\u0e4c",
+            "ground_truth": "(d)",
+            "total_tokens": 2230
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": false,
+            "prediction": "\u6864\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783\u6783",
+            "ground_truth": "(d)",
+            "total_tokens": 2189
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": true,
+            "prediction": "(E) The red book",
+            "ground_truth": "(d)",
+            "total_tokens": 2239
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": false,
+            "prediction": "rt(words",
+            "ground_truth": "(b)",
+            "total_tokens": 16853
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": true,
+            "prediction": "wa",
+            "ground_truth": "(a)",
+            "total_tokens": 10572
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": false,
+            "prediction": "\u6864\u9f57",
+            "ground_truth": "(c)",
+            "total_tokens": 12821
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": true,
+            "prediction": "(B) Mya finished second",
+            "ground_truth": "(a)",
+            "total_tokens": 9885
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": false,
+            "prediction": "\u5ab3\u00e0",
+            "ground_truth": "(b)",
+            "total_tokens": 9006
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": false,
+            "prediction": "\u6864.clf",
+            "ground_truth": "(a)",
+            "total_tokens": 16923
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": true,
+            "prediction": "nable action because albums are used to store and organize physical photographs",
+            "ground_truth": "(b)",
+            "total_tokens": 7871
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": false,
+            "prediction": "ning needed?",
+            "ground_truth": "(b)",
+            "total_tokens": 9957
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "Sentence B",
+            "ground_truth": "(e)",
+            "total_tokens": 12770
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": false,
+            "prediction": "\u6864",
+            "ground_truth": "(c)",
+            "total_tokens": 12638
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": true,
+            "prediction": "orrect answer is: (B)",
+            "ground_truth": "(b)",
+            "total_tokens": 10485
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": false,
+            "prediction": "\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f\u8d7f",
+            "ground_truth": "(e)",
+            "total_tokens": 12905
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": false,
+            "prediction": "\u6864\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6\u6ab6",
+            "ground_truth": "(a)",
+            "total_tokens": 13919
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": false,
+            "prediction": "\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053",
+            "ground_truth": "(d)",
+            "total_tokens": 15144
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": false,
+            "prediction": "3",
+            "ground_truth": "(b)",
+            "total_tokens": 14517
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": false,
+            "prediction": "upertino",
+            "ground_truth": "(b)",
+            "total_tokens": 12595
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": true,
+            "prediction": "acey",
+            "ground_truth": "(c)",
+            "total_tokens": 13337
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "(A) The raven is the leftmost",
+            "ground_truth": "(a)",
+            "total_tokens": 10628
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": true,
+            "prediction": "Geilebooks",
+            "ground_truth": "(b)",
+            "total_tokens": 8683
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": true,
+            "prediction": "Sentence B",
+            "ground_truth": "(c)",
+            "total_tokens": 13494
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": false,
+            "prediction": "\u4f58",
+            "ground_truth": "(d)",
+            "total_tokens": 12290
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": false,
+            "prediction": "\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053\u6053",
+            "ground_truth": "(c)",
+            "total_tokens": 10470
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "- A printer",
+            "ground_truth": "(e)",
+            "total_tokens": 11649
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "(C) The",
+            "ground_truth": "(e)",
+            "total_tokens": 11967
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": false,
+            "prediction": "\u6864\u6989",
+            "ground_truth": "(b)",
+            "total_tokens": 11009
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "(a)",
+            "total_tokens": 15269
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": false,
+            "prediction": "nal or cultural",
+            "ground_truth": "(e)",
+            "total_tokens": 14666
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": false,
+            "prediction": "\u897f\u73ed\u8bed",
+            "ground_truth": "(d)",
+            "total_tokens": 13291
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": true,
+            "prediction": "he sat down and waited for it to be over",
+            "ground_truth": "(d)",
+            "total_tokens": 13824
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "(d)",
+            "total_tokens": 11384
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": false,
+            "prediction": "the correct answer is (A) a group of people",
+            "ground_truth": "(b)",
+            "total_tokens": 5215
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": true,
+            "prediction": "(C) The oranges are the most expensive",
+            "ground_truth": "(a)",
+            "total_tokens": 6256
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": true,
+            "prediction": "Sentence A",
+            "ground_truth": "(c)",
+            "total_tokens": 6210
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": false,
+            "prediction": "(hObject",
+            "ground_truth": "(a)",
+            "total_tokens": 8724
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": false,
+            "prediction": "\u6864\u0e4c",
+            "ground_truth": "(b)",
+            "total_tokens": 7202
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "ap opera, where everyone is talking in a way that is really hard to understand",
+            "ground_truth": "(a)",
+            "total_tokens": 7755
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": false,
+            "prediction": "(E) The watermelons are the second-cheapest",
+            "ground_truth": "(b)",
+            "total_tokens": 6525
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "(b)",
+            "total_tokens": 9056
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": false,
+            "prediction": "\uc0db",
+            "ground_truth": "(e)",
+            "total_tokens": 7009
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": false,
+            "prediction": "\u6864a\u00e7\u00e3o",
+            "ground_truth": "(c)",
+            "total_tokens": 7151
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": true,
+            "prediction": "the correct answer is (B) Mel finished second",
+            "ground_truth": "(b)",
+            "total_tokens": 6944
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": false,
+            "prediction": "\u6482\u7740",
+            "ground_truth": "(e)",
+            "total_tokens": 5075
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": false,
+            "prediction": "\u6864\u5b50\u6811\u7684\u8fb9\u6570\u662f",
+            "ground_truth": "(a)",
+            "total_tokens": 7467
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "(C) The bus is the oldest",
+            "ground_truth": "(d)",
+            "total_tokens": 5123
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": false,
+            "prediction": "\u68ecshoulders",
+            "ground_truth": "(b)",
+            "total_tokens": 7655
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": false,
+            "prediction": ".xtext",
+            "ground_truth": "(b)",
+            "total_tokens": 5158
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": false,
+            "prediction": "n",
+            "ground_truth": "(c)",
+            "total_tokens": 4200
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "acey",
+            "ground_truth": "(a)",
+            "total_tokens": 8025
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": true,
+            "prediction": "(B) The blue book is the second from the right",
+            "ground_truth": "(b)",
+            "total_tokens": 6142
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": false,
+            "prediction": "vereign",
+            "ground_truth": "(c)",
+            "total_tokens": 9011
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "the leftmost book must be the yellow book, as there is no other book to its left",
+            "ground_truth": "(e)",
+            "total_tokens": 6968
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "Correct answer: (D) The hummingbird is the second from the right",
+            "ground_truth": "(e)",
+            "total_tokens": 7577
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": false,
+            "prediction": "inqassistant",
+            "ground_truth": "(b)",
+            "total_tokens": 5416
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": false,
+            "prediction": "\u897f\u73ed",
+            "ground_truth": "(a)",
+            "total_tokens": 9006
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": ".IsAny assistance needed? I'm here to help! Please provide the full list of five objects arranged in a fixed order from each paragraph, and I'll help you determine which option is correct.",
+            "ground_truth": "(e)",
+            "total_tokens": 6318
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": true,
+            "prediction": "me cleaning fluid on her hands to make them dirty",
+            "ground_truth": "(d)",
+            "total_tokens": 6420
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": false,
+            "prediction": "\u6864\u678f",
+            "ground_truth": "(d)",
+            "total_tokens": 8860
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": false,
+            "prediction": "\u062a\u0644\u0641\u0632\u064a\u0648\u0646",
+            "ground_truth": "(d)",
+            "total_tokens": 4586
+          }
+        ]
+      }
+    }
+  }
+}

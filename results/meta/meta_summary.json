@@ -1,0 +1,48 @@
+{
+  "max_gap": 0.33333333333333337,
+  "top_cells": [
+    {
+      "gap": 0.33333333333333337,
+      "model": "Qwen2.5-1.5B",
+      "benchmark": "strategyqa"
+    },
+    {
+      "gap": 0.30000000000000004,
+      "model": "Qwen2.5-7B",
+      "benchmark": "strategyqa"
+    },
+    {
+      "gap": 0.29999999999999993,
+      "model": "Qwen2.5-1.5B",
+      "benchmark": "bbh_logic"
+    },
+    {
+      "gap": 0.2333333333333334,
+      "model": "Qwen2.5-3B",
+      "benchmark": "strategyqa"
+    },
+    {
+      "gap": 0.23333333333333334,
+      "model": "Qwen2.5-7B",
+      "benchmark": "math_hard"
+    },
+    {
+      "gap": 0.23333333333333328,
+      "model": "Qwen2.5-3B",
+      "benchmark": "gsm8k"
+    },
+    {
+      "gap": 0.20000000000000007,
+      "model": "Qwen2.5-7B",
+      "benchmark": "bbh_logic"
+    },
+    {
+      "gap": 0.19999999999999996,
+      "model": "Qwen2.5-3B",
+      "benchmark": "bbh_logic"
+    }
+  ],
+  "cells_with_gap_ge_0.15": 8,
+  "cells_with_gap_lt_0.05": 1,
+  "decision": "PROCEED"
+}
