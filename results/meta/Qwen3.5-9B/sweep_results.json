@@ -2,656 +2,708 @@
   "model": "/openbayes/input/input0/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
   "cells": {
     "gsm8k": {
-      "benchmark": "gsm8k",
+      "n_examples": 30,
+      "oracle_accuracy": 0.9,
+      "sc_accuracy": 0.833,
+      "oracle_sc_gap": 0.067,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.733,
+        "self_consistency": 0.833,
+        "backward_cloze": 0.833
+      },
+      "per_strategy_rows": {},
+      "per_strategy_mean_tokens": {}
+    },
+    "math_hard": {
+      "n_examples": 30,
+      "oracle_accuracy": 0.5,
+      "sc_accuracy": 0.333,
+      "oracle_sc_gap": 0.167,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.267,
+        "self_consistency": 0.333,
+        "backward_cloze": 0.333
+      },
+      "per_strategy_rows": {},
+      "per_strategy_mean_tokens": {}
+    },
+    "strategyqa": {
+      "n_examples": 30,
+      "oracle_accuracy": 0.833,
+      "sc_accuracy": 0.8,
+      "oracle_sc_gap": 0.033,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.733,
+        "self_consistency": 0.8,
+        "backward_cloze": 0.633
+      },
+      "per_strategy_rows": {},
+      "per_strategy_mean_tokens": {}
+    },
+    "bbh_logic": {
+      "n_examples": 30,
+      "oracle_accuracy": 0.967,
+      "sc_accuracy": 0.7,
+      "oracle_sc_gap": 0.267,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.733,
+        "self_consistency": 0.7,
+        "backward_cloze": 0.633
+      },
+      "per_strategy_rows": {},
+      "per_strategy_mean_tokens": {}
+    },
+    "arc_challenge": {
+      "benchmark": "arc_challenge",
       "n_examples": 30,
       "per_strategy_accuracy": {
-        "standard_cot": 0.7333333333333333,
-        "self_consistency": 0.8333333333333334,
-        "backward_cloze": 0.8333333333333334
+        "standard_cot": 0.6333333333333333,
+        "self_consistency": 0.6666666666666666,
+        "backward_cloze": 0.5
       },
       "per_strategy_mean_tokens": {
-        "standard_cot": 2014.5333333333333,
-        "self_consistency": 16822.766666666666,
-        "backward_cloze": 8384.933333333332
+        "standard_cot": 1424.5666666666666,
+        "self_consistency": 12156.333333333334,
+        "backward_cloze": 6760.333333333333
       },
       "oracle_accuracy": 0.9,
-      "sc_accuracy": 0.8333333333333334,
-      "oracle_sc_gap": 0.06666666666666665,
+      "sc_accuracy": 0.6666666666666666,
+      "oracle_sc_gap": 0.2333333333333334,
       "per_strategy_rows": {
         "standard_cot": [
           {
-            "example_id": "gsm8k_101",
-            "correct": true,
-            "prediction": "6",
-            "ground_truth": "6",
-            "total_tokens": 2319
-          },
-          {
-            "example_id": "gsm8k_882",
-            "correct": false,
-            "prediction": "4",
-            "ground_truth": "5",
-            "total_tokens": 2356
-          },
-          {
-            "example_id": "gsm8k_596",
-            "correct": true,
-            "prediction": "260",
-            "ground_truth": "260",
-            "total_tokens": 2335
-          },
-          {
-            "example_id": "gsm8k_465",
-            "correct": false,
-            "prediction": "200",
-            "ground_truth": "30",
-            "total_tokens": 2315
-          },
-          {
-            "example_id": "gsm8k_543",
-            "correct": true,
-            "prediction": "6",
-            "ground_truth": "6",
-            "total_tokens": 2283
-          },
-          {
-            "example_id": "gsm8k_830",
-            "correct": false,
-            "prediction": "5",
-            "ground_truth": "1128",
-            "total_tokens": 2305
-          },
-          {
-            "example_id": "gsm8k_1093",
-            "correct": true,
-            "prediction": "144",
-            "ground_truth": "144",
-            "total_tokens": 2305
-          },
-          {
-            "example_id": "gsm8k_943",
-            "correct": false,
-            "prediction": "110",
-            "ground_truth": "50",
-            "total_tokens": 2295
-          },
-          {
-            "example_id": "gsm8k_1005",
-            "correct": true,
-            "prediction": "1490",
-            "ground_truth": "1490",
-            "total_tokens": 2302
-          },
-          {
-            "example_id": "gsm8k_895",
-            "correct": true,
-            "prediction": "74",
-            "ground_truth": "74",
-            "total_tokens": 1083
-          },
-          {
-            "example_id": "gsm8k_724",
+            "example_id": "arc_985",
             "correct": false,
             "prediction": "1",
-            "ground_truth": "18",
-            "total_tokens": 2297
-          },
-          {
-            "example_id": "gsm8k_1122",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 2119
-          },
-          {
-            "example_id": "gsm8k_660",
-            "correct": true,
-            "prediction": "15",
-            "ground_truth": "15",
-            "total_tokens": 2288
-          },
-          {
-            "example_id": "gsm8k_234",
-            "correct": false,
-            "prediction": "6",
-            "ground_truth": "21",
-            "total_tokens": 2294
-          },
-          {
-            "example_id": "gsm8k_983",
-            "correct": false,
-            "prediction": "30",
-            "ground_truth": "15",
-            "total_tokens": 2274
-          },
-          {
-            "example_id": "gsm8k_839",
-            "correct": true,
-            "prediction": "2",
-            "ground_truth": "2",
-            "total_tokens": 927
-          },
-          {
-            "example_id": "gsm8k_177",
-            "correct": true,
-            "prediction": "350",
-            "ground_truth": "350",
-            "total_tokens": 2335
-          },
-          {
-            "example_id": "gsm8k_1045",
-            "correct": true,
-            "prediction": "420",
-            "ground_truth": "420",
-            "total_tokens": 2282
-          },
-          {
-            "example_id": "gsm8k_548",
-            "correct": true,
-            "prediction": "100",
-            "ground_truth": "100",
-            "total_tokens": 1076
-          },
-          {
-            "example_id": "gsm8k_103",
-            "correct": true,
-            "prediction": "140",
-            "ground_truth": "140",
+            "ground_truth": "D",
             "total_tokens": 1327
           },
           {
-            "example_id": "gsm8k_381",
-            "correct": true,
-            "prediction": "67",
-            "ground_truth": "67",
-            "total_tokens": 2279
-          },
-          {
-            "example_id": "gsm8k_1110",
-            "correct": true,
-            "prediction": "60",
-            "ground_truth": "60",
-            "total_tokens": 2321
-          },
-          {
-            "example_id": "gsm8k_1282",
-            "correct": true,
-            "prediction": "12",
-            "ground_truth": "12",
-            "total_tokens": 2306
-          },
-          {
-            "example_id": "gsm8k_253",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 838
-          },
-          {
-            "example_id": "gsm8k_1193",
-            "correct": true,
-            "prediction": "9.00",
-            "ground_truth": "9",
-            "total_tokens": 1319
-          },
-          {
-            "example_id": "gsm8k_814",
+            "example_id": "arc_962",
             "correct": false,
-            "prediction": "3",
-            "ground_truth": "11",
-            "total_tokens": 2326
+            "prediction": "Diesel fuel",
+            "ground_truth": "B",
+            "total_tokens": 2075
           },
           {
-            "example_id": "gsm8k_99",
+            "example_id": "arc_98",
             "correct": true,
-            "prediction": "58",
-            "ground_truth": "58",
-            "total_tokens": 2324
+            "prediction": "** (B)",
+            "ground_truth": "B",
+            "total_tokens": 1587
           },
           {
-            "example_id": "gsm8k_1249",
+            "example_id": "arc_885",
             "correct": true,
-            "prediction": "56",
-            "ground_truth": "56",
-            "total_tokens": 1762
+            "prediction": "** (B) glucose",
+            "ground_truth": "B",
+            "total_tokens": 946
           },
           {
-            "example_id": "gsm8k_500",
+            "example_id": "arc_752",
             "correct": true,
-            "prediction": "16",
-            "ground_truth": "16",
-            "total_tokens": 2280
+            "prediction": "** (D)",
+            "ground_truth": "D",
+            "total_tokens": 1581
           },
           {
-            "example_id": "gsm8k_112",
+            "example_id": "arc_431",
             "correct": true,
-            "prediction": "24",
-            "ground_truth": "24",
-            "total_tokens": 1564
+            "prediction": ", please place the answer in \\boxed{}",
+            "ground_truth": "D",
+            "total_tokens": 2202
+          },
+          {
+            "example_id": "arc_638",
+            "correct": true,
+            "prediction": "Selection:** (C) mass",
+            "ground_truth": "C",
+            "total_tokens": 568
+          },
+          {
+            "example_id": "arc_594",
+            "correct": true,
+            "prediction": "(D)",
+            "ground_truth": "D",
+            "total_tokens": 1216
+          },
+          {
+            "example_id": "arc_212",
+            "correct": true,
+            "prediction": "the main reason is that rubber is a nonconductor",
+            "ground_truth": "C",
+            "total_tokens": 914
+          },
+          {
+            "example_id": "arc_1125",
+            "correct": true,
+            "prediction": "** (C)",
+            "ground_truth": "C",
+            "total_tokens": 765
+          },
+          {
+            "example_id": "arc_974",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 1057
+          },
+          {
+            "example_id": "arc_801",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "C",
+            "total_tokens": 1015
+          },
+          {
+            "example_id": "arc_879",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "B",
+            "total_tokens": 991
+          },
+          {
+            "example_id": "arc_470",
+            "correct": true,
+            "prediction": "** (D) The grasshopper is smaller than the leaf",
+            "ground_truth": "D",
+            "total_tokens": 809
+          },
+          {
+            "example_id": "arc_910",
+            "correct": true,
+            "prediction": "it is an element, not a compound",
+            "ground_truth": "D",
+            "total_tokens": 1232
+          },
+          {
+            "example_id": "arc_1080",
+            "correct": true,
+            "prediction": "urce of water pollution in coastal areas is agricultural and lawn runoff containing chemicals like fertilizers and pesticides",
+            "ground_truth": "A",
+            "total_tokens": 1517
+          },
+          {
+            "example_id": "arc_581",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 1719
+          },
+          {
+            "example_id": "arc_496",
+            "correct": true,
+            "prediction": "** (B) two dimensional representation of a three dimensional surface",
+            "ground_truth": "B",
+            "total_tokens": 907
+          },
+          {
+            "example_id": "arc_519",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "B",
+            "total_tokens": 806
+          },
+          {
+            "example_id": "arc_749",
+            "correct": true,
+            "prediction": "(C)",
+            "ground_truth": "C",
+            "total_tokens": 2132
+          },
+          {
+            "example_id": "arc_231",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 2278
+          },
+          {
+            "example_id": "arc_102",
+            "correct": true,
+            "prediction": "** (A) making fine incisions",
+            "ground_truth": "A",
+            "total_tokens": 961
+          },
+          {
+            "example_id": "arc_912",
+            "correct": false,
+            "prediction": "not the",
+            "ground_truth": "A",
+            "total_tokens": 2121
+          },
+          {
+            "example_id": "arc_502",
+            "correct": false,
+            "prediction": "\"remains the same\"",
+            "ground_truth": "C",
+            "total_tokens": 2166
+          },
+          {
+            "example_id": "arc_108",
+            "correct": true,
+            "prediction": "** (D)",
+            "ground_truth": "D",
+            "total_tokens": 1091
+          },
+          {
+            "example_id": "arc_148",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "C",
+            "total_tokens": 1345
+          },
+          {
+            "example_id": "arc_523",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "A",
+            "total_tokens": 1462
+          },
+          {
+            "example_id": "arc_607",
+            "correct": true,
+            "prediction": "** (B) the position",
+            "ground_truth": "B",
+            "total_tokens": 1962
+          },
+          {
+            "example_id": "arc_849",
+            "correct": true,
+            "prediction": "** (D)",
+            "ground_truth": "D",
+            "total_tokens": 1856
+          },
+          {
+            "example_id": "arc_830",
+            "correct": true,
+            "prediction": "(D) is the best fit",
+            "ground_truth": "D",
+            "total_tokens": 2129
           }
         ],
         "self_consistency": [
           {
-            "example_id": "gsm8k_101",
+            "example_id": "arc_985",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "D",
+            "total_tokens": 10610
+          },
+          {
+            "example_id": "arc_962",
             "correct": true,
+            "prediction": "ybean oil for bus transport in this context",
+            "ground_truth": "B",
+            "total_tokens": 16023
+          },
+          {
+            "example_id": "arc_98",
+            "correct": true,
+            "prediction": "(B)**",
+            "ground_truth": "B",
+            "total_tokens": 12695
+          },
+          {
+            "example_id": "arc_885",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "B",
+            "total_tokens": 11145
+          },
+          {
+            "example_id": "arc_752",
+            "correct": true,
+            "prediction": "D",
+            "ground_truth": "D",
+            "total_tokens": 11589
+          },
+          {
+            "example_id": "arc_431",
+            "correct": true,
+            "prediction": "** (D) The contents of the beaker can be easily separated into the original substances",
+            "ground_truth": "D",
+            "total_tokens": 14905
+          },
+          {
+            "example_id": "arc_638",
+            "correct": true,
+            "prediction": "** (C) mass",
+            "ground_truth": "C",
+            "total_tokens": 6835
+          },
+          {
+            "example_id": "arc_594",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "D",
+            "total_tokens": 13577
+          },
+          {
+            "example_id": "arc_212",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "C",
+            "total_tokens": 9064
+          },
+          {
+            "example_id": "arc_1125",
+            "correct": true,
+            "prediction": "regardless of the `/no_think` tag (which might be a user attempt to force raw output or just a typo), if they ask for step-by-step reasoning, I should summarize it safely",
+            "ground_truth": "C",
+            "total_tokens": 10283
+          },
+          {
+            "example_id": "arc_974",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "A",
+            "total_tokens": 10224
+          },
+          {
+            "example_id": "arc_801",
+            "correct": true,
+            "prediction": "C",
+            "ground_truth": "C",
+            "total_tokens": 9752
+          },
+          {
+            "example_id": "arc_879",
+            "correct": true,
+            "prediction": "(B)**",
+            "ground_truth": "B",
+            "total_tokens": 10535
+          },
+          {
+            "example_id": "arc_470",
+            "correct": true,
+            "prediction": "** (D) The grasshopper is smaller than the leaf",
+            "ground_truth": "D",
+            "total_tokens": 9147
+          },
+          {
+            "example_id": "arc_910",
+            "correct": true,
+            "prediction": "** (D) ammonia",
+            "ground_truth": "D",
+            "total_tokens": 7337
+          },
+          {
+            "example_id": "arc_1080",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "A",
+            "total_tokens": 13323
+          },
+          {
+            "example_id": "arc_581",
+            "correct": true,
+            "prediction": "(A)",
+            "ground_truth": "A",
+            "total_tokens": 14894
+          },
+          {
+            "example_id": "arc_496",
+            "correct": true,
+            "prediction": "** (B) two dimensional representation of a three dimensional surface",
+            "ground_truth": "B",
+            "total_tokens": 14323
+          },
+          {
+            "example_id": "arc_519",
+            "correct": true,
+            "prediction": "**(B) flexibility**",
+            "ground_truth": "B",
+            "total_tokens": 9772
+          },
+          {
+            "example_id": "arc_749",
+            "correct": false,
+            "prediction": "I *must* emit reasoning, but summarized",
+            "ground_truth": "C",
+            "total_tokens": 14513
+          },
+          {
+            "example_id": "arc_231",
+            "correct": true,
+            "prediction": "** (A) crop farmers",
+            "ground_truth": "A",
+            "total_tokens": 16717
+          },
+          {
+            "example_id": "arc_102",
+            "correct": true,
+            "prediction": "** (A) making fine incisions",
+            "ground_truth": "A",
+            "total_tokens": 8967
+          },
+          {
+            "example_id": "arc_912",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 9324
+          },
+          {
+            "example_id": "arc_502",
+            "correct": true,
+            "prediction": "(C)",
+            "ground_truth": "C",
+            "total_tokens": 17310
+          },
+          {
+            "example_id": "arc_108",
+            "correct": true,
+            "prediction": "(D)**",
+            "ground_truth": "D",
+            "total_tokens": 10473
+          },
+          {
+            "example_id": "arc_148",
+            "correct": false,
             "prediction": "6",
-            "ground_truth": "6",
-            "total_tokens": 15148
+            "ground_truth": "C",
+            "total_tokens": 10563
           },
           {
-            "example_id": "gsm8k_882",
-            "correct": true,
-            "prediction": "5",
-            "ground_truth": "5",
-            "total_tokens": 17297
-          },
-          {
-            "example_id": "gsm8k_596",
-            "correct": true,
-            "prediction": "260",
-            "ground_truth": "260",
-            "total_tokens": 17069
-          },
-          {
-            "example_id": "gsm8k_465",
-            "correct": true,
-            "prediction": "30",
-            "ground_truth": "30",
-            "total_tokens": 16167
-          },
-          {
-            "example_id": "gsm8k_543",
-            "correct": true,
-            "prediction": "6",
-            "ground_truth": "6",
-            "total_tokens": 16169
-          },
-          {
-            "example_id": "gsm8k_830",
+            "example_id": "arc_523",
             "correct": false,
-            "prediction": "18",
-            "ground_truth": "1128",
-            "total_tokens": 18440
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 11164
           },
           {
-            "example_id": "gsm8k_1093",
-            "correct": true,
-            "prediction": "144",
-            "ground_truth": "144",
-            "total_tokens": 16725
-          },
-          {
-            "example_id": "gsm8k_943",
+            "example_id": "arc_607",
             "correct": false,
-            "prediction": "40",
-            "ground_truth": "50",
-            "total_tokens": 18360
+            "prediction": "Position",
+            "ground_truth": "B",
+            "total_tokens": 15760
           },
           {
-            "example_id": "gsm8k_1005",
+            "example_id": "arc_849",
             "correct": true,
-            "prediction": "1490",
-            "ground_truth": "1490",
-            "total_tokens": 18121
+            "prediction": "different",
+            "ground_truth": "D",
+            "total_tokens": 16834
           },
           {
-            "example_id": "gsm8k_895",
-            "correct": true,
-            "prediction": "74",
-            "ground_truth": "74",
-            "total_tokens": 16201
-          },
-          {
-            "example_id": "gsm8k_724",
+            "example_id": "arc_830",
             "correct": false,
-            "prediction": "2",
-            "ground_truth": "18",
-            "total_tokens": 18376
-          },
-          {
-            "example_id": "gsm8k_1122",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 17871
-          },
-          {
-            "example_id": "gsm8k_660",
-            "correct": true,
-            "prediction": "15",
-            "ground_truth": "15",
-            "total_tokens": 17680
-          },
-          {
-            "example_id": "gsm8k_234",
-            "correct": false,
-            "prediction": "14",
-            "ground_truth": "21",
-            "total_tokens": 17656
-          },
-          {
-            "example_id": "gsm8k_983",
-            "correct": true,
-            "prediction": "15",
-            "ground_truth": "15",
-            "total_tokens": 17041
-          },
-          {
-            "example_id": "gsm8k_839",
-            "correct": true,
-            "prediction": "2",
-            "ground_truth": "2",
-            "total_tokens": 15677
-          },
-          {
-            "example_id": "gsm8k_177",
-            "correct": true,
-            "prediction": "350",
-            "ground_truth": "350",
-            "total_tokens": 18219
-          },
-          {
-            "example_id": "gsm8k_1045",
-            "correct": true,
-            "prediction": "420",
-            "ground_truth": "420",
-            "total_tokens": 17671
-          },
-          {
-            "example_id": "gsm8k_548",
-            "correct": true,
-            "prediction": "100",
-            "ground_truth": "100",
-            "total_tokens": 13107
-          },
-          {
-            "example_id": "gsm8k_103",
-            "correct": true,
-            "prediction": "140",
-            "ground_truth": "140",
-            "total_tokens": 14236
-          },
-          {
-            "example_id": "gsm8k_381",
-            "correct": true,
-            "prediction": "67",
-            "ground_truth": "67",
-            "total_tokens": 16261
-          },
-          {
-            "example_id": "gsm8k_1110",
-            "correct": true,
-            "prediction": "60",
-            "ground_truth": "60",
-            "total_tokens": 17522
-          },
-          {
-            "example_id": "gsm8k_1282",
-            "correct": true,
-            "prediction": "12",
-            "ground_truth": "12",
-            "total_tokens": 16105
-          },
-          {
-            "example_id": "gsm8k_253",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 15066
-          },
-          {
-            "example_id": "gsm8k_1193",
-            "correct": true,
-            "prediction": "9.00",
-            "ground_truth": "9",
-            "total_tokens": 17346
-          },
-          {
-            "example_id": "gsm8k_814",
-            "correct": false,
-            "prediction": "17",
-            "ground_truth": "11",
-            "total_tokens": 18608
-          },
-          {
-            "example_id": "gsm8k_99",
-            "correct": true,
-            "prediction": "58",
-            "ground_truth": "58",
-            "total_tokens": 16854
-          },
-          {
-            "example_id": "gsm8k_1249",
-            "correct": true,
-            "prediction": "56",
-            "ground_truth": "56",
-            "total_tokens": 17426
-          },
-          {
-            "example_id": "gsm8k_500",
-            "correct": true,
-            "prediction": "16",
-            "ground_truth": "16",
-            "total_tokens": 17175
-          },
-          {
-            "example_id": "gsm8k_112",
-            "correct": true,
-            "prediction": "24",
-            "ground_truth": "24",
-            "total_tokens": 15089
+            "prediction": "\"Law of Inertia\"",
+            "ground_truth": "D",
+            "total_tokens": 17032
           }
         ],
         "backward_cloze": [
           {
-            "example_id": "gsm8k_101",
-            "correct": true,
-            "prediction": "6",
-            "ground_truth": "6",
-            "total_tokens": 8094
-          },
-          {
-            "example_id": "gsm8k_882",
-            "correct": true,
-            "prediction": "5",
-            "ground_truth": "5",
-            "total_tokens": 9366
-          },
-          {
-            "example_id": "gsm8k_596",
-            "correct": true,
-            "prediction": "260",
-            "ground_truth": "260",
-            "total_tokens": 8860
-          },
-          {
-            "example_id": "gsm8k_465",
-            "correct": true,
-            "prediction": "30",
-            "ground_truth": "30",
-            "total_tokens": 8712
-          },
-          {
-            "example_id": "gsm8k_543",
-            "correct": true,
-            "prediction": "6",
-            "ground_truth": "6",
-            "total_tokens": 8468
-          },
-          {
-            "example_id": "gsm8k_830",
+            "example_id": "arc_985",
             "correct": false,
-            "prediction": "5",
-            "ground_truth": "1128",
-            "total_tokens": 9162
+            "prediction": "1",
+            "ground_truth": "D",
+            "total_tokens": 5772
           },
           {
-            "example_id": "gsm8k_1093",
+            "example_id": "arc_962",
             "correct": true,
-            "prediction": "144",
-            "ground_truth": "144",
-            "total_tokens": 8698
+            "prediction": "Biogas? Some sources might use \"Biofuel\" generally",
+            "ground_truth": "B",
+            "total_tokens": 8723
           },
           {
-            "example_id": "gsm8k_943",
-            "correct": true,
-            "prediction": "50",
-            "ground_truth": "50",
-            "total_tokens": 9125
-          },
-          {
-            "example_id": "gsm8k_1005",
-            "correct": true,
-            "prediction": "1490",
-            "ground_truth": "1490",
-            "total_tokens": 9159
-          },
-          {
-            "example_id": "gsm8k_895",
-            "correct": true,
-            "prediction": "74",
-            "ground_truth": "74",
-            "total_tokens": 7910
-          },
-          {
-            "example_id": "gsm8k_724",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 9133
-          },
-          {
-            "example_id": "gsm8k_1122",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 9301
-          },
-          {
-            "example_id": "gsm8k_660",
+            "example_id": "arc_98",
             "correct": false,
-            "prediction": "20",
-            "ground_truth": "15",
-            "total_tokens": 9097
+            "prediction": "1",
+            "ground_truth": "B",
+            "total_tokens": 6518
           },
           {
-            "example_id": "gsm8k_234",
-            "correct": false,
-            "prediction": "14",
-            "ground_truth": "21",
-            "total_tokens": 8451
-          },
-          {
-            "example_id": "gsm8k_983",
+            "example_id": "arc_885",
             "correct": true,
-            "prediction": "15",
-            "ground_truth": "15",
-            "total_tokens": 7152
+            "prediction": "** (B) glucose",
+            "ground_truth": "B",
+            "total_tokens": 6756
           },
           {
-            "example_id": "gsm8k_839",
+            "example_id": "arc_752",
             "correct": true,
-            "prediction": "2",
-            "ground_truth": "2",
-            "total_tokens": 7414
+            "prediction": "urce of Atmospheric Oxygen:** The buildup of oxygen in Earth's atmosphere is primarily attributed to the evolution of photosynthetic organisms (such as cyanobacteria)",
+            "ground_truth": "D",
+            "total_tokens": 6568
           },
           {
-            "example_id": "gsm8k_177",
+            "example_id": "arc_431",
+            "correct": true,
+            "prediction": "(D)",
+            "ground_truth": "D",
+            "total_tokens": 7245
+          },
+          {
+            "example_id": "arc_638",
             "correct": false,
-            "prediction": "1250",
-            "ground_truth": "350",
+            "prediction": "with the step-by-step explanation requested by the prompt (\"Let's think step by step\")",
+            "ground_truth": "C",
+            "total_tokens": 4845
+          },
+          {
+            "example_id": "arc_594",
+            "correct": true,
+            "prediction": "(D)",
+            "ground_truth": "D",
+            "total_tokens": 6251
+          },
+          {
+            "example_id": "arc_212",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "C",
+            "total_tokens": 5371
+          },
+          {
+            "example_id": "arc_1125",
+            "correct": false,
+            "prediction": "standard",
+            "ground_truth": "C",
+            "total_tokens": 6422
+          },
+          {
+            "example_id": "arc_974",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 5620
+          },
+          {
+            "example_id": "arc_801",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "C",
+            "total_tokens": 6361
+          },
+          {
+            "example_id": "arc_879",
+            "correct": false,
+            "prediction": "ning:**",
+            "ground_truth": "B",
+            "total_tokens": 5327
+          },
+          {
+            "example_id": "arc_470",
+            "correct": false,
+            "prediction": "nal feelings or opinions",
+            "ground_truth": "D",
+            "total_tokens": 8504
+          },
+          {
+            "example_id": "arc_910",
+            "correct": true,
+            "prediction": "** (D) ammonia",
+            "ground_truth": "D",
+            "total_tokens": 4363
+          },
+          {
+            "example_id": "arc_1080",
+            "correct": true,
+            "prediction": "lid waste",
+            "ground_truth": "A",
+            "total_tokens": 7158
+          },
+          {
+            "example_id": "arc_581",
+            "correct": true,
+            "prediction": "** **(A)**",
+            "ground_truth": "A",
+            "total_tokens": 7264
+          },
+          {
+            "example_id": "arc_496",
+            "correct": true,
+            "prediction": "** (B) two dimensional representation of a three dimensional surface",
+            "ground_truth": "B",
+            "total_tokens": 7095
+          },
+          {
+            "example_id": "arc_519",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "B",
+            "total_tokens": 5799
+          },
+          {
+            "example_id": "arc_749",
+            "correct": true,
+            "prediction": "clearly",
+            "ground_truth": "C",
+            "total_tokens": 7209
+          },
+          {
+            "example_id": "arc_231",
+            "correct": true,
+            "prediction": "line or simply sell a blend, but the text frames ethanol as an alternative to conserve gasoline supply, implying a shift away from pure oil dependency",
+            "ground_truth": "A",
             "total_tokens": 9291
           },
           {
-            "example_id": "gsm8k_1045",
+            "example_id": "arc_102",
             "correct": true,
-            "prediction": "420",
-            "ground_truth": "420",
-            "total_tokens": 8871
+            "prediction": "** (A) making fine incisions",
+            "ground_truth": "A",
+            "total_tokens": 5793
           },
           {
-            "example_id": "gsm8k_548",
-            "correct": true,
-            "prediction": "100",
-            "ground_truth": "100",
-            "total_tokens": 6566
-          },
-          {
-            "example_id": "gsm8k_103",
-            "correct": true,
-            "prediction": "140",
-            "ground_truth": "140",
-            "total_tokens": 6393
-          },
-          {
-            "example_id": "gsm8k_381",
-            "correct": true,
-            "prediction": "67",
-            "ground_truth": "67",
-            "total_tokens": 6542
-          },
-          {
-            "example_id": "gsm8k_1110",
-            "correct": true,
-            "prediction": "60",
-            "ground_truth": "60",
-            "total_tokens": 8722
-          },
-          {
-            "example_id": "gsm8k_1282",
-            "correct": true,
-            "prediction": "12",
-            "ground_truth": "12",
-            "total_tokens": 8357
-          },
-          {
-            "example_id": "gsm8k_253",
-            "correct": true,
-            "prediction": "18",
-            "ground_truth": "18",
-            "total_tokens": 6541
-          },
-          {
-            "example_id": "gsm8k_1193",
-            "correct": true,
-            "prediction": "9.00",
-            "ground_truth": "9",
-            "total_tokens": 9287
-          },
-          {
-            "example_id": "gsm8k_814",
+            "example_id": "arc_912",
             "correct": false,
-            "prediction": "240",
-            "ground_truth": "11",
-            "total_tokens": 9252
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 6323
           },
           {
-            "example_id": "gsm8k_99",
-            "correct": true,
-            "prediction": "58",
-            "ground_truth": "58",
-            "total_tokens": 8539
+            "example_id": "arc_502",
+            "correct": false,
+            "prediction": "It remains the same",
+            "ground_truth": "C",
+            "total_tokens": 8771
           },
           {
-            "example_id": "gsm8k_1249",
+            "example_id": "arc_108",
             "correct": true,
-            "prediction": "56",
-            "ground_truth": "56",
-            "total_tokens": 9165
+            "prediction": "(D)",
+            "ground_truth": "D",
+            "total_tokens": 6025
           },
           {
-            "example_id": "gsm8k_500",
-            "correct": true,
-            "prediction": "16",
-            "ground_truth": "16",
-            "total_tokens": 8476
+            "example_id": "arc_148",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "C",
+            "total_tokens": 5694
           },
           {
-            "example_id": "gsm8k_112",
+            "example_id": "arc_523",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "A",
+            "total_tokens": 6063
+          },
+          {
+            "example_id": "arc_607",
+            "correct": false,
+            "prediction": "Direction",
+            "ground_truth": "B",
+            "total_tokens": 8361
+          },
+          {
+            "example_id": "arc_849",
             "correct": true,
-            "prediction": "24",
-            "ground_truth": "24",
-            "total_tokens": 7444
+            "prediction": "ning: All cells contain DNA",
+            "ground_truth": "D",
+            "total_tokens": 8677
+          },
+          {
+            "example_id": "arc_830",
+            "correct": true,
+            "prediction": "ciated with motion, but it's Newton's",
+            "ground_truth": "D",
+            "total_tokens": 8641
           }
         ]
       }

@@ -1,0 +1,3280 @@
+{
+  "model": "/openbayes/input/input0/hub/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218",
+  "cells": {
+    "gsm8k": {
+      "benchmark": "gsm8k",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.9333333333333333,
+        "self_consistency": 0.9333333333333333,
+        "backward_cloze": 0.9333333333333333
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 477.6666666666667,
+        "self_consistency": 3830.2,
+        "backward_cloze": 2120.9
+      },
+      "oracle_accuracy": 0.9333333333333333,
+      "sc_accuracy": 0.9333333333333333,
+      "oracle_sc_gap": 0.0,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 402
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 779
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 481
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "**30**",
+            "ground_truth": "30",
+            "total_tokens": 499
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "$6",
+            "ground_truth": "6",
+            "total_tokens": 349
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "** Britany spends **1,128 minutes** (or **18",
+            "ground_truth": "1128",
+            "total_tokens": 569
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "$144",
+            "ground_truth": "144",
+            "total_tokens": 516
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": true,
+            "prediction": "50",
+            "ground_truth": "50",
+            "total_tokens": 477
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "**1490**",
+            "ground_truth": "1490",
+            "total_tokens": 511
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 362
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 537
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "**18**",
+            "ground_truth": "18",
+            "total_tokens": 724
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 505
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": true,
+            "prediction": "21",
+            "ground_truth": "21",
+            "total_tokens": 394
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 334
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 355
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "**350**",
+            "ground_truth": "350",
+            "total_tokens": 708
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 443
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 302
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 401
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 359
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "**60**",
+            "ground_truth": "60",
+            "total_tokens": 544
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "$12",
+            "ground_truth": "12",
+            "total_tokens": 468
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 324
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": true,
+            "prediction": "$9",
+            "ground_truth": "9",
+            "total_tokens": 524
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "3",
+            "ground_truth": "11",
+            "total_tokens": 593
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 493
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 553
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 408
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 416
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 3252
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 6146
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 3874
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "**30**",
+            "ground_truth": "30",
+            "total_tokens": 3991
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "$6",
+            "ground_truth": "6",
+            "total_tokens": 2859
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "** Britany spends **1,128 minutes** (or **18",
+            "ground_truth": "1128",
+            "total_tokens": 4533
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "$144",
+            "ground_truth": "144",
+            "total_tokens": 4268
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": true,
+            "prediction": "50",
+            "ground_truth": "50",
+            "total_tokens": 3725
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 3894
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 2933
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 4399
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "The fifth worker produces **18 toys per hour**",
+            "ground_truth": "18",
+            "total_tokens": 5797
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 3955
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": true,
+            "prediction": "21",
+            "ground_truth": "21",
+            "total_tokens": 3143
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 2607
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 2866
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "**350**",
+            "ground_truth": "350",
+            "total_tokens": 5611
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 3593
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 2446
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 3061
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 2991
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 4041
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "$12",
+            "ground_truth": "12",
+            "total_tokens": 3668
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 2548
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": true,
+            "prediction": "$9",
+            "ground_truth": "9",
+            "total_tokens": 4236
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "**17**",
+            "ground_truth": "11",
+            "total_tokens": 5273
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 3821
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "**56**",
+            "ground_truth": "56",
+            "total_tokens": 4687
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 3600
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 3088
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 1904
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "**5**",
+            "ground_truth": "5",
+            "total_tokens": 3052
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 2367
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "**30**",
+            "ground_truth": "30",
+            "total_tokens": 2102
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "$6",
+            "ground_truth": "6",
+            "total_tokens": 1513
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "** Britany spends **1,128 minutes** (or **18",
+            "ground_truth": "1128",
+            "total_tokens": 2464
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "$144",
+            "ground_truth": "144",
+            "total_tokens": 2303
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": true,
+            "prediction": "50",
+            "ground_truth": "50",
+            "total_tokens": 2176
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 2239
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 1589
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "**18**",
+            "ground_truth": "18",
+            "total_tokens": 2315
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "** The fifth worker produces **18 toys per hour**",
+            "ground_truth": "18",
+            "total_tokens": 2710
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 1968
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": true,
+            "prediction": "21",
+            "ground_truth": "21",
+            "total_tokens": 1760
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 1578
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 1610
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "**350**",
+            "ground_truth": "350",
+            "total_tokens": 3192
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 1772
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 1358
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 1715
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 1833
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "**60**",
+            "ground_truth": "60",
+            "total_tokens": 2666
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "$12",
+            "ground_truth": "12",
+            "total_tokens": 1894
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 1286
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": true,
+            "prediction": "$9",
+            "ground_truth": "9",
+            "total_tokens": 2194
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "$17",
+            "ground_truth": "11",
+            "total_tokens": 4136
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 2046
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 2458
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 1656
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 1771
+          }
+        ]
+      }
+    },
+    "math_hard": {
+      "benchmark": "math_hard",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.8,
+        "self_consistency": 0.8333333333333334,
+        "backward_cloze": 0.8333333333333334
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 959.4666666666667,
+        "self_consistency": 7409.133333333333,
+        "backward_cloze": 4028.5333333333333
+      },
+      "oracle_accuracy": 0.8666666666666667,
+      "sc_accuracy": 0.8333333333333334,
+      "oracle_sc_gap": 0.033333333333333326,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "math_4135",
+            "correct": true,
+            "prediction": "20",
+            "ground_truth": "20",
+            "total_tokens": 592
+          },
+          {
+            "example_id": "math_3974",
+            "correct": true,
+            "prediction": "448",
+            "ground_truth": "448",
+            "total_tokens": 777
+          },
+          {
+            "example_id": "math_449",
+            "correct": true,
+            "prediction": "3.2",
+            "ground_truth": "3.2",
+            "total_tokens": 709
+          },
+          {
+            "example_id": "math_3670",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 432
+          },
+          {
+            "example_id": "math_3095",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 1033
+          },
+          {
+            "example_id": "math_1878",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 713
+          },
+          {
+            "example_id": "math_2621",
+            "correct": false,
+            "prediction": "the maximum occurs at:",
+            "ground_truth": "5",
+            "total_tokens": 2229
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "520",
+            "ground_truth": "729",
+            "total_tokens": 798
+          },
+          {
+            "example_id": "math_919",
+            "correct": true,
+            "prediction": "-\\frac{10",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 611
+          },
+          {
+            "example_id": "math_4844",
+            "correct": true,
+            "prediction": "-13",
+            "ground_truth": "-13",
+            "total_tokens": 776
+          },
+          {
+            "example_id": "math_4047",
+            "correct": true,
+            "prediction": "200",
+            "ground_truth": "200",
+            "total_tokens": 418
+          },
+          {
+            "example_id": "math_3286",
+            "correct": true,
+            "prediction": "13",
+            "ground_truth": "13",
+            "total_tokens": 1096
+          },
+          {
+            "example_id": "math_3612",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 600
+          },
+          {
+            "example_id": "math_2038",
+            "correct": false,
+            "prediction": "-\\frac{1",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 424
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 448
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "3",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 1463
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "\\frac{1 + \\sqrt{5",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 1208
+          },
+          {
+            "example_id": "math_2155",
+            "correct": true,
+            "prediction": "\\frac{\\sqrt{11",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 1896
+          },
+          {
+            "example_id": "math_2224",
+            "correct": true,
+            "prediction": "25",
+            "ground_truth": "25",
+            "total_tokens": 2125
+          },
+          {
+            "example_id": "math_3078",
+            "correct": true,
+            "prediction": "-221_3",
+            "ground_truth": "-221_3",
+            "total_tokens": 704
+          },
+          {
+            "example_id": "math_1033",
+            "correct": true,
+            "prediction": "3.21",
+            "ground_truth": "3.21",
+            "total_tokens": 508
+          },
+          {
+            "example_id": "math_458",
+            "correct": true,
+            "prediction": "\\frac{1",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 733
+          },
+          {
+            "example_id": "math_3750",
+            "correct": true,
+            "prediction": "264",
+            "ground_truth": "264",
+            "total_tokens": 936
+          },
+          {
+            "example_id": "math_2189",
+            "correct": true,
+            "prediction": "(a, b) = (2, 3)",
+            "ground_truth": "(23)",
+            "total_tokens": 895
+          },
+          {
+            "example_id": "math_492",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 667
+          },
+          {
+            "example_id": "math_658",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 398
+          },
+          {
+            "example_id": "math_2243",
+            "correct": false,
+            "prediction": "the expression is not a telescoping difference",
+            "ground_truth": "1",
+            "total_tokens": 2221
+          },
+          {
+            "example_id": "math_2537",
+            "correct": true,
+            "prediction": "3",
+            "ground_truth": "3",
+            "total_tokens": 1666
+          },
+          {
+            "example_id": "math_3484",
+            "correct": true,
+            "prediction": "43",
+            "ground_truth": "43",
+            "total_tokens": 864
+          },
+          {
+            "example_id": "math_3389",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 844
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "math_4135",
+            "correct": true,
+            "prediction": "20",
+            "ground_truth": "20",
+            "total_tokens": 5069
+          },
+          {
+            "example_id": "math_3974",
+            "correct": true,
+            "prediction": "448",
+            "ground_truth": "448",
+            "total_tokens": 6327
+          },
+          {
+            "example_id": "math_449",
+            "correct": true,
+            "prediction": "3.2",
+            "ground_truth": "3.2",
+            "total_tokens": 5037
+          },
+          {
+            "example_id": "math_3670",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 4363
+          },
+          {
+            "example_id": "math_3095",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 8104
+          },
+          {
+            "example_id": "math_1878",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 6347
+          },
+          {
+            "example_id": "math_2621",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 12191
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "520",
+            "ground_truth": "729",
+            "total_tokens": 7922
+          },
+          {
+            "example_id": "math_919",
+            "correct": true,
+            "prediction": "-\\frac{10",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 5024
+          },
+          {
+            "example_id": "math_4844",
+            "correct": true,
+            "prediction": "-13",
+            "ground_truth": "-13",
+            "total_tokens": 6820
+          },
+          {
+            "example_id": "math_4047",
+            "correct": true,
+            "prediction": "200",
+            "ground_truth": "200",
+            "total_tokens": 3407
+          },
+          {
+            "example_id": "math_3286",
+            "correct": true,
+            "prediction": "13",
+            "ground_truth": "13",
+            "total_tokens": 6721
+          },
+          {
+            "example_id": "math_3612",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 4623
+          },
+          {
+            "example_id": "math_2038",
+            "correct": false,
+            "prediction": "-\\frac{1",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 3101
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 3465
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 13587
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "\\frac{1 + \\sqrt{5",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 13184
+          },
+          {
+            "example_id": "math_2155",
+            "correct": true,
+            "prediction": "\\frac{\\sqrt{11",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 12685
+          },
+          {
+            "example_id": "math_2224",
+            "correct": true,
+            "prediction": "25",
+            "ground_truth": "25",
+            "total_tokens": 16447
+          },
+          {
+            "example_id": "math_3078",
+            "correct": false,
+            "prediction": "-1000_3",
+            "ground_truth": "-221_3",
+            "total_tokens": 6434
+          },
+          {
+            "example_id": "math_1033",
+            "correct": true,
+            "prediction": "3.21",
+            "ground_truth": "3.21",
+            "total_tokens": 4161
+          },
+          {
+            "example_id": "math_458",
+            "correct": true,
+            "prediction": "\\frac{1",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 6450
+          },
+          {
+            "example_id": "math_3750",
+            "correct": true,
+            "prediction": "264",
+            "ground_truth": "264",
+            "total_tokens": 7016
+          },
+          {
+            "example_id": "math_2189",
+            "correct": true,
+            "prediction": "(a, b) = (2, 3)",
+            "ground_truth": "(23)",
+            "total_tokens": 7300
+          },
+          {
+            "example_id": "math_492",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 5433
+          },
+          {
+            "example_id": "math_658",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 3004
+          },
+          {
+            "example_id": "math_2243",
+            "correct": true,
+            "prediction": "1",
+            "ground_truth": "1",
+            "total_tokens": 15047
+          },
+          {
+            "example_id": "math_2537",
+            "correct": true,
+            "prediction": "3",
+            "ground_truth": "3",
+            "total_tokens": 9026
+          },
+          {
+            "example_id": "math_3484",
+            "correct": true,
+            "prediction": "43",
+            "ground_truth": "43",
+            "total_tokens": 6807
+          },
+          {
+            "example_id": "math_3389",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 7172
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "math_4135",
+            "correct": true,
+            "prediction": "20",
+            "ground_truth": "20",
+            "total_tokens": 2605
+          },
+          {
+            "example_id": "math_3974",
+            "correct": true,
+            "prediction": "448",
+            "ground_truth": "448",
+            "total_tokens": 3239
+          },
+          {
+            "example_id": "math_449",
+            "correct": true,
+            "prediction": "3.2",
+            "ground_truth": "3.2",
+            "total_tokens": 3071
+          },
+          {
+            "example_id": "math_3670",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 2596
+          },
+          {
+            "example_id": "math_3095",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 4638
+          },
+          {
+            "example_id": "math_1878",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 3182
+          },
+          {
+            "example_id": "math_2621",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 6712
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "520",
+            "ground_truth": "729",
+            "total_tokens": 5065
+          },
+          {
+            "example_id": "math_919",
+            "correct": true,
+            "prediction": "-\\frac{10",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 3358
+          },
+          {
+            "example_id": "math_4844",
+            "correct": true,
+            "prediction": "-13",
+            "ground_truth": "-13",
+            "total_tokens": 3933
+          },
+          {
+            "example_id": "math_4047",
+            "correct": true,
+            "prediction": "200",
+            "ground_truth": "200",
+            "total_tokens": 2125
+          },
+          {
+            "example_id": "math_3286",
+            "correct": true,
+            "prediction": "13",
+            "ground_truth": "13",
+            "total_tokens": 3485
+          },
+          {
+            "example_id": "math_3612",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 2415
+          },
+          {
+            "example_id": "math_2038",
+            "correct": false,
+            "prediction": "-\\frac{1",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 1757
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 1893
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "1",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 7842
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "f(1) = 1",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 7759
+          },
+          {
+            "example_id": "math_2155",
+            "correct": true,
+            "prediction": "\\frac{\\sqrt{11",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 6120
+          },
+          {
+            "example_id": "math_2224",
+            "correct": true,
+            "prediction": "25",
+            "ground_truth": "25",
+            "total_tokens": 7731
+          },
+          {
+            "example_id": "math_3078",
+            "correct": true,
+            "prediction": "-221_3",
+            "ground_truth": "-221_3",
+            "total_tokens": 4234
+          },
+          {
+            "example_id": "math_1033",
+            "correct": true,
+            "prediction": "3.21",
+            "ground_truth": "3.21",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "math_458",
+            "correct": true,
+            "prediction": "\\frac{1",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 3304
+          },
+          {
+            "example_id": "math_3750",
+            "correct": true,
+            "prediction": "264",
+            "ground_truth": "264",
+            "total_tokens": 3327
+          },
+          {
+            "example_id": "math_2189",
+            "correct": true,
+            "prediction": "(a, b) = (2, 3)",
+            "ground_truth": "(23)",
+            "total_tokens": 3503
+          },
+          {
+            "example_id": "math_492",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 3003
+          },
+          {
+            "example_id": "math_658",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 1725
+          },
+          {
+            "example_id": "math_2243",
+            "correct": false,
+            "prediction": "the sum is:",
+            "ground_truth": "1",
+            "total_tokens": 8178
+          },
+          {
+            "example_id": "math_2537",
+            "correct": true,
+            "prediction": "3",
+            "ground_truth": "3",
+            "total_tokens": 3572
+          },
+          {
+            "example_id": "math_3484",
+            "correct": true,
+            "prediction": "43",
+            "ground_truth": "43",
+            "total_tokens": 4503
+          },
+          {
+            "example_id": "math_3389",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 3836
+          }
+        ]
+      }
+    },
+    "strategyqa": {
+      "benchmark": "strategyqa",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.8,
+        "self_consistency": 0.7666666666666667,
+        "backward_cloze": 0.8
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 194.86666666666667,
+        "self_consistency": 1603.6333333333334,
+        "backward_cloze": 977.2333333333333
+      },
+      "oracle_accuracy": 0.8,
+      "sc_accuracy": 0.7666666666666667,
+      "oracle_sc_gap": 0.033333333333333326,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "potentially yes, but it is not a guaranteed outcome",
+            "ground_truth": "yes",
+            "total_tokens": 279
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 173
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 228
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 172
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": false,
+            "prediction": "yes, it would be unusual",
+            "ground_truth": "yes",
+            "total_tokens": 187
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 158
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 161
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 210
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 155
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": true,
+            "prediction": "No, you cannot make the kitchen 'holy trinity' without celery, as it is one of the three required ingredients",
+            "ground_truth": "no",
+            "total_tokens": 227
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 230
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 160
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 176
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 215
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 187
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 218
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "not a simple \"yes\" or \"no,\" but rather a nuanced consideration of their respective strengths",
+            "ground_truth": "no",
+            "total_tokens": 281
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": false,
+            "prediction": "partially yes, but not entirely",
+            "ground_truth": "yes",
+            "total_tokens": 214
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 189
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 188
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 171
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 177
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 182
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 183
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 174
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 181
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 239
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 212
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 154
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 165
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2105
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1328
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1843
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1267
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": false,
+            "prediction": "yes, it would be unusual",
+            "ground_truth": "yes",
+            "total_tokens": 1487
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1217
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1638
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1801
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1271
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": true,
+            "prediction": "No, you cannot make the kitchen 'holy trinity' without celery, as it is one of the three required ingredients",
+            "ground_truth": "no",
+            "total_tokens": 1784
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2290
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1336
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1456
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1740
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1469
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1856
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2287
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1619
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1464
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1487
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 1399
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1371
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1466
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1440
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1535
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1516
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2367
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1793
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1228
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1249
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "that it is possible, but not certain",
+            "ground_truth": "yes",
+            "total_tokens": 1429
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 734
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1025
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 773
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": false,
+            "prediction": "yes, it would be unusual",
+            "ground_truth": "yes",
+            "total_tokens": 953
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 803
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 850
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1007
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 730
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": true,
+            "prediction": "No, you cannot make the kitchen 'holy trinity' without celery, because celery is one of the three essential components",
+            "ground_truth": "no",
+            "total_tokens": 1300
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "that the question is confusing and does not provide a clear comparison",
+            "ground_truth": "no",
+            "total_tokens": 1505
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 724
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 872
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1102
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 958
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "uncertain based on the information provided",
+            "ground_truth": "yes",
+            "total_tokens": 1194
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "It depends on the context, but hypothetically, a highly skilled Jujutsu expert could defeat a Janissary",
+            "ground_truth": "no",
+            "total_tokens": 1526
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": false,
+            "prediction": "yes, it can be described as binary",
+            "ground_truth": "yes",
+            "total_tokens": 1034
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 969
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 783
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 747
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 949
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1041
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 842
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 912
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 974
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1052
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1004
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 674
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 851
+          }
+        ]
+      }
+    },
+    "arc_challenge": {
+      "benchmark": "arc_challenge",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.8333333333333334,
+        "self_consistency": 0.8,
+        "backward_cloze": 0.8333333333333334
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 465.53333333333336,
+        "self_consistency": 3775.4,
+        "backward_cloze": 1932.2666666666667
+      },
+      "oracle_accuracy": 0.8333333333333334,
+      "sc_accuracy": 0.8,
+      "oracle_sc_gap": 0.033333333333333326,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "arc_985",
+            "correct": true,
+            "prediction": "**(D) sugar and oxygen**",
+            "ground_truth": "D",
+            "total_tokens": 353
+          },
+          {
+            "example_id": "arc_962",
+            "correct": false,
+            "prediction": "**(D) diesel fuel**",
+            "ground_truth": "B",
+            "total_tokens": 391
+          },
+          {
+            "example_id": "arc_98",
+            "correct": false,
+            "prediction": "**Structures unique to animal cells:**",
+            "ground_truth": "B",
+            "total_tokens": 702
+          },
+          {
+            "example_id": "arc_885",
+            "correct": true,
+            "prediction": "**(B) glucose**",
+            "ground_truth": "B",
+            "total_tokens": 501
+          },
+          {
+            "example_id": "arc_752",
+            "correct": true,
+            "prediction": "(D)**",
+            "ground_truth": "D",
+            "total_tokens": 595
+          },
+          {
+            "example_id": "arc_431",
+            "correct": true,
+            "prediction": "(D) The contents of the beaker can be easily separated into the original substances",
+            "ground_truth": "D",
+            "total_tokens": 574
+          },
+          {
+            "example_id": "arc_638",
+            "correct": true,
+            "prediction": "**(C) mass**",
+            "ground_truth": "C",
+            "total_tokens": 223
+          },
+          {
+            "example_id": "arc_594",
+            "correct": true,
+            "prediction": "(D) the Moon to appear as different shapes during the month",
+            "ground_truth": "D",
+            "total_tokens": 544
+          },
+          {
+            "example_id": "arc_212",
+            "correct": true,
+            "prediction": "**(C) rubber is a nonconductor",
+            "ground_truth": "C",
+            "total_tokens": 390
+          },
+          {
+            "example_id": "arc_1125",
+            "correct": true,
+            "prediction": "**(C) report the accident to the teacher**",
+            "ground_truth": "C",
+            "total_tokens": 298
+          },
+          {
+            "example_id": "arc_974",
+            "correct": false,
+            "prediction": "**(D) Insulin develops chemical bonds on the cell membrane.**",
+            "ground_truth": "A",
+            "total_tokens": 504
+          },
+          {
+            "example_id": "arc_801",
+            "correct": true,
+            "prediction": "**(C) a suggested meal plan",
+            "ground_truth": "C",
+            "total_tokens": 509
+          },
+          {
+            "example_id": "arc_879",
+            "correct": true,
+            "prediction": "(B) use a ruler** \u2705",
+            "ground_truth": "B",
+            "total_tokens": 297
+          },
+          {
+            "example_id": "arc_470",
+            "correct": true,
+            "prediction": "**(D) The grasshopper is smaller than the leaf",
+            "ground_truth": "D",
+            "total_tokens": 380
+          },
+          {
+            "example_id": "arc_910",
+            "correct": true,
+            "prediction": "**(D) ammonia**",
+            "ground_truth": "D",
+            "total_tokens": 304
+          },
+          {
+            "example_id": "arc_1080",
+            "correct": true,
+            "prediction": "**(A) using compost as a fertilizer for lawns and gardens**",
+            "ground_truth": "A",
+            "total_tokens": 671
+          },
+          {
+            "example_id": "arc_581",
+            "correct": true,
+            "prediction": "**(A) prevents sediment from flowing downstream",
+            "ground_truth": "A",
+            "total_tokens": 489
+          },
+          {
+            "example_id": "arc_496",
+            "correct": true,
+            "prediction": "**(B) Two dimensional representation of a three dimensional surface",
+            "ground_truth": "B",
+            "total_tokens": 378
+          },
+          {
+            "example_id": "arc_519",
+            "correct": true,
+            "prediction": "(B) flexibility**",
+            "ground_truth": "B",
+            "total_tokens": 195
+          },
+          {
+            "example_id": "arc_749",
+            "correct": true,
+            "prediction": "**(C) solar electric**",
+            "ground_truth": "C",
+            "total_tokens": 674
+          },
+          {
+            "example_id": "arc_231",
+            "correct": false,
+            "prediction": "**(D) Car manufacturers**",
+            "ground_truth": "A",
+            "total_tokens": 797
+          },
+          {
+            "example_id": "arc_102",
+            "correct": true,
+            "prediction": "**(A) making fine incisions",
+            "ground_truth": "A",
+            "total_tokens": 448
+          },
+          {
+            "example_id": "arc_912",
+            "correct": true,
+            "prediction": "(A) distribution**",
+            "ground_truth": "A",
+            "total_tokens": 331
+          },
+          {
+            "example_id": "arc_502",
+            "correct": true,
+            "prediction": "**(C) The total mass remains the same",
+            "ground_truth": "C",
+            "total_tokens": 399
+          },
+          {
+            "example_id": "arc_108",
+            "correct": true,
+            "prediction": "**(D) learning a new behavior",
+            "ground_truth": "D",
+            "total_tokens": 474
+          },
+          {
+            "example_id": "arc_148",
+            "correct": true,
+            "prediction": "**(C) 6**",
+            "ground_truth": "C",
+            "total_tokens": 297
+          },
+          {
+            "example_id": "arc_523",
+            "correct": true,
+            "prediction": "**(A) artificial substances that mimic human peptides**",
+            "ground_truth": "A",
+            "total_tokens": 661
+          },
+          {
+            "example_id": "arc_607",
+            "correct": false,
+            "prediction": "**(D) the acceleration**",
+            "ground_truth": "B",
+            "total_tokens": 552
+          },
+          {
+            "example_id": "arc_849",
+            "correct": true,
+            "prediction": "(D) **to transfer genetic information from one generation to the next**",
+            "ground_truth": "D",
+            "total_tokens": 524
+          },
+          {
+            "example_id": "arc_830",
+            "correct": true,
+            "prediction": "(D) Relative Motion within the Solar System",
+            "ground_truth": "D",
+            "total_tokens": 511
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "arc_985",
+            "correct": true,
+            "prediction": "**(D) sugar and oxygen**",
+            "ground_truth": "D",
+            "total_tokens": 2963
+          },
+          {
+            "example_id": "arc_962",
+            "correct": false,
+            "prediction": "**(D) diesel fuel**",
+            "ground_truth": "B",
+            "total_tokens": 4007
+          },
+          {
+            "example_id": "arc_98",
+            "correct": false,
+            "prediction": "**Structures only found in animal cells:**",
+            "ground_truth": "B",
+            "total_tokens": 5194
+          },
+          {
+            "example_id": "arc_885",
+            "correct": true,
+            "prediction": "**(B) glucose**",
+            "ground_truth": "B",
+            "total_tokens": 4597
+          },
+          {
+            "example_id": "arc_752",
+            "correct": true,
+            "prediction": "**(D) Transformation of light energy into chemical bond energy**",
+            "ground_truth": "D",
+            "total_tokens": 4571
+          },
+          {
+            "example_id": "arc_431",
+            "correct": true,
+            "prediction": "**(D) The contents of the beaker can be easily separated into the original substances",
+            "ground_truth": "D",
+            "total_tokens": 4624
+          },
+          {
+            "example_id": "arc_638",
+            "correct": true,
+            "prediction": "**(C) mass**",
+            "ground_truth": "C",
+            "total_tokens": 2414
+          },
+          {
+            "example_id": "arc_594",
+            "correct": true,
+            "prediction": "**(D) the Moon to appear as different shapes during the month",
+            "ground_truth": "D",
+            "total_tokens": 3823
+          },
+          {
+            "example_id": "arc_212",
+            "correct": true,
+            "prediction": "**(C) rubber is a nonconductor",
+            "ground_truth": "C",
+            "total_tokens": 3425
+          },
+          {
+            "example_id": "arc_1125",
+            "correct": true,
+            "prediction": "**(C) report the accident to the teacher**",
+            "ground_truth": "C",
+            "total_tokens": 2495
+          },
+          {
+            "example_id": "arc_974",
+            "correct": false,
+            "prediction": "rb glucose from the blood",
+            "ground_truth": "A",
+            "total_tokens": 3915
+          },
+          {
+            "example_id": "arc_801",
+            "correct": true,
+            "prediction": "**(C) a suggested meal plan**",
+            "ground_truth": "C",
+            "total_tokens": 3238
+          },
+          {
+            "example_id": "arc_879",
+            "correct": true,
+            "prediction": "(B) use a ruler** \u2705",
+            "ground_truth": "B",
+            "total_tokens": 2417
+          },
+          {
+            "example_id": "arc_470",
+            "correct": true,
+            "prediction": "**(D) The grasshopper is smaller than the leaf",
+            "ground_truth": "D",
+            "total_tokens": 3165
+          },
+          {
+            "example_id": "arc_910",
+            "correct": true,
+            "prediction": "**(D) ammonia**",
+            "ground_truth": "D",
+            "total_tokens": 2626
+          },
+          {
+            "example_id": "arc_1080",
+            "correct": true,
+            "prediction": "**(A) using compost as a fertilizer for lawns and gardens**",
+            "ground_truth": "A",
+            "total_tokens": 4791
+          },
+          {
+            "example_id": "arc_581",
+            "correct": true,
+            "prediction": "**(A) prevents sediment from flowing downstream",
+            "ground_truth": "A",
+            "total_tokens": 4057
+          },
+          {
+            "example_id": "arc_496",
+            "correct": true,
+            "prediction": "**(B) two dimensional representation of a three dimensional surface",
+            "ground_truth": "B",
+            "total_tokens": 3153
+          },
+          {
+            "example_id": "arc_519",
+            "correct": true,
+            "prediction": "(B) flexibility** \u2705",
+            "ground_truth": "B",
+            "total_tokens": 2133
+          },
+          {
+            "example_id": "arc_749",
+            "correct": false,
+            "prediction": "**(D) Hydroelectric**",
+            "ground_truth": "C",
+            "total_tokens": 5778
+          },
+          {
+            "example_id": "arc_231",
+            "correct": false,
+            "prediction": "**(D) Car manufacturers**",
+            "ground_truth": "A",
+            "total_tokens": 6233
+          },
+          {
+            "example_id": "arc_102",
+            "correct": true,
+            "prediction": "**(A) making fine incisions",
+            "ground_truth": "A",
+            "total_tokens": 3378
+          },
+          {
+            "example_id": "arc_912",
+            "correct": true,
+            "prediction": "(A) distribution** \u2705",
+            "ground_truth": "A",
+            "total_tokens": 2570
+          },
+          {
+            "example_id": "arc_502",
+            "correct": true,
+            "prediction": "**(C) The total mass remains the same",
+            "ground_truth": "C",
+            "total_tokens": 4418
+          },
+          {
+            "example_id": "arc_108",
+            "correct": true,
+            "prediction": "**(D) learning a new behavior",
+            "ground_truth": "D",
+            "total_tokens": 3835
+          },
+          {
+            "example_id": "arc_148",
+            "correct": true,
+            "prediction": "**(C) 6**",
+            "ground_truth": "C",
+            "total_tokens": 2607
+          },
+          {
+            "example_id": "arc_523",
+            "correct": true,
+            "prediction": "**(A) artificial substances that mimic human peptides**",
+            "ground_truth": "A",
+            "total_tokens": 4148
+          },
+          {
+            "example_id": "arc_607",
+            "correct": false,
+            "prediction": "(D) the acceleration",
+            "ground_truth": "B",
+            "total_tokens": 4436
+          },
+          {
+            "example_id": "arc_849",
+            "correct": true,
+            "prediction": "**(D) to transfer genetic information from one generation to the next**",
+            "ground_truth": "D",
+            "total_tokens": 4296
+          },
+          {
+            "example_id": "arc_830",
+            "correct": true,
+            "prediction": "**(D) Relative Motion within the Solar System**",
+            "ground_truth": "D",
+            "total_tokens": 3955
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "arc_985",
+            "correct": true,
+            "prediction": "**(D) sugar and oxygen**",
+            "ground_truth": "D",
+            "total_tokens": 1583
+          },
+          {
+            "example_id": "arc_962",
+            "correct": false,
+            "prediction": "**(D) diesel fuel**",
+            "ground_truth": "B",
+            "total_tokens": 1915
+          },
+          {
+            "example_id": "arc_98",
+            "correct": false,
+            "prediction": "**Structures unique to animal cells:**",
+            "ground_truth": "B",
+            "total_tokens": 2453
+          },
+          {
+            "example_id": "arc_885",
+            "correct": true,
+            "prediction": "**(B) glucose**",
+            "ground_truth": "B",
+            "total_tokens": 2384
+          },
+          {
+            "example_id": "arc_752",
+            "correct": true,
+            "prediction": "(D) Transformation of light energy into chemical bond energy**",
+            "ground_truth": "D",
+            "total_tokens": 2319
+          },
+          {
+            "example_id": "arc_431",
+            "correct": true,
+            "prediction": "**(D) The contents of the beaker can be easily separated into the original substances.**",
+            "ground_truth": "D",
+            "total_tokens": 2532
+          },
+          {
+            "example_id": "arc_638",
+            "correct": true,
+            "prediction": "**(C) mass**",
+            "ground_truth": "C",
+            "total_tokens": 1342
+          },
+          {
+            "example_id": "arc_594",
+            "correct": true,
+            "prediction": "**(D) the Moon to appear as different shapes during the month",
+            "ground_truth": "D",
+            "total_tokens": 1962
+          },
+          {
+            "example_id": "arc_212",
+            "correct": true,
+            "prediction": "**(C) rubber is a nonconductor",
+            "ground_truth": "C",
+            "total_tokens": 1794
+          },
+          {
+            "example_id": "arc_1125",
+            "correct": true,
+            "prediction": "(C) report the accident to the teacher**",
+            "ground_truth": "C",
+            "total_tokens": 1367
+          },
+          {
+            "example_id": "arc_974",
+            "correct": false,
+            "prediction": "rb glucose from the blood",
+            "ground_truth": "A",
+            "total_tokens": 2160
+          },
+          {
+            "example_id": "arc_801",
+            "correct": true,
+            "prediction": "(C) a suggested meal plan",
+            "ground_truth": "C",
+            "total_tokens": 1764
+          },
+          {
+            "example_id": "arc_879",
+            "correct": true,
+            "prediction": "(B) use a ruler**",
+            "ground_truth": "B",
+            "total_tokens": 1318
+          },
+          {
+            "example_id": "arc_470",
+            "correct": true,
+            "prediction": "**(D) The grasshopper is smaller than the leaf",
+            "ground_truth": "D",
+            "total_tokens": 1838
+          },
+          {
+            "example_id": "arc_910",
+            "correct": true,
+            "prediction": "**(D) ammonia**",
+            "ground_truth": "D",
+            "total_tokens": 1499
+          },
+          {
+            "example_id": "arc_1080",
+            "correct": true,
+            "prediction": "**Looking at the Choices:**",
+            "ground_truth": "A",
+            "total_tokens": 2682
+          },
+          {
+            "example_id": "arc_581",
+            "correct": true,
+            "prediction": "**(A) prevents sediment from flowing downstream",
+            "ground_truth": "A",
+            "total_tokens": 2094
+          },
+          {
+            "example_id": "arc_496",
+            "correct": true,
+            "prediction": "**(B) two dimensional representation of a three dimensional surface",
+            "ground_truth": "B",
+            "total_tokens": 1650
+          },
+          {
+            "example_id": "arc_519",
+            "correct": true,
+            "prediction": "(B) flexibility**",
+            "ground_truth": "B",
+            "total_tokens": 1074
+          },
+          {
+            "example_id": "arc_749",
+            "correct": true,
+            "prediction": "(C) Solar electric**",
+            "ground_truth": "C",
+            "total_tokens": 2622
+          },
+          {
+            "example_id": "arc_231",
+            "correct": false,
+            "prediction": "**(D) Car manufacturers**",
+            "ground_truth": "A",
+            "total_tokens": 3000
+          },
+          {
+            "example_id": "arc_102",
+            "correct": true,
+            "prediction": "(A) making fine incisions",
+            "ground_truth": "A",
+            "total_tokens": 1526
+          },
+          {
+            "example_id": "arc_912",
+            "correct": true,
+            "prediction": "(A) distribution**",
+            "ground_truth": "A",
+            "total_tokens": 1317
+          },
+          {
+            "example_id": "arc_502",
+            "correct": true,
+            "prediction": "**(C) The total mass remains the same",
+            "ground_truth": "C",
+            "total_tokens": 2394
+          },
+          {
+            "example_id": "arc_108",
+            "correct": true,
+            "prediction": "**(D) learning a new behavior",
+            "ground_truth": "D",
+            "total_tokens": 1864
+          },
+          {
+            "example_id": "arc_148",
+            "correct": true,
+            "prediction": "**(C) 6**",
+            "ground_truth": "C",
+            "total_tokens": 1416
+          },
+          {
+            "example_id": "arc_523",
+            "correct": true,
+            "prediction": "**(A) artificial substances that mimic human peptides**",
+            "ground_truth": "A",
+            "total_tokens": 2233
+          },
+          {
+            "example_id": "arc_607",
+            "correct": false,
+            "prediction": "(D) the acceleration",
+            "ground_truth": "B",
+            "total_tokens": 1941
+          },
+          {
+            "example_id": "arc_849",
+            "correct": true,
+            "prediction": "(D) **to transfer genetic information from one generation to the next**",
+            "ground_truth": "D",
+            "total_tokens": 2161
+          },
+          {
+            "example_id": "arc_830",
+            "correct": true,
+            "prediction": "(D) Relative Motion within the Solar System",
+            "ground_truth": "D",
+            "total_tokens": 1764
+          }
+        ]
+      }
+    },
+    "bbh_logic": {
+      "benchmark": "bbh_logic",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.8,
+        "self_consistency": 0.9333333333333333,
+        "backward_cloze": 0.8666666666666667
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 939.5,
+        "self_consistency": 7322.8,
+        "backward_cloze": 3733.266666666667
+      },
+      "oracle_accuracy": 1.0,
+      "sc_accuracy": 0.9333333333333333,
+      "oracle_sc_gap": 0.06666666666666665,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": false,
+            "prediction": "the correct answer is:",
+            "ground_truth": "(b)",
+            "total_tokens": 1012
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": true,
+            "prediction": "**(A) The cantaloupes are the most expensive** \u2705",
+            "ground_truth": "(a)",
+            "total_tokens": 1020
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": true,
+            "prediction": "**(C) Joe finished second** \u2705",
+            "ground_truth": "(c)",
+            "total_tokens": 701
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": true,
+            "prediction": "**(A) Joe finished second**",
+            "ground_truth": "(a)",
+            "total_tokens": 609
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": true,
+            "prediction": "**(B) Amy finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 994
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "**(A) The oranges are the cheapest**",
+            "ground_truth": "(a)",
+            "total_tokens": 1084
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": false,
+            "prediction": "Clue 4: **\"The watermelons are the most expensive.\"**",
+            "ground_truth": "(b)",
+            "total_tokens": 1290
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "Try: Black = 1, Yellow = 4, Orange = 5",
+            "ground_truth": "(b)",
+            "total_tokens": 944
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "**(E) The quail is the second from the left**",
+            "ground_truth": "(e)",
+            "total_tokens": 922
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": true,
+            "prediction": "**(C) Dan finished first**",
+            "ground_truth": "(c)",
+            "total_tokens": 789
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": true,
+            "prediction": "**(B) Mel finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 626
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": true,
+            "prediction": "**(C) The bus is the second-newest**",
+            "ground_truth": "(e)",
+            "total_tokens": 826
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": true,
+            "prediction": "**(A) The robin is the rightmost**",
+            "ground_truth": "(a)",
+            "total_tokens": 825
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "**(D) The convertible is the oldest**",
+            "ground_truth": "(d)",
+            "total_tokens": 742
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": false,
+            "prediction": "this order is invalid",
+            "ground_truth": "(b)",
+            "total_tokens": 2181
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": false,
+            "prediction": "Try:",
+            "ground_truth": "(b)",
+            "total_tokens": 925
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": true,
+            "prediction": "**(C) Eve finished third**",
+            "ground_truth": "(c)",
+            "total_tokens": 630
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "**(A) The raven is the leftmost**",
+            "ground_truth": "(a)",
+            "total_tokens": 1053
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": true,
+            "prediction": "Constraint 2: **The white book is to the left of the yellow book.**",
+            "ground_truth": "(b)",
+            "total_tokens": 1098
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": false,
+            "prediction": "Given:",
+            "ground_truth": "(c)",
+            "total_tokens": 1078
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": true,
+            "prediction": "(D) The yellow book is the second from the left**",
+            "ground_truth": "(d)",
+            "total_tokens": 942
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": true,
+            "prediction": "**(C) The motorcycle is the newest**",
+            "ground_truth": "(c)",
+            "total_tokens": 951
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "(E) The blue book is the leftmost**",
+            "ground_truth": "(e)",
+            "total_tokens": 857
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "**(E) The crow is the second from the right**",
+            "ground_truth": "(e)",
+            "total_tokens": 812
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": true,
+            "prediction": "Clue 3: The blue jay is to the left of the hummingbird.",
+            "ground_truth": "(b)",
+            "total_tokens": 801
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": true,
+            "prediction": "**(A) The tractor is the third-newest**",
+            "ground_truth": "(a)",
+            "total_tokens": 1014
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "**(E) The purple book is the second from the right**",
+            "ground_truth": "(e)",
+            "total_tokens": 930
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": false,
+            "prediction": "Constraint 4:",
+            "ground_truth": "(d)",
+            "total_tokens": 909
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": true,
+            "prediction": "**(D) Dan finished second-to-last**",
+            "ground_truth": "(d)",
+            "total_tokens": 788
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": true,
+            "prediction": "**(D) The orange book is the third from the left**",
+            "ground_truth": "(d)",
+            "total_tokens": 832
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": true,
+            "prediction": "**(B) The yellow book is the leftmost**",
+            "ground_truth": "(b)",
+            "total_tokens": 6959
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": false,
+            "prediction": "First, note:",
+            "ground_truth": "(a)",
+            "total_tokens": 9564
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": true,
+            "prediction": "**(C) Joe finished second**",
+            "ground_truth": "(c)",
+            "total_tokens": 6373
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": true,
+            "prediction": "**(A) Joe finished second**",
+            "ground_truth": "(a)",
+            "total_tokens": 5684
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": true,
+            "prediction": "**(B) Amy finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 7088
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "**(A) The oranges are the cheapest**",
+            "ground_truth": "(a)",
+            "total_tokens": 8686
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": false,
+            "prediction": "(C) The plums are the second-cheapest**",
+            "ground_truth": "(b)",
+            "total_tokens": 8097
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "**(B) The brown book is the second from the left**",
+            "ground_truth": "(b)",
+            "total_tokens": 7247
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "**(E) The quail is the second from the left**",
+            "ground_truth": "(e)",
+            "total_tokens": 7949
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": true,
+            "prediction": "**(C) Dan finished first**",
+            "ground_truth": "(c)",
+            "total_tokens": 6546
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": true,
+            "prediction": "**(B) Mel finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 5350
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": true,
+            "prediction": "**(E) The motorcyle is the second-newest** \u2705",
+            "ground_truth": "(e)",
+            "total_tokens": 6368
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": true,
+            "prediction": "**(A) The robin is the rightmost**",
+            "ground_truth": "(a)",
+            "total_tokens": 6850
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "**(D) The convertible is the oldest**",
+            "ground_truth": "(d)",
+            "total_tokens": 6095
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": true,
+            "prediction": "**(B) Eve finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 8714
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": true,
+            "prediction": "**(B) Ada finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 6236
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": true,
+            "prediction": "**(C) Eve finished third**",
+            "ground_truth": "(c)",
+            "total_tokens": 5410
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "**(A) The raven is the leftmost**",
+            "ground_truth": "(a)",
+            "total_tokens": 7009
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": true,
+            "prediction": "**(B) The blue book is the second from the right**",
+            "ground_truth": "(b)",
+            "total_tokens": 8708
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": true,
+            "prediction": "**(C) The motorcycle is the third-newest**",
+            "ground_truth": "(c)",
+            "total_tokens": 11418
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": true,
+            "prediction": "(D) The yellow book is the second from the left**",
+            "ground_truth": "(d)",
+            "total_tokens": 7362
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": true,
+            "prediction": "**(C) The motorcycle is the newest**",
+            "ground_truth": "(c)",
+            "total_tokens": 8761
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "**(E) The blue book is the leftmost**",
+            "ground_truth": "(e)",
+            "total_tokens": 7006
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "**(E) The crow is the second from the right**",
+            "ground_truth": "(e)",
+            "total_tokens": 7236
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": true,
+            "prediction": "**(B) The hummingbird is the rightmost**",
+            "ground_truth": "(b)",
+            "total_tokens": 6153
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": true,
+            "prediction": "**(A) The tractor is the third-newest**",
+            "ground_truth": "(a)",
+            "total_tokens": 7747
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "**(E) The purple book is the second from the right**",
+            "ground_truth": "(e)",
+            "total_tokens": 7418
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": true,
+            "prediction": "**(D) The hummingbird is the rightmost**",
+            "ground_truth": "(d)",
+            "total_tokens": 7571
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": true,
+            "prediction": "**(D) Dan finished second-to-last**",
+            "ground_truth": "(d)",
+            "total_tokens": 6836
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": true,
+            "prediction": "**(D) The orange book is the third from the left**",
+            "ground_truth": "(d)",
+            "total_tokens": 7243
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": true,
+            "prediction": "**(B) The yellow book is the leftmost**",
+            "ground_truth": "(b)",
+            "total_tokens": 3620
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": true,
+            "prediction": "**(E) The peaches are the most expensive** \u2705",
+            "ground_truth": "(a)",
+            "total_tokens": 4460
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": false,
+            "prediction": "**Statement 4: Eve finished above Dan.**",
+            "ground_truth": "(c)",
+            "total_tokens": 3703
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": true,
+            "prediction": "**(A) Joe finished second**",
+            "ground_truth": "(a)",
+            "total_tokens": 2882
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": true,
+            "prediction": "**(B) Amy finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 3283
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "**(A) The oranges are the cheapest**",
+            "ground_truth": "(a)",
+            "total_tokens": 4440
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": true,
+            "prediction": "**(B) The kiwis are the second-cheapest**",
+            "ground_truth": "(b)",
+            "total_tokens": 3828
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "**(B)** The brown book is the second from the left",
+            "ground_truth": "(b)",
+            "total_tokens": 3497
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "**(E) The quail is the second from the left**",
+            "ground_truth": "(e)",
+            "total_tokens": 4018
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": true,
+            "prediction": "**(C) Dan finished first**",
+            "ground_truth": "(c)",
+            "total_tokens": 3698
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": true,
+            "prediction": "**(B) Mel finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 2825
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": true,
+            "prediction": "**(E) The motorcyle is the second-newest**",
+            "ground_truth": "(e)",
+            "total_tokens": 3803
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": true,
+            "prediction": "**(A) The robin is the rightmost**",
+            "ground_truth": "(a)",
+            "total_tokens": 3574
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "**(D) The convertible is the oldest**",
+            "ground_truth": "(d)",
+            "total_tokens": 3039
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": true,
+            "prediction": "**(B) Eve finished second**",
+            "ground_truth": "(b)",
+            "total_tokens": 3210
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": true,
+            "prediction": "**(B)**",
+            "ground_truth": "(b)",
+            "total_tokens": 3385
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": true,
+            "prediction": "**(C) Eve finished third**",
+            "ground_truth": "(c)",
+            "total_tokens": 2734
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "**(A) The raven is the leftmost**",
+            "ground_truth": "(a)",
+            "total_tokens": 3603
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": true,
+            "prediction": "(B) The blue book is the second from the right** \u2705",
+            "ground_truth": "(b)",
+            "total_tokens": 4650
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": false,
+            "prediction": "Statement 4:",
+            "ground_truth": "(c)",
+            "total_tokens": 4800
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": false,
+            "prediction": "From constraint (3):",
+            "ground_truth": "(d)",
+            "total_tokens": 3885
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": true,
+            "prediction": "**(D) The convertible is the newest**",
+            "ground_truth": "(c)",
+            "total_tokens": 4136
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "(E) The blue book is the leftmost**",
+            "ground_truth": "(e)",
+            "total_tokens": 3510
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "**(E) The crow is the second from the right**",
+            "ground_truth": "(e)",
+            "total_tokens": 3505
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": false,
+            "prediction": "Step 2: Use the remaining condition",
+            "ground_truth": "(b)",
+            "total_tokens": 3259
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": true,
+            "prediction": "**(A) The tractor is the third-newest**",
+            "ground_truth": "(a)",
+            "total_tokens": 5573
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "**(E) The purple book is the second from the right**",
+            "ground_truth": "(e)",
+            "total_tokens": 3864
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": true,
+            "prediction": "**(D) The hummingbird is the rightmost**",
+            "ground_truth": "(d)",
+            "total_tokens": 3924
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": true,
+            "prediction": "**(D) Dan finished second-to-last**",
+            "ground_truth": "(d)",
+            "total_tokens": 3522
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": true,
+            "prediction": "**(D) The orange book is the third from the left**",
+            "ground_truth": "(d)",
+            "total_tokens": 3768
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "within_summary": [
+    {
+      "cell": "Qwen2.5-1.5B/strategyqa/N150",
+      "sc": 0.54,
+      "oracle": 0.8466666666666667,
+      "router_acc": 0.5066666666666667,
+      "gap_capture": -0.10869565217391303,
+      "token_ratio": 0.47021587361321576,
+      "routes": {
+        "self_consistency": 33,
+        "standard_cot": 71,
+        "backward_cloze": 46
+      }
+    },
+    {
+      "cell": "Qwen2.5-7B/strategyqa/N150",
+      "sc": 0.5266666666666666,
+      "oracle": 0.78,
+      "router_acc": 0.52,
+      "gap_capture": -0.026315789473683935,
+      "token_ratio": 0.41613748194961725,
+      "routes": {
+        "standard_cot": 83,
+        "self_consistency": 29,
+        "backward_cloze": 38
+      }
+    },
+    {
+      "cell": "Qwen2.5-3B/bbh_logic/N150",
+      "sc": 0.7933333333333333,
+      "oracle": 0.96,
+      "router_acc": 0.8266666666666667,
+      "gap_capture": 0.2,
+      "token_ratio": 0.4410538602634651,
+      "routes": {
+        "standard_cot": 65,
+        "self_consistency": 42,
+        "backward_cloze": 43
+      }
+    }
+  ],
+  "avg_capture": 0.02166285278413435,
+  "avg_token_ratio": 0.4424690719420994,
+  "verdict": "NEGATIVE"
+}

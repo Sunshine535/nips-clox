@@ -1,0 +1,63 @@
+{
+  "summary": [
+    {
+      "test_benchmark": "bbh_logic",
+      "sc_acc": 0.6333333333333333,
+      "oracle_acc": 0.8666666666666667,
+      "router_lr_acc": 0.6333333333333333,
+      "router_gb_acc": 0.6888888888888889,
+      "router_lr_tokens": 7275.344444444442,
+      "sc_tokens": 7275.344444444445,
+      "cap_lr": 0.0,
+      "cap_gb": 0.23809523809523814,
+      "compute_ratio_lr": 0.9999999999999997
+    },
+    {
+      "test_benchmark": "gsm8k",
+      "sc_acc": 0.43333333333333335,
+      "oracle_acc": 0.6666666666666666,
+      "router_lr_acc": 0.43333333333333335,
+      "router_gb_acc": 0.4,
+      "router_lr_tokens": 7609.066666666672,
+      "sc_tokens": 7609.066666666669,
+      "cap_lr": 0.0,
+      "cap_gb": -0.14285714285714285,
+      "compute_ratio_lr": 1.0000000000000004
+    },
+    {
+      "test_benchmark": "math_hard",
+      "sc_acc": 0.3333333333333333,
+      "oracle_acc": 0.5666666666666667,
+      "router_lr_acc": 0.3333333333333333,
+      "router_gb_acc": 0.3,
+      "router_lr_tokens": 7757.600000000004,
+      "sc_tokens": 7757.600000000002,
+      "cap_lr": 0.0,
+      "cap_gb": -0.14285714285714282,
+      "compute_ratio_lr": 1.0000000000000002
+    },
+    {
+      "test_benchmark": "strategyqa",
+      "sc_acc": 0.5111111111111111,
+      "oracle_acc": 0.8,
+      "router_lr_acc": 0.5111111111111111,
+      "router_gb_acc": 0.5333333333333333,
+      "router_lr_tokens": 7983.133333333336,
+      "sc_tokens": 7983.133333333336,
+      "cap_lr": 0.0,
+      "cap_gb": 0.07692307692307701,
+      "compute_ratio_lr": 1.0
+    }
+  ],
+  "avg_cap_lr": 0.0,
+  "avg_cap_gb": 0.007326007326007369,
+  "avg_cost_lr": 1.0,
+  "verdict": "negative",
+  "n_train_instances": 240,
+  "best_strategy_distribution": {
+    "standard_cot": 62,
+    "backward_cloze": 33,
+    "self_consistency": 92,
+    "none": 53
+  }
+}

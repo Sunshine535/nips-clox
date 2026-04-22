@@ -17,6 +17,16 @@
       "benchmark": "bbh_logic"
     },
     {
+      "gap": 0.267,
+      "model": "Qwen3.5-9B",
+      "benchmark": "bbh_logic"
+    },
+    {
+      "gap": 0.2333333333333334,
+      "model": "Qwen3.5-9B",
+      "benchmark": "arc_challenge"
+    },
+    {
       "gap": 0.2333333333333334,
       "model": "Qwen2.5-3B",
       "benchmark": "strategyqa"
@@ -30,19 +40,9 @@
       "gap": 0.23333333333333328,
       "model": "Qwen2.5-3B",
       "benchmark": "gsm8k"
-    },
-    {
-      "gap": 0.20000000000000007,
-      "model": "Qwen2.5-7B",
-      "benchmark": "bbh_logic"
-    },
-    {
-      "gap": 0.19999999999999996,
-      "model": "Qwen2.5-3B",
-      "benchmark": "bbh_logic"
     }
   ],
-  "cells_with_gap_ge_0.15": 8,
-  "cells_with_gap_lt_0.05": 1,
+  "cells_with_gap_ge_0.15": 11,
+  "cells_with_gap_lt_0.05": 6,
   "decision": "PROCEED"
 }
