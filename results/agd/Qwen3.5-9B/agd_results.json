@@ -1,0 +1,1301 @@
+{
+  "model": "/openbayes/input/input0/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "cells": {
+    "math_hard": {
+      "summary": {
+        "benchmark": "math_hard",
+        "n_examples": 30,
+        "sc8": {
+          "accuracy": 0.5,
+          "mean_tokens": 17505.833333333332
+        },
+        "always_diverse": {
+          "accuracy": 0.3
+        },
+        "agd_0.5": {
+          "accuracy": 0.26666666666666666,
+          "mean_tokens": 15818.2,
+          "fast_pct": 0.2,
+          "delta_vs_sc": -0.23333333333333334,
+          "token_ratio": 0.9035959442090733
+        },
+        "agd_0.75": {
+          "accuracy": 0.3,
+          "mean_tokens": 17000.466666666667,
+          "fast_pct": 0.06666666666666667,
+          "delta_vs_sc": -0.2,
+          "token_ratio": 0.9711315275860428
+        },
+        "agd_1.0": {
+          "accuracy": 0.3,
+          "mean_tokens": 17571.433333333334,
+          "fast_pct": 0.0,
+          "delta_vs_sc": -0.2,
+          "token_ratio": 1.0037473223211313
+        }
+      },
+      "rows": [
+        {
+          "example_id": "math_4135",
+          "ground_truth": "20",
+          "base_agreement": 0.25,
+          "base_majority": "clearly",
+          "base_answers": [
+            "clearly",
+            "lution steps clearly",
+            "meone wins? No, it asks about \"possible rolls\"",
+            "20"
+          ],
+          "div_answers": [
+            "$M=",
+            "lution style (clear, step-by-step)",
+            "4",
+            "answer"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17872,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "clearly",
+              "correct": false,
+              "tokens": 17920,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "clearly",
+              "correct": false,
+              "tokens": 17920,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "clearly",
+              "correct": false,
+              "tokens": 17920,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 229.7
+        },
+        {
+          "example_id": "math_3974",
+          "ground_truth": "448",
+          "base_agreement": 0.25,
+          "base_majority": "$32 \\times 49 = 1600 - 32 = 1568$",
+          "base_answers": [
+            "$32 \\times 49 = 1600 - 32 = 1568$",
+            "lve\" and implies a step-by-step explanation",
+            "for each of the 64 starting squares, there are 14 valid second squares",
+            "the example problem $2x+3=11$ has a boxed answer"
+          ],
+          "div_answers": [
+            "we just sum them up",
+            "there are $64 \\times 49$ ordered pairs",
+            "** Box the result",
+            "we divide by 2 (or use combinations)"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17472,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$32 \\times 49 = 1600 - 32 = 1568$",
+              "correct": false,
+              "tokens": 17520,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$32 \\times 49 = 1600 - 32 = 1568$",
+              "correct": false,
+              "tokens": 17520,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$32 \\times 49 = 1600 - 32 = 1568$",
+              "correct": false,
+              "tokens": 17520,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.9
+        },
+        {
+          "example_id": "math_449",
+          "ground_truth": "3.2",
+          "base_agreement": 0.25,
+          "base_majority": "clearly",
+          "base_answers": [
+            "clearly",
+            "metimes \"stretched vertically\" is applied to the coordinates",
+            "it's not constant",
+            "$\\{(x, 2f(x-2))\\} ="
+          ],
+          "div_answers": [
+            "Formulation:**",
+            "$f(x) = 2f(x-2)$",
+            "$f(x+2) = 2f(x)$",
+            "und"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17720,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "clearly",
+              "correct": false,
+              "tokens": 17768,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "clearly",
+              "correct": false,
+              "tokens": 17768,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "clearly",
+              "correct": false,
+              "tokens": 17768,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.7
+        },
+        {
+          "example_id": "math_3670",
+          "ground_truth": "8",
+          "base_agreement": 0.75,
+          "base_majority": "8",
+          "base_answers": [
+            "8",
+            "answer",
+            "8",
+            "8"
+          ],
+          "div_answers": [
+            "3",
+            "4",
+            "8",
+            "8"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16765,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "8",
+              "correct": true,
+              "tokens": 8644,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "8",
+              "correct": true,
+              "tokens": 8644,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "8",
+              "correct": true,
+              "tokens": 17336,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.1
+        },
+        {
+          "example_id": "math_3095",
+          "ground_truth": "7",
+          "base_agreement": 0.5,
+          "base_majority": "$u(C) = 3$",
+          "base_answers": [
+            "$Z \\equiv 3 \\pmod{10}$",
+            "$u(C) = 3$",
+            "$u(C) = 3$",
+            "units digit of $C$ is 3"
+          ],
+          "div_answers": [
+            "**",
+            "units digit of $T_3$ is 3",
+            "units digit of $C$ is **3**",
+            "metimes negative results in modulo need careful handling in manual calculation)"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17928,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$u(C) = 3$",
+              "correct": false,
+              "tokens": 8964,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "$u(C) = 3$",
+              "correct": false,
+              "tokens": 17976,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$u(C) = 3$",
+              "correct": false,
+              "tokens": 17976,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.0
+        },
+        {
+          "example_id": "math_1878",
+          "ground_truth": "74",
+          "base_agreement": 0.25,
+          "base_majority": "the ball needs 12",
+          "base_answers": [
+            "the ball needs 12",
+            "answer",
+            "64",
+            "in box"
+          ],
+          "div_answers": [
+            "lid",
+            "$N \\propto d^3$",
+            "74",
+            "Formulation:**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17672,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "the ball needs 12",
+              "correct": false,
+              "tokens": 17720,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "the ball needs 12",
+              "correct": false,
+              "tokens": 17720,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "the ball needs 12",
+              "correct": false,
+              "tokens": 17720,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 220.9
+        },
+        {
+          "example_id": "math_2621",
+          "ground_truth": "5",
+          "base_agreement": 0.5,
+          "base_majority": "5",
+          "base_answers": [
+            "$x_2 = x_3 = \\dots = x_n$",
+            "5",
+            "$\\alpha = 45^\\circ$",
+            "5"
+          ],
+          "div_answers": [
+            "lution is valid",
+            "$x_1^2 + y^2/100 = 1 \\implies x_1^2 + (10x_1)^2/100 = 1 \\implies x_1^2 + x_1^2 =",
+            "$x_j = \\frac{v}{n-1} = \\frac{\\sqrt{n-1}/2}{n-1} = \\frac{1}{2\\sqrt{n-1}}$",
+            "the configuration exists"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17864,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "5",
+              "correct": true,
+              "tokens": 8932,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "5",
+              "correct": true,
+              "tokens": 17912,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "5",
+              "correct": true,
+              "tokens": 17912,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.0
+        },
+        {
+          "example_id": "math_2495",
+          "ground_truth": "729",
+          "base_agreement": 0.25,
+          "base_majority": "I should choose cuts with the smallest areas",
+          "base_answers": [
+            "I should choose cuts with the smallest areas",
+            "if we cut 10 slices all parallel to the smallest face ($10 \\times 13$), each has volume $130$",
+            "I can choose to cut $n_1$ slices parallel to the $10 \\times 13$ face, $n_2$ slices parallel to the $10 \\times 14$ face, and $n_3$ slices parallel to the $13 \\times 14$ face",
+            "we are removing $1 \\times \\text{Area}$ volumes"
+          ],
+          "div_answers": [
+            "the remaining volume is $(10-n_x)(13-n_y)(14-n_z)$ subject to $n_x + n_y + n_z = 10$ and $n_x, n_y, n_z \\ge 0$",
+            "I can choose to reduce the 14 cm dimension by 10 cm",
+            "$a + b + c = 10$",
+            "lid implies the maximal cross-section defined by the cut plane within the solid"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17880,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "I should choose cuts with the smallest areas",
+              "correct": false,
+              "tokens": 17928,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "I should choose cuts with the smallest areas",
+              "correct": false,
+              "tokens": 17928,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "I should choose cuts with the smallest areas",
+              "correct": false,
+              "tokens": 17928,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.7
+        },
+        {
+          "example_id": "math_919",
+          "ground_truth": "-\\frac{10",
+          "base_agreement": 0.25,
+          "base_majority": "$a \\neq 0$",
+          "base_answers": [
+            "$a \\neq 0$",
+            "lve for the value of $a$\"",
+            "in a box",
+            "lve for $a$"
+          ],
+          "div_answers": [
+            "4",
+            "lve for $a$",
+            "-\\frac{10",
+            "$f^{-1}(x) = \\frac{a}{x}-2$"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17448,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "lve for $a$",
+              "correct": false,
+              "tokens": 17496,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "lve for $a$",
+              "correct": false,
+              "tokens": 17496,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "lve for $a$",
+              "correct": false,
+              "tokens": 17496,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.9
+        },
+        {
+          "example_id": "math_4844",
+          "ground_truth": "-13",
+          "base_agreement": 0.25,
+          "base_majority": "lution for $2 \\times 2$ Matrix:**",
+          "base_answers": [
+            "lution for $2 \\times 2$ Matrix:**",
+            "lve for the product of eigenvalues, which is the determinant",
+            "lve for the determinant",
+            "lution assuming $\\mathbf{A}$ is a $2 \\times 2$ matrix, justifying this by the context or noting that unique solution implies $n=2$"
+          ],
+          "div_answers": [
+            "lve for the determinant",
+            "consider $\\operatorname{Tr}(\\mathbf{A}^2)$",
+            "lve for $\\det(\\mathbf{A})$",
+            "the formula is $(\\operatorname{Tr} \\mathbf{A})^2 - \\operatorname{Tr}(\\mathbf{A}^2) = 2 \\det \\mathbf{A}$"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 18048,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "lve for the determinant",
+              "correct": false,
+              "tokens": 18096,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "lve for the determinant",
+              "correct": false,
+              "tokens": 18096,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "lve for the determinant",
+              "correct": false,
+              "tokens": 18096,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.3
+        },
+        {
+          "example_id": "math_4047",
+          "ground_truth": "200",
+          "base_agreement": 0.25,
+          "base_majority": "result of expression $\\approx$ $Y$",
+          "base_answers": [
+            "result of expression $\\approx$ $Y$",
+            "likely 200",
+            "the answer should be an integer ending in 00",
+            "different?"
+          ],
+          "div_answers": [
+            "[Value]",
+            "the answer must be somewhere between $100$ and $400$",
+            "an integer multiple of 100? Yes",
+            "200"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17296,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "result of expression $\\approx$ $Y$",
+              "correct": false,
+              "tokens": 17344,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "result of expression $\\approx$ $Y$",
+              "correct": false,
+              "tokens": 17344,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "result of expression $\\approx$ $Y$",
+              "correct": false,
+              "tokens": 17344,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "math_3286",
+          "ground_truth": "13",
+          "base_agreement": 0.25,
+          "base_majority": "$k$ can be $5, 13, \\dots$",
+          "base_answers": [
+            "$k$ can be $5, 13, \\dots$",
+            "the digits are 6, 2, 5",
+            "$5^n = 125 k$",
+            "$5^{100} \\equiv 625 \\pmod{1000}$"
+          ],
+          "div_answers": [
+            "lution):**",
+            "last 3 digits are 625",
+            "digits are 6, 2, 5",
+            "lve this step by step, then verify our answer by checking it against the original problem"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17312,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$k$ can be $5, 13, \\dots$",
+              "correct": false,
+              "tokens": 17360,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$k$ can be $5, 13, \\dots$",
+              "correct": false,
+              "tokens": 17360,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$k$ can be $5, 13, \\dots$",
+              "correct": false,
+              "tokens": 17360,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "math_3612",
+          "ground_truth": "7",
+          "base_agreement": 0.25,
+          "base_majority": "4",
+          "base_answers": [
+            "4",
+            "7",
+            "metimes questions imply $x$ and $y$ are digits, but these are numbers",
+            "..."
+          ],
+          "div_answers": [
+            "seems solid",
+            "$1/2$ appears once",
+            "7",
+            "\""
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17536,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "7",
+              "correct": true,
+              "tokens": 17584,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "7",
+              "correct": true,
+              "tokens": 17584,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "7",
+              "correct": true,
+              "tokens": 17584,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.3
+        },
+        {
+          "example_id": "math_2038",
+          "ground_truth": "-\\frac{\\sqrt{3",
+          "base_agreement": 0.5,
+          "base_majority": "4",
+          "base_answers": [
+            "4",
+            "-\\frac{\\sqrt{3",
+            "-\\frac{\\sqrt{3",
+            "4"
+          ],
+          "div_answers": [
+            "-\\frac{\\sqrt{3",
+            "-\\frac{1",
+            "-\\frac{\\sqrt{3",
+            "-\\frac{\\sqrt{3"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16700,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "4",
+              "correct": false,
+              "tokens": 8145,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "-\\frac{\\sqrt{3",
+              "correct": true,
+              "tokens": 16801,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "-\\frac{\\sqrt{3",
+              "correct": true,
+              "tokens": 16801,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.6
+        },
+        {
+          "example_id": "math_3742",
+          "ground_truth": "625",
+          "base_agreement": 0.75,
+          "base_majority": "625",
+          "base_answers": [
+            "625",
+            "625",
+            "...",
+            "625"
+          ],
+          "div_answers": [
+            "625",
+            "625",
+            "any of the 5 odd digits can be placed in the thousands place",
+            "..."
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 16400,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "625",
+              "correct": true,
+              "tokens": 7369,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "625",
+              "correct": true,
+              "tokens": 7369,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "625",
+              "correct": true,
+              "tokens": 15806,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "math_4554",
+          "ground_truth": "\\frac{4",
+          "base_agreement": 0.25,
+          "base_majority": "$\\angle AQP + \\angle PQC + \\angle CQB = 180^\\circ$",
+          "base_answers": [
+            "$\\angle AQP + \\angle PQC + \\angle CQB = 180^\\circ$",
+            "$\\angle AQP + \\angle PQB = 180$",
+            "$\\angle A + 2\\gamma = 180^\\circ$",
+            "$\\angle"
+          ],
+          "div_answers": [
+            "as a fraction, boxed",
+            "mewhere",
+            "$\\angle A$ cannot be $90^\\circ$",
+            "$\\triangle APQ$ is isosceles with legs $AP$ and $PQ$"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17792,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$\\angle AQP + \\angle PQC + \\angle CQB = 180^\\circ$",
+              "correct": false,
+              "tokens": 17840,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$\\angle AQP + \\angle PQC + \\angle CQB = 180^\\circ$",
+              "correct": false,
+              "tokens": 17840,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$\\angle AQP + \\angle PQC + \\angle CQB = 180^\\circ$",
+              "correct": false,
+              "tokens": 17840,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "math_2447",
+          "ground_truth": "\\frac{1-\\sqrt{5",
+          "base_agreement": 0.25,
+          "base_majority": "lution $f(x) = \\frac{1",
+          "base_answers": [
+            "lution $f(x) = \\frac{1",
+            "$f(f(x) + 1/x) + \\frac{1}{f(x) + 1/x} = \\frac{1}{f(x)}",
+            "$f(x)$ is either always positive or always negative",
+            "$f(x) = 1/x$ is not the solution"
+          ],
+          "div_answers": [
+            "$f(x)$ is not constant",
+            "from $y = f(x) + 1/x$, we have $x = \\frac{1}{y - f(x)}$",
+            "$f(x) = k/x$ is not a solution",
+            "$f(f(x) + 1/x) \\to -\\infty$"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17832,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "lution $f(x) = \\frac{1",
+              "correct": false,
+              "tokens": 17880,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "lution $f(x) = \\frac{1",
+              "correct": false,
+              "tokens": 17880,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "lution $f(x) = \\frac{1",
+              "correct": false,
+              "tokens": 17880,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "math_2155",
+          "ground_truth": "\\frac{\\sqrt{11",
+          "base_agreement": 0.25,
+          "base_majority": "$y = 1/\\sqrt{2}$",
+          "base_answers": [
+            "$y = 1/\\sqrt{2}$",
+            "the maximum is indeed $\\frac{\\sqrt{11}}{2}$",
+            "$z^2 =",
+            "$E = \\frac{1}{\\sqrt{2}} (\\frac{10}{\\sqrt{22}} + \\frac{1}{\\sqrt{22}}) = \\frac{1}{\\"
+          ],
+          "div_answers": [
+            "$E \\le \\sqrt{10x^2 + z^2} \\cdot y\\sqrt{2}$",
+            "$S^2 \\le 11y^2(1-y^2)$",
+            "we have relations:",
+            "$P = y(2\\lambda y) = 2\\lambda y^2$"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17552,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$y = 1/\\sqrt{2}$",
+              "correct": false,
+              "tokens": 17600,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$y = 1/\\sqrt{2}$",
+              "correct": false,
+              "tokens": 17600,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$y = 1/\\sqrt{2}$",
+              "correct": false,
+              "tokens": 17600,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.9
+        },
+        {
+          "example_id": "math_2224",
+          "ground_truth": "25",
+          "base_agreement": 0.25,
+          "base_majority": "$z_1",
+          "base_answers": [
+            "$z_1",
+            "$|z_1 - z_2|^2 = 5^2 \\cdot 1 = 25$",
+            "let's look at the original equation $\\frac{z_1}{z_2} + \\frac{z_2}{z_1} = 1$",
+            "$K + \\bar{K} = 25(1) = 25$"
+          ],
+          "div_answers": [
+            "$|z_1 - z_2| = |z_2| \\cdot 1 = 5$",
+            "$|z_1 - z_2|^2 = |z_2|^2 \\cdot 1 = 25 \\cdot 1 = 25$",
+            "mething?",
+            "$50 \\text{Re}(w) = 50(1/2) = 25$"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17712,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$z_1",
+              "correct": false,
+              "tokens": 17760,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$z_1",
+              "correct": false,
+              "tokens": 17760,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$z_1",
+              "correct": false,
+              "tokens": 17760,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.8
+        },
+        {
+          "example_id": "math_3078",
+          "ground_truth": "-221_3",
+          "base_agreement": 0.25,
+          "base_majority": "definitely $-25_{10}$",
+          "base_answers": [
+            "definitely $-25_{10}$",
+            "must be expressed in base 3",
+            "lve a specific arithmetic problem involving numbers in base 3",
+            "$42_{10} = 1120_3$"
+          ],
+          "div_answers": [
+            "$42_{10} = 11",
+            "$11011_3$",
+            "must be expressed in base 3",
+            "in base 3"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17432,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "must be expressed in base 3",
+              "correct": false,
+              "tokens": 17480,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "must be expressed in base 3",
+              "correct": false,
+              "tokens": 17480,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "must be expressed in base 3",
+              "correct": false,
+              "tokens": 17480,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.8
+        },
+        {
+          "example_id": "math_1033",
+          "ground_truth": "3.21",
+          "base_agreement": 0.5,
+          "base_majority": "3.21",
+          "base_answers": [
+            "3.21",
+            "Formulation:**",
+            "3.21",
+            "seems to be 3"
+          ],
+          "div_answers": [
+            "lve for $b+c$ directly without finding $b$ and",
+            "$b$ and $c$ are unique",
+            "as a decimal",
+            "boxed"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17544,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "3.21",
+              "correct": true,
+              "tokens": 8772,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "3.21",
+              "correct": true,
+              "tokens": 17592,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "3.21",
+              "correct": true,
+              "tokens": 17592,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "math_458",
+          "ground_truth": "\\frac{1",
+          "base_agreement": 0.25,
+          "base_majority": "Formulation:**",
+          "base_answers": [
+            "Formulation:**",
+            "\\frac{1",
+            "seems to be 1/3",
+            "$S_2 = S_1 + 5000$"
+          ],
+          "div_answers": [
+            "1/3",
+            "the odd integers are strictly 1, 3",
+            "lve each one\" suggests I should output the reasoning steps clearly",
+            "lid"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17504,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "Formulation:**",
+              "correct": false,
+              "tokens": 17552,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Formulation:**",
+              "correct": false,
+              "tokens": 17552,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Formulation:**",
+              "correct": false,
+              "tokens": 17552,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "math_3750",
+          "ground_truth": "264",
+          "base_agreement": 0.25,
+          "base_majority": "[Answer]",
+          "base_answers": [
+            "[Answer]",
+            "I need to output the reasoning and the final answer",
+            "the list is complete",
+            "$240$"
+          ],
+          "div_answers": [
+            "in a box, similar to the example provided",
+            "lution clearly",
+            "03 is not a candidate",
+            "264"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17312,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "[Answer]",
+              "correct": false,
+              "tokens": 17360,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "[Answer]",
+              "correct": false,
+              "tokens": 17360,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "[Answer]",
+              "correct": false,
+              "tokens": 17360,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.5
+        },
+        {
+          "example_id": "math_2189",
+          "ground_truth": "(23)",
+          "base_agreement": 0.25,
+          "base_majority": "$P(i) = (ai + b)(i + 1) - (5i + 1)$",
+          "base_answers": [
+            "$P(i) = (ai + b)(i + 1) - (5i + 1)$",
+            "$P(i) = 0$ and $P(-i) = 0$",
+            "$P(x) \\equiv (b-a) + (a+b)x - (5x + 1) \\pmod",
+            "as the ordered pair $(a, b)$"
+          ],
+          "div_answers": [
+            "$(2, 3)$",
+            "$x^5 + 1 \\equiv x + 1 \\pmod{x^2+1}$",
+            "r",
+            "coefficients of $x$ and the constant term must be 0"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17512,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "$P(i) = (ai + b)(i + 1) - (5i + 1)$",
+              "correct": false,
+              "tokens": 17560,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$P(i) = (ai + b)(i + 1) - (5i + 1)$",
+              "correct": false,
+              "tokens": 17560,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$P(i) = (ai + b)(i + 1) - (5i + 1)$",
+              "correct": false,
+              "tokens": 17560,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.9
+        },
+        {
+          "example_id": "math_492",
+          "ground_truth": "2",
+          "base_agreement": 0.25,
+          "base_majority": "2",
+          "base_answers": [
+            "2",
+            "is 2",
+            "seems to be 2",
+            "lid"
+          ],
+          "div_answers": [
+            "lve:**",
+            "...",
+            "in a box)",
+            "seems to be 2"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17528,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "seems to be 2",
+              "correct": true,
+              "tokens": 17576,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "seems to be 2",
+              "correct": true,
+              "tokens": 17576,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "seems to be 2",
+              "correct": true,
+              "tokens": 17576,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.2
+        },
+        {
+          "example_id": "math_658",
+          "ground_truth": "5",
+          "base_agreement": 0.25,
+          "base_majority": "the solution is consistent and unique given the nonnegative constraint",
+          "base_answers": [
+            "the solution is consistent and unique given the nonnegative constraint",
+            "$a+b+c=5$, $ab+bc+ca=6$",
+            "in a specific format (implied by the example)",
+            "formulation"
+          ],
+          "div_answers": [
+            "lve for $(a+b+c)^2$",
+            "4",
+            "in a box",
+            "seems to be 5"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16942,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "the solution is consistent and unique given the nonnegative constraint",
+              "correct": false,
+              "tokens": 17584,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "the solution is consistent and unique given the nonnegative constraint",
+              "correct": false,
+              "tokens": 17584,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "the solution is consistent and unique given the nonnegative constraint",
+              "correct": false,
+              "tokens": 17584,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.9
+        },
+        {
+          "example_id": "math_2243",
+          "ground_truth": "1",
+          "base_agreement": 0.25,
+          "base_majority": "$2(3n^2 + 9n + 7) = \\frac{d}{dn} \\left( \\frac{-(2n+3)}{((n+1)(n+2))^2} \\right) \\times \\text{something}$? No, wait",
+          "base_answers": [
+            "$2(3n^2 + 9n + 7) = \\frac{d}{dn} \\left( \\frac{-(2n+3)}{((n+1)(n+2))^2} \\right) \\times \\text{something}$? No, wait",
+            "$3A + 3B + D + E + F = 0$",
+            "we want $b_x = g(x) - g(x+1)$? No, the sum is $\\sum_{n=0}^N$",
+            "$\\frac{1}{(k+1)^2(k+2)^2}$ where $k=n+1$, so the term is $\\frac{1}{(n+1)^2(n+2)^2}$"
+          ],
+          "div_answers": [
+            "mething, but the square term makes it tricky",
+            "the partial fraction decomposition is:",
+            "$a$ and $b$ are relatively prime positive integers",
+            "$F(n) - F(n+1) = \\frac{4(n+2)}{(n+1)^2(n+2)^2(n+3)^2} = \\frac{4}{(n+1)^2(n+2)(n+3)^2}$"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17792,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "$2(3n^2 + 9n + 7) = \\frac{d}{dn} \\left( \\frac{-(2n+3)}{((n+1)(n+2))^2} \\right) \\times \\text{something}$? No, wait",
+              "correct": true,
+              "tokens": 17840,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "$2(3n^2 + 9n + 7) = \\frac{d}{dn} \\left( \\frac{-(2n+3)}{((n+1)(n+2))^2} \\right) \\times \\text{something}$? No, wait",
+              "correct": true,
+              "tokens": 17840,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "$2(3n^2 + 9n + 7) = \\frac{d}{dn} \\left( \\frac{-(2n+3)}{((n+1)(n+2))^2} \\right) \\times \\text{something}$? No, wait",
+              "correct": true,
+              "tokens": 17840,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.5
+        },
+        {
+          "example_id": "math_2537",
+          "ground_truth": "3",
+          "base_agreement": 0.25,
+          "base_majority": "mething",
+          "base_answers": [
+            "mething",
+            "$x^3 + x^2 + x - 1 = (x+1)(x^2-1) = (x+1)(x-1)(x+1) = (x+1)^2(x-1)$",
+            "the roots of $P'(x)$ interlace the roots of $P(x)$",
+            "usually 3"
+          ],
+          "div_answers": [
+            "$a_2=-1, a_3=-1$), then $a_2 a_3",
+            "$n=4$ fails for this example",
+            "$\\binom{n}{k} b_k = \\pm 1$",
+            "$P'(x) = c_0 x^{n-1} + c_1 x^{n-2} + \\dots + c_{n-1}$ where $c_k = (n-k) b_k$"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17648,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "mething",
+              "correct": false,
+              "tokens": 17696,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "mething",
+              "correct": false,
+              "tokens": 17696,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "mething",
+              "correct": false,
+              "tokens": 17696,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "math_3484",
+          "ground_truth": "43",
+          "base_agreement": 0.25,
+          "base_majority": "43",
+          "base_answers": [
+            "43",
+            "factors are 1, 5, 43, 215",
+            "does $m$ share a factor with 6?",
+            "the constraint boils down to $m$ being a two-digit divisor of 215"
+          ],
+          "div_answers": [
+            "for the inverse to exist, $\\gcd(6, m) = 1$",
+            "4",
+            "$6^{-1} \\equiv 6^2 \\pmod m$ means the solution to $6x \\equiv 1$ is $6^2$",
+            "lve for $m$"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17488,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "43",
+              "correct": true,
+              "tokens": 17536,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "43",
+              "correct": true,
+              "tokens": 17536,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "43",
+              "correct": true,
+              "tokens": 17536,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.0
+        },
+        {
+          "example_id": "math_3389",
+          "ground_truth": "8",
+          "base_agreement": 0.25,
+          "base_majority": "lutions $n \\equiv 4 \\pmod{12}$",
+          "base_answers": [
+            "lutions $n \\equiv 4 \\pmod{12}$",
+            "late $k$, we multiply both sides by the modular inverse of 2 modulo 13",
+            "$k = 2^{n-1}$",
+            "clearly"
+          ],
+          "div_answers": [
+            "$k = 2^{n",
+            "answer",
+            "lve for $2^{n-1}$ modulo 13",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17672,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "lutions $n \\equiv 4 \\pmod{12}$",
+              "correct": false,
+              "tokens": 17720,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "lutions $n \\equiv 4 \\pmod{12}$",
+              "correct": false,
+              "tokens": 17720,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "lutions $n \\equiv 4 \\pmod{12}$",
+              "correct": false,
+              "tokens": 17720,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.9
+        }
+      ]
+    }
+  }
+}
