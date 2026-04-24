@@ -1296,6 +1296,3894 @@
           "elapsed": 222.9
         }
       ]
+    },
+    "bbh_logic": {
+      "summary": {
+        "benchmark": "bbh_logic",
+        "n_examples": 30,
+        "sc8": {
+          "accuracy": 0.6,
+          "mean_tokens": 15486.233333333334
+        },
+        "always_diverse": {
+          "accuracy": 0.5666666666666667
+        },
+        "agd_0.5": {
+          "accuracy": 0.5666666666666667,
+          "mean_tokens": 14101.233333333334,
+          "fast_pct": 0.26666666666666666,
+          "delta_vs_sc": -0.033333333333333326,
+          "token_ratio": 0.9105657282704854
+        },
+        "agd_0.75": {
+          "accuracy": 0.5666666666666667,
+          "mean_tokens": 16098.833333333334,
+          "fast_pct": 0.03333333333333333,
+          "delta_vs_sc": -0.033333333333333326,
+          "token_ratio": 1.0395577147014445
+        },
+        "agd_1.0": {
+          "accuracy": 0.5666666666666667,
+          "mean_tokens": 16344.566666666668,
+          "fast_pct": 0.0,
+          "delta_vs_sc": -0.033333333333333326,
+          "token_ratio": 1.0554255715291216
+        }
+      },
+      "rows": [
+        {
+          "example_id": "bbh_logical_deduction_five_objects_236",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "** (B)",
+          "base_answers": [
+            "** (B)",
+            "** (B) The yellow book is the leftmost",
+            "the Green book must be at position 2",
+            "the Orange book goes there"
+          ],
+          "div_answers": [
+            "4",
+            "is (B)",
+            "**Green must be at Position 2**",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 14004,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (B)",
+              "correct": true,
+              "tokens": 14927,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (B)",
+              "correct": true,
+              "tokens": 14927,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (B)",
+              "correct": true,
+              "tokens": 14927,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 204.9
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_231",
+          "ground_truth": "(a)",
+          "base_agreement": 0.5,
+          "base_majority": "** (A)",
+          "base_answers": [
+            "** (A)",
+            "the Cantaloupes are the most expensive",
+            "** (A)",
+            "(A)"
+          ],
+          "div_answers": [
+            "Kiwis are the least expensive",
+            "Cantaloupes",
+            "4",
+            "5"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16369,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 7114,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 15942,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 15942,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 218.2
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_19",
+          "ground_truth": "(c)",
+          "base_agreement": 0.25,
+          "base_majority": "Joe",
+          "base_answers": [
+            "Joe",
+            "definitely Joe",
+            "1",
+            "C"
+          ],
+          "div_answers": [
+            "explicitly given in the text",
+            "C",
+            ", likely explaining the steps clearly as requested (\"break this into smaller sub-problems\")",
+            "Option (C)"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15869,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "C",
+              "correct": true,
+              "tokens": 16024,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "C",
+              "correct": true,
+              "tokens": 16024,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "C",
+              "correct": true,
+              "tokens": 16024,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.8
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_200",
+          "ground_truth": "(a)",
+          "base_agreement": 0.25,
+          "base_majority": "** (A) Joe finished second",
+          "base_answers": [
+            "** (A) Joe finished second",
+            "far: Mya > Joe > Eve > Amy > Ana",
+            "is (A)",
+            "Joe"
+          ],
+          "div_answers": [
+            "Joe",
+            "**",
+            "** (A) Joe finished second",
+            "lve this problem, we need to arrange the five golfers (Joe, Mya, Eve, Amy, and Ana) in order of their finish, from 1st place (best) to 5th place (worst)"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 15641,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A) Joe finished second",
+              "correct": true,
+              "tokens": 16025,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (A) Joe finished second",
+              "correct": true,
+              "tokens": 16025,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (A) Joe finished second",
+              "correct": true,
+              "tokens": 16025,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_171",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "\"second-to-last\" implies a position",
+          "base_answers": [
+            "\"second-to-last\" implies a position",
+            "the second-to-last position is **4th**",
+            "**",
+            "B"
+          ],
+          "div_answers": [
+            "lution",
+            "3",
+            "Amy",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17203,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 17552,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 17552,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 17552,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_97",
+          "ground_truth": "(a)",
+          "base_agreement": 0.5,
+          "base_majority": "**",
+          "base_answers": [
+            "it must take the lowest available rank, which is Position 5",
+            "lve this logic puzzle, let's assign a rank to each fruit from 1 (cheapest) to 5 (most expensive)",
+            "**",
+            "**"
+          ],
+          "div_answers": [
+            "**",
+            "**Oranges** must be in **Position 5**",
+            "lve the logic puzzle:",
+            "Oranges are the cheapest (Index 5)"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17482,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 8582,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 17530,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 17530,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 227.0
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_158",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "Pears = 3",
+          "base_answers": [
+            "Pears = 3",
+            "Plums must be ranked higher (more expensive) than the 2nd position",
+            "is (B)",
+            "mething else"
+          ],
+          "div_answers": [
+            "4",
+            "a direct restatement because the other options require complex deduction that leads to a contradiction or is simply false",
+            "Plums cannot be Rank 5",
+            "match the question requirements? Yes"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17832,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "Pears = 3",
+              "correct": false,
+              "tokens": 17483,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Pears = 3",
+              "correct": false,
+              "tokens": 17483,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Pears = 3",
+              "correct": false,
+              "tokens": 17483,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.1
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_135",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "I must select the true statement among the choices",
+          "base_answers": [
+            "I must select the true statement among the choices",
+            "\" or \"Don't use the thinking block\"",
+            ": **Black is at Position 1**, **Yellow is at Position 4**, and **Orange is at Position 5**",
+            "Option (B) is a direct restatement of a fact provided in the premises"
+          ],
+          "div_answers": [
+            "5",
+            "by working backwards from the options (the goal candidates) and testing them against the fixed facts provided in the text, only Option B remains consistent",
+            "lution broken down into sub-problems:",
+            "lution is robust"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 16580,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "I must select the true statement among the choices",
+              "correct": false,
+              "tokens": 18008,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "I must select the true statement among the choices",
+              "correct": false,
+              "tokens": 18008,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "I must select the true statement among the choices",
+              "correct": false,
+              "tokens": 18008,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_46",
+          "ground_truth": "(e)",
+          "base_agreement": 0.25,
+          "base_majority": "**",
+          "base_answers": [
+            "**",
+            "the Blue Jay must be in Position 4, and the Hummingbird must be in Position 5",
+            "directly readable from the text provided in the prompt",
+            "just confirming a fact derived from the premises that distinguishes it from the others"
+          ],
+          "div_answers": [
+            "explicitly written in the text?",
+            "trivial",
+            "clearly",
+            "2"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17952,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 18000,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 18000,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 18000,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.5
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_245",
+          "ground_truth": "(c)",
+          "base_agreement": 0.25,
+          "base_majority": "meone says \"I shot a score above yours\", that usually means a numerically higher score (worse)",
+          "base_answers": [
+            "meone says \"I shot a score above yours\", that usually means a numerically higher score (worse)",
+            "Amy cannot be 3rd (because positions 4 and 5 are already taken by Mya and Ana)",
+            "**Ana = 5th**",
+            "** (C) Dan finished first"
+          ],
+          "div_answers": [
+            "**",
+            "meone is better)",
+            "to reflect this breakdown",
+            "the \"second-to-last\" position is **4th**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15236,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "meone says \"I shot a score above yours\", that usually means a numerically higher score (worse)",
+              "correct": true,
+              "tokens": 16897,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "meone says \"I shot a score above yours\", that usually means a numerically higher score (worse)",
+              "correct": true,
+              "tokens": 16897,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "meone says \"I shot a score above yours\", that usually means a numerically higher score (worse)",
+              "correct": true,
+              "tokens": 16897,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.1
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_232",
+          "ground_truth": "(b)",
+          "base_agreement": 0.5,
+          "base_majority": "** (B) Mel finished second",
+          "base_answers": [
+            "clearly",
+            "** (B) Mel finished second",
+            "** (B) Mel finished second",
+            "is (B)"
+          ],
+          "div_answers": [
+            ", but show the reasoning process as requested",
+            "** (B) Mel finished second",
+            "1",
+            "(B"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 13478,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (B) Mel finished second",
+              "correct": true,
+              "tokens": 6452,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (B) Mel finished second",
+              "correct": true,
+              "tokens": 14925,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (B) Mel finished second",
+              "correct": true,
+              "tokens": 14925,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 211.5
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_178",
+          "ground_truth": "(e)",
+          "base_agreement": 0.25,
+          "base_majority": "Minivan is #1",
+          "base_answers": [
+            "Minivan is #1",
+            "** The Motorcycle",
+            "** (E)",
+            "lid"
+          ],
+          "div_answers": [
+            "**",
+            "Motorcycle is newer than Bus",
+            "1st)",
+            "lution to the problem:"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15776,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "Minivan is #1",
+              "correct": false,
+              "tokens": 17217,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Minivan is #1",
+              "correct": false,
+              "tokens": 17217,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Minivan is #1",
+              "correct": false,
+              "tokens": 17217,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.8
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_194",
+          "ground_truth": "(a)",
+          "base_agreement": 0.75,
+          "base_majority": "** (A)",
+          "base_answers": [
+            "** (A)",
+            "the crow cannot be in position 1",
+            "** (A)",
+            "** (A)"
+          ],
+          "div_answers": [
+            "the **crow must be in position 2**, and the **quail must be in position 1**",
+            "the Crow must be at position 2, and the Quail must be at position 1",
+            "**",
+            "**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 13578,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 6218,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 6218,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 13590,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 182.3
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_98",
+          "ground_truth": "(d)",
+          "base_agreement": 0.25,
+          "base_majority": "the convertible is the oldest vehicle",
+          "base_answers": [
+            "the convertible is the oldest vehicle",
+            "the order from Oldest (Lowest Newness) to Newest (Highest Newness) is:",
+            "**",
+            "far: **Minivan** (Newest)"
+          ],
+          "div_answers": [
+            "lution",
+            "(D)",
+            "5",
+            "selection"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14158,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "the convertible is the oldest vehicle",
+              "correct": true,
+              "tokens": 16673,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "the convertible is the oldest vehicle",
+              "correct": true,
+              "tokens": 16673,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "the convertible is the oldest vehicle",
+              "correct": true,
+              "tokens": 16673,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 215.8
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_204",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "lid",
+          "base_answers": [
+            "lid",
+            "**",
+            "** (B)",
+            "Eve"
+          ],
+          "div_answers": [
+            "lution:**",
+            "lve this problem, we need to determine the ranking of the five golfers based on the provided statements",
+            "1",
+            "we need to place"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 16197,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "lid",
+              "correct": false,
+              "tokens": 14617,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "lid",
+              "correct": false,
+              "tokens": 14617,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "lid",
+              "correct": false,
+              "tokens": 14617,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.9
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_243",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "B",
+          "base_answers": [
+            "B",
+            "Rob, Dan, Joe, and Mel must be in other positions (1st, 3rd, 4th, 5th)",
+            "just restating a fact if the other options are contradictions or false deductions",
+            "Ada"
+          ],
+          "div_answers": [
+            "** Match the deduced information with the given options",
+            "in the text?",
+            "2",
+            "2"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17279,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "2",
+              "correct": false,
+              "tokens": 17504,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "2",
+              "correct": false,
+              "tokens": 17504,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "2",
+              "correct": false,
+              "tokens": 17504,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.5
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_121",
+          "ground_truth": "(c)",
+          "base_agreement": 0.5,
+          "base_majority": "** (C)",
+          "base_answers": [
+            "** (C)",
+            "** (C)",
+            "option (C) is correct",
+            "my first interpretation is the correct one"
+          ],
+          "div_answers": [
+            "n in the 3rd position",
+            "\"below\" means a higher rank number (worse)",
+            "**",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 13175,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (C)",
+              "correct": true,
+              "tokens": 6904,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (C)",
+              "correct": true,
+              "tokens": 14911,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (C)",
+              "correct": true,
+              "tokens": 14911,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.3
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_99",
+          "ground_truth": "(a)",
+          "base_agreement": 0.5,
+          "base_majority": "** (A) The raven is the leftmost",
+          "base_answers": [
+            "** (A) The raven is the leftmost",
+            "Position 4 must be Robin",
+            "** (A) The raven is the leftmost",
+            "**"
+          ],
+          "div_answers": [
+            "lution",
+            "or a concise explanation",
+            "**",
+            "** (A)"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 11748,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A) The raven is the leftmost",
+              "correct": true,
+              "tokens": 6195,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (A) The raven is the leftmost",
+              "correct": true,
+              "tokens": 14584,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (A) The raven is the leftmost",
+              "correct": true,
+              "tokens": 14584,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 194.0
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_110",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "a deduction, but sometimes the question asks which statement is true among the options",
+          "base_answers": [
+            "a deduction, but sometimes the question asks which statement is true among the options",
+            "B",
+            "the standard Left-to-Right convention",
+            "Yellow must be at 3 (since 4 is Blue)"
+          ],
+          "div_answers": [
+            "a direct fact provided in the setup to ensure consistency, or perhaps I need to check if the text implies something else",
+            "in the text?",
+            "Yellow is in {1, 2,",
+            "Blue"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17960,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "a deduction, but sometimes the question asks which statement is true among the options",
+              "correct": true,
+              "tokens": 18008,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "a deduction, but sometimes the question asks which statement is true among the options",
+              "correct": true,
+              "tokens": 18008,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "a deduction, but sometimes the question asks which statement is true among the options",
+              "correct": true,
+              "tokens": 18008,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 226.3
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_168",
+          "ground_truth": "(c)",
+          "base_agreement": 0.25,
+          "base_majority": "rted by newness?",
+          "base_answers": [
+            "rted by newness?",
+            "Truck > Hatchback",
+            "5th-newest)",
+            "Option (C) seems correct"
+          ],
+          "div_answers": [
+            "the Motorcycle is the third-newest",
+            "H is older than T",
+            "Moto is 3, 4, or 5",
+            "the position is indeed Rank 3 (in the Ol"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17864,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "rted by newness?",
+              "correct": false,
+              "tokens": 17912,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "rted by newness?",
+              "correct": false,
+              "tokens": 17912,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "rted by newness?",
+              "correct": false,
+              "tokens": 17912,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 222.7
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_89",
+          "ground_truth": "(d)",
+          "base_agreement": 0.5,
+          "base_majority": "** (D)",
+          "base_answers": [
+            "the **Brown book is at Position 4**",
+            "the Brown book is in position **4**",
+            "** (D)",
+            "** (D)"
+          ],
+          "div_answers": [
+            "5",
+            "I should merge the deduction steps into a single coherent paragraph or two",
+            "**",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 12925,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (D)",
+              "correct": true,
+              "tokens": 6926,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (D)",
+              "correct": true,
+              "tokens": 15189,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (D)",
+              "correct": true,
+              "tokens": 15189,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 200.9
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_21",
+          "ground_truth": "(c)",
+          "base_agreement": 0.25,
+          "base_majority": "ns",
+          "base_answers": [
+            "ns",
+            "the Motorcycle is the newest",
+            "$M$ is the newest",
+            "$\\text{Truck} < \\text{Convertible"
+          ],
+          "div_answers": [
+            "5",
+            "lution, let's break down the information provided about the order of the five vehicles: Truck (T), Station Wagon (SW), Motorcycle (M), Convertible (C), and Hatchback (H)",
+            ":",
+            "Motorcycle is the Newest"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17776,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "ns",
+              "correct": false,
+              "tokens": 17824,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "ns",
+              "correct": false,
+              "tokens": 17824,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "ns",
+              "correct": false,
+              "tokens": 17824,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.1
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_226",
+          "ground_truth": "(e)",
+          "base_agreement": 0.25,
+          "base_majority": "the Brown book goes there",
+          "base_answers": [
+            "the Brown book goes there",
+            "the correct option is **(E)**",
+            "the Brown book is in position 4",
+            "**Brown book is at position 4**"
+          ],
+          "div_answers": [
+            "**Yellow** must be at **Position 2**",
+            "the correct option is **(E)**",
+            "** Option (E)",
+            "3"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 13132,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "the correct option is **(E)**",
+              "correct": true,
+              "tokens": 14674,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "the correct option is **(E)**",
+              "correct": true,
+              "tokens": 14674,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "the correct option is **(E)**",
+              "correct": true,
+              "tokens": 14674,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 205.0
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_108",
+          "ground_truth": "(e)",
+          "base_agreement": 0.25,
+          "base_majority": "lid",
+          "base_answers": [
+            "lid",
+            "** (E)",
+            "** (E) The crow is the second from the right",
+            "(E)"
+          ],
+          "div_answers": [
+            "5",
+            "** (E)",
+            "**",
+            "lution:"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14824,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (E)",
+              "correct": true,
+              "tokens": 16303,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (E)",
+              "correct": true,
+              "tokens": 16303,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (E)",
+              "correct": true,
+              "tokens": 16303,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 213.1
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_30",
+          "ground_truth": "(b)",
+          "base_agreement": 0.25,
+          "base_majority": "** (B) The hummingbird is the rightmost",
+          "base_answers": [
+            "** (B) The hummingbird is the rightmost",
+            "Blue Jay is at Pos 4, Hummingbird is at Pos 5",
+            "the Blue Jay must be in Position 4, and the Hummingbird must be in Position 5",
+            "5"
+          ],
+          "div_answers": [
+            "**",
+            "**Position 4: Blue Jay** and **Position 5: Hummingbird**",
+            "1",
+            "5"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 10696,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "5",
+              "correct": false,
+              "tokens": 13075,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "5",
+              "correct": false,
+              "tokens": 13075,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "5",
+              "correct": false,
+              "tokens": 13075,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 172.1
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_44",
+          "ground_truth": "(a)",
+          "base_agreement": 0.25,
+          "base_majority": "Motorcycle = 2, Minivan = 5",
+          "base_answers": [
+            "Motorcycle = 2, Minivan = 5",
+            "Minivan = 5th Newest",
+            "Minivan = Pos 1, Motorcycle = Pos 4",
+            "just a copy-paste of a premise?"
+          ],
+          "div_answers": [
+            "why do I need to solve step-by-step? To verify consistency",
+            "explicitly stated in the text",
+            "one of the options",
+            "A immediately"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17848,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "Motorcycle = 2, Minivan = 5",
+              "correct": true,
+              "tokens": 17896,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Motorcycle = 2, Minivan = 5",
+              "correct": true,
+              "tokens": 17896,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Motorcycle = 2, Minivan = 5",
+              "correct": true,
+              "tokens": 17896,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.3
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_120",
+          "ground_truth": "(e)",
+          "base_agreement": 0.5,
+          "base_majority": "** (E)",
+          "base_answers": [
+            "** (E)",
+            "**Purple must be at Position 4**",
+            "the **Purple book must be at Position 4**, and the **Yellow book must be at Position 5**",
+            "** (E)"
+          ],
+          "div_answers": [
+            "lid",
+            "Purple cannot be at Position 5",
+            "Purple must be at Position 4",
+            "lve this problem:"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16849,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (E)",
+              "correct": true,
+              "tokens": 8676,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (E)",
+              "correct": true,
+              "tokens": 17696,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (E)",
+              "correct": true,
+              "tokens": 17696,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.8
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_145",
+          "ground_truth": "(d)",
+          "base_agreement": 0.25,
+          "base_majority": "the Blue Jay must be at Position 4",
+          "base_answers": [
+            "the Blue Jay must be at Position 4",
+            "**",
+            "** (D)",
+            "und"
+          ],
+          "div_answers": [
+            "the Blue Jay cannot be at Position 5",
+            "the Hummingbird is in **Position 5**",
+            "without showing the thought trace explicitly in a separate block, or rather, I should just answer the prompt directly",
+            "should be clearly indicated"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 14225,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "the Blue Jay must be at Position 4",
+              "correct": false,
+              "tokens": 16936,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "the Blue Jay must be at Position 4",
+              "correct": false,
+              "tokens": 16936,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "the Blue Jay must be at Position 4",
+              "correct": false,
+              "tokens": 16936,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_191",
+          "ground_truth": "(d)",
+          "base_agreement": 0.25,
+          "base_majority": "Joe <",
+          "base_answers": [
+            "Joe <",
+            "Dan",
+            "lve this problem, we need to determine the finishing order of the five golfers based on the given statements",
+            "seems to be (D)"
+          ],
+          "div_answers": [
+            ": $P(\\text{Rob}) > P(\\text{Dan}) > P(\\text{Amy}) > P(\\text{Joe}) > P(\\text{Ana})$",
+            "Rank(Amy) < Rank(Dan) < Rank(Rob)",
+            "the answer should be Dan",
+            "** Dan"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16845,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "Joe <",
+              "correct": false,
+              "tokens": 17318,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Joe <",
+              "correct": false,
+              "tokens": 17318,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Joe <",
+              "correct": false,
+              "tokens": 17318,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.8
+        },
+        {
+          "example_id": "bbh_logical_deduction_five_objects_185",
+          "ground_truth": "(d)",
+          "base_agreement": 0.25,
+          "base_majority": "the correct option is **(D)**",
+          "base_answers": [
+            "the correct option is **(D)**",
+            "**Orange must be in Position 3** and **Purple must be in Position 4**",
+            "** (D) The orange book is the third from the left",
+            "** (D)"
+          ],
+          "div_answers": [
+            "**",
+            "with a very high-level summary of the reasoning, omitting intermediate steps, backtracking, self-correction, etc",
+            "Orange cannot be at Position 4",
+            "with explanation, not a raw thought trace"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14086,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "the correct option is **(D)**",
+              "correct": true,
+              "tokens": 15097,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "the correct option is **(D)**",
+              "correct": true,
+              "tokens": 15097,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "the correct option is **(D)**",
+              "correct": true,
+              "tokens": 15097,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 203.2
+        }
+      ]
+    },
+    "arc_challenge": {
+      "summary": {
+        "benchmark": "arc_challenge",
+        "n_examples": 30,
+        "sc8": {
+          "accuracy": 0.5666666666666667,
+          "mean_tokens": 11551.1
+        },
+        "always_diverse": {
+          "accuracy": 0.6333333333333333
+        },
+        "agd_0.5": {
+          "accuracy": 0.6333333333333333,
+          "mean_tokens": 11185.6,
+          "fast_pct": 0.3333333333333333,
+          "delta_vs_sc": 0.06666666666666665,
+          "token_ratio": 0.9683579918795613
+        },
+        "agd_0.75": {
+          "accuracy": 0.6333333333333333,
+          "mean_tokens": 12889.166666666666,
+          "fast_pct": 0.1,
+          "delta_vs_sc": 0.06666666666666665,
+          "token_ratio": 1.1158388955741587
+        },
+        "agd_1.0": {
+          "accuracy": 0.6333333333333333,
+          "mean_tokens": 13379.3,
+          "fast_pct": 0.03333333333333333,
+          "delta_vs_sc": 0.06666666666666665,
+          "token_ratio": 1.1582706408913437
+        }
+      },
+      "rows": [
+        {
+          "example_id": "arc_985",
+          "ground_truth": "D",
+          "base_agreement": 0.75,
+          "base_majority": "1",
+          "base_answers": [
+            "1",
+            "require sunlight and chlorophyll",
+            "1",
+            "1"
+          ],
+          "div_answers": [
+            "clearly",
+            "with a brief justification",
+            "the products are Glucose (Sugar) and Oxygen",
+            "me bacteria to convert light energy into chemical energy"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 9264,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 3925,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 3925,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 11673,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 188.2
+        },
+        {
+          "example_id": "arc_962",
+          "ground_truth": "B",
+          "base_agreement": 0.25,
+          "base_majority": "Diesel fuel (specifically biodiesel, which falls under the diesel umbrella in this context)",
+          "base_answers": [
+            "Diesel fuel (specifically biodiesel, which falls under the diesel umbrella in this context)",
+            "(D) is the most accurate",
+            "(B) Biogas? Some sources define biofuels broadly",
+            "(D)"
+          ],
+          "div_answers": [
+            "(D)",
+            "(D)",
+            "(D)",
+            "without the visible reasoning block"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 15803,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "(D)",
+              "correct": false,
+              "tokens": 17232,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "(D)",
+              "correct": false,
+              "tokens": 17232,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "(D)",
+              "correct": false,
+              "tokens": 17232,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.1
+        },
+        {
+          "example_id": "arc_98",
+          "ground_truth": "B",
+          "base_agreement": 0.5,
+          "base_majority": "** (B) cell membrane, nucleus, mitochondrion",
+          "base_answers": [
+            "** (B) cell membrane, nucleus, mitochondrion",
+            "** (B) cell membrane, nucleus, mitochondrion",
+            "** (B)",
+            "they share many fundamental components"
+          ],
+          "div_answers": [
+            "** (B)",
+            "ciated with plant cells",
+            "** (B) cell membrane, nucleus, mitochondrion",
+            "**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 11227,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (B) cell membrane, nucleus, mitochondrion",
+              "correct": true,
+              "tokens": 5056,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (B) cell membrane, nucleus, mitochondrion",
+              "correct": true,
+              "tokens": 11709,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (B) cell membrane, nucleus, mitochondrion",
+              "correct": true,
+              "tokens": 11709,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 192.9
+        },
+        {
+          "example_id": "arc_885",
+          "ground_truth": "B",
+          "base_agreement": 0.25,
+          "base_majority": "I am bound",
+          "base_answers": [
+            "I am bound",
+            "ning trace\"",
+            "1",
+            "**(B)**"
+          ],
+          "div_answers": [
+            "lve step by step",
+            ", but rather the reasoning leading to the answer",
+            "urce for photosynthesis, not a requirement for respiration",
+            "lution:"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 10952,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "I am bound",
+              "correct": true,
+              "tokens": 14402,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "I am bound",
+              "correct": true,
+              "tokens": 14402,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "I am bound",
+              "correct": true,
+              "tokens": 14402,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 212.8
+        },
+        {
+          "example_id": "arc_752",
+          "ground_truth": "D",
+          "base_agreement": 0.5,
+          "base_majority": "1",
+          "base_answers": [
+            "(D)",
+            "1",
+            "(like the `<thought>` tag)",
+            "1"
+          ],
+          "div_answers": [
+            "** (D)",
+            "it would decrease, not increase, atmospheric oxygen levels",
+            "**",
+            "lve this step by step, then verify"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 10521,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 6200,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 13068,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 13068,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 205.8
+        },
+        {
+          "example_id": "arc_431",
+          "ground_truth": "D",
+          "base_agreement": 0.5,
+          "base_majority": "(D)",
+          "base_answers": [
+            "directly or with minimal explanation, but not the detailed internal reasoning block",
+            "(D)",
+            "(D)",
+            "**"
+          ],
+          "div_answers": [
+            "** (D)",
+            "with the explanation",
+            "the mass of the contents should be roughly equal to the mass of the original substances",
+            "** (D)"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 15361,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "(D)",
+              "correct": true,
+              "tokens": 7888,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "(D)",
+              "correct": true,
+              "tokens": 15798,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "(D)",
+              "correct": true,
+              "tokens": 15798,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.9
+        },
+        {
+          "example_id": "arc_638",
+          "ground_truth": "C",
+          "base_agreement": 0.25,
+          "base_majority": "1",
+          "base_answers": [
+            "1",
+            "the width decreases",
+            "(C) mass",
+            "(C) mass**"
+          ],
+          "div_answers": [
+            "the **shape changes**",
+            "1",
+            "(C) mass**",
+            "verified"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 8118,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 11384,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 11384,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 11384,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 202.0
+        },
+        {
+          "example_id": "arc_594",
+          "ground_truth": "D",
+          "base_agreement": 0.25,
+          "base_majority": "clearly",
+          "base_answers": [
+            "clearly",
+            "the Moon to appear as different shapes during the month",
+            "the revolution causes the Moon to appear as different shapes during the month",
+            "the revolution of the Moon causes the changing of its phases (shapes)"
+          ],
+          "div_answers": [
+            ",",
+            "ning in the final response as requested by the user's prompt text (\"Let's think about",
+            "**",
+            "**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 12189,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 14029,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 14029,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 14029,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 210.8
+        },
+        {
+          "example_id": "arc_212",
+          "ground_truth": "C",
+          "base_agreement": 0.25,
+          "base_majority": "ning:",
+          "base_answers": [
+            "ning:",
+            "C",
+            "** (C)",
+            "** (C) rubber is a nonconductor"
+          ],
+          "div_answers": [
+            "lution:**",
+            "the material must be a nonconductor",
+            "**",
+            "** (C) rubber is a nonconductor"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 9291,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (C) rubber is a nonconductor",
+              "correct": true,
+              "tokens": 11180,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (C) rubber is a nonconductor",
+              "correct": true,
+              "tokens": 11180,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (C) rubber is a nonconductor",
+              "correct": true,
+              "tokens": 11180,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 187.7
+        },
+        {
+          "example_id": "arc_1125",
+          "ground_truth": "C",
+          "base_agreement": 0.25,
+          "base_majority": "** Choice (C) aligns with standard laboratory safety rules",
+          "base_answers": [
+            "** Choice (C) aligns with standard laboratory safety rules",
+            "* (C) report the accident to the teacher",
+            "** Standard lab safety rules state that accidents involving broken glass or injuries must be reported to the instructor immediately",
+            "with the explanation"
+          ],
+          "div_answers": [
+            "with the requested structure",
+            "clear",
+            "(C)",
+            "** (C) report the accident to the teacher"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 10763,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** Choice (C) aligns with standard laboratory safety rules",
+              "correct": true,
+              "tokens": 15705,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** Choice (C) aligns with standard laboratory safety rules",
+              "correct": true,
+              "tokens": 15705,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** Choice (C) aligns with standard laboratory safety rules",
+              "correct": true,
+              "tokens": 15705,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 209.8
+        },
+        {
+          "example_id": "arc_974",
+          "ground_truth": "A",
+          "base_agreement": 0.75,
+          "base_majority": "** (A)",
+          "base_answers": [
+            "Selection:** Choice (A)",
+            "** (A)",
+            "** (A)",
+            "** (A)"
+          ],
+          "div_answers": [
+            "** (A) Insulin stimulates cells to absorb glucose from the blood",
+            "** (A) Insulin stimulates cells to absorb glucose from the blood",
+            ", which is public output, not hidden reasoning",
+            "** (A)"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 8444,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 4349,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 4349,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "** (A)",
+              "correct": true,
+              "tokens": 11305,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 150.3
+        },
+        {
+          "example_id": "arc_801",
+          "ground_truth": "C",
+          "base_agreement": 0.25,
+          "base_majority": "(C)",
+          "base_answers": [
+            "(C)",
+            "** (C) a suggested meal plan",
+            "the one that is *not* found",
+            "und like I'm following a hidden instruction"
+          ],
+          "div_answers": [
+            "** (C) a suggested meal plan",
+            "** (C) a suggested meal plan",
+            "dium, protein, etc",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 8855,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (C) a suggested meal plan",
+              "correct": true,
+              "tokens": 12235,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (C) a suggested meal plan",
+              "correct": true,
+              "tokens": 12235,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (C) a suggested meal plan",
+              "correct": true,
+              "tokens": 12235,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 194.9
+        },
+        {
+          "example_id": "arc_879",
+          "ground_truth": "B",
+          "base_agreement": 0.25,
+          "base_majority": "** (B)",
+          "base_answers": [
+            "** (B)",
+            "** (B) use a ruler",
+            "1",
+            "(B)"
+          ],
+          "div_answers": [
+            "**",
+            "me leaves:** Cutting the leaves destroys them and does not measure their dimensions",
+            "** (B) use a ruler",
+            "(B)"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 6548,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (B) use a ruler",
+              "correct": true,
+              "tokens": 8782,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (B) use a ruler",
+              "correct": true,
+              "tokens": 8782,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (B) use a ruler",
+              "correct": true,
+              "tokens": 8782,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 129.0
+        },
+        {
+          "example_id": "arc_470",
+          "ground_truth": "D",
+          "base_agreement": 0.25,
+          "base_majority": "the statement that is a scientific observation is **(D)**",
+          "base_answers": [
+            "the statement that is a scientific observation is **(D)**",
+            "standard helpful behavior",
+            "ry data",
+            "the statement that describes a scientific observation is the one that compares measurable physical properties"
+          ],
+          "div_answers": [
+            "D",
+            "** (D) The grasshopper is smaller than the leaf",
+            "** (D) The grasshopper is smaller than the leaf",
+            "**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 7531,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (D) The grasshopper is smaller than the leaf",
+              "correct": true,
+              "tokens": 11320,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (D) The grasshopper is smaller than the leaf",
+              "correct": true,
+              "tokens": 11320,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (D) The grasshopper is smaller than the leaf",
+              "correct": true,
+              "tokens": 11320,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 185.5
+        },
+        {
+          "example_id": "arc_910",
+          "ground_truth": "D",
+          "base_agreement": 0.25,
+          "base_majority": "it fits the definition of a compound",
+          "base_answers": [
+            "it fits the definition of a compound",
+            "it is an element",
+            "it is a compound",
+            "(D)"
+          ],
+          "div_answers": [
+            "2",
+            "** (D) ammonia",
+            "lid",
+            "ning is clear"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 7578,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "it fits the definition of a compound",
+              "correct": true,
+              "tokens": 9495,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "it fits the definition of a compound",
+              "correct": true,
+              "tokens": 9495,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "it fits the definition of a compound",
+              "correct": true,
+              "tokens": 9495,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 172.4
+        },
+        {
+          "example_id": "arc_1080",
+          "ground_truth": "A",
+          "base_agreement": 0.25,
+          "base_majority": "il and improves soil health",
+          "base_answers": [
+            "il and improves soil health",
+            "urces but does not necessarily stop pollutants (like those from detergents or the water itself) from potentially affecting the soil or groundwater",
+            "switching to compost reduces the chemical load (fertilizer runoff) that pollutes the water, which is the most effective action listed for protecting the marine ecosystems",
+            "lid waste pollution"
+          ],
+          "div_answers": [
+            "**",
+            "aps and detergents",
+            "urces of water pollution in this context",
+            "selection"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15196,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "il and improves soil health",
+              "correct": true,
+              "tokens": 15944,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "il and improves soil health",
+              "correct": true,
+              "tokens": 15944,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "il and improves soil health",
+              "correct": true,
+              "tokens": 15944,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.4
+        },
+        {
+          "example_id": "arc_581",
+          "ground_truth": "A",
+          "base_agreement": 0.25,
+          "base_majority": "ciated with river ecosystems compared to sediment disruption",
+          "base_answers": [
+            "ciated with river ecosystems compared to sediment disruption",
+            "(A) describes a disruption to the natural cycle of sediment, which is a major ecological concern",
+            "il in agricultural areas, and degradation of habitats for fish and other wildlife",
+            "or the reasoning"
+          ],
+          "div_answers": [
+            "with the requested explanation style",
+            "ning and the final answer",
+            "il and sediment downstream, which replenishes",
+            "**"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 14037,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "ciated with river ecosystems compared to sediment disruption",
+              "correct": true,
+              "tokens": 14515,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "ciated with river ecosystems compared to sediment disruption",
+              "correct": true,
+              "tokens": 14515,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "ciated with river ecosystems compared to sediment disruption",
+              "correct": true,
+              "tokens": 14515,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.1
+        },
+        {
+          "example_id": "arc_496",
+          "ground_truth": "B",
+          "base_agreement": 0.25,
+          "base_majority": "it is a representation that translates a 3D reality onto a 2D medium",
+          "base_answers": [
+            "it is a representation that translates a 3D reality onto a 2D medium",
+            "1",
+            "ning for the final output:",
+            "(B)"
+          ],
+          "div_answers": [
+            "lution\" content, framing it as the answer to the question, rather than \"Here is my internal thought process\"",
+            "2",
+            "with a brief summary of the logic, without showing the \"breakdown\" steps in detail or internal monologue",
+            "3"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 12927,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "it is a representation that translates a 3D reality onto a 2D medium",
+              "correct": false,
+              "tokens": 17153,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "it is a representation that translates a 3D reality onto a 2D medium",
+              "correct": false,
+              "tokens": 17153,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "it is a representation that translates a 3D reality onto a 2D medium",
+              "correct": false,
+              "tokens": 17153,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.3
+        },
+        {
+          "example_id": "arc_519",
+          "ground_truth": "B",
+          "base_agreement": 0.5,
+          "base_majority": "1",
+          "base_answers": [
+            "**",
+            "1",
+            "flexibility is the specific property that allows an object to bend",
+            "1"
+          ],
+          "div_answers": [
+            "** (B) flexibility",
+            "fine",
+            ", not the internal monologue",
+            "** (B) flexibility"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 7396,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 3734,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 10730,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 10730,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 164.2
+        },
+        {
+          "example_id": "arc_749",
+          "ground_truth": "C",
+          "base_agreement": 0.5,
+          "base_majority": "** (C) solar electric",
+          "base_answers": [
+            "** (C) solar electric",
+            "** (C) solar electric",
+            "(C)",
+            "1"
+          ],
+          "div_answers": [
+            "following the user's requested structure",
+            "(C)",
+            "urce Extraction:** Coal mining causes significant land degradation and water contamination",
+            "** (C) solar electric"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14062,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (C) solar electric",
+              "correct": true,
+              "tokens": 7370,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (C) solar electric",
+              "correct": true,
+              "tokens": 15697,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (C) solar electric",
+              "correct": true,
+              "tokens": 15697,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 215.4
+        },
+        {
+          "example_id": "arc_231",
+          "ground_truth": "A",
+          "base_agreement": 0.25,
+          "base_majority": "** (A) crop farmers",
+          "base_answers": [
+            "** (A) crop farmers",
+            "** (A)",
+            "the group that benefits most from the increased demand for the raw materials used to make the fuel is the crop farmers",
+            "urce's environmental benefits and conservation of gasoline"
+          ],
+          "div_answers": [
+            "line, but ethanol displaces some pure gasoline usage or adds a new component",
+            "line mixtures creates higher demand for the crops used to make ethanol, benefiting the farmers who grow them",
+            "** (A) crop farmers",
+            "** (A) crop farmers"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16780,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A) crop farmers",
+              "correct": true,
+              "tokens": 16577,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (A) crop farmers",
+              "correct": true,
+              "tokens": 16577,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (A) crop farmers",
+              "correct": true,
+              "tokens": 16577,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "arc_102",
+          "ground_truth": "A",
+          "base_agreement": 0.5,
+          "base_majority": "1",
+          "base_answers": [
+            "** (A) making fine incisions",
+            "1",
+            "with the reasoning summarized concisely",
+            "1"
+          ],
+          "div_answers": [
+            "**",
+            "and a",
+            ")",
+            "**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 8280,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 5897,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 13061,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 13061,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 191.1
+        },
+        {
+          "example_id": "arc_912",
+          "ground_truth": "A",
+          "base_agreement": 0.25,
+          "base_majority": "1",
+          "base_answers": [
+            "1",
+            "the distribution division is most responsible for getting the furniture to the retail stores",
+            ", is that violating `/no_think`?",
+            "** (A) distribution"
+          ],
+          "div_answers": [
+            "** (A)",
+            "** (A) distribution",
+            "** (A) distribution",
+            "ld"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 9490,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (A) distribution",
+              "correct": true,
+              "tokens": 9468,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "** (A) distribution",
+              "correct": true,
+              "tokens": 9468,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (A) distribution",
+              "correct": true,
+              "tokens": 9468,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 196.4
+        },
+        {
+          "example_id": "arc_502",
+          "ground_truth": "C",
+          "base_agreement": 0.25,
+          "base_majority": "\"part of mass changed to energy\"? Only in nuclear physics contexts",
+          "base_answers": [
+            "\"part of mass changed to energy\"? Only in nuclear physics contexts",
+            "\"equal",
+            "Mass is conserved",
+            "invariably \"remains the same\" to test the Conservation of Mass concept"
+          ],
+          "div_answers": [
+            "** Choose the option that accurately reflects the principle",
+            "Mass is conserved",
+            "lution:**",
+            "almost universally \"remains the same\" to test the Law of Conservation of Mass"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17328,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "Mass is conserved",
+              "correct": true,
+              "tokens": 17376,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Mass is conserved",
+              "correct": true,
+              "tokens": 17376,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Mass is conserved",
+              "correct": true,
+              "tokens": 17376,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.9
+        },
+        {
+          "example_id": "arc_108",
+          "ground_truth": "D",
+          "base_agreement": 0.5,
+          "base_majority": "** (D) learning a new behavior",
+          "base_answers": [
+            "consistently (D)",
+            "** (D) learning a new behavior",
+            "ciation of humans with food is not a genetic trait",
+            "** (D) learning a new behavior"
+          ],
+          "div_answers": [
+            "ciate human presence and campsites with food, leading them to lose their natural fear and adapt their foraging habits to the environment",
+            "it is a learned behavior",
+            "lution:**",
+            "(D)"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 10273,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "** (D) learning a new behavior",
+              "correct": true,
+              "tokens": 5084,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "** (D) learning a new behavior",
+              "correct": true,
+              "tokens": 12273,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "** (D) learning a new behavior",
+              "correct": true,
+              "tokens": 12273,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 176.9
+        },
+        {
+          "example_id": "arc_148",
+          "ground_truth": "C",
+          "base_agreement": 1.0,
+          "base_majority": "6",
+          "base_answers": [
+            "6",
+            "6",
+            "6",
+            "6"
+          ],
+          "div_answers": [
+            "6",
+            "6",
+            "6",
+            "4"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 10165,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "6",
+              "correct": false,
+              "tokens": 6398,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "6",
+              "correct": false,
+              "tokens": 6398,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "6",
+              "correct": false,
+              "tokens": 6398,
+              "path": "fast"
+            }
+          },
+          "elapsed": 220.7
+        },
+        {
+          "example_id": "arc_523",
+          "ground_truth": "A",
+          "base_agreement": 0.25,
+          "base_majority": "** (A) artificial substances that mimic human peptides",
+          "base_answers": [
+            "** (A) artificial substances that mimic human peptides",
+            "the discovery led to the development of artificial substances that mimic the immune-resistant properties of human peptides",
+            "**",
+            "1"
+          ],
+          "div_answers": [
+            "or the requested solution format without revealing the hidden reasoning steps if possible, OR follow the user's explicit instruction if it's compatible with safety guidelines",
+            "**1",
+            ", ensuring it looks like a solved problem rather than a raw thought dump",
+            "**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 10194,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 13422,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 13422,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "**",
+              "correct": false,
+              "tokens": 13422,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 192.7
+        },
+        {
+          "example_id": "arc_607",
+          "ground_truth": "B",
+          "base_agreement": 0.25,
+          "base_majority": "1",
+          "base_answers": [
+            "1",
+            "acceleration cannot change without velocity changing",
+            "the position can change while the velocity remains constant",
+            "Position"
+          ],
+          "div_answers": [
+            "** Select the characteristic that changes during motion with constant velocity",
+            ", please place the answer in \\boxed{}",
+            "0",
+            "acceleration cannot change without changing the velocity"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 13800,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 16214,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 16214,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "1",
+              "correct": false,
+              "tokens": 16214,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.5
+        },
+        {
+          "example_id": "arc_849",
+          "ground_truth": "D",
+          "base_agreement": 0.25,
+          "base_majority": "urces cite \"Transfer of genetic information\" as a key function of cells (reproduction)",
+          "base_answers": [
+            "urces cite \"Transfer of genetic information\" as a key function of cells (reproduction)",
+            "different",
+            "(D)",
+            "me bacteria)"
+          ],
+          "div_answers": [
+            "yes, at the cellular level, it holds",
+            "ning is clear and follows the \"work backwards\" instruction implicitly (i",
+            "consistently D",
+            "*   A: Plants only"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17128,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "urces cite \"Transfer of genetic information\" as a key function of cells (reproduction)",
+              "correct": true,
+              "tokens": 16819,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "urces cite \"Transfer of genetic information\" as a key function of cells (reproduction)",
+              "correct": true,
+              "tokens": 16819,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "urces cite \"Transfer of genetic information\" as a key function of cells (reproduction)",
+              "correct": true,
+              "tokens": 16819,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "arc_830",
+          "ground_truth": "D",
+          "base_agreement": 0.25,
+          "base_majority": "\"Relative Motion within the Solar System\" is likely a descriptive label used in this specific question context to represent Galilean Relativity or his support for the solar system mechanics",
+          "base_answers": [
+            "\"Relative Motion within the Solar System\" is likely a descriptive label used in this specific question context to represent Galilean Relativity or his support for the solar system mechanics",
+            "lar System: Galileo Galilei (1609-1610s)",
+            "** (D) Relative Motion within the Solar System",
+            "expected to be \"None of the above\" or is one of these loosely attributed?"
+          ],
+          "div_answers": [
+            "yes, describing the motion within the solar system (Heliocentric vs Ge",
+            "lar system (e",
+            "lution with the breakdown in the final response, as that is what the user explicitly requested in the text, overriding the implicit \"/no_think\" if it conflicts with being helpful",
+            "says: \"Keep"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17032,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "\"Relative Motion within the Solar System\" is likely a descriptive label used in this specific question context to represent Galilean Relativity or his support for the solar system mechanics",
+              "correct": true,
+              "tokens": 16415,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "\"Relative Motion within the Solar System\" is likely a descriptive label used in this specific question context to represent Galilean Relativity or his support for the solar system mechanics",
+              "correct": true,
+              "tokens": 16415,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "\"Relative Motion within the Solar System\" is likely a descriptive label used in this specific question context to represent Galilean Relativity or his support for the solar system mechanics",
+              "correct": true,
+              "tokens": 16415,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 226.9
+        }
+      ]
+    },
+    "strategyqa": {
+      "summary": {
+        "benchmark": "strategyqa",
+        "n_examples": 30,
+        "sc8": {
+          "accuracy": 0.8333333333333334,
+          "mean_tokens": 15269.8
+        },
+        "always_diverse": {
+          "accuracy": 0.7666666666666667
+        },
+        "agd_0.5": {
+          "accuracy": 0.7666666666666667,
+          "mean_tokens": 8988.966666666667,
+          "fast_pct": 0.8333333333333334,
+          "delta_vs_sc": -0.06666666666666665,
+          "token_ratio": 0.5886761232410815
+        },
+        "agd_0.75": {
+          "accuracy": 0.7666666666666667,
+          "mean_tokens": 11553.9,
+          "fast_pct": 0.5333333333333333,
+          "delta_vs_sc": -0.06666666666666665,
+          "token_ratio": 0.7566503817993687
+        },
+        "agd_1.0": {
+          "accuracy": 0.7666666666666667,
+          "mean_tokens": 13917.266666666666,
+          "fast_pct": 0.23333333333333334,
+          "delta_vs_sc": -0.06666666666666665,
+          "token_ratio": 0.9114242928307291
+        }
+      },
+      "rows": [
+        {
+          "example_id": "strategyqa_652",
+          "ground_truth": "yes",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            ", please place the answer in \\boxed{}",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no\"), I should probably lean towards the factual consensus if one exists",
+            ", just like the example provided in the prompt",
+            "1",
+            ")"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 15243,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": false,
+              "tokens": 8616,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": false,
+              "tokens": 8616,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": false,
+              "tokens": 17280,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.3
+        },
+        {
+          "example_id": "strategyqa_569",
+          "ground_truth": "no",
+          "base_agreement": 0.25,
+          "base_majority": "No?",
+          "base_answers": [
+            "No?",
+            "ning and the",
+            "no",
+            "yes"
+          ],
+          "div_answers": [
+            "Yes",
+            "no",
+            "Yes",
+            "Yes"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17148,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 17240,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 17240,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 17240,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 226.5
+        },
+        {
+          "example_id": "strategyqa_57",
+          "ground_truth": "no",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "[Yes/No]",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "no",
+            "no",
+            "correct"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14863,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7693,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7693,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 15168,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 218.2
+        },
+        {
+          "example_id": "strategyqa_533",
+          "ground_truth": "no",
+          "base_agreement": 1.0,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "1",
+            "52",
+            "directly"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 13694,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 5698,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 5698,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 5698,
+              "path": "fast"
+            }
+          },
+          "elapsed": 216.6
+        },
+        {
+          "example_id": "strategyqa_463",
+          "ground_truth": "yes",
+          "base_agreement": 1.0,
+          "base_majority": "yes",
+          "base_answers": [
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+          ],
+          "div_answers": [
+            "yes",
+            "yes",
+            "yes",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 12851,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 6148,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 6148,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 6148,
+              "path": "fast"
+            }
+          },
+          "elapsed": 223.2
+        },
+        {
+          "example_id": "strategyqa_251",
+          "ground_truth": "no",
+          "base_agreement": 1.0,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "no",
+            "[Conclusion]",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 12233,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 5815,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 5815,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 5815,
+              "path": "fast"
+            }
+          },
+          "elapsed": 223.5
+        },
+        {
+          "example_id": "strategyqa_432",
+          "ground_truth": "yes",
+          "base_agreement": 0.25,
+          "base_majority": "\"Yes\"",
+          "base_answers": [
+            "\"Yes\"",
+            "**No** because the YMCA headquarters is in **Chicago**, and maybe the riddle implies a specific context? No, that doesn't make sense",
+            "expected to be \"No\" because Indianapolis is not known for Raclette?",
+            "Yes"
+          ],
+          "div_answers": [
+            "a definitive Yes",
+            "[Yes/No]",
+            "[Yes/No]",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17184,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "[Yes/No]",
+              "correct": false,
+              "tokens": 17232,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "[Yes/No]",
+              "correct": false,
+              "tokens": 17232,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "[Yes/No]",
+              "correct": false,
+              "tokens": 17232,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.7
+        },
+        {
+          "example_id": "strategyqa_351",
+          "ground_truth": "no",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "no",
+            "No"
+          ],
+          "div_answers": [
+            "no because the tool is specific to vertebrate bone density assessment (often for osteoporosis)",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16467,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7785,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7785,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 16449,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.1
+        },
+        {
+          "example_id": "strategyqa_124",
+          "ground_truth": "yes",
+          "base_agreement": 0.75,
+          "base_majority": "yes",
+          "base_answers": [
+            "no",
+            "yes",
+            "yes",
+            "yes"
+          ],
+          "div_answers": [
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15430,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 5006,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 5006,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 12528,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 221.2
+        },
+        {
+          "example_id": "strategyqa_686",
+          "ground_truth": "no",
+          "base_agreement": 1.0,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14536,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6760,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6760,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6760,
+              "path": "fast"
+            }
+          },
+          "elapsed": 222.7
+        },
+        {
+          "example_id": "strategyqa_631",
+          "ground_truth": "no",
+          "base_agreement": 0.5,
+          "base_majority": "yes",
+          "base_answers": [
+            "yes",
+            "Yes",
+            "yes",
+            "Yes"
+          ],
+          "div_answers": [
+            "Yes, he did a physical act of violence, whereas the slogan is a verbal warning",
+            "it is very",
+            "Yes",
+            "usually **Yes**"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17288,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": false,
+              "tokens": 7226,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 15918,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 15918,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.5
+        },
+        {
+          "example_id": "strategyqa_482",
+          "ground_truth": "yes",
+          "base_agreement": 0.75,
+          "base_majority": "yes",
+          "base_answers": [
+            "no",
+            "yes",
+            "yes",
+            "yes"
+          ],
+          "div_answers": [
+            "lve step by step",
+            "yes",
+            "no",
+            "yes"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15701,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 8252,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 8252,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 15202,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.7
+        },
+        {
+          "example_id": "strategyqa_529",
+          "ground_truth": "yes",
+          "base_agreement": 0.25,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "\"Yes\" because you can watch it in a submarine? The question asks \"Can you",
+            "\"A BLT contains bacon",
+            "\"Yes"
+          ],
+          "div_answers": [
+            "Technically yes (in a sub), but usually no (naked human)",
+            "No",
+            "\"Yes, in a submersible",
+            "no"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 16695,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": false,
+              "tokens": 17240,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": false,
+              "tokens": 17240,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": false,
+              "tokens": 17240,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.1
+        },
+        {
+          "example_id": "strategyqa_275",
+          "ground_truth": "no",
+          "base_agreement": 0.25,
+          "base_majority": "3",
+          "base_answers": [
+            "3",
+            "no",
+            "2001",
+            "No"
+          ],
+          "div_answers": [
+            "no",
+            "3",
+            "2",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17192,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 16692,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 16692,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 16692,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.6
+        },
+        {
+          "example_id": "strategyqa_563",
+          "ground_truth": "no",
+          "base_agreement": 1.0,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "no",
+            "no",
+            "\"No"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 14281,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7242,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7242,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7242,
+              "path": "fast"
+            }
+          },
+          "elapsed": 226.6
+        },
+        {
+          "example_id": "strategyqa_670",
+          "ground_truth": "yes",
+          "base_agreement": 0.5,
+          "base_majority": "yes",
+          "base_answers": [
+            "yes",
+            "statement",
+            "no",
+            "yes"
+          ],
+          "div_answers": [
+            "Yes (with the caveat of the specific partner)",
+            "no",
+            "Yes, specifically regarding George Harrison",
+            "yes"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17115,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 8087,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 16747,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 16747,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.5
+        },
+        {
+          "example_id": "strategyqa_345",
+          "ground_truth": "no",
+          "base_agreement": 0.5,
+          "base_majority": "no",
+          "base_answers": [
+            "no\")",
+            "likely \"Yes, hypothetically\"",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "unlikely",
+            "* The prompt asks \"Could",
+            "\"Yes, it is possible under specific conditions, but unlikely in a general fight",
+            "Maybe/No"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17216,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 8608,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 17264,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 17264,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.9
+        },
+        {
+          "example_id": "strategyqa_286",
+          "ground_truth": "yes",
+          "base_agreement": 0.5,
+          "base_majority": "yes",
+          "base_answers": [
+            "[Answer]",
+            "yes",
+            "yes",
+            "0"
+          ],
+          "div_answers": [
+            "yes",
+            "yes",
+            "no",
+            "[Result]"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 11800,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 7902,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 16154,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 16154,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.0
+        },
+        {
+          "example_id": "strategyqa_304",
+          "ground_truth": "no",
+          "base_agreement": 0.5,
+          "base_majority": "52",
+          "base_answers": [
+            "52",
+            "2",
+            "text because they asked for it",
+            "52"
+          ],
+          "div_answers": [
+            "no",
+            "52",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15547,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "52",
+              "correct": true,
+              "tokens": 8290,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "52",
+              "correct": true,
+              "tokens": 16921,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "52",
+              "correct": true,
+              "tokens": 16921,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.6
+        },
+        {
+          "example_id": "strategyqa_439",
+          "ground_truth": "no",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "No",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15019,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6623,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6623,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 13661,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.4
+        },
+        {
+          "example_id": "strategyqa_134",
+          "ground_truth": "no",
+          "base_agreement": 0.5,
+          "base_majority": "Yes",
+          "base_answers": [
+            "Yes",
+            "No",
+            "[Yes/No]",
+            "Yes"
+          ],
+          "div_answers": [
+            "Yes",
+            "No",
+            "Yes",
+            "No?*"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 17200,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 8600,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 17248,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "Yes",
+              "correct": false,
+              "tokens": 17248,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.0
+        },
+        {
+          "example_id": "strategyqa_58",
+          "ground_truth": "no",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "No",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "content, not the internal scratchpad",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15152,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7269,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7269,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 15574,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.5
+        },
+        {
+          "example_id": "strategyqa_567",
+          "ground_truth": "no",
+          "base_agreement": 1.0,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "no",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 13413,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6418,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6418,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 6418,
+              "path": "fast"
+            }
+          },
+          "elapsed": 224.4
+        },
+        {
+          "example_id": "strategyqa_290",
+          "ground_truth": "no",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "no",
+            "no",
+            "[Yes/No]",
+            "no"
+          ],
+          "div_answers": [
+            "[Answer]",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 12513,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7418,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 7418,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 15433,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 223.7
+        },
+        {
+          "example_id": "strategyqa_62",
+          "ground_truth": "no",
+          "base_agreement": 0.25,
+          "base_majority": "1918",
+          "base_answers": [
+            "1918",
+            "no",
+            "23",
+            "No"
+          ],
+          "div_answers": [
+            "no",
+            "yes",
+            "1",
+            "1915"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16795,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 17232,
+              "path": "diverse"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 17232,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 17232,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.2
+        },
+        {
+          "example_id": "strategyqa_86",
+          "ground_truth": "yes",
+          "base_agreement": 0.5,
+          "base_majority": "yes",
+          "base_answers": [
+            "\"Yes, because of grapefruit,\" that is medically accurate",
+            "yes (for some)",
+            "yes",
+            "yes"
+          ],
+          "div_answers": [
+            "if I were using a specific CoT model, but since I am generating text, I will just output the text",
+            "Yes",
+            "[Answer]",
+            "yes"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 17208,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 8155,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 16598,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 16598,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.7
+        },
+        {
+          "example_id": "strategyqa_339",
+          "ground_truth": "no",
+          "base_agreement": 0.5,
+          "base_majority": "60",
+          "base_answers": [
+            "60",
+            "59",
+            "60",
+            "57"
+          ],
+          "div_answers": [
+            "66",
+            "55",
+            "20",
+            "57"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 16616,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "60",
+              "correct": true,
+              "tokens": 8608,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "60",
+              "correct": true,
+              "tokens": 17264,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "60",
+              "correct": true,
+              "tokens": 17264,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 226.3
+        },
+        {
+          "example_id": "strategyqa_374",
+          "ground_truth": "yes",
+          "base_agreement": 0.5,
+          "base_majority": "7",
+          "base_answers": [
+            "7",
+            "3",
+            "[Example Answer]",
+            "7"
+          ],
+          "div_answers": [
+            "7",
+            "7",
+            "7",
+            "7"
+          ],
+          "sc8_correct": false,
+          "sc8_tokens": 14405,
+          "joint_correct": false,
+          "agd": {
+            "0.5": {
+              "pred": "7",
+              "correct": false,
+              "tokens": 8620,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "7",
+              "correct": false,
+              "tokens": 16930,
+              "path": "diverse"
+            },
+            "1.0": {
+              "pred": "7",
+              "correct": false,
+              "tokens": 16930,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 225.8
+        },
+        {
+          "example_id": "strategyqa_510",
+          "ground_truth": "yes",
+          "base_agreement": 1.0,
+          "base_majority": "yes",
+          "base_answers": [
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+          ],
+          "div_answers": [
+            "no",
+            "yes",
+            "yes",
+            "yes"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 11421,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 4622,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 4622,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "yes",
+              "correct": true,
+              "tokens": 4622,
+              "path": "fast"
+            }
+          },
+          "elapsed": 221.9
+        },
+        {
+          "example_id": "strategyqa_492",
+          "ground_truth": "no",
+          "base_agreement": 0.75,
+          "base_majority": "no",
+          "base_answers": [
+            "definitively no",
+            "no",
+            "no",
+            "no"
+          ],
+          "div_answers": [
+            "No",
+            "no",
+            "no",
+            "no"
+          ],
+          "sc8_correct": true,
+          "sc8_tokens": 15868,
+          "joint_correct": true,
+          "agd": {
+            "0.5": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 8572,
+              "path": "fast"
+            },
+            "0.75": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 8572,
+              "path": "fast"
+            },
+            "1.0": {
+              "pred": "no",
+              "correct": true,
+              "tokens": 16840,
+              "path": "diverse"
+            }
+          },
+          "elapsed": 224.9
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,73 @@
+2026-04-23 16:34:51,068 INFO === AGD Experiment ===
+2026-04-23 16:34:51,069 INFO Model: /openbayes/input/input0/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a, Benchmarks: ['math_hard', 'bbh_logic', 'arc_challenge', 'strategyqa'], N=30
+2026-04-23 16:35:55,834 INFO Model loaded (tp=4)
+2026-04-23 16:35:55,836 INFO === Benchmark: math_hard ===
+2026-04-23 16:35:56,574 INFO [math_hard] AGD: k_base=4, k_div=4, thresholds=[0.5, 0.75, 1.0]
+2026-04-23 16:54:56,810 INFO   [math_hard] 5/30  SC8=40%  AGD0.5=40%(f40%)  AGD0.75=40%(f0%)  AGD1.0=40%(f0%)
+2026-04-23 17:13:55,953 INFO   [math_hard] 10/30  SC8=30%  AGD0.5=30%(f20%)  AGD0.75=30%(f0%)  AGD1.0=30%(f0%)
+2026-04-24 02:15:30,225 INFO === AGD Experiment ===
+2026-04-24 02:15:30,225 INFO Model: /openbayes/input/input0/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a, Benchmarks: ['math_hard', 'bbh_logic', 'arc_challenge', 'strategyqa'], N=30
+2026-04-24 02:52:35,819 INFO === AGD Experiment ===
+2026-04-24 02:52:35,819 INFO Model: /openbayes/input/input0/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a, Benchmarks: ['math_hard', 'bbh_logic', 'arc_challenge', 'strategyqa'], N=30
+2026-04-24 02:56:55,619 INFO Model loaded (tp=4)
+2026-04-24 02:56:55,623 INFO === Benchmark: math_hard ===
+2026-04-24 02:56:57,386 INFO [math_hard] AGD: k_base=4, k_div=4, thresholds=[0.5, 0.75, 1.0]
+2026-04-24 03:15:33,738 INFO   [math_hard] 5/30  SC8=60%  AGD0.5=20%(f40%)  AGD0.75=20%(f20%)  AGD1.0=20%(f0%)
+2026-04-24 03:34:06,637 INFO   [math_hard] 10/30  SC8=60%  AGD0.5=20%(f30%)  AGD0.75=20%(f10%)  AGD1.0=20%(f0%)
+2026-04-24 03:52:44,079 INFO   [math_hard] 15/30  SC8=60%  AGD0.5=27%(f33%)  AGD0.75=33%(f13%)  AGD1.0=33%(f0%)
+2026-04-24 04:11:23,091 INFO   [math_hard] 20/30  SC8=50%  AGD0.5=20%(f25%)  AGD0.75=25%(f10%)  AGD1.0=25%(f0%)
+2026-04-24 04:30:01,702 INFO   [math_hard] 25/30  SC8=52%  AGD0.5=24%(f24%)  AGD0.75=28%(f8%)  AGD1.0=28%(f0%)
+2026-04-24 04:48:38,707 INFO   [math_hard] 30/30  SC8=50%  AGD0.5=27%(f20%)  AGD0.75=30%(f7%)  AGD1.0=30%(f0%)
+2026-04-24 04:48:38,753 INFO [math_hard] RESULTS:
+2026-04-24 04:48:38,754 INFO   SC(8):           50.0%
+2026-04-24 04:48:38,754 INFO   Always-diverse:  30.0%
+2026-04-24 04:48:38,754 INFO   AGD(thr=0.50):   26.7%  Δ=-23.3%  fast=20%  tok=0.90x
+2026-04-24 04:48:38,754 INFO   AGD(thr=0.75):   30.0%  Δ=-20.0%  fast=7%  tok=0.97x
+2026-04-24 04:48:38,754 INFO   AGD(thr=1.00):   30.0%  Δ=-20.0%  fast=0%  tok=1.00x
+2026-04-24 04:48:38,754 INFO === Benchmark: bbh_logic ===
+2026-04-24 04:48:39,294 INFO [bbh_logic] AGD: k_base=4, k_div=4, thresholds=[0.5, 0.75, 1.0]
+2026-04-24 05:06:51,977 INFO   [bbh_logic] 5/30  SC8=40%  AGD0.5=80%(f20%)  AGD0.75=80%(f0%)  AGD1.0=80%(f0%)
+2026-04-24 05:25:32,000 INFO   [bbh_logic] 10/30  SC8=50%  AGD0.5=50%(f20%)  AGD0.75=50%(f0%)  AGD1.0=50%(f0%)
+2026-04-24 05:43:07,303 INFO   [bbh_logic] 15/30  SC8=60%  AGD0.5=53%(f27%)  AGD0.75=53%(f7%)  AGD1.0=53%(f0%)
+2026-04-24 06:01:15,016 INFO   [bbh_logic] 20/30  SC8=50%  AGD0.5=55%(f30%)  AGD0.75=55%(f5%)  AGD1.0=55%(f0%)
+2026-04-24 06:18:09,258 INFO   [bbh_logic] 25/30  SC8=56%  AGD0.5=56%(f28%)  AGD0.75=56%(f4%)  AGD1.0=56%(f0%)
+2026-04-24 06:36:26,612 INFO   [bbh_logic] 30/30  SC8=60%  AGD0.5=57%(f27%)  AGD0.75=57%(f3%)  AGD1.0=57%(f0%)
+2026-04-24 06:36:26,652 INFO [bbh_logic] RESULTS:
+2026-04-24 06:36:26,653 INFO   SC(8):           60.0%
+2026-04-24 06:36:26,653 INFO   Always-diverse:  56.7%
+2026-04-24 06:36:26,653 INFO   AGD(thr=0.50):   56.7%  Δ=-3.3%  fast=27%  tok=0.91x
+2026-04-24 06:36:26,653 INFO   AGD(thr=0.75):   56.7%  Δ=-3.3%  fast=3%  tok=1.04x
+2026-04-24 06:36:26,653 INFO   AGD(thr=1.00):   56.7%  Δ=-3.3%  fast=0%  tok=1.06x
+2026-04-24 06:36:26,653 INFO === Benchmark: arc_challenge ===
+2026-04-24 06:36:26,962 INFO [arc_challenge] AGD: k_base=4, k_div=4, thresholds=[0.5, 0.75, 1.0]
+2026-04-24 06:53:31,832 INFO   [arc_challenge] 5/30  SC8=40%  AGD0.5=40%(f60%)  AGD0.75=40%(f20%)  AGD1.0=40%(f0%)
+2026-04-24 07:10:46,012 INFO   [arc_challenge] 10/30  SC8=50%  AGD0.5=50%(f40%)  AGD0.75=50%(f10%)  AGD1.0=50%(f0%)
+2026-04-24 07:24:38,143 INFO   [arc_challenge] 15/30  SC8=53%  AGD0.5=67%(f33%)  AGD0.75=67%(f13%)  AGD1.0=67%(f0%)
+2026-04-24 07:42:10,399 INFO   [arc_challenge] 20/30  SC8=55%  AGD0.5=65%(f35%)  AGD0.75=65%(f10%)  AGD1.0=65%(f0%)
+2026-04-24 07:59:02,104 INFO   [arc_challenge] 25/30  SC8=60%  AGD0.5=68%(f36%)  AGD0.75=68%(f8%)  AGD1.0=68%(f0%)
+2026-04-24 08:17:09,704 INFO   [arc_challenge] 30/30  SC8=57%  AGD0.5=63%(f33%)  AGD0.75=63%(f10%)  AGD1.0=63%(f3%)
+2026-04-24 08:17:09,746 INFO [arc_challenge] RESULTS:
+2026-04-24 08:17:09,746 INFO   SC(8):           56.7%
+2026-04-24 08:17:09,746 INFO   Always-diverse:  63.3%
+2026-04-24 08:17:09,746 INFO   AGD(thr=0.50):   63.3%  Δ=+6.7%  fast=33%  tok=0.97x
+2026-04-24 08:17:09,746 INFO   AGD(thr=0.75):   63.3%  Δ=+6.7%  fast=10%  tok=1.12x
+2026-04-24 08:17:09,746 INFO   AGD(thr=1.00):   63.3%  Δ=+6.7%  fast=3%  tok=1.16x
+2026-04-24 08:17:09,746 INFO === Benchmark: strategyqa ===
+2026-04-24 08:17:09,894 INFO [strategyqa] AGD: k_base=4, k_div=4, thresholds=[0.5, 0.75, 1.0]
+2026-04-24 08:35:39,646 INFO   [strategyqa] 5/30  SC8=60%  AGD0.5=60%(f80%)  AGD0.75=60%(f80%)  AGD1.0=60%(f40%)
+2026-04-24 08:54:16,944 INFO   [strategyqa] 10/30  SC8=80%  AGD0.5=70%(f80%)  AGD0.75=70%(f80%)  AGD1.0=70%(f40%)
+2026-04-24 09:13:00,472 INFO   [strategyqa] 15/30  SC8=80%  AGD0.5=67%(f73%)  AGD0.75=67%(f67%)  AGD1.0=67%(f33%)
+2026-04-24 09:31:45,899 INFO   [strategyqa] 20/30  SC8=85%  AGD0.5=75%(f80%)  AGD0.75=75%(f55%)  AGD1.0=75%(f25%)
+2026-04-24 09:50:29,589 INFO   [strategyqa] 25/30  SC8=84%  AGD0.5=76%(f80%)  AGD0.75=76%(f56%)  AGD1.0=76%(f24%)
+2026-04-24 10:09:13,163 INFO   [strategyqa] 30/30  SC8=83%  AGD0.5=77%(f83%)  AGD0.75=77%(f53%)  AGD1.0=77%(f23%)
+2026-04-24 10:09:13,203 INFO [strategyqa] RESULTS:
+2026-04-24 10:09:13,203 INFO   SC(8):           83.3%
+2026-04-24 10:09:13,203 INFO   Always-diverse:  76.7%
+2026-04-24 10:09:13,203 INFO   AGD(thr=0.50):   76.7%  Δ=-6.7%  fast=83%  tok=0.59x
+2026-04-24 10:09:13,203 INFO   AGD(thr=0.75):   76.7%  Δ=-6.7%  fast=53%  tok=0.76x
+2026-04-24 10:09:13,203 INFO   AGD(thr=1.00):   76.7%  Δ=-6.7%  fast=23%  tok=0.91x
+2026-04-24 10:09:13,204 INFO 
+=== FINAL CROSS-BENCHMARK ===
+2026-04-24 10:09:13,204 INFO AGD(0.50): avg Δ=-6.7%, min Δ=-23.3% (NOT universal)
+2026-04-24 10:09:13,204 INFO AGD(0.75): avg Δ=-5.8%, min Δ=-20.0% (NOT universal)
+2026-04-24 10:09:13,204 INFO AGD(1.00): avg Δ=-5.8%, min Δ=-20.0% (NOT universal)
