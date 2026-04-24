@@ -1,0 +1,3175 @@
+{
+  "model": "/openbayes/input/input0/hub/Qwen2.5-1.5B",
+  "cells": {
+    "strategyqa": {
+      "benchmark": "strategyqa",
+      "n_examples": 150,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.4666666666666667,
+        "self_consistency": 0.54,
+        "backward_cloze": 0.46
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1522.7866666666666,
+        "self_consistency": 9991.34,
+        "backward_cloze": 6086.055172413793
+      },
+      "oracle_accuracy": 0.8466666666666667,
+      "sc_accuracy": 0.54,
+      "oracle_sc_gap": 0.30666666666666664,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "strategyqa_275",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_205",
+            "correct": false,
+            "prediction": "it is not possible to tell",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_285",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 258
+          },
+          {
+            "example_id": "strategyqa_237",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 261
+          },
+          {
+            "example_id": "strategyqa_407",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_663",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_431",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_278",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_420",
+            "correct": true,
+            "prediction": "\u8d78",
+            "ground_truth": "no",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_279",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 282
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_508",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 299
+          },
+          {
+            "example_id": "strategyqa_428",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_519",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 957
+          },
+          {
+            "example_id": "strategyqa_675",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 242
+          },
+          {
+            "example_id": "strategyqa_23",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_270",
+            "correct": false,
+            "prediction": "\u8d7f",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_673",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_4",
+            "correct": true,
+            "prediction": "oplayer",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_282",
+            "correct": true,
+            "prediction": "\u9a9f",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_397",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 249
+          },
+          {
+            "example_id": "strategyqa_294",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_506",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_515",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_531",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_324",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 310
+          },
+          {
+            "example_id": "strategyqa_456",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 343
+          },
+          {
+            "example_id": "strategyqa_535",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 252
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_483",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_46",
+            "correct": true,
+            "prediction": "Sarkozy was the president of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate for the presidency of France. Sarkozy was the candidate",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_464",
+            "correct": false,
+            "prediction": "Sarkasian",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_635",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_234",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_255",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_362",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 249
+          },
+          {
+            "example_id": "strategyqa_617",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_598",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_380",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_91",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_127",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_507",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 339
+          },
+          {
+            "example_id": "strategyqa_139",
+            "correct": false,
+            "prediction": "\u6864",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_546",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 247
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_291",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_75",
+            "correct": false,
+            "prediction": "amsunggalaxy",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_25",
+            "correct": false,
+            "prediction": "Islamist",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_436",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_284",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_371",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_511",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_288",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 309
+          },
+          {
+            "example_id": "strategyqa_99",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_188",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 334
+          },
+          {
+            "example_id": "strategyqa_311",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_646",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 225
+          },
+          {
+            "example_id": "strategyqa_517",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 270
+          },
+          {
+            "example_id": "strategyqa_480",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 232
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "it is not guaranteed",
+            "ground_truth": "no",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_36",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 783
+          },
+          {
+            "example_id": "strategyqa_555",
+            "correct": true,
+            "prediction": "Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme that breaks down monoamine neurotransmitters. Monoamine neurotransmitters are chemicals that help transmit signals between nerve cells. Monoamine Oxidase is an enzyme",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_52",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_24",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_260",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_89",
+            "correct": false,
+            "prediction": "nville",
+            "ground_truth": "yes",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_295",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 269
+          },
+          {
+            "example_id": "strategyqa_364",
+            "correct": false,
+            "prediction": "mething at Chick-fil-A?",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_396",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 336
+          },
+          {
+            "example_id": "strategyqa_551",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_182",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_244",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_370",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_329",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_95",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_423",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_145",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_648",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 242
+          },
+          {
+            "example_id": "strategyqa_51",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_196",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 263
+          },
+          {
+            "example_id": "strategyqa_505",
+            "correct": false,
+            "prediction": "it is not possible to tell",
+            "ground_truth": "yes",
+            "total_tokens": 351
+          },
+          {
+            "example_id": "strategyqa_353",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 336
+          },
+          {
+            "example_id": "strategyqa_226",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_375",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 285
+          },
+          {
+            "example_id": "strategyqa_440",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_530",
+            "correct": true,
+            "prediction": "\u6864",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_79",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "yes",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_433",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_179",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 303
+          },
+          {
+            "example_id": "strategyqa_204",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_114",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_676",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 377
+          },
+          {
+            "example_id": "strategyqa_377",
+            "correct": true,
+            "prediction": "Geile",
+            "ground_truth": "no",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_406",
+            "correct": true,
+            "prediction": "SGlobal",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_110",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 264
+          },
+          {
+            "example_id": "strategyqa_102",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 229
+          },
+          {
+            "example_id": "strategyqa_308",
+            "correct": true,
+            "prediction": "ycopg",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_219",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_159",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_39",
+            "correct": true,
+            "prediction": "1777",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_466",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 309
+          },
+          {
+            "example_id": "strategyqa_60",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 895
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 302
+          },
+          {
+            "example_id": "strategyqa_382",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 291
+          },
+          {
+            "example_id": "strategyqa_391",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 280
+          },
+          {
+            "example_id": "strategyqa_438",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 285
+          },
+          {
+            "example_id": "strategyqa_347",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_250",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 230
+          },
+          {
+            "example_id": "strategyqa_666",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 283
+          },
+          {
+            "example_id": "strategyqa_160",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 295
+          },
+          {
+            "example_id": "strategyqa_40",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_565",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 310
+          },
+          {
+            "example_id": "strategyqa_502",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_48",
+            "correct": false,
+            "prediction": "\u6864",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_129",
+            "correct": true,
+            "prediction": "SGlobal",
+            "ground_truth": "no",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_417",
+            "correct": false,
+            "prediction": "Islamist",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_247",
+            "correct": false,
+            "prediction": "SGlobal",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "\u731e\u7301",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_566",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_522",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 286
+          },
+          {
+            "example_id": "strategyqa_214",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 239
+          },
+          {
+            "example_id": "strategyqa_404",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_446",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 300
+          },
+          {
+            "example_id": "strategyqa_581",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_207",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 267
+          },
+          {
+            "example_id": "strategyqa_434",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_151",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 299
+          },
+          {
+            "example_id": "strategyqa_195",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2153
+          },
+          {
+            "example_id": "strategyqa_669",
+            "correct": false,
+            "prediction": "Geilech",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_443",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_361",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_521",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_654",
+            "correct": false,
+            "prediction": "it is not possible to tell",
+            "ground_truth": "yes",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_605",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_475",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_534",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 250
+          },
+          {
+            "example_id": "strategyqa_161",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_316",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 244
+          },
+          {
+            "example_id": "strategyqa_202",
+            "correct": true,
+            "prediction": "\u6864",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_273",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_20",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_289",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_413",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2152
+          },
+          {
+            "example_id": "strategyqa_71",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 254
+          },
+          {
+            "example_id": "strategyqa_298",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_419",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 275
+          },
+          {
+            "example_id": "strategyqa_224",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_115",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 272
+          },
+          {
+            "example_id": "strategyqa_582",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 265
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "ertools",
+            "ground_truth": "no",
+            "total_tokens": 10631
+          },
+          {
+            "example_id": "strategyqa_205",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10040
+          },
+          {
+            "example_id": "strategyqa_285",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7606
+          },
+          {
+            "example_id": "strategyqa_237",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8719
+          },
+          {
+            "example_id": "strategyqa_407",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10696
+          },
+          {
+            "example_id": "strategyqa_663",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9740
+          },
+          {
+            "example_id": "strategyqa_431",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8951
+          },
+          {
+            "example_id": "strategyqa_278",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4770
+          },
+          {
+            "example_id": "strategyqa_420",
+            "correct": true,
+            "prediction": "ldier",
+            "ground_truth": "no",
+            "total_tokens": 15476
+          },
+          {
+            "example_id": "strategyqa_279",
+            "correct": true,
+            "prediction": "it is not possible to tell",
+            "ground_truth": "no",
+            "total_tokens": 9895
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7889
+          },
+          {
+            "example_id": "strategyqa_508",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 13380
+          },
+          {
+            "example_id": "strategyqa_428",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7151
+          },
+          {
+            "example_id": "strategyqa_519",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4980
+          },
+          {
+            "example_id": "strategyqa_675",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8048
+          },
+          {
+            "example_id": "strategyqa_23",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10325
+          },
+          {
+            "example_id": "strategyqa_270",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9232
+          },
+          {
+            "example_id": "strategyqa_673",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 12150
+          },
+          {
+            "example_id": "strategyqa_4",
+            "correct": true,
+            "prediction": "oplayer",
+            "ground_truth": "no",
+            "total_tokens": 13568
+          },
+          {
+            "example_id": "strategyqa_282",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8663
+          },
+          {
+            "example_id": "strategyqa_397",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9835
+          },
+          {
+            "example_id": "strategyqa_294",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10002
+          },
+          {
+            "example_id": "strategyqa_506",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 11773
+          },
+          {
+            "example_id": "strategyqa_515",
+            "correct": false,
+            "prediction": "childcare",
+            "ground_truth": "yes",
+            "total_tokens": 13475
+          },
+          {
+            "example_id": "strategyqa_531",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8598
+          },
+          {
+            "example_id": "strategyqa_324",
+            "correct": true,
+            "prediction": "You are a helpful assistant, who always provide explanation. Think like you are answering to a five year old.",
+            "ground_truth": "no",
+            "total_tokens": 8235
+          },
+          {
+            "example_id": "strategyqa_456",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7516
+          },
+          {
+            "example_id": "strategyqa_535",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7090
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 14362
+          },
+          {
+            "example_id": "strategyqa_483",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6504
+          },
+          {
+            "example_id": "strategyqa_46",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 11861
+          },
+          {
+            "example_id": "strategyqa_464",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 12044
+          },
+          {
+            "example_id": "strategyqa_635",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8880
+          },
+          {
+            "example_id": "strategyqa_234",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 12064
+          },
+          {
+            "example_id": "strategyqa_255",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 11374
+          },
+          {
+            "example_id": "strategyqa_362",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9899
+          },
+          {
+            "example_id": "strategyqa_617",
+            "correct": false,
+            "prediction": "Geile",
+            "ground_truth": "yes",
+            "total_tokens": 11678
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6327
+          },
+          {
+            "example_id": "strategyqa_598",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6205
+          },
+          {
+            "example_id": "strategyqa_380",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9719
+          },
+          {
+            "example_id": "strategyqa_91",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 11755
+          },
+          {
+            "example_id": "strategyqa_127",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5356
+          },
+          {
+            "example_id": "strategyqa_507",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8312
+          },
+          {
+            "example_id": "strategyqa_139",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10088
+          },
+          {
+            "example_id": "strategyqa_546",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9044
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 13195
+          },
+          {
+            "example_id": "strategyqa_291",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7259
+          },
+          {
+            "example_id": "strategyqa_75",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9740
+          },
+          {
+            "example_id": "strategyqa_25",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 11765
+          },
+          {
+            "example_id": "strategyqa_436",
+            "correct": true,
+            "prediction": "uctor",
+            "ground_truth": "no",
+            "total_tokens": 14259
+          },
+          {
+            "example_id": "strategyqa_284",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 13432
+          },
+          {
+            "example_id": "strategyqa_371",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 14023
+          },
+          {
+            "example_id": "strategyqa_511",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 11116
+          },
+          {
+            "example_id": "strategyqa_288",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7701
+          },
+          {
+            "example_id": "strategyqa_99",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8075
+          },
+          {
+            "example_id": "strategyqa_188",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 12043
+          },
+          {
+            "example_id": "strategyqa_311",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10284
+          },
+          {
+            "example_id": "strategyqa_646",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9023
+          },
+          {
+            "example_id": "strategyqa_517",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8619
+          },
+          {
+            "example_id": "strategyqa_480",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 11996
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3471
+          },
+          {
+            "example_id": "strategyqa_36",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9277
+          },
+          {
+            "example_id": "strategyqa_555",
+            "correct": true,
+            "prediction": "allback",
+            "ground_truth": "no",
+            "total_tokens": 15764
+          },
+          {
+            "example_id": "strategyqa_52",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10211
+          },
+          {
+            "example_id": "strategyqa_24",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9885
+          },
+          {
+            "example_id": "strategyqa_260",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9998
+          },
+          {
+            "example_id": "strategyqa_89",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 14501
+          },
+          {
+            "example_id": "strategyqa_295",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8244
+          },
+          {
+            "example_id": "strategyqa_364",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8445
+          },
+          {
+            "example_id": "strategyqa_396",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10683
+          },
+          {
+            "example_id": "strategyqa_551",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9588
+          },
+          {
+            "example_id": "strategyqa_182",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7890
+          },
+          {
+            "example_id": "strategyqa_244",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 15269
+          },
+          {
+            "example_id": "strategyqa_370",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 11725
+          },
+          {
+            "example_id": "strategyqa_329",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9747
+          },
+          {
+            "example_id": "strategyqa_95",
+            "correct": true,
+            "prediction": "ostringstream",
+            "ground_truth": "no",
+            "total_tokens": 13447
+          },
+          {
+            "example_id": "strategyqa_423",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10028
+          },
+          {
+            "example_id": "strategyqa_145",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9848
+          },
+          {
+            "example_id": "strategyqa_648",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 13876
+          },
+          {
+            "example_id": "strategyqa_51",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8670
+          },
+          {
+            "example_id": "strategyqa_196",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7987
+          },
+          {
+            "example_id": "strategyqa_505",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8012
+          },
+          {
+            "example_id": "strategyqa_353",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10695
+          },
+          {
+            "example_id": "strategyqa_226",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 11050
+          },
+          {
+            "example_id": "strategyqa_375",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6593
+          },
+          {
+            "example_id": "strategyqa_440",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7948
+          },
+          {
+            "example_id": "strategyqa_530",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10837
+          },
+          {
+            "example_id": "strategyqa_79",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "yes",
+            "total_tokens": 13614
+          },
+          {
+            "example_id": "strategyqa_433",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7389
+          },
+          {
+            "example_id": "strategyqa_179",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8421
+          },
+          {
+            "example_id": "strategyqa_204",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10234
+          },
+          {
+            "example_id": "strategyqa_114",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 12227
+          },
+          {
+            "example_id": "strategyqa_676",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8182
+          },
+          {
+            "example_id": "strategyqa_377",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9634
+          },
+          {
+            "example_id": "strategyqa_406",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 15436
+          },
+          {
+            "example_id": "strategyqa_110",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8071
+          },
+          {
+            "example_id": "strategyqa_102",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5464
+          },
+          {
+            "example_id": "strategyqa_308",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 15406
+          },
+          {
+            "example_id": "strategyqa_219",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 13369
+          },
+          {
+            "example_id": "strategyqa_159",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3162
+          },
+          {
+            "example_id": "strategyqa_39",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8611
+          },
+          {
+            "example_id": "strategyqa_466",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4912
+          },
+          {
+            "example_id": "strategyqa_60",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7371
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 11695
+          },
+          {
+            "example_id": "strategyqa_382",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8735
+          },
+          {
+            "example_id": "strategyqa_391",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10238
+          },
+          {
+            "example_id": "strategyqa_438",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5918
+          },
+          {
+            "example_id": "strategyqa_347",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9740
+          },
+          {
+            "example_id": "strategyqa_250",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10221
+          },
+          {
+            "example_id": "strategyqa_666",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10548
+          },
+          {
+            "example_id": "strategyqa_160",
+            "correct": true,
+            "prediction": "Geile",
+            "ground_truth": "no",
+            "total_tokens": 12324
+          },
+          {
+            "example_id": "strategyqa_40",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10201
+          },
+          {
+            "example_id": "strategyqa_565",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6918
+          },
+          {
+            "example_id": "strategyqa_502",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10324
+          },
+          {
+            "example_id": "strategyqa_48",
+            "correct": false,
+            "prediction": "dzia\u0142",
+            "ground_truth": "yes",
+            "total_tokens": 12311
+          },
+          {
+            "example_id": "strategyqa_129",
+            "correct": true,
+            "prediction": "ftheUS",
+            "ground_truth": "no",
+            "total_tokens": 12373
+          },
+          {
+            "example_id": "strategyqa_417",
+            "correct": false,
+            "prediction": "uctor",
+            "ground_truth": "yes",
+            "total_tokens": 12108
+          },
+          {
+            "example_id": "strategyqa_247",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 13838
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9811
+          },
+          {
+            "example_id": "strategyqa_566",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6510
+          },
+          {
+            "example_id": "strategyqa_522",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4951
+          },
+          {
+            "example_id": "strategyqa_214",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10081
+          },
+          {
+            "example_id": "strategyqa_404",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10522
+          },
+          {
+            "example_id": "strategyqa_446",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4922
+          },
+          {
+            "example_id": "strategyqa_581",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10310
+          },
+          {
+            "example_id": "strategyqa_207",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 12587
+          },
+          {
+            "example_id": "strategyqa_434",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5447
+          },
+          {
+            "example_id": "strategyqa_151",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9639
+          },
+          {
+            "example_id": "strategyqa_195",
+            "correct": false,
+            "prediction": "ization",
+            "ground_truth": "yes",
+            "total_tokens": 14085
+          },
+          {
+            "example_id": "strategyqa_669",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10003
+          },
+          {
+            "example_id": "strategyqa_443",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 12055
+          },
+          {
+            "example_id": "strategyqa_361",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 13314
+          },
+          {
+            "example_id": "strategyqa_521",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4891
+          },
+          {
+            "example_id": "strategyqa_654",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9885
+          },
+          {
+            "example_id": "strategyqa_605",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 12211
+          },
+          {
+            "example_id": "strategyqa_475",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7838
+          },
+          {
+            "example_id": "strategyqa_534",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10570
+          },
+          {
+            "example_id": "strategyqa_161",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9949
+          },
+          {
+            "example_id": "strategyqa_316",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10775
+          },
+          {
+            "example_id": "strategyqa_202",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 13454
+          },
+          {
+            "example_id": "strategyqa_273",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 11864
+          },
+          {
+            "example_id": "strategyqa_20",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6694
+          },
+          {
+            "example_id": "strategyqa_289",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8998
+          },
+          {
+            "example_id": "strategyqa_413",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10167
+          },
+          {
+            "example_id": "strategyqa_71",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 14456
+          },
+          {
+            "example_id": "strategyqa_298",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5583
+          },
+          {
+            "example_id": "strategyqa_419",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7443
+          },
+          {
+            "example_id": "strategyqa_224",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 12426
+          },
+          {
+            "example_id": "strategyqa_115",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 12653
+          },
+          {
+            "example_id": "strategyqa_582",
+            "correct": true,
+            "prediction": "\u540e\u536b\u7403\u5458",
+            "ground_truth": "no",
+            "total_tokens": 15487
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "strategyqa_275",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4818
+          },
+          {
+            "example_id": "strategyqa_205",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4971
+          },
+          {
+            "example_id": "strategyqa_285",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7019
+          },
+          {
+            "example_id": "strategyqa_237",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6786
+          },
+          {
+            "example_id": "strategyqa_407",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3552
+          },
+          {
+            "example_id": "strategyqa_663",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5568
+          },
+          {
+            "example_id": "strategyqa_431",
+            "correct": true,
+            "prediction": "a\u0142iczka",
+            "ground_truth": "no",
+            "total_tokens": 8613
+          },
+          {
+            "example_id": "strategyqa_278",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6878
+          },
+          {
+            "example_id": "strategyqa_420",
+            "correct": true,
+            "prediction": "me beer",
+            "ground_truth": "no",
+            "total_tokens": 8647
+          },
+          {
+            "example_id": "strategyqa_279",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4753
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "\u4fda",
+            "ground_truth": "no",
+            "total_tokens": 6629
+          },
+          {
+            "example_id": "strategyqa_508",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5107
+          },
+          {
+            "example_id": "strategyqa_428",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7766
+          },
+          {
+            "example_id": "strategyqa_519",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3330
+          },
+          {
+            "example_id": "strategyqa_675",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8624
+          },
+          {
+            "example_id": "strategyqa_23",
+            "correct": true,
+            "prediction": "szed",
+            "ground_truth": "no",
+            "total_tokens": 8615
+          },
+          {
+            "example_id": "strategyqa_270",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7806
+          },
+          {
+            "example_id": "strategyqa_673",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7381
+          },
+          {
+            "example_id": "strategyqa_4",
+            "correct": true,
+            "prediction": "oplayer",
+            "ground_truth": "no",
+            "total_tokens": 8619
+          },
+          {
+            "example_id": "strategyqa_282",
+            "correct": true,
+            "prediction": "\u9a9f",
+            "ground_truth": "no",
+            "total_tokens": 8604
+          },
+          {
+            "example_id": "strategyqa_397",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8628
+          },
+          {
+            "example_id": "strategyqa_294",
+            "correct": true,
+            "prediction": "SGlobal",
+            "ground_truth": "no",
+            "total_tokens": 4812
+          },
+          {
+            "example_id": "strategyqa_506",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6931
+          },
+          {
+            "example_id": "strategyqa_515",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4993
+          },
+          {
+            "example_id": "strategyqa_531",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8616
+          },
+          {
+            "example_id": "strategyqa_324",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6938
+          },
+          {
+            "example_id": "strategyqa_456",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "strategyqa_535",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7209
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4975
+          },
+          {
+            "example_id": "strategyqa_483",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4019
+          },
+          {
+            "example_id": "strategyqa_46",
+            "correct": true,
+            "prediction": "9",
+            "ground_truth": "no",
+            "total_tokens": 6955
+          },
+          {
+            "example_id": "strategyqa_464",
+            "correct": false,
+            "prediction": "Sarkar",
+            "ground_truth": "yes",
+            "total_tokens": 4623
+          },
+          {
+            "example_id": "strategyqa_635",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5435
+          },
+          {
+            "example_id": "strategyqa_234",
+            "correct": false,
+            "prediction": "ApiOperation",
+            "ground_truth": "yes",
+            "total_tokens": 7153
+          },
+          {
+            "example_id": "strategyqa_255",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3643
+          },
+          {
+            "example_id": "strategyqa_362",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4938
+          },
+          {
+            "example_id": "strategyqa_617",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5034
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4522
+          },
+          {
+            "example_id": "strategyqa_598",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7031
+          },
+          {
+            "example_id": "strategyqa_380",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7060
+          },
+          {
+            "example_id": "strategyqa_91",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3374
+          },
+          {
+            "example_id": "strategyqa_127",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3143
+          },
+          {
+            "example_id": "strategyqa_507",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5052
+          },
+          {
+            "example_id": "strategyqa_139",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3149
+          },
+          {
+            "example_id": "strategyqa_546",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5191
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8516
+          },
+          {
+            "example_id": "strategyqa_291",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4894
+          },
+          {
+            "example_id": "strategyqa_75",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4763
+          },
+          {
+            "example_id": "strategyqa_25",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5055
+          },
+          {
+            "example_id": "strategyqa_436",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5130
+          },
+          {
+            "example_id": "strategyqa_284",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6727
+          },
+          {
+            "example_id": "strategyqa_371",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4103
+          },
+          {
+            "example_id": "strategyqa_511",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7036
+          },
+          {
+            "example_id": "strategyqa_288",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6378
+          },
+          {
+            "example_id": "strategyqa_99",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6865
+          },
+          {
+            "example_id": "strategyqa_188",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5101
+          },
+          {
+            "example_id": "strategyqa_311",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5105
+          },
+          {
+            "example_id": "strategyqa_646",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8621
+          },
+          {
+            "example_id": "strategyqa_517",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4444
+          },
+          {
+            "example_id": "strategyqa_480",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7093
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3260
+          },
+          {
+            "example_id": "strategyqa_36",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5590
+          },
+          {
+            "example_id": "strategyqa_555",
+            "correct": true,
+            "prediction": "a tiger would be without a tiger stripe",
+            "ground_truth": "no",
+            "total_tokens": 5204
+          },
+          {
+            "example_id": "strategyqa_52",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6783
+          },
+          {
+            "example_id": "strategyqa_24",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4837
+          },
+          {
+            "example_id": "strategyqa_260",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8616
+          },
+          {
+            "example_id": "strategyqa_89",
+            "correct": false,
+            "prediction": "nville",
+            "ground_truth": "yes",
+            "total_tokens": 7791
+          },
+          {
+            "example_id": "strategyqa_295",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8623
+          },
+          {
+            "example_id": "strategyqa_364",
+            "correct": false,
+            "prediction": "\u9a9f",
+            "ground_truth": "yes",
+            "total_tokens": 8630
+          },
+          {
+            "example_id": "strategyqa_396",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5469
+          },
+          {
+            "example_id": "strategyqa_551",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5460
+          },
+          {
+            "example_id": "strategyqa_182",
+            "correct": false,
+            "prediction": "Islamist",
+            "ground_truth": "yes",
+            "total_tokens": 6790
+          },
+          {
+            "example_id": "strategyqa_244",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7849
+          },
+          {
+            "example_id": "strategyqa_370",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3463
+          },
+          {
+            "example_id": "strategyqa_329",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8612
+          },
+          {
+            "example_id": "strategyqa_95",
+            "correct": true,
+            "prediction": "Q: Can a person survive without a heart?",
+            "ground_truth": "no",
+            "total_tokens": 8633
+          },
+          {
+            "example_id": "strategyqa_423",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5302
+          },
+          {
+            "example_id": "strategyqa_145",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3257
+          },
+          {
+            "example_id": "strategyqa_648",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6702
+          },
+          {
+            "example_id": "strategyqa_51",
+            "correct": false,
+            "prediction": "we cannot definitively conclude that the man is outside",
+            "ground_truth": "yes",
+            "total_tokens": 6901
+          },
+          {
+            "example_id": "strategyqa_196",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5047
+          },
+          {
+            "example_id": "strategyqa_505",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6870
+          },
+          {
+            "example_id": "strategyqa_353",
+            "correct": true,
+            "prediction": "is no",
+            "ground_truth": "no",
+            "total_tokens": 6723
+          },
+          {
+            "example_id": "strategyqa_226",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3044
+          },
+          {
+            "example_id": "strategyqa_375",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4012
+          },
+          {
+            "example_id": "strategyqa_440",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3705
+          },
+          {
+            "example_id": "strategyqa_530",
+            "correct": true,
+            "prediction": "Geileuttich",
+            "ground_truth": "no",
+            "total_tokens": 7620
+          },
+          {
+            "example_id": "strategyqa_79",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "strategyqa_433",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6869
+          },
+          {
+            "example_id": "strategyqa_179",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6755
+          },
+          {
+            "example_id": "strategyqa_204",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5198
+          },
+          {
+            "example_id": "strategyqa_114",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "strategyqa_676",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6784
+          },
+          {
+            "example_id": "strategyqa_377",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7469
+          },
+          {
+            "example_id": "strategyqa_406",
+            "correct": true,
+            "prediction": "SGlobal",
+            "ground_truth": "no",
+            "total_tokens": 6910
+          },
+          {
+            "example_id": "strategyqa_110",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3727
+          },
+          {
+            "example_id": "strategyqa_102",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4884
+          },
+          {
+            "example_id": "strategyqa_308",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5163
+          },
+          {
+            "example_id": "strategyqa_219",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5142
+          },
+          {
+            "example_id": "strategyqa_159",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5864
+          },
+          {
+            "example_id": "strategyqa_39",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5285
+          },
+          {
+            "example_id": "strategyqa_466",
+            "correct": true,
+            "prediction": "\u02fciz",
+            "ground_truth": "no",
+            "total_tokens": 5547
+          },
+          {
+            "example_id": "strategyqa_60",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6877
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          },
+          {
+            "example_id": "strategyqa_382",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3840
+          },
+          {
+            "example_id": "strategyqa_391",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5304
+          },
+          {
+            "example_id": "strategyqa_438",
+            "correct": true,
+            "prediction": "\u68a0culation",
+            "ground_truth": "no",
+            "total_tokens": 7253
+          },
+          {
+            "example_id": "strategyqa_347",
+            "correct": false,
+            "prediction": "Let's consider two scenarios where security is evaluated: one where individuals are present and one where a group of people is present",
+            "ground_truth": "yes",
+            "total_tokens": 7205
+          },
+          {
+            "example_id": "strategyqa_250",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6751
+          },
+          {
+            "example_id": "strategyqa_666",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8362
+          },
+          {
+            "example_id": "strategyqa_160",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6761
+          },
+          {
+            "example_id": "strategyqa_40",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6828
+          },
+          {
+            "example_id": "strategyqa_565",
+            "correct": false,
+            "prediction": "brasseries and tapas bars",
+            "ground_truth": "yes",
+            "total_tokens": 4907
+          },
+          {
+            "example_id": "strategyqa_502",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5136
+          },
+          {
+            "example_id": "strategyqa_48",
+            "correct": false,
+            "prediction": "\u6864",
+            "ground_truth": "yes",
+            "total_tokens": 6868
+          },
+          {
+            "example_id": "strategyqa_129",
+            "correct": true,
+            "prediction": "SGlobal",
+            "ground_truth": "no",
+            "total_tokens": 8635
+          },
+          {
+            "example_id": "strategyqa_417",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4934
+          },
+          {
+            "example_id": "strategyqa_247",
+            "correct": false,
+            "prediction": "surgeon",
+            "ground_truth": "yes",
+            "total_tokens": 6732
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "Explanation: The premise describes the man laying out his guitar on a wooden bench, which does not give any information about him building a stage",
+            "ground_truth": "no",
+            "total_tokens": 5151
+          },
+          {
+            "example_id": "strategyqa_566",
+            "correct": false,
+            "prediction": "ertools",
+            "ground_truth": "yes",
+            "total_tokens": 7216
+          },
+          {
+            "example_id": "strategyqa_522",
+            "correct": true,
+            "prediction": "inquiring",
+            "ground_truth": "no",
+            "total_tokens": 8651
+          },
+          {
+            "example_id": "strategyqa_214",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5078
+          },
+          {
+            "example_id": "strategyqa_404",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4453
+          },
+          {
+            "example_id": "strategyqa_446",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4932
+          },
+          {
+            "example_id": "strategyqa_581",
+            "correct": false,
+            "prediction": "scriptId",
+            "ground_truth": "yes",
+            "total_tokens": 8603
+          },
+          {
+            "example_id": "strategyqa_207",
+            "correct": false,
+            "prediction": ".swtich",
+            "ground_truth": "yes",
+            "total_tokens": 7971
+          },
+          {
+            "example_id": "strategyqa_434",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5035
+          },
+          {
+            "example_id": "strategyqa_151",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3865
+          },
+          {
+            "example_id": "strategyqa_195",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7119
+          },
+          {
+            "example_id": "strategyqa_669",
+            "correct": false,
+            "prediction": "ystate",
+            "ground_truth": "yes",
+            "total_tokens": 7323
+          },
+          {
+            "example_id": "strategyqa_443",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4843
+          },
+          {
+            "example_id": "strategyqa_361",
+            "correct": true,
+            "prediction": "\u0119tr",
+            "ground_truth": "no",
+            "total_tokens": 5057
+          },
+          {
+            "example_id": "strategyqa_521",
+            "correct": true,
+            "prediction": "contestant",
+            "ground_truth": "no",
+            "total_tokens": 7023
+          },
+          {
+            "example_id": "strategyqa_654",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5173
+          },
+          {
+            "example_id": "strategyqa_605",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6612
+          },
+          {
+            "example_id": "strategyqa_475",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3133
+          },
+          {
+            "example_id": "strategyqa_534",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4008
+          },
+          {
+            "example_id": "strategyqa_161",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8662
+          },
+          {
+            "example_id": "strategyqa_316",
+            "correct": false,
+            "prediction": "acey",
+            "ground_truth": "yes",
+            "total_tokens": 7120
+          },
+          {
+            "example_id": "strategyqa_202",
+            "correct": true,
+            "prediction": "\u6864",
+            "ground_truth": "no",
+            "total_tokens": 8628
+          },
+          {
+            "example_id": "strategyqa_273",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6777
+          },
+          {
+            "example_id": "strategyqa_20",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5115
+          },
+          {
+            "example_id": "strategyqa_289",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5044
+          },
+          {
+            "example_id": "strategyqa_413",
+            "correct": false,
+            "prediction": "\u8d7f",
+            "ground_truth": "yes",
+            "total_tokens": 6871
+          },
+          {
+            "example_id": "strategyqa_71",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6682
+          },
+          {
+            "example_id": "strategyqa_298",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6644
+          },
+          {
+            "example_id": "strategyqa_419",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5454
+          },
+          {
+            "example_id": "strategyqa_224",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5020
+          },
+          {
+            "example_id": "strategyqa_115",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5091
+          },
+          {
+            "example_id": "strategyqa_582",
+            "correct": false,
+            "error": "This model's maximum context length is 4096 tokens. However, you requested 0 output tokens and your prompt contains at least 4097 input tokens, for a total of at least 4097 tokens. Please reduce the l",
+            "total_tokens": 0
+          }
+        ]
+      }
+    }
+  }
+}

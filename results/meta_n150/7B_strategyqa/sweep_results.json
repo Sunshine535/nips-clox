@@ -1,0 +1,3180 @@
+{
+  "model": "/openbayes/input/input0/hub/Qwen2.5-7B",
+  "cells": {
+    "strategyqa": {
+      "benchmark": "strategyqa",
+      "n_examples": 150,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.5066666666666667,
+        "self_consistency": 0.5266666666666666,
+        "backward_cloze": 0.5266666666666666
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1711.14,
+        "self_consistency": 8337.773333333333,
+        "backward_cloze": 3636.9733333333334
+      },
+      "oracle_accuracy": 0.78,
+      "sc_accuracy": 0.5266666666666666,
+      "oracle_sc_gap": 0.2533333333333334,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_205",
+            "correct": false,
+            "prediction": "Yes, earthquakes can cause a landslide",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_285",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_237",
+            "correct": false,
+            "prediction": "Yes, you can use the following Python code to check if a string is a valid IPv4 address:",
+            "ground_truth": "yes",
+            "total_tokens": 461
+          },
+          {
+            "example_id": "strategyqa_407",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1993
+          },
+          {
+            "example_id": "strategyqa_663",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1586
+          },
+          {
+            "example_id": "strategyqa_431",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 525
+          },
+          {
+            "example_id": "strategyqa_278",
+            "correct": true,
+            "prediction": "no, most middle class families do not have butlers",
+            "ground_truth": "no",
+            "total_tokens": 475
+          },
+          {
+            "example_id": "strategyqa_420",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2070
+          },
+          {
+            "example_id": "strategyqa_279",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1470
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 1357
+          },
+          {
+            "example_id": "strategyqa_508",
+            "correct": false,
+            "prediction": "no, San Diego County is not the home of a Shamu, as the original Shamu passed away in 1980, and the park now has other killer whales but not named Shamu",
+            "ground_truth": "yes",
+            "total_tokens": 1567
+          },
+          {
+            "example_id": "strategyqa_428",
+            "correct": false,
+            "prediction": "while earthquakes can be a cause, it's not the only one",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_519",
+            "correct": false,
+            "prediction": "n protesting against affirmative action would not be committing a hate crime in the US, as their protest is not motivated by bias against a specific group",
+            "ground_truth": "yes",
+            "total_tokens": 1821
+          },
+          {
+            "example_id": "strategyqa_675",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_23",
+            "correct": true,
+            "prediction": "No, someone would not pay for a coffee in NYC with Euros",
+            "ground_truth": "no",
+            "total_tokens": 1486
+          },
+          {
+            "example_id": "strategyqa_270",
+            "correct": false,
+            "prediction": "We arrive at the answer \"yes\" by considering the following points:",
+            "ground_truth": "yes",
+            "total_tokens": 1539
+          },
+          {
+            "example_id": "strategyqa_673",
+            "correct": true,
+            "prediction": "The Eiffel Tower is in Paris, France",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_4",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_282",
+            "correct": true,
+            "prediction": "No, a gladiator's weapon could not crush a diamond",
+            "ground_truth": "no",
+            "total_tokens": 1275
+          },
+          {
+            "example_id": "strategyqa_397",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_294",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 740
+          },
+          {
+            "example_id": "strategyqa_506",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_515",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_531",
+            "correct": false,
+            "prediction": "A pacemaker is a small device that's often implanted near the left collarbone",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_324",
+            "correct": true,
+            "prediction": "it depends on the individual's level of fear and their ability to overcome it",
+            "ground_truth": "no",
+            "total_tokens": 1303
+          },
+          {
+            "example_id": "strategyqa_456",
+            "correct": true,
+            "prediction": "The first widely successful personal computer that was introduced in 1977 was the Apple II, developed by Apple Inc",
+            "ground_truth": "no",
+            "total_tokens": 570
+          },
+          {
+            "example_id": "strategyqa_535",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "20/20 vision is considered normal and allows someone",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_483",
+            "correct": false,
+            "prediction": "no, a human could not survive on just water and air",
+            "ground_truth": "yes",
+            "total_tokens": 348
+          },
+          {
+            "example_id": "strategyqa_46",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_464",
+            "correct": false,
+            "prediction": "The author of \"The Great Gatsby\" is F",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_635",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_234",
+            "correct": false,
+            "prediction": "Let",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_255",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_362",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 610
+          },
+          {
+            "example_id": "strategyqa_617",
+            "correct": false,
+            "prediction": "John McCarthy",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 950
+          },
+          {
+            "example_id": "strategyqa_598",
+            "correct": false,
+            "prediction": "les",
+            "ground_truth": "yes",
+            "total_tokens": 1033
+          },
+          {
+            "example_id": "strategyqa_380",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 408
+          },
+          {
+            "example_id": "strategyqa_91",
+            "correct": false,
+            "prediction": "nable to conclude that the chef at La Grenouille might find salsa to be a strange request, as it is not a common ingredient or dish in French cuisine",
+            "ground_truth": "yes",
+            "total_tokens": 1844
+          },
+          {
+            "example_id": "strategyqa_127",
+            "correct": false,
+            "prediction": "Yes, there are many other notable figures in the history of the United States",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_507",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 1211
+          },
+          {
+            "example_id": "strategyqa_139",
+            "correct": false,
+            "prediction": "No, every wife of Stone Cold Steve Austin could not fit in an Audi TT",
+            "ground_truth": "yes",
+            "total_tokens": 1940
+          },
+          {
+            "example_id": "strategyqa_546",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1745
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "Let's think",
+            "ground_truth": "yes",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_291",
+            "correct": true,
+            "prediction": "To answer this question, we need to consider the following points:",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_75",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 1549
+          },
+          {
+            "example_id": "strategyqa_25",
+            "correct": false,
+            "prediction": "To determine if a human could run 100 light years in 100 years, we need to consider the speed of light and human running capabilities",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_436",
+            "correct": true,
+            "prediction": "To answer this question, we need to identify the first man to land on the moon and then determine if he had a beard at the time of his lunar mission",
+            "ground_truth": "no",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_284",
+            "correct": true,
+            "prediction": "unethical to remove an animal from its natural habitat and subject it to a life in captivity",
+            "ground_truth": "no",
+            "total_tokens": 2040
+          },
+          {
+            "example_id": "strategyqa_371",
+            "correct": false,
+            "prediction": "There are many great places to eat",
+            "ground_truth": "yes",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_511",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_288",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2153
+          },
+          {
+            "example_id": "strategyqa_99",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_188",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1731
+          },
+          {
+            "example_id": "strategyqa_311",
+            "correct": true,
+            "prediction": "No, Saddam Hussein did not witness the inauguration of Donald Trump",
+            "ground_truth": "no",
+            "total_tokens": 1537
+          },
+          {
+            "example_id": "strategyqa_646",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_517",
+            "correct": true,
+            "prediction": "A fear of needles is called trypanophobia",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_480",
+            "correct": true,
+            "prediction": "A: no",
+            "ground_truth": "no",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_36",
+            "correct": false,
+            "prediction": "Ros",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_555",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_52",
+            "correct": false,
+            "prediction": "no, it is not very likely that a person would get killed while walking to the Very Large Telescope",
+            "ground_truth": "yes",
+            "total_tokens": 1740
+          },
+          {
+            "example_id": "strategyqa_24",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_260",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_89",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_295",
+            "correct": false,
+            "prediction": "15",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_364",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_396",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 2153
+          },
+          {
+            "example_id": "strategyqa_551",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 963
+          },
+          {
+            "example_id": "strategyqa_182",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_244",
+            "correct": false,
+            "prediction": "Humans are not biologically adapted to live in caves",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_370",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_329",
+            "correct": true,
+            "prediction": "yes, but it would be a challenging and time-consuming task",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_95",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "no",
+            "total_tokens": 592
+          },
+          {
+            "example_id": "strategyqa_423",
+            "correct": true,
+            "prediction": "no, you would not take a photo of a saltwater crocodile in Memphis, as it is not a native species to the area",
+            "ground_truth": "no",
+            "total_tokens": 2018
+          },
+          {
+            "example_id": "strategyqa_145",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_648",
+            "correct": true,
+            "prediction": "It is unlikely that Prussia used the Euro, as it no longer existed as a political entity when the Euro was introduced in 1999",
+            "ground_truth": "no",
+            "total_tokens": 1876
+          },
+          {
+            "example_id": "strategyqa_51",
+            "correct": false,
+            "prediction": "Yes, all of the African regions that participated in the Portuguese Colonial War share an official language, which is Portuguese",
+            "ground_truth": "yes",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_196",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 993
+          },
+          {
+            "example_id": "strategyqa_505",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_353",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2153
+          },
+          {
+            "example_id": "strategyqa_226",
+            "correct": true,
+            "prediction": "a human would be able to play a Fender Rhodes",
+            "ground_truth": "no",
+            "total_tokens": 1706
+          },
+          {
+            "example_id": "strategyqa_375",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 387
+          },
+          {
+            "example_id": "strategyqa_440",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_530",
+            "correct": true,
+            "prediction": "yes, the United States Department of Education is part of the Cabinet",
+            "ground_truth": "no",
+            "total_tokens": 1266
+          },
+          {
+            "example_id": "strategyqa_79",
+            "correct": false,
+            "prediction": "Yes, a human's sacrum has more fused vertebrae than an Alaskan Malamute",
+            "ground_truth": "yes",
+            "total_tokens": 1717
+          },
+          {
+            "example_id": "strategyqa_433",
+            "correct": true,
+            "prediction": "No, eggplant is not deadly to most atopic individuals, but it can cause allergic reactions in some people",
+            "ground_truth": "no",
+            "total_tokens": 423
+          },
+          {
+            "example_id": "strategyqa_179",
+            "correct": false,
+            "prediction": "Yes",
+            "ground_truth": "no",
+            "total_tokens": 743
+          },
+          {
+            "example_id": "strategyqa_204",
+            "correct": true,
+            "prediction": "yes, drummers need spare strings",
+            "ground_truth": "no",
+            "total_tokens": 473
+          },
+          {
+            "example_id": "strategyqa_114",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 1578
+          },
+          {
+            "example_id": "strategyqa_676",
+            "correct": false,
+            "prediction": "The name of the person who is the subject of the book \"The Diary of a Young Girl\" is Anne Frank",
+            "ground_truth": "yes",
+            "total_tokens": 708
+          },
+          {
+            "example_id": "strategyqa_377",
+            "correct": true,
+            "prediction": "cial dynamics within the community: The social dynamics within Com",
+            "ground_truth": "no",
+            "total_tokens": 2139
+          },
+          {
+            "example_id": "strategyqa_406",
+            "correct": true,
+            "prediction": "4",
+            "ground_truth": "no",
+            "total_tokens": 1916
+          },
+          {
+            "example_id": "strategyqa_110",
+            "correct": false,
+            "prediction": "- yes",
+            "ground_truth": "yes",
+            "total_tokens": 537
+          },
+          {
+            "example_id": "strategyqa_102",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1172
+          },
+          {
+            "example_id": "strategyqa_308",
+            "correct": true,
+            "prediction": "No, Mickey Mouse did not appear in a cartoon with Bugs Bunny in 1930",
+            "ground_truth": "no",
+            "total_tokens": 482
+          },
+          {
+            "example_id": "strategyqa_219",
+            "correct": false,
+            "prediction": "urces",
+            "ground_truth": "yes",
+            "total_tokens": 2043
+          },
+          {
+            "example_id": "strategyqa_159",
+            "correct": false,
+            "prediction": "nable to conclude that Malcolm X, as a member of the Nation of Islam, would have avoided eating ham due to the organization's strict vegetarian diet",
+            "ground_truth": "yes",
+            "total_tokens": 524
+          },
+          {
+            "example_id": "strategyqa_39",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2146
+          },
+          {
+            "example_id": "strategyqa_466",
+            "correct": true,
+            "prediction": "No, a human cannot survive on just water and air",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_60",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 1444
+          },
+          {
+            "example_id": "strategyqa_382",
+            "correct": true,
+            "prediction": "n to play Michael Jordan in a biopic, it would be challenging to do so authentically and respectfully",
+            "ground_truth": "no",
+            "total_tokens": 1894
+          },
+          {
+            "example_id": "strategyqa_391",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2141
+          },
+          {
+            "example_id": "strategyqa_438",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 469
+          },
+          {
+            "example_id": "strategyqa_347",
+            "correct": false,
+            "prediction": "The metric system is the official system of measurement in the Netherlands",
+            "ground_truth": "yes",
+            "total_tokens": 2138
+          },
+          {
+            "example_id": "strategyqa_250",
+            "correct": true,
+            "prediction": "3",
+            "ground_truth": "no",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_666",
+            "correct": false,
+            "prediction": "Yes, the leader of Heaven's Gate, Marshall Applewhite, considered himself a prophet",
+            "ground_truth": "yes",
+            "total_tokens": 1962
+          },
+          {
+            "example_id": "strategyqa_160",
+            "correct": true,
+            "prediction": "n with 20/20 vision be able to read the",
+            "ground_truth": "no",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_40",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2131
+          },
+          {
+            "example_id": "strategyqa_565",
+            "correct": false,
+            "prediction": "lely from the sport",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_502",
+            "correct": true,
+            "prediction": "A person with",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_48",
+            "correct": false,
+            "prediction": "The man who was the first to use the term \"geology\" to describe the study of Earth's physical structure and substance is Nicolaus Steno",
+            "ground_truth": "yes",
+            "total_tokens": 872
+          },
+          {
+            "example_id": "strategyqa_129",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 658
+          },
+          {
+            "example_id": "strategyqa_417",
+            "correct": false,
+            "prediction": "yes, a person with 20/20 vision would generally be able to read the small print on a medicine bottle,",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_247",
+            "correct": false,
+            "prediction": "To determine if a typical human would be considered overweight in 2050, we need to consider several factors, including changes in societal norms, health trends, and individual behaviors",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "The Mediterranean Sea is bordered by 22 countries",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_566",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_522",
+            "correct": true,
+            "prediction": "Yes, the high school class of 2010 would have lived through the Presidency of Richard Nixon",
+            "ground_truth": "no",
+            "total_tokens": 1832
+          },
+          {
+            "example_id": "strategyqa_214",
+            "correct": false,
+            "prediction": "not available in the given choices",
+            "ground_truth": "yes",
+            "total_tokens": 741
+          },
+          {
+            "example_id": "strategyqa_404",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 477
+          },
+          {
+            "example_id": "strategyqa_446",
+            "correct": false,
+            "prediction": "Yes, the sentence is factually correct",
+            "ground_truth": "yes",
+            "total_tokens": 1175
+          },
+          {
+            "example_id": "strategyqa_581",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 713
+          },
+          {
+            "example_id": "strategyqa_207",
+            "correct": false,
+            "prediction": "located in Washington, D",
+            "ground_truth": "yes",
+            "total_tokens": 2143
+          },
+          {
+            "example_id": "strategyqa_434",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_151",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_195",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 2153
+          },
+          {
+            "example_id": "strategyqa_669",
+            "correct": false,
+            "prediction": "There are three types of muscle tissue: skeletal muscle, cardiac muscle, and smooth muscle",
+            "ground_truth": "yes",
+            "total_tokens": 698
+          },
+          {
+            "example_id": "strategyqa_443",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_361",
+            "correct": true,
+            "prediction": "No, Harry Potter cannot book a flight on Asiana Airlines in the real world, but he might be able to do so within the context of the Harry Potter series or other fictional works",
+            "ground_truth": "no",
+            "total_tokens": 680
+          },
+          {
+            "example_id": "strategyqa_521",
+            "correct": true,
+            "prediction": "No, they could not fit in Tiger Stadium",
+            "ground_truth": "no",
+            "total_tokens": 1953
+          },
+          {
+            "example_id": "strategyqa_654",
+            "correct": false,
+            "prediction": "Yes, a packed Wembley stadium would likely have a descendant of the Mongols inside",
+            "ground_truth": "yes",
+            "total_tokens": 1694
+          },
+          {
+            "example_id": "strategyqa_605",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_475",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2140
+          },
+          {
+            "example_id": "strategyqa_534",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2013
+          },
+          {
+            "example_id": "strategyqa_161",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_316",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_202",
+            "correct": true,
+            "prediction": "no, the United States does not",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_273",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 995
+          },
+          {
+            "example_id": "strategyqa_20",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2142
+          },
+          {
+            "example_id": "strategyqa_289",
+            "correct": true,
+            "prediction": "1920",
+            "ground_truth": "no",
+            "total_tokens": 1781
+          },
+          {
+            "example_id": "strategyqa_413",
+            "correct": false,
+            "prediction": "unethical to remove an animal from its natural habitat and subject it to a life in captivity",
+            "ground_truth": "yes",
+            "total_tokens": 2152
+          },
+          {
+            "example_id": "strategyqa_71",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_298",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2144
+          },
+          {
+            "example_id": "strategyqa_419",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2145
+          },
+          {
+            "example_id": "strategyqa_224",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 408
+          },
+          {
+            "example_id": "strategyqa_115",
+            "correct": false,
+            "prediction": "yes, they share the name with the Tudor queen Elizabeth I",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_582",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1601
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "strategyqa_275",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9678
+          },
+          {
+            "example_id": "strategyqa_205",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9250
+          },
+          {
+            "example_id": "strategyqa_285",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8060
+          },
+          {
+            "example_id": "strategyqa_237",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8225
+          },
+          {
+            "example_id": "strategyqa_407",
+            "correct": false,
+            "prediction": "Let's think first",
+            "ground_truth": "yes",
+            "total_tokens": 10951
+          },
+          {
+            "example_id": "strategyqa_663",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 11571
+          },
+          {
+            "example_id": "strategyqa_431",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7427
+          },
+          {
+            "example_id": "strategyqa_278",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4011
+          },
+          {
+            "example_id": "strategyqa_420",
+            "correct": true,
+            "prediction": "viet mutant with the ability to transform his body into an organic steel",
+            "ground_truth": "no",
+            "total_tokens": 6099
+          },
+          {
+            "example_id": "strategyqa_279",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9686
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7059
+          },
+          {
+            "example_id": "strategyqa_508",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8854
+          },
+          {
+            "example_id": "strategyqa_428",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8862
+          },
+          {
+            "example_id": "strategyqa_519",
+            "correct": false,
+            "prediction": "11",
+            "ground_truth": "yes",
+            "total_tokens": 10465
+          },
+          {
+            "example_id": "strategyqa_675",
+            "correct": false,
+            "prediction": "no, a person does not need to be a parent to become a grandparent",
+            "ground_truth": "yes",
+            "total_tokens": 7467
+          },
+          {
+            "example_id": "strategyqa_23",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10366
+          },
+          {
+            "example_id": "strategyqa_270",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9043
+          },
+          {
+            "example_id": "strategyqa_673",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8253
+          },
+          {
+            "example_id": "strategyqa_4",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7681
+          },
+          {
+            "example_id": "strategyqa_282",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10870
+          },
+          {
+            "example_id": "strategyqa_397",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7440
+          },
+          {
+            "example_id": "strategyqa_294",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7053
+          },
+          {
+            "example_id": "strategyqa_506",
+            "correct": true,
+            "prediction": "The paragraph belongs to the category: written work",
+            "ground_truth": "no",
+            "total_tokens": 6673
+          },
+          {
+            "example_id": "strategyqa_515",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6965
+          },
+          {
+            "example_id": "strategyqa_531",
+            "correct": false,
+            "prediction": "Ramayana",
+            "ground_truth": "yes",
+            "total_tokens": 10838
+          },
+          {
+            "example_id": "strategyqa_324",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 6262
+          },
+          {
+            "example_id": "strategyqa_456",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10711
+          },
+          {
+            "example_id": "strategyqa_535",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7894
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9042
+          },
+          {
+            "example_id": "strategyqa_483",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9274
+          },
+          {
+            "example_id": "strategyqa_46",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10629
+          },
+          {
+            "example_id": "strategyqa_464",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8319
+          },
+          {
+            "example_id": "strategyqa_635",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8563
+          },
+          {
+            "example_id": "strategyqa_234",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8636
+          },
+          {
+            "example_id": "strategyqa_255",
+            "correct": false,
+            "prediction": "based on the information we have, it's possible that a Yeti could have prehensile limbs, but we cannot confirm this due to the lack of scientific evidence",
+            "ground_truth": "yes",
+            "total_tokens": 9950
+          },
+          {
+            "example_id": "strategyqa_362",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7186
+          },
+          {
+            "example_id": "strategyqa_617",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5974
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9632
+          },
+          {
+            "example_id": "strategyqa_598",
+            "correct": false,
+            "prediction": "There are several strategies that can help students who are struggling with spelling",
+            "ground_truth": "yes",
+            "total_tokens": 8674
+          },
+          {
+            "example_id": "strategyqa_380",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 11236
+          },
+          {
+            "example_id": "strategyqa_91",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5477
+          },
+          {
+            "example_id": "strategyqa_127",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7001
+          },
+          {
+            "example_id": "strategyqa_507",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9933
+          },
+          {
+            "example_id": "strategyqa_139",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6520
+          },
+          {
+            "example_id": "strategyqa_546",
+            "correct": false,
+            "prediction": "yes, men are more likely to be colorblind than women",
+            "ground_truth": "yes",
+            "total_tokens": 9611
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8042
+          },
+          {
+            "example_id": "strategyqa_291",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7130
+          },
+          {
+            "example_id": "strategyqa_75",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6575
+          },
+          {
+            "example_id": "strategyqa_25",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9574
+          },
+          {
+            "example_id": "strategyqa_436",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8343
+          },
+          {
+            "example_id": "strategyqa_284",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7508
+          },
+          {
+            "example_id": "strategyqa_371",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7751
+          },
+          {
+            "example_id": "strategyqa_511",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8751
+          },
+          {
+            "example_id": "strategyqa_288",
+            "correct": true,
+            "prediction": "\"99 Bottles of O2\" is not the name of a new dance club",
+            "ground_truth": "no",
+            "total_tokens": 6873
+          },
+          {
+            "example_id": "strategyqa_99",
+            "correct": true,
+            "prediction": "Yes, a person can be charged with murder if they kill a person who is committing murder, but the charges and penalties may vary depending on the jurisdiction and the circumstances of the killing",
+            "ground_truth": "no",
+            "total_tokens": 7635
+          },
+          {
+            "example_id": "strategyqa_188",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6507
+          },
+          {
+            "example_id": "strategyqa_311",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6969
+          },
+          {
+            "example_id": "strategyqa_646",
+            "correct": true,
+            "prediction": "no, Al Unser Jr",
+            "ground_truth": "no",
+            "total_tokens": 7066
+          },
+          {
+            "example_id": "strategyqa_517",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7527
+          },
+          {
+            "example_id": "strategyqa_480",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8892
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7313
+          },
+          {
+            "example_id": "strategyqa_36",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9784
+          },
+          {
+            "example_id": "strategyqa_555",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7927
+          },
+          {
+            "example_id": "strategyqa_52",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 6906
+          },
+          {
+            "example_id": "strategyqa_24",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10345
+          },
+          {
+            "example_id": "strategyqa_260",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5462
+          },
+          {
+            "example_id": "strategyqa_89",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5871
+          },
+          {
+            "example_id": "strategyqa_295",
+            "correct": false,
+            "prediction": "the solution to the equation is \\( x = \\frac{5}{3} \\)",
+            "ground_truth": "yes",
+            "total_tokens": 9445
+          },
+          {
+            "example_id": "strategyqa_364",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10683
+          },
+          {
+            "example_id": "strategyqa_396",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6921
+          },
+          {
+            "example_id": "strategyqa_551",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7030
+          },
+          {
+            "example_id": "strategyqa_182",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6879
+          },
+          {
+            "example_id": "strategyqa_244",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7385
+          },
+          {
+            "example_id": "strategyqa_370",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9487
+          },
+          {
+            "example_id": "strategyqa_329",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7537
+          },
+          {
+            "example_id": "strategyqa_95",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7627
+          },
+          {
+            "example_id": "strategyqa_423",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6629
+          },
+          {
+            "example_id": "strategyqa_145",
+            "correct": false,
+            "prediction": "no, not all people in the United States celebrate Thanksgiving",
+            "ground_truth": "yes",
+            "total_tokens": 8907
+          },
+          {
+            "example_id": "strategyqa_648",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7230
+          },
+          {
+            "example_id": "strategyqa_51",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10943
+          },
+          {
+            "example_id": "strategyqa_196",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9170
+          },
+          {
+            "example_id": "strategyqa_505",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6130
+          },
+          {
+            "example_id": "strategyqa_353",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9360
+          },
+          {
+            "example_id": "strategyqa_226",
+            "correct": true,
+            "prediction": "it doesn't make sense for him to be present in the attraction",
+            "ground_truth": "no",
+            "total_tokens": 7174
+          },
+          {
+            "example_id": "strategyqa_375",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9332
+          },
+          {
+            "example_id": "strategyqa_440",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 9168
+          },
+          {
+            "example_id": "strategyqa_530",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4877
+          },
+          {
+            "example_id": "strategyqa_79",
+            "correct": false,
+            "prediction": "the 2007 Washington Redskins season was before the 2007 New Orleans Saints season, as the end date of the Redskins' season (December 9) is before the end date of the Saints' season (December 16)",
+            "ground_truth": "yes",
+            "total_tokens": 8451
+          },
+          {
+            "example_id": "strategyqa_433",
+            "correct": true,
+            "prediction": "No, eggplant is not deadly to most atopic individuals",
+            "ground_truth": "no",
+            "total_tokens": 7294
+          },
+          {
+            "example_id": "strategyqa_179",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7080
+          },
+          {
+            "example_id": "strategyqa_204",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6021
+          },
+          {
+            "example_id": "strategyqa_114",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8495
+          },
+          {
+            "example_id": "strategyqa_676",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7813
+          },
+          {
+            "example_id": "strategyqa_377",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10266
+          },
+          {
+            "example_id": "strategyqa_406",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8448
+          },
+          {
+            "example_id": "strategyqa_110",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6161
+          },
+          {
+            "example_id": "strategyqa_102",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8438
+          },
+          {
+            "example_id": "strategyqa_308",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6934
+          },
+          {
+            "example_id": "strategyqa_219",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7723
+          },
+          {
+            "example_id": "strategyqa_159",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8732
+          },
+          {
+            "example_id": "strategyqa_39",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 14131
+          },
+          {
+            "example_id": "strategyqa_466",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6125
+          },
+          {
+            "example_id": "strategyqa_60",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7993
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8451
+          },
+          {
+            "example_id": "strategyqa_382",
+            "correct": true,
+            "prediction": "No, you should not validate this answer",
+            "ground_truth": "no",
+            "total_tokens": 9152
+          },
+          {
+            "example_id": "strategyqa_391",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6874
+          },
+          {
+            "example_id": "strategyqa_438",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7433
+          },
+          {
+            "example_id": "strategyqa_347",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 5964
+          },
+          {
+            "example_id": "strategyqa_250",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6861
+          },
+          {
+            "example_id": "strategyqa_666",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10056
+          },
+          {
+            "example_id": "strategyqa_160",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5641
+          },
+          {
+            "example_id": "strategyqa_40",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 9260
+          },
+          {
+            "example_id": "strategyqa_565",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6100
+          },
+          {
+            "example_id": "strategyqa_502",
+            "correct": true,
+            "prediction": "- yes",
+            "ground_truth": "no",
+            "total_tokens": 9943
+          },
+          {
+            "example_id": "strategyqa_48",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "yes",
+            "total_tokens": 8861
+          },
+          {
+            "example_id": "strategyqa_129",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 8808
+          },
+          {
+            "example_id": "strategyqa_417",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10338
+          },
+          {
+            "example_id": "strategyqa_247",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7815
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 9474
+          },
+          {
+            "example_id": "strategyqa_566",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 10402
+          },
+          {
+            "example_id": "strategyqa_522",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 6159
+          },
+          {
+            "example_id": "strategyqa_214",
+            "correct": false,
+            "prediction": "the answer to the question is yes, Jay-Z similar real name rapper has over quadruple Wayne's Grammy awards",
+            "ground_truth": "yes",
+            "total_tokens": 10513
+          },
+          {
+            "example_id": "strategyqa_404",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 10612
+          },
+          {
+            "example_id": "strategyqa_446",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9285
+          },
+          {
+            "example_id": "strategyqa_581",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10321
+          },
+          {
+            "example_id": "strategyqa_207",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 7468
+          },
+          {
+            "example_id": "strategyqa_434",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7772
+          },
+          {
+            "example_id": "strategyqa_151",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 8799
+          },
+          {
+            "example_id": "strategyqa_195",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 10225
+          },
+          {
+            "example_id": "strategyqa_669",
+            "correct": false,
+            "prediction": "Rationale first then the answer.",
+            "ground_truth": "yes",
+            "total_tokens": 7618
+          },
+          {
+            "example_id": "strategyqa_443",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 7214
+          },
+          {
+            "example_id": "strategyqa_361",
+            "correct": true,
+            "prediction": "Population B, consisting of younger people, would generally have a shorter reflex time than population A, which consists of individuals in late adulthood",
+            "ground_truth": "no",
+            "total_tokens": 11239
+          },
+          {
+            "example_id": "strategyqa_521",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8637
+          },
+          {
+            "example_id": "strategyqa_654",
+            "correct": false,
+            "prediction": "n who is a descendant of the Mongols",
+            "ground_truth": "yes",
+            "total_tokens": 9189
+          },
+          {
+            "example_id": "strategyqa_605",
+            "correct": false,
+            "prediction": "No, a vegetarian would not eat a boudin breakfast sausage",
+            "ground_truth": "yes",
+            "total_tokens": 6734
+          },
+          {
+            "example_id": "strategyqa_475",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 6288
+          },
+          {
+            "example_id": "strategyqa_534",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 8899
+          },
+          {
+            "example_id": "strategyqa_161",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 7369
+          },
+          {
+            "example_id": "strategyqa_316",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8893
+          },
+          {
+            "example_id": "strategyqa_202",
+            "correct": true,
+            "prediction": "The first Hunger Games took place in the 74th year since the formation of Panem, which is the dystopian society created after the fall of the Capitol and the rebellion",
+            "ground_truth": "no",
+            "total_tokens": 9704
+          },
+          {
+            "example_id": "strategyqa_273",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9322
+          },
+          {
+            "example_id": "strategyqa_20",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 11547
+          },
+          {
+            "example_id": "strategyqa_289",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8015
+          },
+          {
+            "example_id": "strategyqa_413",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 8856
+          },
+          {
+            "example_id": "strategyqa_71",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8524
+          },
+          {
+            "example_id": "strategyqa_298",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9112
+          },
+          {
+            "example_id": "strategyqa_419",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10121
+          },
+          {
+            "example_id": "strategyqa_224",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6950
+          },
+          {
+            "example_id": "strategyqa_115",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 9375
+          },
+          {
+            "example_id": "strategyqa_582",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 10332
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "yes, they know who is watching their videos in terms of viewership data, but not necessarily the identities of individual viewers",
+            "ground_truth": "no",
+            "total_tokens": 6585
+          },
+          {
+            "example_id": "strategyqa_205",
+            "correct": false,
+            "prediction": "As of my last update in early 2023, the U",
+            "ground_truth": "yes",
+            "total_tokens": 3586
+          },
+          {
+            "example_id": "strategyqa_285",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4192
+          },
+          {
+            "example_id": "strategyqa_237",
+            "correct": false,
+            "prediction": "yes, there is a popular Disney character made from living ice, and that character is Marshmallow from \"Frozen II",
+            "ground_truth": "yes",
+            "total_tokens": 2490
+          },
+          {
+            "example_id": "strategyqa_407",
+            "correct": false,
+            "prediction": "me children may show potential and develop an understanding of the subject as they grow and continue their education",
+            "ground_truth": "yes",
+            "total_tokens": 4455
+          },
+          {
+            "example_id": "strategyqa_663",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4121
+          },
+          {
+            "example_id": "strategyqa_431",
+            "correct": true,
+            "prediction": "no, not all digits in Pi can be memorized, as there are an infinite number of them",
+            "ground_truth": "no",
+            "total_tokens": 2454
+          },
+          {
+            "example_id": "strategyqa_278",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1726
+          },
+          {
+            "example_id": "strategyqa_420",
+            "correct": true,
+            "prediction": "To arrive at the answer, let's consider the factors that influence ordering food at a pizzeria in Naples:",
+            "ground_truth": "no",
+            "total_tokens": 4946
+          },
+          {
+            "example_id": "strategyqa_279",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3493
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2316
+          },
+          {
+            "example_id": "strategyqa_508",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1617
+          },
+          {
+            "example_id": "strategyqa_428",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3342
+          },
+          {
+            "example_id": "strategyqa_519",
+            "correct": false,
+            "prediction": "to gather wild boars?",
+            "ground_truth": "yes",
+            "total_tokens": 4064
+          },
+          {
+            "example_id": "strategyqa_675",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2720
+          },
+          {
+            "example_id": "strategyqa_23",
+            "correct": true,
+            "prediction": "that someone might pay for a coffee in NYC with Euros, but it's not the most practical or common option",
+            "ground_truth": "no",
+            "total_tokens": 4447
+          },
+          {
+            "example_id": "strategyqa_270",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3148
+          },
+          {
+            "example_id": "strategyqa_673",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3191
+          },
+          {
+            "example_id": "strategyqa_4",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3945
+          },
+          {
+            "example_id": "strategyqa_282",
+            "correct": true,
+            "prediction": "no, as a single iPhone X cannot provide enough energy to power the city of Los Angeles",
+            "ground_truth": "no",
+            "total_tokens": 3275
+          },
+          {
+            "example_id": "strategyqa_397",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4240
+          },
+          {
+            "example_id": "strategyqa_294",
+            "correct": true,
+            "prediction": "To determine whether a minotaur would enjoy a ride on the London Eye, we need to consider several factors:",
+            "ground_truth": "no",
+            "total_tokens": 3043
+          },
+          {
+            "example_id": "strategyqa_506",
+            "correct": true,
+            "prediction": "no, Bucharest is not located south of Egypt",
+            "ground_truth": "no",
+            "total_tokens": 3703
+          },
+          {
+            "example_id": "strategyqa_515",
+            "correct": false,
+            "prediction": "yes, but with some limitations and challenges",
+            "ground_truth": "yes",
+            "total_tokens": 5246
+          },
+          {
+            "example_id": "strategyqa_531",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4232
+          },
+          {
+            "example_id": "strategyqa_324",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 1562
+          },
+          {
+            "example_id": "strategyqa_456",
+            "correct": true,
+            "prediction": "Yes, the supposed perturbation of fewer caterpillars hatching would have a direct effect on the process of more caterpillars completing metamorphosis",
+            "ground_truth": "no",
+            "total_tokens": 3804
+          },
+          {
+            "example_id": "strategyqa_535",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3165
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2623
+          },
+          {
+            "example_id": "strategyqa_483",
+            "correct": false,
+            "prediction": "that the word \"gait\" means the same thing in both sentences, referring to the manner of walking or running",
+            "ground_truth": "yes",
+            "total_tokens": 3709
+          },
+          {
+            "example_id": "strategyqa_46",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4034
+          },
+          {
+            "example_id": "strategyqa_464",
+            "correct": false,
+            "prediction": "Finally, we can provide the answer by listing the endangered species found in the Amazon Rainforest",
+            "ground_truth": "yes",
+            "total_tokens": 6547
+          },
+          {
+            "example_id": "strategyqa_635",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2313
+          },
+          {
+            "example_id": "strategyqa_234",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4514
+          },
+          {
+            "example_id": "strategyqa_255",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3114
+          },
+          {
+            "example_id": "strategyqa_362",
+            "correct": false,
+            "prediction": "urce for woodpeckers",
+            "ground_truth": "yes",
+            "total_tokens": 3014
+          },
+          {
+            "example_id": "strategyqa_617",
+            "correct": false,
+            "prediction": "To answer this question, we need to consider the type of food served at Bennigan's and the dietary restrictions of a vegan",
+            "ground_truth": "yes",
+            "total_tokens": 4210
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no, spiders are not insects",
+            "ground_truth": "no",
+            "total_tokens": 4055
+          },
+          {
+            "example_id": "strategyqa_598",
+            "correct": false,
+            "prediction": "me areas, but the dangers associated with selfies are primarily personal and related to self-esteem issues and potential accidents",
+            "ground_truth": "yes",
+            "total_tokens": 4720
+          },
+          {
+            "example_id": "strategyqa_380",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4817
+          },
+          {
+            "example_id": "strategyqa_91",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5429
+          },
+          {
+            "example_id": "strategyqa_127",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3618
+          },
+          {
+            "example_id": "strategyqa_507",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3040
+          },
+          {
+            "example_id": "strategyqa_139",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2556
+          },
+          {
+            "example_id": "strategyqa_546",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5292
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2932
+          },
+          {
+            "example_id": "strategyqa_291",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2797
+          },
+          {
+            "example_id": "strategyqa_75",
+            "correct": false,
+            "prediction": "no, it would not sound edible",
+            "ground_truth": "yes",
+            "total_tokens": 3093
+          },
+          {
+            "example_id": "strategyqa_25",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3209
+          },
+          {
+            "example_id": "strategyqa_436",
+            "correct": true,
+            "prediction": "no, a loris cannot outrun a greyhound",
+            "ground_truth": "no",
+            "total_tokens": 3208
+          },
+          {
+            "example_id": "strategyqa_284",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3213
+          },
+          {
+            "example_id": "strategyqa_371",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2545
+          },
+          {
+            "example_id": "strategyqa_511",
+            "correct": true,
+            "prediction": "To determine if a typical cat would fit in a handbag, we need to consider the size of both a typical cat and a handbag",
+            "ground_truth": "no",
+            "total_tokens": 3041
+          },
+          {
+            "example_id": "strategyqa_288",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 3928
+          },
+          {
+            "example_id": "strategyqa_99",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2348
+          },
+          {
+            "example_id": "strategyqa_188",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2446
+          },
+          {
+            "example_id": "strategyqa_311",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2504
+          },
+          {
+            "example_id": "strategyqa_646",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2057
+          },
+          {
+            "example_id": "strategyqa_517",
+            "correct": true,
+            "prediction": "nable to assume that there would be more real estate agents listed in yellow pages directories than ghostwriters",
+            "ground_truth": "no",
+            "total_tokens": 5509
+          },
+          {
+            "example_id": "strategyqa_480",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 5152
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4839
+          },
+          {
+            "example_id": "strategyqa_36",
+            "correct": false,
+            "prediction": "Ros",
+            "ground_truth": "yes",
+            "total_tokens": 4535
+          },
+          {
+            "example_id": "strategyqa_555",
+            "correct": true,
+            "prediction": "no, a Monoamine Oxidase candy bar would not cheer up a depressed friend",
+            "ground_truth": "no",
+            "total_tokens": 5953
+          },
+          {
+            "example_id": "strategyqa_52",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1745
+          },
+          {
+            "example_id": "strategyqa_24",
+            "correct": false,
+            "prediction": "Yes, for a vegetarian, a BLT sandwich would be unacceptable due to its meat content",
+            "ground_truth": "yes",
+            "total_tokens": 3503
+          },
+          {
+            "example_id": "strategyqa_260",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2724
+          },
+          {
+            "example_id": "strategyqa_89",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3876
+          },
+          {
+            "example_id": "strategyqa_295",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3070
+          },
+          {
+            "example_id": "strategyqa_364",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2591
+          },
+          {
+            "example_id": "strategyqa_396",
+            "correct": true,
+            "prediction": "No, Chuck Norris will not be a nonagenarian by the time the next leap year after 2020 (2024) happens",
+            "ground_truth": "no",
+            "total_tokens": 4356
+          },
+          {
+            "example_id": "strategyqa_551",
+            "correct": false,
+            "prediction": "Step-by-step reasoning process: The perimeter of a triangle is the sum of all its sides",
+            "ground_truth": "yes",
+            "total_tokens": 4167
+          },
+          {
+            "example_id": "strategyqa_182",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 4128
+          },
+          {
+            "example_id": "strategyqa_244",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 4117
+          },
+          {
+            "example_id": "strategyqa_370",
+            "correct": false,
+            "prediction": "No, a game of Mario Kart 64 would not use NFC",
+            "ground_truth": "yes",
+            "total_tokens": 3128
+          },
+          {
+            "example_id": "strategyqa_329",
+            "correct": true,
+            "prediction": "The answer is yes, a White-eyed Vireo would benefit from the North American Beaver",
+            "ground_truth": "no",
+            "total_tokens": 3144
+          },
+          {
+            "example_id": "strategyqa_95",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 5513
+          },
+          {
+            "example_id": "strategyqa_423",
+            "correct": true,
+            "prediction": "To answer this question, let's consider the following steps:",
+            "ground_truth": "no",
+            "total_tokens": 2989
+          },
+          {
+            "example_id": "strategyqa_145",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 4188
+          },
+          {
+            "example_id": "strategyqa_648",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4697
+          },
+          {
+            "example_id": "strategyqa_51",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2538
+          },
+          {
+            "example_id": "strategyqa_196",
+            "correct": true,
+            "prediction": "The Sahara has a large impact on the people and nations that surround it",
+            "ground_truth": "no",
+            "total_tokens": 2916
+          },
+          {
+            "example_id": "strategyqa_505",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3307
+          },
+          {
+            "example_id": "strategyqa_353",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3768
+          },
+          {
+            "example_id": "strategyqa_226",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4549
+          },
+          {
+            "example_id": "strategyqa_375",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1667
+          },
+          {
+            "example_id": "strategyqa_440",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3449
+          },
+          {
+            "example_id": "strategyqa_530",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2121
+          },
+          {
+            "example_id": "strategyqa_79",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3812
+          },
+          {
+            "example_id": "strategyqa_433",
+            "correct": true,
+            "prediction": "Let's think step by step",
+            "ground_truth": "no",
+            "total_tokens": 2885
+          },
+          {
+            "example_id": "strategyqa_179",
+            "correct": true,
+            "prediction": "The first season of Cowboy Bebop aired on TV Tokyo between January 1998 and June 1998 and consisted of 26 episodes",
+            "ground_truth": "no",
+            "total_tokens": 3471
+          },
+          {
+            "example_id": "strategyqa_204",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3757
+          },
+          {
+            "example_id": "strategyqa_114",
+            "correct": true,
+            "prediction": "no, the Louvre's pyramid is not known for being unbreakable",
+            "ground_truth": "no",
+            "total_tokens": 3004
+          },
+          {
+            "example_id": "strategyqa_676",
+            "correct": false,
+            "prediction": "To find a full list of countries and their respective international calling codes, you can visit the International Telecommunication Union's website (https://www",
+            "ground_truth": "yes",
+            "total_tokens": 3501
+          },
+          {
+            "example_id": "strategyqa_377",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2860
+          },
+          {
+            "example_id": "strategyqa_406",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3270
+          },
+          {
+            "example_id": "strategyqa_110",
+            "correct": false,
+            "prediction": "No, Indiana Jones: The Pinball Adventure does not have a female lead character",
+            "ground_truth": "yes",
+            "total_tokens": 4630
+          },
+          {
+            "example_id": "strategyqa_102",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1789
+          },
+          {
+            "example_id": "strategyqa_308",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4981
+          },
+          {
+            "example_id": "strategyqa_219",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3586
+          },
+          {
+            "example_id": "strategyqa_159",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3128
+          },
+          {
+            "example_id": "strategyqa_39",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4647
+          },
+          {
+            "example_id": "strategyqa_466",
+            "correct": true,
+            "prediction": "To answer this question, let's consider the following steps:",
+            "ground_truth": "no",
+            "total_tokens": 5102
+          },
+          {
+            "example_id": "strategyqa_60",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2868
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3281
+          },
+          {
+            "example_id": "strategyqa_382",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3827
+          },
+          {
+            "example_id": "strategyqa_391",
+            "correct": false,
+            "prediction": "yes, they had a romantic relationship",
+            "ground_truth": "yes",
+            "total_tokens": 4825
+          },
+          {
+            "example_id": "strategyqa_438",
+            "correct": true,
+            "prediction": "no, a crossword puzzle player would not use a Scrabble tile bag",
+            "ground_truth": "no",
+            "total_tokens": 2537
+          },
+          {
+            "example_id": "strategyqa_347",
+            "correct": false,
+            "prediction": "Yes, Genghis Khan and Aristotle have one thing in common - they are both influential figures who have made significant contributions to their fields and have left a lasting impact on history",
+            "ground_truth": "yes",
+            "total_tokens": 5768
+          },
+          {
+            "example_id": "strategyqa_250",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4804
+          },
+          {
+            "example_id": "strategyqa_666",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5667
+          },
+          {
+            "example_id": "strategyqa_160",
+            "correct": true,
+            "prediction": "No, Alfred Hitchcock did not include internet slang in his films, as the internet did not exist during his lifetime",
+            "ground_truth": "no",
+            "total_tokens": 2197
+          },
+          {
+            "example_id": "strategyqa_40",
+            "correct": false,
+            "prediction": "ries",
+            "ground_truth": "yes",
+            "total_tokens": 2597
+          },
+          {
+            "example_id": "strategyqa_565",
+            "correct": false,
+            "prediction": "depends on personal preferences and cultural background",
+            "ground_truth": "yes",
+            "total_tokens": 5996
+          },
+          {
+            "example_id": "strategyqa_502",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 4161
+          },
+          {
+            "example_id": "strategyqa_48",
+            "correct": false,
+            "prediction": "me qualities that make it potentially effective as a guard animal, its large size, special care requirements, and aggressiveness may also present challenges",
+            "ground_truth": "yes",
+            "total_tokens": 3075
+          },
+          {
+            "example_id": "strategyqa_129",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4167
+          },
+          {
+            "example_id": "strategyqa_417",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 1850
+          },
+          {
+            "example_id": "strategyqa_247",
+            "correct": false,
+            "prediction": "Yes, Robert Wadlow would tower over a German Shepherd",
+            "ground_truth": "yes",
+            "total_tokens": 3100
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "a specific place, such as \"Mount Rushmore\" in honor of the presidents who were engraved into the mountain",
+            "ground_truth": "no",
+            "total_tokens": 3825
+          },
+          {
+            "example_id": "strategyqa_566",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 4050
+          },
+          {
+            "example_id": "strategyqa_522",
+            "correct": true,
+            "prediction": "No, the high school class of 2010 would not have lived through the Presidency of Richard Nixon",
+            "ground_truth": "no",
+            "total_tokens": 3121
+          },
+          {
+            "example_id": "strategyqa_214",
+            "correct": false,
+            "prediction": "\"satisfaction\" because",
+            "ground_truth": "yes",
+            "total_tokens": 3130
+          },
+          {
+            "example_id": "strategyqa_404",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3873
+          },
+          {
+            "example_id": "strategyqa_446",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3182
+          },
+          {
+            "example_id": "strategyqa_581",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2632
+          },
+          {
+            "example_id": "strategyqa_207",
+            "correct": false,
+            "prediction": "Let's think first",
+            "ground_truth": "yes",
+            "total_tokens": 2317
+          },
+          {
+            "example_id": "strategyqa_434",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2605
+          },
+          {
+            "example_id": "strategyqa_151",
+            "correct": true,
+            "prediction": "No, SnapCap is not an example of a retail store",
+            "ground_truth": "no",
+            "total_tokens": 3904
+          },
+          {
+            "example_id": "strategyqa_195",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 3874
+          },
+          {
+            "example_id": "strategyqa_669",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 5313
+          },
+          {
+            "example_id": "strategyqa_443",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3088
+          },
+          {
+            "example_id": "strategyqa_361",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4524
+          },
+          {
+            "example_id": "strategyqa_521",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3270
+          },
+          {
+            "example_id": "strategyqa_654",
+            "correct": false,
+            "prediction": "yes, a packed Wembley stadium would be likely to have a descendant of the Mongols inside",
+            "ground_truth": "yes",
+            "total_tokens": 4334
+          },
+          {
+            "example_id": "strategyqa_605",
+            "correct": false,
+            "prediction": "waries",
+            "ground_truth": "yes",
+            "total_tokens": 3946
+          },
+          {
+            "example_id": "strategyqa_475",
+            "correct": false,
+            "prediction": "yes, it is possible that Kelly Clarkson's voice could shake glass under certain conditions",
+            "ground_truth": "yes",
+            "total_tokens": 3879
+          },
+          {
+            "example_id": "strategyqa_534",
+            "correct": false,
+            "prediction": "nal use but professional work",
+            "ground_truth": "yes",
+            "total_tokens": 2715
+          },
+          {
+            "example_id": "strategyqa_161",
+            "correct": true,
+            "prediction": "Step 1: Understand the beliefs and practices of Jehovah's Witnesses and Sikhs",
+            "ground_truth": "no",
+            "total_tokens": 3911
+          },
+          {
+            "example_id": "strategyqa_316",
+            "correct": false,
+            "prediction": "Yes, Cardi B would benefit from soy milk",
+            "ground_truth": "yes",
+            "total_tokens": 4330
+          },
+          {
+            "example_id": "strategyqa_202",
+            "correct": true,
+            "prediction": "No, Solomon does not make up a bigger percentage of Islamic prophets than Kings of Judah",
+            "ground_truth": "no",
+            "total_tokens": 4790
+          },
+          {
+            "example_id": "strategyqa_273",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 4442
+          },
+          {
+            "example_id": "strategyqa_20",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 4508
+          },
+          {
+            "example_id": "strategyqa_289",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 2890
+          },
+          {
+            "example_id": "strategyqa_413",
+            "correct": false,
+            "prediction": "Let's think step by step",
+            "ground_truth": "yes",
+            "total_tokens": 4605
+          },
+          {
+            "example_id": "strategyqa_71",
+            "correct": false,
+            "prediction": "influence the outcome",
+            "ground_truth": "yes",
+            "total_tokens": 3111
+          },
+          {
+            "example_id": "strategyqa_298",
+            "correct": false,
+            "prediction": "litary animals and typically avoid confrontation",
+            "ground_truth": "yes",
+            "total_tokens": 3886
+          },
+          {
+            "example_id": "strategyqa_419",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3464
+          },
+          {
+            "example_id": "strategyqa_224",
+            "correct": true,
+            "prediction": "yes, a jellyfish would be safe from a box jellyfish at a gelato shop",
+            "ground_truth": "no",
+            "total_tokens": 3529
+          },
+          {
+            "example_id": "strategyqa_115",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 3269
+          },
+          {
+            "example_id": "strategyqa_582",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 3813
+          }
+        ]
+      }
+    }
+  }
+}

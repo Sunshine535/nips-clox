@@ -1,58 +1,6 @@
 {
   "model": "/openbayes/input/input0/hub/models--Qwen--Qwen3.5-9B/snapshots/c202236235762e1c871ad0ccb60c8ee5ba337b9a",
   "cells": {
-    "gsm8k": {
-      "n_examples": 30,
-      "oracle_accuracy": 0.9,
-      "sc_accuracy": 0.833,
-      "oracle_sc_gap": 0.067,
-      "per_strategy_accuracy": {
-        "standard_cot": 0.733,
-        "self_consistency": 0.833,
-        "backward_cloze": 0.833
-      },
-      "per_strategy_rows": {},
-      "per_strategy_mean_tokens": {}
-    },
-    "math_hard": {
-      "n_examples": 30,
-      "oracle_accuracy": 0.5,
-      "sc_accuracy": 0.333,
-      "oracle_sc_gap": 0.167,
-      "per_strategy_accuracy": {
-        "standard_cot": 0.267,
-        "self_consistency": 0.333,
-        "backward_cloze": 0.333
-      },
-      "per_strategy_rows": {},
-      "per_strategy_mean_tokens": {}
-    },
-    "strategyqa": {
-      "n_examples": 30,
-      "oracle_accuracy": 0.833,
-      "sc_accuracy": 0.8,
-      "oracle_sc_gap": 0.033,
-      "per_strategy_accuracy": {
-        "standard_cot": 0.733,
-        "self_consistency": 0.8,
-        "backward_cloze": 0.633
-      },
-      "per_strategy_rows": {},
-      "per_strategy_mean_tokens": {}
-    },
-    "bbh_logic": {
-      "n_examples": 30,
-      "oracle_accuracy": 0.967,
-      "sc_accuracy": 0.7,
-      "oracle_sc_gap": 0.267,
-      "per_strategy_accuracy": {
-        "standard_cot": 0.733,
-        "self_consistency": 0.7,
-        "backward_cloze": 0.633
-      },
-      "per_strategy_rows": {},
-      "per_strategy_mean_tokens": {}
-    },
     "arc_challenge": {
       "benchmark": "arc_challenge",
       "n_examples": 30,
@@ -704,6 +652,2626 @@
             "prediction": "ciated with motion, but it's Newton's",
             "ground_truth": "D",
             "total_tokens": 8641
+          }
+        ]
+      }
+    },
+    "gsm8k": {
+      "benchmark": "gsm8k",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.7333333333333333,
+        "self_consistency": 0.9,
+        "backward_cloze": 0.8
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 2049.633333333333,
+        "self_consistency": 16732.066666666666,
+        "backward_cloze": 8563.066666666668
+      },
+      "oracle_accuracy": 0.9,
+      "sc_accuracy": 0.9,
+      "oracle_sc_gap": 0.0,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 2319
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": false,
+            "prediction": "10",
+            "ground_truth": "5",
+            "total_tokens": 2356
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 2335
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "30",
+            "ground_truth": "30",
+            "total_tokens": 2315
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 2283
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "120",
+            "ground_truth": "1128",
+            "total_tokens": 2305
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": false,
+            "prediction": "160",
+            "ground_truth": "144",
+            "total_tokens": 2305
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "110",
+            "ground_truth": "50",
+            "total_tokens": 2295
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 2302
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 1065
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 2297
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": false,
+            "prediction": "380",
+            "ground_truth": "18",
+            "total_tokens": 2339
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 2288
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "14",
+            "ground_truth": "21",
+            "total_tokens": 2294
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 815
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 2283
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 2335
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 2282
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 996
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 1327
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 2279
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 2321
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "12",
+            "ground_truth": "12",
+            "total_tokens": 2306
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 838
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": false,
+            "prediction": "3.00",
+            "ground_truth": "9",
+            "total_tokens": 2334
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "240",
+            "ground_truth": "11",
+            "total_tokens": 2326
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 2324
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 1753
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 2280
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 1592
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 15138
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 17846
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 18386
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "30",
+            "ground_truth": "30",
+            "total_tokens": 15601
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 17493
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "1128",
+            "total_tokens": 18440
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "144",
+            "ground_truth": "144",
+            "total_tokens": 17663
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": true,
+            "prediction": "50",
+            "ground_truth": "50",
+            "total_tokens": 18360
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 18265
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 11797
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 18263
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 18686
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 17917
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "14",
+            "ground_truth": "21",
+            "total_tokens": 17804
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 15254
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 14007
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 18680
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 17414
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 15620
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 15869
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 13546
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 16181
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "12",
+            "ground_truth": "12",
+            "total_tokens": 17365
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 14245
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": true,
+            "prediction": "9.00",
+            "ground_truth": "9",
+            "total_tokens": 18334
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "17.00",
+            "ground_truth": "11",
+            "total_tokens": 18608
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 18333
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 18196
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 15255
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 13396
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 6255
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 9366
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 8988
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "30",
+            "ground_truth": "30",
+            "total_tokens": 8967
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 9074
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "18",
+            "ground_truth": "1128",
+            "total_tokens": 9165
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "144",
+            "ground_truth": "144",
+            "total_tokens": 8475
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "90",
+            "ground_truth": "50",
+            "total_tokens": 9125
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 9159
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 9141
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 9130
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 8607
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 9097
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "14",
+            "ground_truth": "21",
+            "total_tokens": 7836
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 6918
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 5942
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 9082
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "420",
+            "total_tokens": 8612
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 8222
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 7273
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 9061
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 7750
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "12",
+            "ground_truth": "12",
+            "total_tokens": 8335
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 8576
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": true,
+            "prediction": "9.00",
+            "ground_truth": "9",
+            "total_tokens": 9197
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "17",
+            "ground_truth": "11",
+            "total_tokens": 9249
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 9088
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": false,
+            "prediction": "20",
+            "ground_truth": "56",
+            "total_tokens": 8979
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 9062
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 9161
+          }
+        ]
+      }
+    },
+    "math_hard": {
+      "benchmark": "math_hard",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.36666666666666664,
+        "self_consistency": 0.36666666666666664,
+        "backward_cloze": 0.43333333333333335
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 2187.233333333333,
+        "self_consistency": 17546.6,
+        "backward_cloze": 8850.733333333334
+      },
+      "oracle_accuracy": 0.6,
+      "sc_accuracy": 0.36666666666666664,
+      "oracle_sc_gap": 0.23333333333333334,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "math_4135",
+            "correct": true,
+            "prediction": "20",
+            "ground_truth": "20",
+            "total_tokens": 2234
+          },
+          {
+            "example_id": "math_3974",
+            "correct": true,
+            "prediction": "448 is the correct number",
+            "ground_truth": "448",
+            "total_tokens": 2184
+          },
+          {
+            "example_id": "math_449",
+            "correct": false,
+            "prediction": "the new function is $y = 2 f(x-2)$",
+            "ground_truth": "3.2",
+            "total_tokens": 2215
+          },
+          {
+            "example_id": "math_3670",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 2161
+          },
+          {
+            "example_id": "math_3095",
+            "correct": false,
+            "prediction": "$E \\equiv 2 + 8 - 3 \\pmod{10}$",
+            "ground_truth": "7",
+            "total_tokens": 2241
+          },
+          {
+            "example_id": "math_1878",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "74",
+            "total_tokens": 2209
+          },
+          {
+            "example_id": "math_2621",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 2233
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "all cuts must be from the surface, reducing the dimensions",
+            "ground_truth": "729",
+            "total_tokens": 2235
+          },
+          {
+            "example_id": "math_919",
+            "correct": false,
+            "prediction": "answer",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 2181
+          },
+          {
+            "example_id": "math_4844",
+            "correct": false,
+            "prediction": "$y, z$ are roots of $t^2 + 3t + 2 = 0 \\",
+            "ground_truth": "-13",
+            "total_tokens": 2256
+          },
+          {
+            "example_id": "math_4047",
+            "correct": true,
+            "prediction": "$200$",
+            "ground_truth": "200",
+            "total_tokens": 2162
+          },
+          {
+            "example_id": "math_3286",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "13",
+            "total_tokens": 2164
+          },
+          {
+            "example_id": "math_3612",
+            "correct": false,
+            "prediction": "boxed",
+            "ground_truth": "7",
+            "total_tokens": 2192
+          },
+          {
+            "example_id": "math_2038",
+            "correct": true,
+            "prediction": "-\\frac{\\sqrt{3",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 2152
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 1816
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "the ratio is $\\frac{\\gamma}{4\\gamma - 180^\\circ}$",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 2224
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "me range",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 2229
+          },
+          {
+            "example_id": "math_2155",
+            "correct": false,
+            "prediction": "$S = \\frac{1}{\\sqrt{2}} \\cdot \\frac{\\sqrt{22}}{2} = \\frac{\\sqrt{11}}{2}$",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 2194
+          },
+          {
+            "example_id": "math_2224",
+            "correct": false,
+            "prediction": "$|z_1 - z_2|^2 = 50 - (z_1 \\bar{z}_2 + \\bar{z}_1 z_2)$",
+            "ground_truth": "25",
+            "total_tokens": 2214
+          },
+          {
+            "example_id": "math_3078",
+            "correct": true,
+            "prediction": "$-221_3$",
+            "ground_truth": "-221_3",
+            "total_tokens": 2179
+          },
+          {
+            "example_id": "math_1033",
+            "correct": false,
+            "prediction": "clearly",
+            "ground_truth": "3.21",
+            "total_tokens": 2193
+          },
+          {
+            "example_id": "math_458",
+            "correct": false,
+            "prediction": "the set is definitely $\\{1, 3,",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 2188
+          },
+          {
+            "example_id": "math_3750",
+            "correct": false,
+            "prediction": "lid",
+            "ground_truth": "264",
+            "total_tokens": 2164
+          },
+          {
+            "example_id": "math_2189",
+            "correct": false,
+            "prediction": "$P(i) = -a + b + (a + b)i - 5i - 1 = (-a + b - 1) + (a + b - 5)i$",
+            "ground_truth": "(23)",
+            "total_tokens": 2189
+          },
+          {
+            "example_id": "math_492",
+            "correct": false,
+            "prediction": "$d \\neq 0$",
+            "ground_truth": "2",
+            "total_tokens": 2191
+          },
+          {
+            "example_id": "math_658",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 2192
+          },
+          {
+            "example_id": "math_2243",
+            "correct": true,
+            "prediction": "the term is indeed $\\frac{3k^2 + 3k + 1}{k^3 (k+1)^3} = \\frac{(k+1)^3 - k^3}{k^3 (k+1)^3} = \\frac{1}{k^3} - \\frac{1}{(k+1)^3}$",
+            "ground_truth": "1",
+            "total_tokens": 2224
+          },
+          {
+            "example_id": "math_2537",
+            "correct": false,
+            "prediction": "we must have $a_2 = -1$",
+            "ground_truth": "3",
+            "total_tokens": 2206
+          },
+          {
+            "example_id": "math_3484",
+            "correct": true,
+            "prediction": "43",
+            "ground_truth": "43",
+            "total_tokens": 2186
+          },
+          {
+            "example_id": "math_3389",
+            "correct": false,
+            "prediction": "$21 \\equiv 8 \\pmod{13}$",
+            "ground_truth": "8",
+            "total_tokens": 2209
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "math_4135",
+            "correct": true,
+            "prediction": "20",
+            "ground_truth": "20",
+            "total_tokens": 17872
+          },
+          {
+            "example_id": "math_3974",
+            "correct": false,
+            "prediction": "number of squares where square 2 can be placed such that it is NOT in the same row and NOT in the same column = $64 - 1 (\\text{itself}) - 7 - 7 = 49$",
+            "ground_truth": "448",
+            "total_tokens": 17472
+          },
+          {
+            "example_id": "math_449",
+            "correct": false,
+            "prediction": "$f(x) = 2f(x-2)$",
+            "ground_truth": "3.2",
+            "total_tokens": 17720
+          },
+          {
+            "example_id": "math_3670",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 17288
+          },
+          {
+            "example_id": "math_3095",
+            "correct": false,
+            "prediction": "lve this",
+            "ground_truth": "7",
+            "total_tokens": 17928
+          },
+          {
+            "example_id": "math_1878",
+            "correct": false,
+            "prediction": "Formulation:**",
+            "ground_truth": "74",
+            "total_tokens": 17672
+          },
+          {
+            "example_id": "math_2621",
+            "correct": false,
+            "prediction": "the literal interpretation is $E = x_1 (x_2 + x_3 + \\dots + x_{101})$",
+            "ground_truth": "5",
+            "total_tokens": 17864
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "me* face?",
+            "ground_truth": "729",
+            "total_tokens": 17880
+          },
+          {
+            "example_id": "math_919",
+            "correct": false,
+            "prediction": "$a \\neq 0$",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 17448
+          },
+          {
+            "example_id": "math_4844",
+            "correct": true,
+            "prediction": "$\\det(\\mathbf{A}) = -13$",
+            "ground_truth": "-13",
+            "total_tokens": 18048
+          },
+          {
+            "example_id": "math_4047",
+            "correct": true,
+            "prediction": "around 200, asking for the nearest hundred is a standard rounding task",
+            "ground_truth": "200",
+            "total_tokens": 17296
+          },
+          {
+            "example_id": "math_3286",
+            "correct": false,
+            "prediction": "the last three digits are 6, 2, 5",
+            "ground_truth": "13",
+            "total_tokens": 17312
+          },
+          {
+            "example_id": "math_3612",
+            "correct": true,
+            "prediction": "7",
+            "ground_truth": "7",
+            "total_tokens": 17495
+          },
+          {
+            "example_id": "math_2038",
+            "correct": true,
+            "prediction": "...",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 17216
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 16161
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "$AC = AB$",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 17792
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "$f(x)$ is not linear",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 17832
+          },
+          {
+            "example_id": "math_2155",
+            "correct": true,
+            "prediction": "$y = \\sqrt{11} z$",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 17552
+          },
+          {
+            "example_id": "math_2224",
+            "correct": false,
+            "prediction": "$z_1/z_2 = e^{\\pm i \\pi/3}$",
+            "ground_truth": "25",
+            "total_tokens": 17712
+          },
+          {
+            "example_id": "math_3078",
+            "correct": false,
+            "prediction": "needs to be expressed in base 3",
+            "ground_truth": "-221_3",
+            "total_tokens": 17432
+          },
+          {
+            "example_id": "math_1033",
+            "correct": true,
+            "prediction": "3.21",
+            "ground_truth": "3.21",
+            "total_tokens": 17544
+          },
+          {
+            "example_id": "math_458",
+            "correct": false,
+            "prediction": "in a box",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 17504
+          },
+          {
+            "example_id": "math_3750",
+            "correct": false,
+            "prediction": "lid",
+            "ground_truth": "264",
+            "total_tokens": 17312
+          },
+          {
+            "example_id": "math_2189",
+            "correct": false,
+            "prediction": "$ax^6 + bx^5 + ax + b$",
+            "ground_truth": "(23)",
+            "total_tokens": 17512
+          },
+          {
+            "example_id": "math_492",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 17528
+          },
+          {
+            "example_id": "math_658",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 17406
+          },
+          {
+            "example_id": "math_2243",
+            "correct": false,
+            "prediction": "$\\frac{3k^2+3k+1}{k^3(k+1)^3} = \\frac{3k(k+1) + 1}{k^3(k+1)^3} = \\frac{3}{k^2(k+1)^2} + \\frac{1}{k^3(k+1)^3}$",
+            "ground_truth": "1",
+            "total_tokens": 17792
+          },
+          {
+            "example_id": "math_2537",
+            "correct": false,
+            "prediction": "we need to find if there exist real numbers $r_i$ such that these symmetric sums are $\\pm 1$",
+            "ground_truth": "3",
+            "total_tokens": 17648
+          },
+          {
+            "example_id": "math_3484",
+            "correct": false,
+            "prediction": "answer",
+            "ground_truth": "43",
+            "total_tokens": 17488
+          },
+          {
+            "example_id": "math_3389",
+            "correct": false,
+            "prediction": "lve for $k$:",
+            "ground_truth": "8",
+            "total_tokens": 17672
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "math_4135",
+            "correct": true,
+            "prediction": "20",
+            "ground_truth": "20",
+            "total_tokens": 8981
+          },
+          {
+            "example_id": "math_3974",
+            "correct": false,
+            "prediction": "we just add them",
+            "ground_truth": "448",
+            "total_tokens": 8784
+          },
+          {
+            "example_id": "math_449",
+            "correct": false,
+            "prediction": "$f(x) = 2f(x-2)$",
+            "ground_truth": "3.2",
+            "total_tokens": 8932
+          },
+          {
+            "example_id": "math_3670",
+            "correct": true,
+            "prediction": "8",
+            "ground_truth": "8",
+            "total_tokens": 8686
+          },
+          {
+            "example_id": "math_3095",
+            "correct": true,
+            "prediction": "is 7",
+            "ground_truth": "7",
+            "total_tokens": 9009
+          },
+          {
+            "example_id": "math_1878",
+            "correct": false,
+            "prediction": "the total volume of the ball is directly proportional to the number of rubber bands used",
+            "ground_truth": "74",
+            "total_tokens": 8920
+          },
+          {
+            "example_id": "math_2621",
+            "correct": false,
+            "prediction": "$a = 1/\\sqrt{2}$",
+            "ground_truth": "5",
+            "total_tokens": 8998
+          },
+          {
+            "example_id": "math_2495",
+            "correct": false,
+            "prediction": "lid usually implies a plane parallel to the face",
+            "ground_truth": "729",
+            "total_tokens": 9003
+          },
+          {
+            "example_id": "math_919",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "-\\frac{10",
+            "total_tokens": 8766
+          },
+          {
+            "example_id": "math_4844",
+            "correct": false,
+            "prediction": "clearly",
+            "ground_truth": "-13",
+            "total_tokens": 9063
+          },
+          {
+            "example_id": "math_4047",
+            "correct": true,
+            "prediction": "200",
+            "ground_truth": "200",
+            "total_tokens": 8741
+          },
+          {
+            "example_id": "math_3286",
+            "correct": false,
+            "prediction": "$5^{100}",
+            "ground_truth": "13",
+            "total_tokens": 8713
+          },
+          {
+            "example_id": "math_3612",
+            "correct": false,
+            "prediction": "4",
+            "ground_truth": "7",
+            "total_tokens": 8810
+          },
+          {
+            "example_id": "math_2038",
+            "correct": true,
+            "prediction": "-\\frac{\\sqrt{3",
+            "ground_truth": "-\\frac{\\sqrt{3",
+            "total_tokens": 8665
+          },
+          {
+            "example_id": "math_3742",
+            "correct": true,
+            "prediction": "625",
+            "ground_truth": "625",
+            "total_tokens": 8661
+          },
+          {
+            "example_id": "math_4554",
+            "correct": false,
+            "prediction": "$B, Q, A$ are collinear in that order? Or $A, Q, B$?",
+            "ground_truth": "\\frac{4",
+            "total_tokens": 9001
+          },
+          {
+            "example_id": "math_2447",
+            "correct": false,
+            "prediction": "$x = \\frac{y}{y^2-1}$",
+            "ground_truth": "\\frac{1-\\sqrt{5",
+            "total_tokens": 8994
+          },
+          {
+            "example_id": "math_2155",
+            "correct": false,
+            "prediction": "$\\sqrt{10}x + z \\le \\sqrt{11(x^2 + z^2)}$",
+            "ground_truth": "\\frac{\\sqrt{11",
+            "total_tokens": 8887
+          },
+          {
+            "example_id": "math_2224",
+            "correct": false,
+            "prediction": "$u - 1 = -u^2$",
+            "ground_truth": "25",
+            "total_tokens": 8925
+          },
+          {
+            "example_id": "math_3078",
+            "correct": true,
+            "prediction": "$-221_3$",
+            "ground_truth": "-221_3",
+            "total_tokens": 8797
+          },
+          {
+            "example_id": "math_1033",
+            "correct": true,
+            "prediction": "3.21",
+            "ground_truth": "3.21",
+            "total_tokens": 8832
+          },
+          {
+            "example_id": "math_458",
+            "correct": false,
+            "prediction": "$S_1 = 50^2 = 2500$",
+            "ground_truth": "\\frac{1",
+            "total_tokens": 8839
+          },
+          {
+            "example_id": "math_3750",
+            "correct": false,
+            "prediction": "in a box",
+            "ground_truth": "264",
+            "total_tokens": 8701
+          },
+          {
+            "example_id": "math_2189",
+            "correct": true,
+            "prediction": "(2, 3)",
+            "ground_truth": "(23)",
+            "total_tokens": 8810
+          },
+          {
+            "example_id": "math_492",
+            "correct": true,
+            "prediction": "$a_2",
+            "ground_truth": "2",
+            "total_tokens": 8812
+          },
+          {
+            "example_id": "math_658",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 8541
+          },
+          {
+            "example_id": "math_2243",
+            "correct": true,
+            "prediction": "$u_n = \\frac{3k^2+3k+1}{k^3(k+1)^3} = \\frac{1}{k^3} - \\frac{1}{(k+1)^3}$",
+            "ground_truth": "1",
+            "total_tokens": 9079
+          },
+          {
+            "example_id": "math_2537",
+            "correct": false,
+            "prediction": "$P'(x)$ has coefficients of the same signs as $a_k$",
+            "ground_truth": "3",
+            "total_tokens": 8908
+          },
+          {
+            "example_id": "math_3484",
+            "correct": true,
+            "prediction": "43",
+            "ground_truth": "43",
+            "total_tokens": 8789
+          },
+          {
+            "example_id": "math_3389",
+            "correct": false,
+            "prediction": "clearly",
+            "ground_truth": "8",
+            "total_tokens": 8875
+          }
+        ]
+      }
+    },
+    "strategyqa": {
+      "benchmark": "strategyqa",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.8,
+        "self_consistency": 0.7666666666666667,
+        "backward_cloze": 0.8
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1788.7,
+        "self_consistency": 14997.7,
+        "backward_cloze": 7820.966666666666
+      },
+      "oracle_accuracy": 0.9,
+      "sc_accuracy": 0.7666666666666667,
+      "oracle_sc_gap": 0.1333333333333333,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "No",
+            "ground_truth": "yes",
+            "total_tokens": 2154
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 1594
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "[X]",
+            "ground_truth": "no",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 979
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1792
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "clearly",
+            "ground_truth": "no",
+            "total_tokens": 2154
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 681
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1487
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "mething\"",
+            "ground_truth": "no",
+            "total_tokens": 2161
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "Yes, if you have a submersible",
+            "ground_truth": "yes",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1302
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "generally \"Yes, George Harrison",
+            "ground_truth": "yes",
+            "total_tokens": 2153
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "yes/no\"",
+            "ground_truth": "no",
+            "total_tokens": 2152
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1389
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1456
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 2149
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": true,
+            "prediction": "No",
+            "ground_truth": "no",
+            "total_tokens": 2150
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1777
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 1299
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "[Answer]",
+            "ground_truth": "no",
+            "total_tokens": 2147
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": true,
+            "prediction": "\"No\" because his first wife died",
+            "ground_truth": "no",
+            "total_tokens": 2148
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 2151
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "57",
+            "ground_truth": "no",
+            "total_tokens": 2152
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "7",
+            "ground_truth": "yes",
+            "total_tokens": 1524
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 1045
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 772
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 17232
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": false,
+            "prediction": "yes",
+            "ground_truth": "no",
+            "total_tokens": 15049
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 11722
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 14276
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 13360
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 13833
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": false,
+            "prediction": "likely \"Yes\"",
+            "ground_truth": "yes",
+            "total_tokens": 17184
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 14858
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 12363
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 15032
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": false,
+            "prediction": "Yes",
+            "ground_truth": "no",
+            "total_tokens": 17288
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 15350
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 17192
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 16433
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 13243
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 17224
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 17216
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 11211
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 16118
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 12702
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": false,
+            "prediction": "Yes",
+            "ground_truth": "no",
+            "total_tokens": 15039
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 14448
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 14772
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 12541
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 16852
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 16493
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "no",
+            "total_tokens": 17216
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "7",
+            "ground_truth": "yes",
+            "total_tokens": 16481
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 10787
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 16416
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "strategyqa_652",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8660
+          },
+          {
+            "example_id": "strategyqa_569",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8640
+          },
+          {
+            "example_id": "strategyqa_57",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6435
+          },
+          {
+            "example_id": "strategyqa_533",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7511
+          },
+          {
+            "example_id": "strategyqa_463",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8140
+          },
+          {
+            "example_id": "strategyqa_251",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7574
+          },
+          {
+            "example_id": "strategyqa_432",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8636
+          },
+          {
+            "example_id": "strategyqa_351",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8504
+          },
+          {
+            "example_id": "strategyqa_124",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 6064
+          },
+          {
+            "example_id": "strategyqa_686",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7851
+          },
+          {
+            "example_id": "strategyqa_631",
+            "correct": true,
+            "prediction": "n do something very different?* He committed a crime",
+            "ground_truth": "no",
+            "total_tokens": 8715
+          },
+          {
+            "example_id": "strategyqa_482",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8412
+          },
+          {
+            "example_id": "strategyqa_529",
+            "correct": false,
+            "prediction": "no",
+            "ground_truth": "yes",
+            "total_tokens": 8640
+          },
+          {
+            "example_id": "strategyqa_275",
+            "correct": true,
+            "prediction": "21",
+            "ground_truth": "no",
+            "total_tokens": 8646
+          },
+          {
+            "example_id": "strategyqa_563",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8640
+          },
+          {
+            "example_id": "strategyqa_670",
+            "correct": false,
+            "prediction": "Yes (George Harrison)",
+            "ground_truth": "yes",
+            "total_tokens": 8668
+          },
+          {
+            "example_id": "strategyqa_345",
+            "correct": true,
+            "prediction": "no (or unlikely)",
+            "ground_truth": "no",
+            "total_tokens": 8664
+          },
+          {
+            "example_id": "strategyqa_286",
+            "correct": false,
+            "prediction": "0",
+            "ground_truth": "yes",
+            "total_tokens": 6441
+          },
+          {
+            "example_id": "strategyqa_304",
+            "correct": true,
+            "prediction": "52",
+            "ground_truth": "no",
+            "total_tokens": 7193
+          },
+          {
+            "example_id": "strategyqa_439",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6511
+          },
+          {
+            "example_id": "strategyqa_134",
+            "correct": false,
+            "prediction": "Yes",
+            "ground_truth": "no",
+            "total_tokens": 8644
+          },
+          {
+            "example_id": "strategyqa_58",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7322
+          },
+          {
+            "example_id": "strategyqa_567",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 6261
+          },
+          {
+            "example_id": "strategyqa_290",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 7439
+          },
+          {
+            "example_id": "strategyqa_62",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8303
+          },
+          {
+            "example_id": "strategyqa_86",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 8311
+          },
+          {
+            "example_id": "strategyqa_339",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "no",
+            "total_tokens": 8590
+          },
+          {
+            "example_id": "strategyqa_374",
+            "correct": false,
+            "prediction": "7",
+            "ground_truth": "yes",
+            "total_tokens": 7876
+          },
+          {
+            "example_id": "strategyqa_510",
+            "correct": true,
+            "prediction": "yes",
+            "ground_truth": "yes",
+            "total_tokens": 5011
+          },
+          {
+            "example_id": "strategyqa_492",
+            "correct": true,
+            "prediction": "no",
+            "ground_truth": "no",
+            "total_tokens": 8327
+          }
+        ]
+      }
+    },
+    "bbh_logic": {
+      "benchmark": "bbh_logic",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.6666666666666666,
+        "self_consistency": 0.7,
+        "backward_cloze": 0.5666666666666667
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 1918.8333333333333,
+        "self_consistency": 15720.233333333334,
+        "backward_cloze": 8308.266666666666
+      },
+      "oracle_accuracy": 0.9,
+      "sc_accuracy": 0.7,
+      "oracle_sc_gap": 0.20000000000000007,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": false,
+            "prediction": "**",
+            "ground_truth": "(b)",
+            "total_tokens": 1653
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": true,
+            "prediction": "Peaches must be Rank 3",
+            "ground_truth": "(a)",
+            "total_tokens": 2224
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": false,
+            "prediction": "the order is 1: Amy, 2: Joe, 3",
+            "ground_truth": "(c)",
+            "total_tokens": 2182
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": false,
+            "prediction": "n",
+            "ground_truth": "(a)",
+            "total_tokens": 2186
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": true,
+            "prediction": "B",
+            "ground_truth": "(b)",
+            "total_tokens": 2156
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "ning in the final response",
+            "ground_truth": "(a)",
+            "total_tokens": 2225
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": false,
+            "prediction": "Pears is in the middle (3rd position out of 5)",
+            "ground_truth": "(b)",
+            "total_tokens": 2229
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "a deduction that isn't explicitly stated, but here the text explicitly states the answer",
+            "ground_truth": "(b)",
+            "total_tokens": 2245
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "E",
+            "ground_truth": "(e)",
+            "total_tokens": 2244
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": false,
+            "prediction": "there are five finishing positions: 1st, 2nd, 3rd, 4th, and 5th",
+            "ground_truth": "(c)",
+            "total_tokens": 2049
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": false,
+            "prediction": "** Mel",
+            "ground_truth": "(b)",
+            "total_tokens": 1244
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": true,
+            "prediction": "** (E) The motorcyle is the second-newest",
+            "ground_truth": "(e)",
+            "total_tokens": 1755
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "(a)",
+            "total_tokens": 1467
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "** (D) The convertible is the oldest",
+            "ground_truth": "(d)",
+            "total_tokens": 1864
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": true,
+            "prediction": "Joe cannot be 2nd",
+            "ground_truth": "(b)",
+            "total_tokens": 2185
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": false,
+            "prediction": "explicitly in the text",
+            "ground_truth": "(b)",
+            "total_tokens": 2182
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": true,
+            "prediction": "** (C) Eve finished third",
+            "ground_truth": "(c)",
+            "total_tokens": 1201
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "(a)",
+            "total_tokens": 1494
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": false,
+            "prediction": "the one that is logically derived or the only one that fits the final configuration",
+            "ground_truth": "(b)",
+            "total_tokens": 2245
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": false,
+            "prediction": "\"Third-oldest\" and \"Third-newest\" refer to the same position (Position 3)",
+            "ground_truth": "(c)",
+            "total_tokens": 2233
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": true,
+            "prediction": "the **Yellow book must be at Position 2**, and the **Blue book must be at Position 1**",
+            "ground_truth": "(d)",
+            "total_tokens": 1596
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": true,
+            "prediction": "** (C) The motorcyle is the newest",
+            "ground_truth": "(c)",
+            "total_tokens": 1738
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "the Brown book goes there",
+            "ground_truth": "(e)",
+            "total_tokens": 1585
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "** (E)",
+            "ground_truth": "(e)",
+            "total_tokens": 2088
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": true,
+            "prediction": "Hummingbird is rightmost",
+            "ground_truth": "(b)",
+            "total_tokens": 1394
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": true,
+            "prediction": "Minivan = 5, Motorcycle = 2",
+            "ground_truth": "(a)",
+            "total_tokens": 2231
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "the Purple book must be at Position 4, and the Yellow book must be at Position 5",
+            "ground_truth": "(e)",
+            "total_tokens": 2020
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": true,
+            "prediction": "** (D) The hummingbird is the rightmost",
+            "ground_truth": "(d)",
+            "total_tokens": 1717
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": false,
+            "prediction": "$Joe$ must",
+            "ground_truth": "(d)",
+            "total_tokens": 2193
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": true,
+            "prediction": "** (D)",
+            "ground_truth": "(d)",
+            "total_tokens": 1740
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": true,
+            "prediction": "** (B) The yellow book is the leftmost",
+            "ground_truth": "(b)",
+            "total_tokens": 13738
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "(a)",
+            "total_tokens": 16495
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "(c)",
+            "total_tokens": 17430
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": false,
+            "prediction": "Joe",
+            "ground_truth": "(a)",
+            "total_tokens": 15031
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": false,
+            "prediction": "far: [?, ?, ?, Mya(4), Ana(5)]",
+            "ground_truth": "(b)",
+            "total_tokens": 16147
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "(A)",
+            "ground_truth": "(a)",
+            "total_tokens": 17296
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": true,
+            "prediction": "B",
+            "ground_truth": "(b)",
+            "total_tokens": 17674
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "B",
+            "ground_truth": "(b)",
+            "total_tokens": 17609
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": false,
+            "prediction": "**Hawk is at Position 1**",
+            "ground_truth": "(e)",
+            "total_tokens": 17461
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": true,
+            "prediction": "(C)",
+            "ground_truth": "(c)",
+            "total_tokens": 16081
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": false,
+            "prediction": "**",
+            "ground_truth": "(b)",
+            "total_tokens": 11385
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": true,
+            "prediction": "Motorcycle",
+            "ground_truth": "(e)",
+            "total_tokens": 16335
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "(a)",
+            "total_tokens": 12195
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "** (D) The convertible is the oldest",
+            "ground_truth": "(d)",
+            "total_tokens": 15770
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": false,
+            "prediction": "**",
+            "ground_truth": "(b)",
+            "total_tokens": 14844
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": true,
+            "prediction": "B",
+            "ground_truth": "(b)",
+            "total_tokens": 17237
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": false,
+            "prediction": "Eve",
+            "ground_truth": "(c)",
+            "total_tokens": 16370
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "** (A) The raven is the leftmost",
+            "ground_truth": "(a)",
+            "total_tokens": 11995
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": false,
+            "prediction": "the one that holds true",
+            "ground_truth": "(b)",
+            "total_tokens": 17960
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": false,
+            "prediction": "T must be at least 4? No",
+            "ground_truth": "(c)",
+            "total_tokens": 17864
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": true,
+            "prediction": "** (D)",
+            "ground_truth": "(d)",
+            "total_tokens": 13253
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": true,
+            "prediction": "Motorcycle is the newest",
+            "ground_truth": "(c)",
+            "total_tokens": 17776
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": true,
+            "prediction": "** (E)",
+            "ground_truth": "(e)",
+            "total_tokens": 13875
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": true,
+            "prediction": "** (E)",
+            "ground_truth": "(e)",
+            "total_tokens": 15427
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": true,
+            "prediction": "** (B) The hummingbird is the rightmost",
+            "ground_truth": "(b)",
+            "total_tokens": 11701
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": true,
+            "prediction": "a direct inference or restatement of a fact derived from the constraints",
+            "ground_truth": "(a)",
+            "total_tokens": 17848
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "** (E)",
+            "ground_truth": "(e)",
+            "total_tokens": 16874
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": true,
+            "prediction": "** (D) The hummingbird is the rightmost",
+            "ground_truth": "(d)",
+            "total_tokens": 15393
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": true,
+            "prediction": "** (D)",
+            "ground_truth": "(d)",
+            "total_tokens": 16843
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": true,
+            "prediction": "**Orange** is at **Position 3** and **Purple** is at **Position 4**",
+            "ground_truth": "(d)",
+            "total_tokens": 15700
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "bbh_logical_deduction_five_objects_236",
+            "correct": true,
+            "prediction": "the Green book must be at position 2",
+            "ground_truth": "(b)",
+            "total_tokens": 8173
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_231",
+            "correct": false,
+            "prediction": "**",
+            "ground_truth": "(a)",
+            "total_tokens": 8700
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_19",
+            "correct": true,
+            "prediction": "directly supported by the text provided in the prompt",
+            "ground_truth": "(c)",
+            "total_tokens": 8612
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_200",
+            "correct": false,
+            "prediction": "Joe",
+            "ground_truth": "(a)",
+            "total_tokens": 8606
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_171",
+            "correct": false,
+            "prediction": "Amy",
+            "ground_truth": "(b)",
+            "total_tokens": 8850
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_97",
+            "correct": true,
+            "prediction": "Oranges are at Position 1 (Cheapest)",
+            "ground_truth": "(a)",
+            "total_tokens": 9028
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_158",
+            "correct": false,
+            "prediction": "the scenario is valid",
+            "ground_truth": "(b)",
+            "total_tokens": 9023
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_135",
+            "correct": true,
+            "prediction": "mention the other constraints to show I understood the full context, but the direct statement is sufficient",
+            "ground_truth": "(b)",
+            "total_tokens": 8882
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_46",
+            "correct": true,
+            "prediction": "clear",
+            "ground_truth": "(e)",
+            "total_tokens": 9060
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_245",
+            "correct": true,
+            "prediction": "** (C) Dan finished first",
+            "ground_truth": "(c)",
+            "total_tokens": 8150
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_232",
+            "correct": false,
+            "prediction": "right there",
+            "ground_truth": "(b)",
+            "total_tokens": 7321
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_178",
+            "correct": true,
+            "prediction": "** (E) The motorcyle is the second-newest",
+            "ground_truth": "(e)",
+            "total_tokens": 8203
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_194",
+            "correct": true,
+            "prediction": "the **Owl is in Position 4** and the **Robin is in Position 5**",
+            "ground_truth": "(a)",
+            "total_tokens": 6572
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_98",
+            "correct": true,
+            "prediction": "** (D) The convertible is the oldest",
+            "ground_truth": "(d)",
+            "total_tokens": 7521
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_204",
+            "correct": false,
+            "prediction": ":",
+            "ground_truth": "(b)",
+            "total_tokens": 8631
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_243",
+            "correct": true,
+            "prediction": "(B) is the answer",
+            "ground_truth": "(b)",
+            "total_tokens": 8550
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_121",
+            "correct": true,
+            "prediction": "** (C) Eve finished third",
+            "ground_truth": "(c)",
+            "total_tokens": 7937
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_99",
+            "correct": true,
+            "prediction": "** (A)",
+            "ground_truth": "(a)",
+            "total_tokens": 6869
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_110",
+            "correct": false,
+            "prediction": "White is 1",
+            "ground_truth": "(b)",
+            "total_tokens": 9087
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_168",
+            "correct": true,
+            "prediction": "Truck is Rank H+1",
+            "ground_truth": "(c)",
+            "total_tokens": 9045
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_89",
+            "correct": true,
+            "prediction": "** (D)",
+            "ground_truth": "(d)",
+            "total_tokens": 7724
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_21",
+            "correct": false,
+            "prediction": "the order is:",
+            "ground_truth": "(c)",
+            "total_tokens": 8995
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_226",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "(e)",
+            "total_tokens": 8139
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_108",
+            "correct": false,
+            "prediction": "lid",
+            "ground_truth": "(e)",
+            "total_tokens": 8573
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_30",
+            "correct": false,
+            "prediction": "ning",
+            "ground_truth": "(b)",
+            "total_tokens": 6116
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_44",
+            "correct": true,
+            "prediction": "Tractor",
+            "ground_truth": "(a)",
+            "total_tokens": 9025
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_120",
+            "correct": true,
+            "prediction": "Purple must be at **Position 4**, and Yellow must be at **Position 5**",
+            "ground_truth": "(e)",
+            "total_tokens": 8904
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_145",
+            "correct": true,
+            "prediction": "** (D) The hummingbird is the rightmost",
+            "ground_truth": "(d)",
+            "total_tokens": 7894
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_191",
+            "correct": false,
+            "prediction": "5th is below 1st",
+            "ground_truth": "(d)",
+            "total_tokens": 8633
+          },
+          {
+            "example_id": "bbh_logical_deduction_five_objects_185",
+            "correct": false,
+            "prediction": "**",
+            "ground_truth": "(d)",
+            "total_tokens": 8425
           }
         ]
       }

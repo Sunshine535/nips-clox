@@ -1,0 +1,660 @@
+{
+  "model": "/openbayes/input/input0/hub/models--Qwen--Qwen3.5-27B/snapshots/b7ca741b86de18df552fd2cc952861e04621a4bd",
+  "cells": {
+    "gsm8k": {
+      "benchmark": "gsm8k",
+      "n_examples": 30,
+      "per_strategy_accuracy": {
+        "standard_cot": 0.7333333333333333,
+        "self_consistency": 0.8666666666666667,
+        "backward_cloze": 0.9
+      },
+      "per_strategy_mean_tokens": {
+        "standard_cot": 2200.3,
+        "self_consistency": 17046.133333333335,
+        "backward_cloze": 8550.666666666666
+      },
+      "oracle_accuracy": 0.9333333333333333,
+      "sc_accuracy": 0.8666666666666667,
+      "oracle_sc_gap": 0.06666666666666665,
+      "per_strategy_rows": {
+        "standard_cot": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 2262
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": false,
+            "prediction": "2",
+            "ground_truth": "5",
+            "total_tokens": 2356
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 2335
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": false,
+            "prediction": "200",
+            "ground_truth": "30",
+            "total_tokens": 2315
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 2283
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "48",
+            "ground_truth": "1128",
+            "total_tokens": 2305
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "144",
+            "ground_truth": "144",
+            "total_tokens": 2305
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "40",
+            "ground_truth": "50",
+            "total_tokens": 2295
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 2020
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "74",
+            "total_tokens": 2299
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 2297
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 2339
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": false,
+            "prediction": "20",
+            "ground_truth": "15",
+            "total_tokens": 2288
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": true,
+            "prediction": "21",
+            "ground_truth": "21",
+            "total_tokens": 2294
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 1983
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 2283
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 2335
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 2282
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 1496
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 2306
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 1724
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 2321
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "12",
+            "ground_truth": "12",
+            "total_tokens": 2306
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 1747
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": false,
+            "prediction": "1.50",
+            "ground_truth": "9",
+            "total_tokens": 2334
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "11",
+            "total_tokens": 2326
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 2324
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 2353
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 2280
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 1616
+          }
+        ],
+        "self_consistency": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 15142
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 17679
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 17361
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "30",
+            "ground_truth": "30",
+            "total_tokens": 16912
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 16924
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "18.8",
+            "ground_truth": "1128",
+            "total_tokens": 18440
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "144",
+            "ground_truth": "144",
+            "total_tokens": 17551
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": true,
+            "prediction": "50",
+            "ground_truth": "50",
+            "total_tokens": 18360
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 17412
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 14849
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 18056
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 17888
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 17691
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": false,
+            "prediction": "14",
+            "ground_truth": "21",
+            "total_tokens": 18352
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 15983
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 15990
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 17460
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 16545
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 16167
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 16482
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 15346
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 17545
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "12",
+            "ground_truth": "12",
+            "total_tokens": 17382
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 16426
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": false,
+            "prediction": "5",
+            "ground_truth": "9",
+            "total_tokens": 17984
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "17",
+            "ground_truth": "11",
+            "total_tokens": 18447
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 18020
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 16984
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 16787
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 15219
+          }
+        ],
+        "backward_cloze": [
+          {
+            "example_id": "gsm8k_101",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 7677
+          },
+          {
+            "example_id": "gsm8k_882",
+            "correct": true,
+            "prediction": "5",
+            "ground_truth": "5",
+            "total_tokens": 9058
+          },
+          {
+            "example_id": "gsm8k_596",
+            "correct": true,
+            "prediction": "260",
+            "ground_truth": "260",
+            "total_tokens": 8463
+          },
+          {
+            "example_id": "gsm8k_465",
+            "correct": true,
+            "prediction": "30",
+            "ground_truth": "30",
+            "total_tokens": 7520
+          },
+          {
+            "example_id": "gsm8k_543",
+            "correct": true,
+            "prediction": "6",
+            "ground_truth": "6",
+            "total_tokens": 7589
+          },
+          {
+            "example_id": "gsm8k_830",
+            "correct": false,
+            "prediction": "18",
+            "ground_truth": "1128",
+            "total_tokens": 9165
+          },
+          {
+            "example_id": "gsm8k_1093",
+            "correct": true,
+            "prediction": "144",
+            "ground_truth": "144",
+            "total_tokens": 8643
+          },
+          {
+            "example_id": "gsm8k_943",
+            "correct": false,
+            "prediction": "6",
+            "ground_truth": "50",
+            "total_tokens": 9125
+          },
+          {
+            "example_id": "gsm8k_1005",
+            "correct": true,
+            "prediction": "1490",
+            "ground_truth": "1490",
+            "total_tokens": 9159
+          },
+          {
+            "example_id": "gsm8k_895",
+            "correct": true,
+            "prediction": "74",
+            "ground_truth": "74",
+            "total_tokens": 7126
+          },
+          {
+            "example_id": "gsm8k_724",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 8984
+          },
+          {
+            "example_id": "gsm8k_1122",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 8703
+          },
+          {
+            "example_id": "gsm8k_660",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 8009
+          },
+          {
+            "example_id": "gsm8k_234",
+            "correct": true,
+            "prediction": "21",
+            "ground_truth": "21",
+            "total_tokens": 9121
+          },
+          {
+            "example_id": "gsm8k_983",
+            "correct": true,
+            "prediction": "15",
+            "ground_truth": "15",
+            "total_tokens": 8426
+          },
+          {
+            "example_id": "gsm8k_839",
+            "correct": true,
+            "prediction": "2",
+            "ground_truth": "2",
+            "total_tokens": 8269
+          },
+          {
+            "example_id": "gsm8k_177",
+            "correct": true,
+            "prediction": "350",
+            "ground_truth": "350",
+            "total_tokens": 9119
+          },
+          {
+            "example_id": "gsm8k_1045",
+            "correct": true,
+            "prediction": "420",
+            "ground_truth": "420",
+            "total_tokens": 9076
+          },
+          {
+            "example_id": "gsm8k_548",
+            "correct": true,
+            "prediction": "100",
+            "ground_truth": "100",
+            "total_tokens": 8253
+          },
+          {
+            "example_id": "gsm8k_103",
+            "correct": true,
+            "prediction": "140",
+            "ground_truth": "140",
+            "total_tokens": 8299
+          },
+          {
+            "example_id": "gsm8k_381",
+            "correct": true,
+            "prediction": "67",
+            "ground_truth": "67",
+            "total_tokens": 8769
+          },
+          {
+            "example_id": "gsm8k_1110",
+            "correct": true,
+            "prediction": "60",
+            "ground_truth": "60",
+            "total_tokens": 8999
+          },
+          {
+            "example_id": "gsm8k_1282",
+            "correct": true,
+            "prediction": "12",
+            "ground_truth": "12",
+            "total_tokens": 8133
+          },
+          {
+            "example_id": "gsm8k_253",
+            "correct": true,
+            "prediction": "18",
+            "ground_truth": "18",
+            "total_tokens": 6737
+          },
+          {
+            "example_id": "gsm8k_1193",
+            "correct": true,
+            "prediction": "9.00",
+            "ground_truth": "9",
+            "total_tokens": 9287
+          },
+          {
+            "example_id": "gsm8k_814",
+            "correct": false,
+            "prediction": "24",
+            "ground_truth": "11",
+            "total_tokens": 9246
+          },
+          {
+            "example_id": "gsm8k_99",
+            "correct": true,
+            "prediction": "58",
+            "ground_truth": "58",
+            "total_tokens": 9021
+          },
+          {
+            "example_id": "gsm8k_1249",
+            "correct": true,
+            "prediction": "56",
+            "ground_truth": "56",
+            "total_tokens": 9016
+          },
+          {
+            "example_id": "gsm8k_500",
+            "correct": true,
+            "prediction": "16",
+            "ground_truth": "16",
+            "total_tokens": 8941
+          },
+          {
+            "example_id": "gsm8k_112",
+            "correct": true,
+            "prediction": "24",
+            "ground_truth": "24",
+            "total_tokens": 8587
+          }
+        ]
+      }
+    }
+  }
+}

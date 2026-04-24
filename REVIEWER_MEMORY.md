@@ -33,3 +33,26 @@ Nightmare mode: GPT has full read access to the repo; Claude cannot curate.
 Author chose to TERMINATE the loop at Round 1 rather than continue. Honest reason: pilot data does not support publishable positive result. BAV ≈ backward_cloze in accuracy (p=0.66), and all other concerns (citation, matched baselines, scale) would not close the gap without finding a genuinely new signal.
 
 This terminates the loop at max_rounds=1/4 with status="terminated_honestly" rather than "ready".
+
+---
+
+## New Direction: PDSC (Prompt-Diverse Self-Consistency) — Pre-Round 2
+
+### Context since Round 1
+After BAV termination, the author:
+1. Completed a 6×5 meta-sweep (6 models × 5 benchmarks, N=30 each): systematic Oracle-SC gap characterization
+2. Ran N=150 validation on 3 high-gap cells: confirmed gap stability
+3. Tried 3 different selector/router approaches: all failed (2-16% gap capture)
+4. Root cause: Oracle-SC gap comes from stochastic strategy complementarity, not feature-predictable patterns
+
+### New hypothesis (PDSC)
+Standard SC uses k=8 samples from ONE prompt → temperature-only diversity → correlated errors.
+PDSC distributes k=8 across 8 different reasoning prompts → strategy diversity → less correlated errors → higher majority-vote accuracy.
+
+Same compute budget (k=8 total samples), but with prompt diversity instead of temperature-only diversity.
+
+### Concerns to verify
+- Is PDSC genuinely novel vs Universal Self-Consistency (Chen 2023)?
+- Are the 8 prompts truly diverse or cosmetically different?
+- Does prompt diversity actually reduce error correlation?
+- Is the phase diagram finding (where gaps are large) sufficient novelty by itself?

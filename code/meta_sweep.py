@@ -201,8 +201,14 @@ def main():
     )
     log.info("Model loaded")
 
-    # Run each benchmark
-    results = {"model": args.model, "cells": {}}
+    # Run each benchmark (merge with existing results if any)
+    out_path = os.path.join(args.output, "sweep_results.json")
+    if os.path.exists(out_path):
+        with open(out_path) as f:
+            results = json.load(f)
+        log.info("Loaded %d existing cells from %s", len(results.get("cells", {})), out_path)
+    else:
+        results = {"model": args.model, "cells": {}}
     for bname in benchmarks:
         log.info("=== Benchmark: %s ===", bname)
         try:

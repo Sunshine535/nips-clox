@@ -165,3 +165,57 @@ After Round 1 feedback, the author decided to terminate rather than continue. Ho
 
 - Requested: `difficulty: nightmare`, `reviewer: oracle-pro`
 - Actual: `codex exec` (nightmare; Oracle MCP unavailable → fell back to Codex CLI). This gives GPT-5.4 direct repo read access, which IS the intended "adversarial" behavior.
+
+---
+
+## Round 2 (2026-04-23) — PDSC Proposal Review, GPT-5.4 via Codex MCP
+
+### Context
+
+After BAV termination, author completed:
+1. 6×5 meta-sweep phase diagram (Oracle-SC gap across 6 models × 5 benchmarks)
+2. N=150 validation on 3 high-gap cells
+3. 3 failed selector/router approaches (2-16% gap capture)
+4. Root cause analysis: gap is stochastic, not feature-predictable
+5. New proposal: PDSC (Prompt-Diverse Self-Consistency)
+
+### Assessment (Summary)
+- **Score: 3/10** (proposal stage, no results yet)
+- **Verdict: not ready** — PDSC overlaps with DDPrompt (ACL 2024) and DIPPER (EMNLP 2025)
+- Key criticisms:
+  1. DDPrompt and DIPPER already did prompt-diverse voting; PDSC is their simplified ablation
+  2. 3-voter simulation (6/14 positive) is a WARNING, not support
+  3. +3-5% gain at matched k=8 is insufficient for NeurIPS 2026
+  4. Equal-weight voting across prompts is fragile
+  5. "Same compute budget" must be token-matched, not sample-matched
+
+### Reviewer Raw Response
+
+<details>
+<summary>Full GPT-5.4 response</summary>
+
+Score: 3/10 for NeurIPS method paper.
+
+Novelty: NOT genuinely novel. DDPrompt (ACL 2024 Short) and DIPPER (EMNLP 2025) are closest prior art — both already do prompt-diverse inference-time ensembling. DiVeRSe (ACL 2023) uses diverse prompts + verification. PDSC reads like a stripped-down DiVeRSe ablation without the verifier.
+
+Required experiments: DDPrompt/DIPPER baselines, token-matched compute, depth-vs-breadth ablation (1×8, 2×4, 4×2, 8×1), pairwise error correlation measurement, prompt bank ablation, stronger models.
+
+Reviewer suggests reframing: NOT "PDSC: novel method" but "Oracle-SC headroom in modern open models is real, router signals fail, prompt diversity is one compute-matched mechanism that sometimes recovers the stochastic gap." That is more honest and defensible.
+
+</details>
+
+### Reviewer Reframing Suggestion
+
+> "If I were steering this, I would NOT write 'PDSC: a novel method.' I would write a paper centered on: oracle SC headroom in modern open models is real, router signals fail, and prompt diversity is one compute-matched mechanism that sometimes recovers the stochastic gap. That is much more honest and much more defensible."
+
+### Actions Planned
+1. Wait for PDSC experiment results (Qwen3.5-27B × 4 benchmarks, running)
+2. Add depth-vs-breadth ablation (1×8, 2×4, 4×2, 8×1)
+3. Measure pairwise error correlation (temperature vs prompt diversity)
+4. Search DDPrompt, DIPPER papers for exact methodology comparison
+5. Reframe paper as empirical analysis, not method paper
+
+### Status
+- Continuing to implement experiments
+- PDSC running on GPU 4-7 (Qwen3.5-27B)
+- Meta-sweep completing (9B on GPU 0-1, 27B-gsm8k on GPU 2-3)
