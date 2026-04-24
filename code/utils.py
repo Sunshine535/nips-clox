@@ -58,6 +58,7 @@ def prepare_runtime_environment(workdir: str) -> None:
 
 
 def set_all_seeds(seed: int) -> None:
+    os.environ["PYTHONHASHSEED"] = str(seed)
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -73,9 +74,19 @@ def set_all_seeds(seed: int) -> None:
         torch.backends.cudnn.benchmark = False
 
 
-def stable_int_seed(*parts: object) -> int:
+# Alias per GPT-5.5 Pro Task 4 spec
+set_global_seed = set_all_seeds
+
+
+def stable_hash_seed(*parts: object) -> int:
+    """SHA256-based stable seed. Stable across processes (unlike Python hash)."""
     payload = "::".join(str(part) for part in parts).encode("utf-8")
-    return int(hashlib.md5(payload).hexdigest()[:8], 16)
+    return int(hashlib.sha256(payload).hexdigest()[:8], 16)
+
+
+def stable_int_seed(*parts: object) -> int:
+    """Back-compat shim — delegates to stable_hash_seed."""
+    return stable_hash_seed(*parts)
 
 
 def logsumexp(values) -> float:

@@ -191,8 +191,9 @@ class RandomRepair(InferenceStrategy):
     """Random step masking repair (ablation control for targeted repair)."""
     name = "random_repair"
 
-    def __init__(self, mask_fraction: float = 0.4):
+    def __init__(self, mask_fraction: float = 0.4, seed: int = 11):
         self.mask_fraction = mask_fraction
+        self.seed = seed
 
     def run(self, engine, question, max_tokens=512, few_shot=""):
         prompt = f"{few_shot}\nQuestion: {question}\nLet's think step by step."
@@ -211,9 +212,11 @@ class RandomRepair(InferenceStrategy):
                 strategy_name=self.name, reasoning_trace=first.text,
             )
 
-        # Phase 2: Random masking (seeded by question hash + distinct salt)
+        # Phase 2: Random masking (SHA256-seeded by question + self.seed)
+        # Using stable_hash_seed — reproducible across processes (unlike hash()).
+        from utils import stable_hash_seed
         n_mask = max(1, int(len(trace.steps) * self.mask_fraction))
-        rng = np.random.default_rng(hash(question) % (2**32) + 12345)
+        rng = np.random.default_rng(stable_hash_seed(question, self.seed, "random_repair"))
         masked_indices = sorted(
             rng.choice(len(trace.steps), size=min(n_mask, len(trace.steps)), replace=False).tolist()
         )

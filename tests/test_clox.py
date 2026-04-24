@@ -1,13 +1,20 @@
-"""Tests for CLOX: strategy budget matching, BBH macro-averaging, topology metrics."""
+"""Tests for CLOX legacy v1 (strategy budget matching, BBH macro-averaging, topology).
+
+Archived per GPT-5.5 Pro Task 1 — targets `archive/legacy_clox_v1/strategies.py`.
+Skipped in the PCS test suite; kept for historical audit only.
+"""
 from __future__ import annotations
 
 import sys
 import os
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "code"))
+import pytest
+
+pytestmark = pytest.mark.skip(reason="Legacy CLOX v1 — archived per GPT-5.5 Pro Task 1.")
+
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "archive", "legacy_clox_v1"))
 
 import numpy as np
-import pytest
 
 from benchmarks import compute_bbh_macro_average
 from evaluation import compute_task_topology_metrics
