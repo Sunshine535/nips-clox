@@ -42,6 +42,16 @@ def create_manifest(benchmark, n_calib, n_test, seed=11):
     all_ids = [ex.example_id for ex in examples]
     shuffled = stable_shuffle(all_ids, seed)
 
+    # Capture data-source metadata so future loads can detect drift.
+    src_meta = {}
+    if examples:
+        md0 = getattr(examples[0], "metadata", {}) or {}
+        src_meta = {
+            "source_repo": md0.get("source_repo", ""),
+            "source_split": md0.get("source_split", ""),
+            "dataset_revision": md0.get("dataset_revision", ""),
+        }
+
     n_total = min(n_calib + n_test, len(shuffled))
     n_c = min(n_calib, n_total)
     n_t = min(n_test, n_total - n_c)
@@ -49,9 +59,17 @@ def create_manifest(benchmark, n_calib, n_test, seed=11):
     calib_ids = sorted(shuffled[:n_c])
     test_ids = sorted(shuffled[n_c:n_c + n_t])
 
+    # Fingerprint includes source metadata so a dataset-revision change
+    # produces a different fingerprint and is auto-detectable.
+    id_hash = hashlib.sha256(
+        json.dumps(sorted(all_ids)).encode()
+    ).hexdigest()[:16]
     fingerprint = hashlib.sha256(
-        json.dumps({"benchmark": benchmark, "seed": seed,
-                    "n_total": len(all_ids)}).encode()
+        json.dumps({
+            "benchmark": benchmark, "seed": seed,
+            "n_total": len(all_ids), "id_hash": id_hash,
+            **src_meta,
+        }, sort_keys=True).encode()
     ).hexdigest()[:16]
 
     return {
@@ -61,6 +79,10 @@ def create_manifest(benchmark, n_calib, n_test, seed=11):
         "n_calib": len(calib_ids),
         "n_test": len(test_ids),
         "fingerprint": fingerprint,
+        "id_hash": id_hash,
+        "source_repo": src_meta.get("source_repo", ""),
+        "source_split": src_meta.get("source_split", ""),
+        "dataset_revision": src_meta.get("dataset_revision", ""),
         "calib_ids": calib_ids,
         "test_ids": test_ids,
     }
@@ -81,17 +103,26 @@ def main():
 
     if args.check:
         ok = True
-        for f in os.listdir(args.output):
-            if f.endswith(".json"):
-                data = json.load(open(os.path.join(args.output, f)))
-                overlap = set(data["calib_ids"]) & set(data["test_ids"])
-                if overlap:
-                    print(f"FAIL: {f} has {len(overlap)} overlapping IDs")
-                    ok = False
-                else:
-                    print(f"OK: {f} — calib={data['n_calib']}, test={data['n_test']}, no overlap")
+        files = [f for f in os.listdir(args.output) if f.endswith(".json")]
+        if not files:
+            print("FAIL: no manifests in directory — empty tree is NOT 'valid'.")
+            sys.exit(2)
+        for f in files:
+            data = json.load(open(os.path.join(args.output, f)))
+            overlap = set(data["calib_ids"]) & set(data["test_ids"])
+            if overlap:
+                print(f"FAIL: {f} has {len(overlap)} overlapping IDs")
+                ok = False
+            elif not data.get("calib_ids") or not data.get("test_ids"):
+                print(f"FAIL: {f} has empty calib_ids or test_ids")
+                ok = False
+            else:
+                print(f"OK: {f} — calib={data['n_calib']}, test={data['n_test']}, "
+                      f"src={data.get('source_repo', '?')}, no overlap")
         if ok:
             print("All manifests valid.")
+        else:
+            sys.exit(2)
         return
 
     for bname in args.benchmarks.split(","):

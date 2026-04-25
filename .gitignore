@@ -89,3 +89,4 @@ logs/
 
 # Cache
 .cache/
+.claude/

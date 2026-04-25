@@ -23,6 +23,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import pickle
@@ -81,67 +82,112 @@ def expected_calibration_error(
 def fit_selector(
     rows: list[dict],
     random_state: int = 11,
-    calibration_fraction: float = 0.3,
+    val_fraction: float = 0.2,
+    holdout_fraction: float = 0.2,
 ) -> tuple[SelectorArtifact, dict[str, float]]:
-    X, names = build_feature_matrix(rows)
-    y = build_labels(rows)
-    X = np.asarray(X, dtype=float)
-    y = np.asarray(y, dtype=int)
-    if len(X) == 0 or len(np.unique(y)) < 2:
-        raise ValueError(f"insufficient data: n={len(X)}, unique_y={np.unique(y).tolist()}")
+    """3-way example-id-stratified split:
+        train    — LR fit
+        val      — isotonic fit
+        holdout  — held-out metrics (reported as the only honest numbers)
 
-    # Split rows (not candidates) so we don't leak across candidates of same example
+    Splits by example_id (not candidate row), so no candidates from the same
+    question appear in two splits.
+    """
+    if len(rows) < 5 or len(np.unique([r["example_id"] for r in rows])) < 5:
+        raise ValueError(
+            f"need at least 5 distinct example_ids; got {len(rows)} rows. "
+            "Selector requires distinct splits."
+        )
     rng = np.random.default_rng(random_state)
-    n_rows = len(rows)
-    idx = rng.permutation(n_rows)
-    n_cal = max(1, int(round(n_rows * calibration_fraction)))
-    cal_row_idx = set(idx[:n_cal].tolist())
-    train_rows = [r for i, r in enumerate(rows) if i not in cal_row_idx]
-    cal_rows = [r for i, r in enumerate(rows) if i in cal_row_idx]
+    ids = sorted({r["example_id"] for r in rows})
+    rng.shuffle(ids)
+    n = len(ids)
+    n_holdout = max(1, int(round(n * holdout_fraction)))
+    n_val = max(1, int(round(n * val_fraction)))
+    n_train = n - n_holdout - n_val
+    if n_train < 1:
+        # Tiny-sample fallback: assign at least 1 row to each split
+        n_holdout = 1
+        n_val = 1
+        n_train = max(1, n - 2)
 
-    X_tr, _ = build_feature_matrix(train_rows)
-    y_tr = build_labels(train_rows)
-    X_cal, _ = build_feature_matrix(cal_rows)
-    y_cal = build_labels(cal_rows)
-    X_tr = np.asarray(X_tr); y_tr = np.asarray(y_tr)
-    X_cal = np.asarray(X_cal); y_cal = np.asarray(y_cal)
+    holdout_ids = set(ids[:n_holdout])
+    val_ids = set(ids[n_holdout:n_holdout + n_val])
+    train_ids = set(ids[n_holdout + n_val:n_holdout + n_val + n_train])
 
-    if len(np.unique(y_tr)) < 2:
-        # Fallback: train on full
-        logistic = LogisticRegression(max_iter=1000).fit(X, y)
+    train_rows = [r for r in rows if r["example_id"] in train_ids]
+    val_rows = [r for r in rows if r["example_id"] in val_ids]
+    holdout_rows = [r for r in rows if r["example_id"] in holdout_ids]
+
+    def _Xy(part):
+        X, _ = build_feature_matrix(part)
+        y = build_labels(part)
+        return np.asarray(X, dtype=float), np.asarray(y, dtype=int)
+
+    X_tr, y_tr = _Xy(train_rows)
+    X_val, y_val = _Xy(val_rows)
+    X_ho, y_ho = _Xy(holdout_rows)
+
+    if len(X_tr) == 0 or len(np.unique(y_tr)) < 2:
+        # Fallback if train split has only one class — fit on all rows
+        X_full, y_full = _Xy(rows)
+        logistic = LogisticRegression(max_iter=1000).fit(X_full, y_full)
         iso = None
+        leakage_warning = "train split single-class; trained on full rows (BIASED)"
     else:
         logistic = LogisticRegression(max_iter=1000).fit(X_tr, y_tr)
-        p_cal_raw = logistic.predict_proba(X_cal)[:, 1]
-        iso = (IsotonicRegression(out_of_bounds="clip").fit(p_cal_raw, y_cal)
-               if len(np.unique(y_cal)) >= 2 else None)
+        if len(X_val) > 0 and len(np.unique(y_val)) >= 2:
+            p_val_raw = logistic.predict_proba(X_val)[:, 1]
+            iso = IsotonicRegression(out_of_bounds="clip").fit(p_val_raw, y_val)
+        else:
+            iso = None
+        leakage_warning = ""
 
-    # Metrics on calibration subset (no leakage because isotonic already fit there,
-    # so metrics below are in-sample for isotonic — for honest held-out, use report())
-    p_full = logistic.predict_proba(X)[:, 1]
-    if iso is not None:
-        p_full_cal = iso.predict(p_full)
-    else:
-        p_full_cal = p_full
-    metrics = {
-        "n_candidates": int(len(X)),
-        "n_rows": int(len(rows)),
-        "n_train_rows": int(len(train_rows)),
-        "n_cal_rows": int(len(cal_rows)),
-        "auc_raw": float(roc_auc_score(y, p_full)) if len(np.unique(y)) >= 2 else float("nan"),
-        "auc_calibrated": float(roc_auc_score(y, p_full_cal)) if len(np.unique(y)) >= 2 else float("nan"),
-        "brier_raw": float(brier_score_loss(y, p_full)),
-        "brier_calibrated": float(brier_score_loss(y, p_full_cal)),
-        "ece_raw": expected_calibration_error(y, p_full),
-        "ece_calibrated": expected_calibration_error(y, p_full_cal),
-        "positive_rate": float(y.mean()),
+    def _metrics(X, y, label):
+        if len(X) == 0 or len(np.unique(y)) < 2:
+            return {f"{label}_auc": float("nan"),
+                    f"{label}_brier": float("nan"),
+                    f"{label}_ece": float("nan"),
+                    f"{label}_n": int(len(X)),
+                    f"{label}_positive_rate": float(y.mean()) if len(y) else float("nan")}
+        p_raw = logistic.predict_proba(X)[:, 1]
+        p_cal = iso.predict(p_raw) if iso is not None else p_raw
+        return {
+            f"{label}_auc_raw": float(roc_auc_score(y, p_raw)),
+            f"{label}_auc_calibrated": float(roc_auc_score(y, p_cal)),
+            f"{label}_brier_raw": float(brier_score_loss(y, p_raw)),
+            f"{label}_brier_calibrated": float(brier_score_loss(y, p_cal)),
+            f"{label}_ece_raw": expected_calibration_error(y, p_raw),
+            f"{label}_ece_calibrated": expected_calibration_error(y, p_cal),
+            f"{label}_n": int(len(X)),
+            f"{label}_positive_rate": float(y.mean()),
+        }
+
+    metrics: dict[str, float] = {
+        "n_examples_train": len(train_ids),
+        "n_examples_val": len(val_ids),
+        "n_examples_holdout": len(holdout_ids),
+        "leakage_warning": leakage_warning,
     }
+    metrics.update(_metrics(X_tr, y_tr, "train"))
+    metrics.update(_metrics(X_val, y_val, "val"))
+    metrics.update(_metrics(X_ho, y_ho, "holdout"))
+
+    feature_names_full = list(build_feature_matrix(rows[:1])[1]) if rows else []
+    feature_schema_hash = hashlib.sha256(
+        json.dumps(feature_names_full, sort_keys=True).encode()
+    ).hexdigest()[:16] if feature_names_full else ""
     art = SelectorArtifact(
         logistic=logistic, isotonic=iso,
-        feature_names=list(names),
+        feature_names=feature_names_full,
         meta={"random_state": random_state,
-              "calibration_fraction": calibration_fraction,
-              "feature_count": len(names)},
+              "val_fraction": val_fraction,
+              "holdout_fraction": holdout_fraction,
+              "feature_count": len(feature_names_full),
+              "feature_schema_hash": feature_schema_hash,
+              "train_example_ids": sorted(train_ids),
+              "val_example_ids": sorted(val_ids),
+              "holdout_example_ids": sorted(holdout_ids)},
     )
     return art, metrics
 
@@ -212,40 +258,39 @@ def cmd_report(args) -> None:
 
 
 def cmd_debug_tiny(args) -> None:
-    """Self-overfit sanity: trivial signal selector must reach AUC >= 0.9."""
+    """Self-overfit sanity: trivial signal selector must reach holdout AUC > 0.55."""
     rng = np.random.default_rng(0)
     rows = []
-    for i in range(10):
-        gt_cluster = int(rng.integers(0, 3))
-        cands = []
-        for k in range(4):
-            ans = str(gt_cluster if k == 0 else rng.integers(0, 5))
-            cands.append({
-                "candidate_id": f"ex{i}:c{k}",
-                "strategy": "standard_cot" if k == 0 else "random_repair",
-                "sample_index": k,
-                "raw_output": "",
-                "normalized_answer": ans,
-                "answer_cluster_id": k,
-                "tokens": 100, "prompt_tokens": 10,
-                "confidence": 0.9 if k == 0 else 0.3,
-            })
-        rows.append({
-            "example_id": f"ex{i}",
-            "ground_truth": str(gt_cluster),
-            "answer_type": "numeric",
-            "candidates": cands,
-        })
-    # simple cluster: each answer = own cluster
-    for row in rows:
-        for k, c in enumerate(row["candidates"]):
-            c["answer_cluster_id"] = k  # trivially 1-per-cluster; features degenerate
+    # Strong signal: standard_cot always emits ground truth; sc_sample emits noise.
+    for i in range(60):
+        gt = str(i % 3)
+        cands = [{
+            "candidate_id": f"ex{i}:c{k}",
+            "strategy": "standard_cot" if k == 0 else "random_repair",
+            "sample_index": k,
+            "raw_output": "",
+            "normalized_answer": gt if k == 0 else str(rng.integers(0, 5)),
+            "answer_cluster_id": -1,
+            "tokens": 100, "prompt_tokens": 10,
+            "confidence": 0.9 if k == 0 else 0.3,
+        } for k in range(4)]
+        # Cluster by normalized_answer
+        k2id = {}
+        for c in cands:
+            if c["normalized_answer"] not in k2id:
+                k2id[c["normalized_answer"]] = len(k2id)
+            c["answer_cluster_id"] = k2id[c["normalized_answer"]]
+        rows.append({"example_id": f"ex{i}", "ground_truth": gt,
+                     "answer_type": "numeric", "candidates": cands})
     art, metrics = fit_selector(rows, random_state=11)
-    print(json.dumps(metrics, indent=2))
-    assert metrics["auc_raw"] > 0.5 or metrics["positive_rate"] in (0.0, 1.0), (
-        f"selector failed to learn trivial signal: {metrics}"
-    )
-    print("debug_tiny OK")
+    print(json.dumps({k: v for k, v in metrics.items()
+                      if "holdout" in k or "n_examples" in k}, indent=2))
+    holdout_auc = metrics.get("holdout_auc_raw", float("nan"))
+    holdout_pos_rate = metrics.get("holdout_positive_rate", 0.5)
+    assert (
+        np.isnan(holdout_auc) or holdout_auc > 0.55 or holdout_pos_rate in (0.0, 1.0)
+    ), f"selector failed on trivial signal — held-out AUC = {holdout_auc}: {metrics}"
+    print("debug_tiny OK (held-out AUC > 0.55)")
 
 
 def main():

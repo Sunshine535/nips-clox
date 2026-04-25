@@ -1,8 +1,24 @@
 # CLOX v2 — 拓扑感知的计算最优推理策略选择
 
+> ⚠️ **STALE-CLAIMS BANNER (2026-04-25)**
+> The narrative below describes the *legacy* topology-routed CLOX-Adaptive path.
+> Per GPT-5.5 Pro audit (`GPT55_DIAGNOSIS.md`), the topology theorem and the
+> "40–60% compute saving" claim are **NOT supported** by current evidence and
+> have been retired. See:
+> - `docs/legacy_status.md` — what's frozen as `LEGACY_BASELINE`
+> - `reports/CLAIM_UPDATE_LOG.md` — retracted / weakened / retained claims
+> - `reports/REMAINING_RISKS.md` — open risks
+> - `reports/MINIMAL_EXPERIMENT_RESULTS.md` — what numbers are claim-supportable today
+> - `reports/STRICT_REPLAY_RESULTS.md` — legacy vs strict-metric deltas
+>
+> The new MAIN METHOD path is **CLOX-PCS (Calibrated Portfolio Compute Selection)**
+> in `code/portfolio.py`, `code/calibrated_selector.py`, `code/compute_gate.py`,
+> `code/run_portfolio_experiment.py`. README will be rewritten after the PCS
+> empirical run passes the GPT-5.5 Pro pre-registered gates.
+
 推理 trace 具有可测量的结构属性——**局部可恢复性 (r̄)** 和**误差传播长度 (ℓ)**——这两个指标决定了最优推理策略。CLOX 从少量 pilot traces 估算拓扑，自动路由到最优策略，在匹配 Self-Consistency 准确率的同时节省 40-60% 计算开销。
 
-**Review 状态**: Round 3, Score 6.5/10
+**Review 状态**: Round 3, Score 6.5/10 → Round 4 GPT-5.5 Pro flagged the topology claim as unsupported; replay shows mean −10 pts on 27B AGD vs legacy metric.
 
 ## 环境安装
 

@@ -96,6 +96,11 @@ def _to_candidate(
     )
 
 
+_STRATEGY_KWARGS_BY_NAME = {
+    "random_repair": {"seed": True},   # accepts seed
+}
+
+
 def run_portfolio(
     engine: VLLMEngine,
     example_id: str,
@@ -106,12 +111,15 @@ def run_portfolio(
     sc_temperature: float = 0.7,
     max_tokens: int = 512,
     few_shot: str = "",
+    seed: int = 11,
 ) -> list[Candidate]:
     """Collect all candidates from the portfolio.
 
     Special case: SC is expanded to k per-sample candidates (one per sample), not
     one majority-vote candidate. For SC we call engine.generate_multi directly so
     each sample becomes a standalone candidate that the selector can score.
+
+    `seed` propagates to stochastic strategies (e.g. RandomRepair).
     """
     strategies = strategies or [
         "standard_cot",
@@ -137,14 +145,18 @@ def run_portfolio(
                     confidence=1.0 / max(1, sc_k),
                     answer_type=answer_type,
                     extra={"source_strategy": "self_consistency", "k": sc_k,
-                           "temperature": sc_temperature},
+                           "temperature": sc_temperature, "seed": seed},
                 ))
             continue
 
         if strat not in STRATEGY_REGISTRY:
             continue
 
-        strat_obj = build_strategy(strat)
+        # Forward seed only to strategies that accept it
+        kwargs = {}
+        if _STRATEGY_KWARGS_BY_NAME.get(strat, {}).get("seed"):
+            kwargs["seed"] = seed
+        strat_obj = build_strategy(strat, **kwargs)
         try:
             res: StrategyResult = strat_obj.run(
                 engine, question, max_tokens=max_tokens, few_shot=few_shot,
@@ -153,7 +165,7 @@ def run_portfolio(
             candidates.append(_to_candidate(
                 example_id, strat, 0, "", 0, 0, confidence=0.0,
                 answer_type=answer_type,
-                extra={"error": repr(e)},
+                extra={"error": repr(e), "seed": seed},
             ))
             continue
 
@@ -166,6 +178,7 @@ def run_portfolio(
                 "strategy_prediction": res.prediction,
                 "total_tokens": res.total_tokens,
                 "step_metadata": res.step_metadata,
+                "seed": seed,
             },
         ))
 

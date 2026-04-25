@@ -18,7 +18,14 @@ def normalize_answer(text: str) -> str:
     return text
 
 
-def check_answer(prediction: str, reference: str, answer_type: str = "text") -> bool:
+def check_answer_legacy_unsafe(prediction: str, reference: str, answer_type: str = "text") -> bool:
+    """LEGACY checker — preserved verbatim for historical-result replay only.
+
+    DO NOT USE for new experiments. The terminal substring fallback
+    (`pred in ref or ref in pred`) silently passes contaminated answers
+    (e.g. "the answer is 123 units" matches "123"). Use `check_answer`
+    (delegates to strict path) or `answer_extraction.check_answer_strict`.
+    """
     pred = normalize_answer(prediction)
     ref = normalize_answer(reference)
 
@@ -59,6 +66,18 @@ def check_answer(prediction: str, reference: str, answer_type: str = "text") -> 
         return pred_bool == ref_bool
 
     return pred in ref or ref in pred
+
+
+def check_answer(prediction: str, reference: str, answer_type: str = "text") -> bool:
+    """Strict answer checker.
+
+    Delegates to `answer_extraction.check_answer_strict` (no substring fallback).
+    Any caller importing `evaluation.check_answer` automatically gets the strict
+    path. For audit access to the unsafe historical behaviour, see
+    `check_answer_legacy_unsafe`.
+    """
+    from answer_extraction import check_answer_strict
+    return bool(check_answer_strict(prediction, reference, answer_type))
 
 
 def exact_match_accuracy(

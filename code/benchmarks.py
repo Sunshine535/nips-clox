@@ -122,20 +122,36 @@ def load_math(max_examples: int | None = None, levels: list[int] | None = None) 
     return examples
 
 
-def load_strategyqa(max_examples: int | None = None) -> list[BenchmarkExample]:
+def load_strategyqa(
+    max_examples: int | None = None,
+    allow_train_eval: bool = False,
+) -> list[BenchmarkExample]:
+    """Load StrategyQA. By default forbids the metaeval train fallback.
+
+    Pass `allow_train_eval=True` ONLY for development/diagnostic. The
+    `metaeval/strategy-qa` train split has been used in evaluation by mistake
+    in the past (GPT-5.5 Pro §3 P0 row 4). Forbidding it by default forces
+    callers to acknowledge the risk explicitly.
+    """
     from datasets import load_dataset
+    candidates = [("ChilleD/StrategyQA", "test")]
+    if allow_train_eval:
+        candidates.append(("metaeval/strategy-qa", "train"))
+
     ds = None
-    for repo, split in [
-        ("ChilleD/StrategyQA", "test"),
-        ("metaeval/strategy-qa", "train"),
-    ]:
+    used_repo = used_split = None
+    for repo, split in candidates:
         try:
             ds = load_dataset(repo, split=split)
+            used_repo, used_split = repo, split
             break
         except Exception:
             continue
     if ds is None:
-        raise RuntimeError("Could not load StrategyQA dataset from any source")
+        raise RuntimeError(
+            "Could not load StrategyQA test split. To allow train fallback, "
+            "pass allow_train_eval=True (development only)."
+        )
 
     examples = []
     for i, item in enumerate(ds):
@@ -157,6 +173,8 @@ def load_strategyqa(max_examples: int | None = None) -> list[BenchmarkExample]:
             metadata={
                 "facts": item.get("facts", []),
                 "decomposition": item.get("decomposition", ""),
+                "source_repo": used_repo,
+                "source_split": used_split,
             },
         ))
     return examples

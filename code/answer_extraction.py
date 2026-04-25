@@ -103,11 +103,54 @@ def extract_answer_typed(text: str, answer_type: str) -> str:
         return text.strip().split("\n")[-1].strip() if text.strip() else ""
 
 
+_LATEX_NORMALIZE = [
+    (r"\\boxed\{([^}]+)\}", r"\1"),
+    (r"\\dfrac", r"\\frac"),
+    (r"\\tfrac", r"\\frac"),
+    (r"\\cdot|\\times", r"*"),
+    (r"\\left", ""),
+    (r"\\right", ""),
+    (r"\\,|\\;|\\!|\\:|\\ ", ""),
+    (r"\\!", ""),
+    (r"\$", ""),
+    (r"\s+", ""),
+]
+
+
+def normalize_math_expression(text: str) -> str:
+    """LaTeX-aware normalization for MATH expression equivalence.
+
+    Strips boxes, common spacing macros, $-delimiters, and converts
+    \\cdot/\\times → *. Returns lowercase string with all whitespace removed.
+    """
+    if text is None:
+        return ""
+    s = str(text)
+    for pat, repl in _LATEX_NORMALIZE:
+        s = re.sub(pat, repl, s)
+    return s.lower().strip()
+
+
 def check_answer_strict(prediction: str, reference: str, answer_type: str = "text") -> bool:
     if not prediction or not reference:
         return False
 
-    if answer_type in ("numeric", "math_expression"):
+    if answer_type == "math_expression":
+        # Strict for MATH-style answers: try numeric first, then LaTeX-normalized
+        # string equivalence. This is more robust than the previous numeric-only
+        # path which silently ignored expressions like "x+1" or "(2,3)".
+        pred_clean = prediction.strip().replace(",", "").replace("−", "-")
+        ref_clean = reference.strip().replace(",", "").replace("−", "-")
+        if pred_clean == ref_clean:
+            return True
+        try:
+            pn = float(pred_clean); rn = float(ref_clean)
+            return abs(pn - rn) < 1e-6
+        except (ValueError, TypeError):
+            pass
+        return normalize_math_expression(prediction) == normalize_math_expression(reference)
+
+    if answer_type == "numeric":
         pred_clean = prediction.strip().replace(",", "").replace("−", "-")
         ref_clean = reference.strip().replace(",", "").replace("−", "-")
         if pred_clean == ref_clean:
