@@ -117,6 +117,51 @@ _LATEX_NORMALIZE = [
 ]
 
 
+_MC_EXPLICIT_PATTERNS = [
+    # "(B)" or "(b)" alone
+    r"^\s*\(?\s*([A-Ea-e])\s*\)?\s*\.?\s*$",
+    # "answer is (B)" / "answer: B" / "the answer is B"
+    r"(?:the\s+answer\s+is|answer\s*[:=]?|i\s+choose|option)\s*\(?\s*([A-Ea-e])\s*\)?",
+    # "Therefore B" / "Hence (B)"
+    r"(?:therefore|hence|so|thus),?\s*\(?\s*([A-Ea-e])\s*\)?\s*[\.\!]?\s*$",
+    # boxed letter
+    r"\\boxed\{\s*([A-Ea-e])\s*\}",
+]
+
+
+def _extract_mc_strict(text: str) -> str | None:
+    """Return the MC label A-E if it's explicit; otherwise None.
+
+    Strict-by-design: arbitrary text containing some letter A-E does NOT
+    qualify. Acceptable forms are exhaustively enumerated above.
+    """
+    if text is None:
+        return None
+    s = str(text).strip()
+    if not s:
+        return None
+    # Single-character pure letter
+    if len(s) == 1 and s.upper() in "ABCDE":
+        return s.upper()
+    # Single-character with trailing punctuation
+    if len(s) <= 3:
+        m = re.match(r"^\s*\(?\s*([A-Ea-e])\s*\)?\s*\.?\s*$", s)
+        if m:
+            return m.group(1).upper()
+    # Otherwise require an explicit answer marker
+    for pat in _MC_EXPLICIT_PATTERNS:
+        m = re.search(pat, s, re.IGNORECASE)
+        if m:
+            return m.group(1).upper()
+    # Final-line fallback: ONLY if last non-empty line is itself just a letter
+    last_line = next((ln.strip() for ln in s.splitlines()[::-1] if ln.strip()), "")
+    if last_line:
+        m = re.match(r"^\(?\s*([A-Ea-e])\s*\)?\s*\.?\s*$", last_line)
+        if m:
+            return m.group(1).upper()
+    return None
+
+
 def normalize_math_expression(text: str) -> str:
     """LaTeX-aware normalization for MATH expression equivalence.
 
@@ -161,15 +206,15 @@ def check_answer_strict(prediction: str, reference: str, answer_type: str = "tex
             return False
 
     if answer_type == "multiple_choice":
-        p = prediction.strip().upper()
-        r = reference.strip().upper()
-        if len(p) == 1 and len(r) == 1:
-            return p == r
-        p_letter = re.search(r"([A-E])", p)
-        r_letter = re.search(r"([A-E])", r)
-        if p_letter and r_letter:
-            return p_letter.group(1) == r_letter.group(1)
-        return False
+        # Strict: only accept extracted MC label OR explicit single letter.
+        # Raw text containing some [A-E] letter is NOT accepted (Round-5 fix).
+        p = prediction.strip()
+        r = reference.strip()
+        p_label = _extract_mc_strict(p)
+        r_label = _extract_mc_strict(r)
+        if p_label is None or r_label is None:
+            return False
+        return p_label == r_label
 
     if answer_type == "boolean":
         p = prediction.strip().lower().rstrip(".")

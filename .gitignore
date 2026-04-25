@@ -90,3 +90,5 @@ logs/
 # Cache
 .cache/
 .claude/
+.pkl
+results/pcs/smoke/

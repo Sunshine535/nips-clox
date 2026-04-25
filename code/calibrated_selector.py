@@ -205,19 +205,40 @@ def score_pool(art: SelectorArtifact, pool: list[dict]) -> list[float]:
 
 
 def save_artifact(art: SelectorArtifact, path: str) -> None:
+    """Save as a plain dict (avoids pickle module/__main__ class lookup issues)."""
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
+    payload = {
+        "logistic": art.logistic,
+        "isotonic": art.isotonic,
+        "feature_names": list(art.feature_names),
+        "meta": dict(art.meta),
+    }
     with open(path, "wb") as f:
-        pickle.dump(art, f)
+        pickle.dump(payload, f)
 
 
 def load_artifact(path: str) -> SelectorArtifact:
     with open(path, "rb") as f:
-        return pickle.load(f)
+        payload = pickle.load(f)
+    if isinstance(payload, SelectorArtifact):
+        return payload
+    return SelectorArtifact(
+        logistic=payload["logistic"], isotonic=payload["isotonic"],
+        feature_names=list(payload.get("feature_names", [])),
+        meta=dict(payload.get("meta", {})),
+    )
 
 
 def cmd_fit(args) -> None:
     rows = load_candidate_rows(args.calib)
     art, metrics = fit_selector(rows, random_state=args.seed)
+    leakage_warn = metrics.get("leakage_warning", "")
+    if leakage_warn and not getattr(args, "allow_biased_debug", False):
+        print(f"FATAL: selector training triggered fallback: {leakage_warn}",
+              file=sys.stderr)
+        print("Use --allow_biased_debug to override (marks run as invalid for claims).",
+              file=sys.stderr)
+        sys.exit(2)
     save_artifact(art, args.out)
     report_path = os.path.join(
         os.path.dirname(args.out) or ".",
@@ -301,6 +322,8 @@ def main():
     p_fit.add_argument("--calib", required=True)
     p_fit.add_argument("--out", required=True)
     p_fit.add_argument("--seed", type=int, default=11)
+    p_fit.add_argument("--allow_biased_debug", action="store_true",
+                       help="Allow single-class fallback (marks run invalid for claims).")
     p_fit.set_defaults(func=cmd_fit)
 
     p_rep = sub.add_parser("report")

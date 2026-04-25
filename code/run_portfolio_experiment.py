@@ -199,18 +199,30 @@ def _arm_C_staged(
         tau_stop=tau_stop, tau_margin=tau_margin,
     )
 
+    common_log = {
+        "mechanism_enabled": True,
+        "selector_artifact_path": selector_path,
+        "feature_schema_hash": art.meta.get("feature_schema_hash", ""),
+        "scout_tokens": scout_tokens,
+        "expansion_tokens": expansion_tokens,
+        "pool_total_tokens": scout_tokens + expansion_tokens,
+    }
+
     if decision_stage1.action == "stop" or not expansion:
         best = pick_best_answer(pool)
         return best.get("normalized_answer", ""), scout_tokens, {
+            **common_log,
             "stage": 1, "decision_stage1": asdict(decision_stage1),
             "stage1_pool_size": len(pool), "expansion_used": False,
             "tokens_used": scout_tokens,
+            "best_cluster_answer": best.get("normalized_answer", ""),
+            "calibrated_scores": scores,
         }
 
     # Stage-2: expand & re-score full pool
     pool = list(scout) + list(expansion)
-    scores = score_pool(art, pool)
-    for c, s in zip(pool, scores):
+    scores_full = score_pool(art, pool)
+    for c, s in zip(pool, scores_full):
         c["calibrated_score"] = float(s)
     decision_stage2 = decide(
         pool, remaining_budget=0, next_strategy_cost=10**9,
@@ -218,12 +230,15 @@ def _arm_C_staged(
     )
     best = pick_best_answer(pool)
     return best.get("normalized_answer", ""), scout_tokens + expansion_tokens, {
+        **common_log,
         "stage": 2, "decision_stage1": asdict(decision_stage1),
         "decision_stage2": asdict(decision_stage2),
         "stage1_pool_size": len(scout),
         "stage2_pool_size": len(pool),
         "expansion_used": True,
         "tokens_used": scout_tokens + expansion_tokens,
+        "best_cluster_answer": best.get("normalized_answer", ""),
+        "calibrated_scores": scores_full,
     }
 
 
@@ -341,7 +356,7 @@ def main():
     parser.add_argument("--allow_train_eval", action="store_true",
                         help="Permit StrategyQA train-split fallback (default forbidden).")
 
-    parser.add_argument("--compare", type=str, default="A_SC,A_TARGETED,B,C")
+    parser.add_argument("--compare", type=str, default="A_SC,A_TARGETED,A_BAV,B,C")
     parser.add_argument("--candidates", type=str, default="")
     parser.add_argument("--selector", type=str, default="")
     parser.add_argument("--tau_stop", type=float, default=0.75)

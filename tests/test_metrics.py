@@ -89,3 +89,46 @@ def test_normalize_math_expression():
     assert normalize_math_expression(r"\dfrac{1}{2}") == r"\frac{1}{2}"
     assert normalize_math_expression(r"a \cdot b") == "a*b"
     assert normalize_math_expression(r"\left( x \right)") == "(x)"
+
+
+# ── Round-5 Task 2 — MC strict checker tightening ───────────────────
+
+
+def test_mc_strict_rejects_substring_letter():
+    """Raw prose containing A-E must NOT pass."""
+    assert check_answer_strict("Because photosynthesis happens", "B",
+                               "multiple_choice") is False
+
+
+def test_mc_strict_accepts_explicit_answer():
+    assert check_answer_strict("The answer is (B).", "B",
+                               "multiple_choice") is True
+
+
+def test_mc_strict_accepts_option_marker():
+    assert check_answer_strict("I choose option D", "D",
+                               "multiple_choice") is True
+
+
+def test_mc_strict_rejects_letters_in_explanation():
+    assert check_answer_strict("A long explanation mentions B and C", "C",
+                               "multiple_choice") is False
+
+
+def test_mc_strict_accepts_final_line_letter():
+    assert check_answer_strict("Some text\nblah\nE", "E",
+                               "multiple_choice") is True
+
+
+def test_mc_strict_rejects_text_ending_with_punctuation_no_answer():
+    assert check_answer_strict("Multi line\nnot ending in letter alone", "E",
+                               "multiple_choice") is False
+
+
+def test_mc_strict_boxed_letter():
+    assert check_answer_strict(r"\boxed{D}", "D", "multiple_choice") is True
+
+
+def test_mc_strict_therefore_letter():
+    assert check_answer_strict("Therefore C.", "C", "multiple_choice") is True
+    assert check_answer_strict("Hence (A)", "A", "multiple_choice") is True
