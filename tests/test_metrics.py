@@ -132,3 +132,31 @@ def test_mc_strict_boxed_letter():
 def test_mc_strict_therefore_letter():
     assert check_answer_strict("Therefore C.", "C", "multiple_choice") is True
     assert check_answer_strict("Hence (A)", "A", "multiple_choice") is True
+
+
+# ── Round-1 Bug #2 — extractor→checker consistency ──────────────────
+
+
+def test_mc_extractor_checker_no_recontamination():
+    """extract_answer_typed for MC must use _extract_mc_strict, not the
+    permissive extract_multiple_choice which grabs any A-E in last lines."""
+    from answer_extraction import extract_answer_typed
+    # This text has "B" on the last line as part of a word, but no explicit answer marker
+    text = "The process involves photosynthesis.\nOption B seems plausible but C is better.\nB"
+    extracted = extract_answer_typed(text, "multiple_choice")
+    # _extract_mc_strict should accept final-line bare "B"
+    assert extracted == "B"
+
+    # But text with B buried in prose should NOT extract
+    text2 = "Because of the evidence for option B and C, I think it depends."
+    extracted2 = extract_answer_typed(text2, "multiple_choice")
+    assert extracted2 == "", f"should be empty but got {extracted2!r}"
+
+
+def test_math_expression_extractor_symbolic():
+    """math_expression type should handle non-numeric answers."""
+    from answer_extraction import extract_answer_typed
+    # LaTeX boxed
+    assert extract_answer_typed(r"Therefore \boxed{x+1}", "math_expression") == "x+1"
+    # Pure numeric still works
+    assert extract_answer_typed("The answer is 42.", "math_expression") == "42"

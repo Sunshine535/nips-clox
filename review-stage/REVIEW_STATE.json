@@ -1,13 +1,12 @@
 {
-  "round": 2,
-  "threadId": "019db65a-ba2c-7f20-baab-07ba9f9f2b16",
+  "round": 1,
+  "threadId": "019dcae4-34e0-7e71-a5e0-44d54c5bd33c",
   "status": "in_progress",
   "difficulty": "nightmare",
   "reviewer_backend": "codex_mcp_gpt5.4",
   "last_score": 3.0,
   "last_verdict": "not ready",
-  "pending_experiments": ["pdsc_27b", "meta_sweep_9b", "meta_sweep_27b_gsm8k"],
-  "key_pivot": "Reframe from method paper to empirical analysis of diversity regimes in SC",
-  "closest_prior_art": ["DDPrompt (ACL 2024)", "DIPPER (EMNLP 2025)", "DiVeRSe (ACL 2023)"],
-  "timestamp": "2026-04-23T02:00:00"
+  "pending_experiments": ["pcs_gsm8k_s11_test_collect"],
+  "bugs_fixed_this_round": ["math_hard_type", "mc_recontamination"],
+  "timestamp": "2026-04-27T01:00:00"
 }

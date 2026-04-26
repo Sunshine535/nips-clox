@@ -84,11 +84,20 @@ def extract_boolean(text: str) -> str | None:
 
 
 def extract_answer_typed(text: str, answer_type: str) -> str:
-    if answer_type == "numeric" or answer_type == "math_expression":
+    if answer_type == "numeric":
         result = extract_numeric(text)
         return result if result else ""
+    elif answer_type == "math_expression":
+        result = extract_numeric(text)
+        if result:
+            return result
+        return normalize_math_expression(text.strip().split("\n")[-1].strip()) if text.strip() else ""
     elif answer_type == "multiple_choice":
-        result = extract_multiple_choice(text)
+        # Use _extract_mc_strict to prevent re-contamination (Round 1 bug #2):
+        # extract_multiple_choice() fallback grabs any A-E in last 3 lines,
+        # which would feed a clean letter to check_answer_strict and bypass
+        # the tightening. _extract_mc_strict only accepts explicit markers.
+        result = _extract_mc_strict(text)
         return result if result else ""
     elif answer_type == "boolean":
         result = extract_boolean(text)
@@ -97,7 +106,7 @@ def extract_answer_typed(text: str, answer_type: str) -> str:
         result = extract_numeric(text)
         if result:
             return result
-        result = extract_multiple_choice(text)
+        result = _extract_mc_strict(text)
         if result:
             return result
         return text.strip().split("\n")[-1].strip() if text.strip() else ""
@@ -120,8 +129,8 @@ _LATEX_NORMALIZE = [
 _MC_EXPLICIT_PATTERNS = [
     # "(B)" or "(b)" alone
     r"^\s*\(?\s*([A-Ea-e])\s*\)?\s*\.?\s*$",
-    # "answer is (B)" / "answer: B" / "the answer is B"
-    r"(?:the\s+answer\s+is|answer\s*[:=]?|i\s+choose|option)\s*\(?\s*([A-Ea-e])\s*\)?",
+    # "answer is (B)" / "answer: B" / "the answer is B" / "I choose option D"
+    r"(?:the\s+answer\s+is|answer\s*[:=]?|i\s+choose(?:\s+option)?|(?:select|pick)\s+option)\s*\(?\s*([A-Ea-e])\s*\)?",
     # "Therefore B" / "Hence (B)"
     r"(?:therefore|hence|so|thus),?\s*\(?\s*([A-Ea-e])\s*\)?\s*[\.\!]?\s*$",
     # boxed letter

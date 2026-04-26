@@ -73,7 +73,7 @@ def _collect(args) -> None:
         examples = examples[: args.max_examples]
 
     answer_type_map = {
-        "gsm8k": "numeric", "math_hard": "numeric",
+        "gsm8k": "numeric", "math_hard": "math_expression",
         "arc_challenge": "multiple_choice", "bbh_logic": "multiple_choice",
         "strategyqa": "boolean",
     }
